@@ -6,11 +6,11 @@ const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || "#registrati
 const abstractUrl = process.env.NEXT_PUBLIC_ABSTRACT_URL || "#abstract";
 
 const highlights = [
-  ["panel-transparent.png", "Panel Discussions"],
-  ["keynote-transparent.png", "Keynote Sessions"],
-  ["papers-transparent.png", "Paper & Poster Presentations"],
-  ["award-transparent.png", "Best Paper & Best Poster Presentation Awards"],
-  ["networking-single-transparent.png", "Exhibition, Networking & Branding"],
+  ["panel-transparent.png", "Panel Discussions", "by Industry Experts & Academicians"],
+  ["keynote-transparent.png", "Keynote Sessions", ""],
+  ["papers-transparent.png", "Paper & Poster", "Presentations"],
+  ["award-transparent.png", "Best Paper & Best Poster", "Presentation Awards"],
+  ["networking-transparent.png", "Exhibition, Networking", "& Branding"],
 ];
 
 const dates = [
@@ -90,13 +90,13 @@ export default function Home() {
         <div className="hero-inner">
           <div className="top-logos">
             <img className="pdeu-main-logo" src="/assets/pdeu-logo-new-transparent.png" alt="Pandit Deendayal Energy University" />
-            <img className="soet" src="/assets/soet-logo-final.jpg" alt="School of Energy Technology" />
+            <img className="hero-icphd-logo" src="/assets/icphd-logo-transparent.png" alt="ICPHD 2026 logo" />
           </div>
 
           <div className="hero-title-block">
             <p className="edition">FOURTH EDITION OF</p>
             <h1>International Conference on</h1>
-            <h2>Petroleum, Hydrogen &amp; Decarbonization (ICPHD 2026)</h2>
+            <h2>Petroleum, Hydrogen &amp; Decarbonization <span>(ICPHD 2026)</span></h2>
             <p className="tagline">Driving Innovation, Enabling Transition and Shaping the Energy Future</p>
             <div className="date-pill">December 11–13, 2026 (Friday–Sunday) &nbsp;||&nbsp; PDEU, Gandhinagar</div>
           </div>
@@ -105,7 +105,11 @@ export default function Home() {
             <div className="organizers-panel">
               <div className="org-block">
                 <p className="mini-label">ORGANISED BY</p>
-                <p className="org-copy">Department of Petroleum Engineering<br />Department of Chemical Engineering<br />Pandit Deendayal Energy University (PDEU)</p>
+                <div className="organised-row">
+                  <img className="organised-soet" src="/assets/soet-logo-final-transparent.png" alt="School of Energy Technology" />
+                  <p className="org-copy">Department of Petroleum Engineering, Department of Chemical Engineering, Pandit Deendayal Energy University</p>
+                  <img className="organised-pdeu" src="/assets/pdeu-seal-new-transparent.png" alt="Pandit Deendayal Energy University" />
+                </div>
               </div>
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
@@ -168,7 +172,7 @@ export default function Home() {
         <div className="container">
           <div className="content-section highlights-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
-            <div className="highlight-grid">{highlights.map(([img, title]) => <article className="highlight-card" key={title}><img src={`/assets/${img}`} alt="" /><h3>{title}</h3></article>)}</div>
+            <div className="highlight-grid">{highlights.map(([img, title, sub]) => <article className="highlight-card" key={title}><img src={`/assets/${img}`} alt="" /><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}</div>
           </div>
 
           <div id="dates" className="content-section dates-section anchor-section">
@@ -176,7 +180,7 @@ export default function Home() {
             <div className="dates-panel">
               <div className="dates-layout">
                 <div className="dates-table">{dates.map(([date, label]) => <div className="date-row" key={date + label}><b>{date}</b><span>{label}</span></div>)}</div>
-                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/pdeu-oil-pump-new.jpg" alt="PDEU oil pump landmark" /></div>
+                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/pdeu-oil-pump-new.jpg" alt="PDEU oil pump" /></div>
               </div>
             </div>
           </div>
