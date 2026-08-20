@@ -2,7 +2,7 @@
 
 "use client";
 
-import { useEffect, useMemo, useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || "#registration";
 const abstractUrl = process.env.NEXT_PUBLIC_ABSTRACT_URL || "#abstract";
