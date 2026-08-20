@@ -824,3 +824,85 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
   .highlight-icon img,
   .highlight-card:last-child .highlight-icon img { width: 78px !important; height: 78px !important; max-width: 78px !important; max-height: 78px !important; }
 }
+
+/* ===== LATEST SIZE BOOST: PDEU + STUDENT CHAPTERS + EXHIBITION ARTWORK ===== */
+.pdeu-main-logo {
+  width: min(660px, 68vw) !important;
+  height: 122px !important;
+}
+
+.association-logos {
+  gap: 12px !important;
+}
+.association-logos img,
+.association-logos .combined-chapters {
+  width: min(100%, 170px) !important;
+  height: 148px !important;
+  max-width: 170px !important;
+  max-height: 148px !important;
+}
+
+.highlight-icon {
+  width: 108px !important;
+  height: 108px !important;
+  flex-basis: 108px !important;
+}
+.highlight-icon img {
+  width: 92px !important;
+  height: 92px !important;
+  max-width: 92px !important;
+  max-height: 92px !important;
+}
+.highlight-card:last-child .highlight-icon img {
+  width: 112px !important;
+  height: 112px !important;
+  max-width: 112px !important;
+  max-height: 112px !important;
+}
+
+@media (max-width: 1000px) {
+  .pdeu-main-logo {
+    width: min(620px, 68vw) !important;
+    height: 112px !important;
+  }
+  .association-logos { gap: 8px !important; }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    width: min(100%, 155px) !important;
+    height: 136px !important;
+    max-width: 155px !important;
+    max-height: 136px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .pdeu-main-logo {
+    width: calc(100% - 96px) !important;
+    height: 82px !important;
+  }
+  .association-logos { gap: 5px !important; }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    width: 116px !important;
+    height: 104px !important;
+    max-width: 116px !important;
+    max-height: 104px !important;
+  }
+  .highlight-icon {
+    width: 100px !important;
+    height: 100px !important;
+    flex-basis: 100px !important;
+  }
+  .highlight-icon img {
+    width: 86px !important;
+    height: 86px !important;
+    max-width: 86px !important;
+    max-height: 86px !important;
+  }
+  .highlight-card:last-child .highlight-icon img {
+    width: 104px !important;
+    height: 104px !important;
+    max-width: 104px !important;
+    max-height: 104px !important;
+  }
+}
