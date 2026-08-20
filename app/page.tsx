@@ -6,11 +6,11 @@ const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || "#registrati
 const abstractUrl = process.env.NEXT_PUBLIC_ABSTRACT_URL || "#abstract";
 
 const highlights = [
-  ["panel.png", "Panel Discussions", "by Industry Experts & Academicians"],
-  ["keynote.png", "Keynote Sessions", ""],
-  ["papers.png", "Paper & Poster", "Presentations"],
-  ["award.png", "Best Paper & Best Poster", "Presentation Awards"],
-  ["networking.png", "Exhibition, Networking", "& Branding"],
+  ["panel-transparent.png", "Panel Discussions", "by Industry Experts & Academicians"],
+  ["keynote-transparent.png", "Keynote Sessions", ""],
+  ["papers-transparent.png", "Paper & Poster", "Presentations"],
+  ["award-transparent.png", "Best Paper & Best Poster", "Presentation Awards"],
+  ["networking-transparent.png", "Exhibition, Networking", "& Branding"],
 ];
 
 const dates = [
@@ -80,17 +80,17 @@ export default function Home() {
   return (
     <main>
       <header className="nav">
-        <a className="brand" href="#home"><img src="/assets/icphd-logo.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
+        <a className="brand" href="#home"><img src="/assets/icphd-logo-transparent.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
         <nav><a href="#home">Home</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
       </header>
 
       <section id="home" className="hero">
-        <img className="hero-bg" src="/assets/campus-aerial.png" alt="PDEU campus" />
+        <img className="hero-bg" src="/assets/campus-aerial-final.jpg" alt="PDEU campus" />
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <img className="pdeu-main-logo" src="/assets/pdeu-logo-new.png" alt="Pandit Deendayal Energy University" />
-            <img className="soet" src="/assets/soet-logo-final.jpg" alt="School of Energy Technology" />
+            <img className="pdeu-main-logo" src="/assets/pdeu-logo-new-transparent.png" alt="Pandit Deendayal Energy University" />
+            <img className="soet" src="/assets/soet-logo-final-transparent.png" alt="School of Energy Technology" />
           </div>
 
           <div className="hero-title-block">
@@ -110,10 +110,10 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <img src="/assets/fipi-final.png" alt="FIPI" />
-                  <img src="/assets/spe-pdeu-new.png" alt="SPE PDEU Student Chapter" />
-                  <img src="/assets/iadc-pdeu-new.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
-                  <img className="combined-chapters" src="/assets/pdeu-student-chapters.png" alt="PDEU Student Chapters: SEG, SIG and EAGE" />
+                  <img src="/assets/fipi-final-transparent.png" alt="FIPI" />
+                  <img src="/assets/spe-pdeu-new-transparent.png" alt="SPE PDEU Student Chapter" />
+                  <img src="/assets/iadc-pdeu-new-transparent.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
+                  <img className="combined-chapters" src="/assets/pdeu-student-chapters-transparent.png" alt="PDEU Student Chapters: SEG, SIG and EAGE" />
                 </div>
               </div>
             </div>
@@ -174,7 +174,10 @@ export default function Home() {
           <div id="dates" className="content-section dates-section anchor-section">
             <SectionTitle title="Important Dates" />
             <div className="dates-panel">
-              <div className="dates-table">{dates.map(([date, label]) => <div className="date-row" key={date + label}><b>{date}</b><span>{label}</span></div>)}</div>
+              <div className="dates-layout">
+                <div className="dates-table">{dates.map(([date, label]) => <div className="date-row" key={date + label}><b>{date}</b><span>{label}</span></div>)}</div>
+                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/pdeu-oil-pump-new.jpg" alt="PDEU oil pump and campus" /></div>
+              </div>
             </div>
           </div>
 
@@ -196,13 +199,16 @@ export default function Home() {
       <section className="soft venue">
         <div className="container"><SectionTitle title="Venue" /><div className="venue-grid">
           <article className="venue-copy"><img className="venue-building" src="/assets/pdeu-building-new.jpg" alt="PDEU campus building" /><div className="venue-copy-inner"><h3>Pandit Deendayal Energy University Campus</h3><p className="address">Knowledge Corridor, Raysan Village, PDPU Rd, Gandhinagar, Raysan, Gujarat 382426</p><p>ICPHD 2026 will be held at Pandit Deendayal Energy University (PDEU), Gandhinagar, Gujarat, India. Located in Raisan, on the outskirts of Gandhinagar, the university is well connected to Ahmedabad and other major cities by road, rail, and air.</p></div></article>
-          <a className="maps-card" href="https://www.google.com/maps/search/?api=1&query=Pandit+Deendayal+Energy+University+Gandhinagar" target="_blank" rel="noreferrer"><span>VENUE LOCATION</span><strong>Open in Google Maps</strong><small>Tap here to open the PDEU location in Google Maps →</small></a>
+          <a className="maps-card" href="https://www.google.com/maps/search/?api=1&query=Pandit+Deendayal+Energy+University+Gandhinagar" target="_blank" rel="noreferrer">
+            <div className="map-preview"><img src="/assets/venue-map.png" alt="PDEU location on Google Maps" /></div>
+            <div className="map-card-footer"><span>VENUE LOCATION</span><strong>Open in Google Maps →</strong></div>
+          </a>
         </div></div>
       </section>
 
       <section className="countdown-section"><div className="container countdown-wrap"><div><p className="eyebrow">DECEMBER 11–13, 2026</p><h2>See you at ICPHD 2026</h2><p>Driving innovation, enabling transition and shaping the energy future.</p></div><Countdown /></div></section>
 
-      <footer id="contact"><div className="container footer-top"><div className="footer-title"><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p><img className="footer-pdeu-logo" src="/assets/pdeu-logo-new.png" alt="Pandit Deendayal Energy University" /></div>{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h3>{name}</h3><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></div>)}<img className="footer-seal" src="/assets/pdeu-seal-new.png" alt="PDEU seal" /></div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
+      <footer id="contact"><div className="container footer-top"><div className="footer-title"><div className="footer-contact-head"><img className="footer-seal-main" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU seal" /><div><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p></div></div></div>{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h3>{name}</h3><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></div>)}</div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
     </main>
   );
 }
