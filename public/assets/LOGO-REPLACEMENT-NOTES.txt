@@ -1,0 +1,3 @@
+Updated 2026-08-20:
+- icphd-logo-transparent.png replaced with the newly supplied ICPHD 2026 logo, with black background removed.
+- pdeu-logo-new-transparent.png replaced with the newly supplied PDEU logo, with black background removed.

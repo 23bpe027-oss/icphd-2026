@@ -1,7 +1,5 @@
 'use client';
 
-"use client";
-
 import { useEffect, useMemo, useState } from "react";
 
 const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || "#registration";
@@ -109,7 +107,7 @@ export default function Home() {
         <nav><a href="#home">Home</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
       </header>
 
-      <section className="reveal reveal-delay-1" id="home" className="hero">
+      <section className="reveal reveal-delay-1 hero" id="home">
         <img className="hero-bg" src="/assets/campus-aerial-final.jpg" alt="PDEU campus" />
         <div className="hero-overlay" />
         <div className="hero-inner">
@@ -154,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reveal reveal-delay-2" className="dark-strip">
+      <section className="reveal reveal-delay-2 dark-strip">
         <div className="partners-grid">
           <div className="strip-block">
             <p className="strip-label">SPONSORS</p>
@@ -169,7 +167,7 @@ export default function Home() {
         <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
 
-      <section className="reveal reveal-delay-3" className="container about">
+      <section className="reveal reveal-delay-3 container about">
         <div>
           <SectionTitle title="About ICPHD 2026" />
           <p>Welcome to the 4th Edition of the International Conference on Petroleum, Hydrogen, and Decarbonization (ICPHD), organized by the Department of Petroleum Engineering and the Department of Chemical Engineering, Pandit Deendayal Energy University (PDEU), Gandhinagar. The conference brings together leading experts, researchers, academicians, industry professionals, and young researchers to explore cutting-edge developments in petroleum, hydrogen, and decarbonization.</p>
@@ -192,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reveal reveal-delay-4" className="soft conference-content">
+      <section className="reveal reveal-delay-4 soft conference-content">
         <div className="container">
           <div className="content-section highlights-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
@@ -216,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reveal reveal-delay-5" id="registration" className="container registration anchor-section">
+      <section className="reveal reveal-delay-5 container registration anchor-section" id="registration">
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
           <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href={registrationUrl}>Click here for Registration</a><div className="fee-table"><div className="fee-head"><b>Category</b><b>Amount</b></div>{fees.map(([category, amount]) => <div className="fee-row" key={category}><span>{category}</span><b>{amount}</b></div>)}</div></article>
@@ -224,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reveal reveal-delay-1" className="soft venue">
+      <section className="reveal reveal-delay-1 soft venue">
         <div className="container"><SectionTitle title="Venue" /><div className="venue-grid">
           <article className="venue-copy"><img className="venue-building" src="/assets/pdeu-building-new.jpg" alt="PDEU campus building" /><div className="venue-copy-inner"><h3>Pandit Deendayal Energy University Campus</h3><p className="address">Knowledge Corridor, Raysan Village, PDPU Rd, Gandhinagar, Raysan, Gujarat 382426</p><p>ICPHD 2026 will be held at Pandit Deendayal Energy University (PDEU), Gandhinagar, Gujarat, India. Located in Raisan, on the outskirts of Gandhinagar, the university is well connected to Ahmedabad and other major cities by road, rail, and air.</p></div></article>
           <a className="maps-card" href="https://www.google.com/maps/search/?api=1&query=Pandit+Deendayal+Energy+University+Gandhinagar" target="_blank" rel="noreferrer">
@@ -234,7 +232,7 @@ export default function Home() {
         </div></div>
       </section>
 
-      <section className="reveal reveal-delay-2" className="countdown-section"><div className="container countdown-wrap"><div><p className="eyebrow">DECEMBER 11–13, 2026</p><h2>See you at ICPHD 2026</h2><p>Driving innovation, enabling transition and shaping the energy future.</p></div><Countdown /></div></section>
+      <section className="reveal reveal-delay-2 countdown-section"><div className="container countdown-wrap"><div><p className="eyebrow">DECEMBER 11–13, 2026</p><h2>See you at ICPHD 2026</h2><p>Driving innovation, enabling transition and shaping the energy future.</p></div><Countdown /></div></section>
 
       <footer id="contact"><div className="container footer-top"><div className="footer-title"><div className="footer-contact-head"><div><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p><img className="footer-seal-mini" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU seal" /></div></div></div>{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h3>{name}</h3><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></div>)}</div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
     </main>
