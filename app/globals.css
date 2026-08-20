@@ -209,3 +209,127 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
   .association-logos img,
   .association-logos .combined-chapters { height: 88px; }
 }
+
+/* Latest visual corrections */
+.nav .brand img {
+  width: 68px;
+  height: 68px;
+}
+
+/* Keep the campus visible beneath a rich blue tint, matching the supplied reference. */
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(4, 34, 72, .48), rgba(3, 48, 92, .58)),
+    linear-gradient(90deg, rgba(3, 29, 65, .56), rgba(5, 50, 94, .50) 55%, rgba(3, 38, 79, .46));
+}
+
+.pdeu-main-logo {
+  width: min(650px, 68vw);
+  height: 120px;
+}
+
+.hero-icphd-logo {
+  width: 152px;
+  height: 120px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+/* SOET is only used beside the organised-by text. */
+.organised-soet {
+  width: 132px;
+  height: 132px;
+  object-fit: contain;
+  background: #147db7;
+  border-radius: 6px;
+}
+
+.org-copy {
+  font-size: 17px;
+  line-height: 1.48;
+}
+
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.association-logos img,
+.association-logos .combined-chapters {
+  height: 126px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Smaller, cleaner outside-only theme glow; the cards themselves stay solid white. */
+.theme-card {
+  background: #fff;
+  border-color: #b9d0e3;
+  box-shadow: 0 4px 14px rgba(26,60,91,.08);
+}
+
+.theme-card::before {
+  inset: -4px;
+  border-radius: 15px;
+  background: linear-gradient(135deg,
+    rgba(7, 57, 112, .34),
+    rgba(45, 111, 171, .06) 50%,
+    rgba(7, 57, 112, .28));
+  filter: blur(3px);
+  opacity: .55;
+  z-index: -1;
+}
+
+.highlight-icon {
+  width: 88px;
+  height: 88px;
+  flex-basis: 88px;
+  margin-bottom: 18px;
+}
+
+.highlight-icon img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  object-position: center;
+  transform: translate(0, 0);
+}
+
+.highlight-card:last-child .highlight-icon img {
+  width: 128px;
+  height: 128px;
+  transform: translate(0, 0);
+}
+
+@media (max-width: 720px) {
+  .hero-icphd-logo { width: 96px; height: 88px; }
+  .pdeu-main-logo { width: calc(100% - 112px); height: 82px; }
+  .association-logos { gap: 8px; }
+  .association-logos img,
+  .association-logos .combined-chapters { height: 92px; }
+  .organised-soet { width: 96px; height: 96px; }
+  .org-copy { font-size: 14px; }
+}
+
+@media (max-width: 520px) {
+  .hero-icphd-logo { width: 72px; height: 72px; }
+  .pdeu-main-logo { width: calc(100% - 88px); height: 74px; }
+  .association-logos { gap: 6px; }
+  .association-logos img,
+  .association-logos .combined-chapters { height: 78px; }
+}
+
+
+/* FULL MERGED NAVIGATION FIX */
+.nav {
+  padding-inline: max(24px, calc((100% - 1180px) / 2));
+  gap: 28px;
+  justify-content: flex-start;
+}
+.nav .brand { flex: 0 0 auto; white-space: nowrap; }
+.nav nav { flex: 0 1 auto; align-items: center; gap: 10px; white-space: nowrap; }
+.nav nav a { padding: 7px 5px; line-height: 1; }
+@media (max-width: 1000px) { .nav { gap: 20px; } .nav nav { gap: 7px; } }
+@media (max-width: 720px) { .nav { padding-inline: 14px; gap: 12px; } .nav nav { gap: 4px; } .nav nav a { padding-inline: 3px; } }

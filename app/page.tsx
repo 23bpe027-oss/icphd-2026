@@ -103,7 +103,7 @@ export default function Home() {
   return (
     <main>
       <header className="nav">
-        <a className="brand" href="#home"><img src="/assets/icphd-logo-transparent.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
+        <a className="brand" href="#home"><img src="/assets/icphd-logo-transparent-clean.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
         <nav><a href="#home">Home</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
       </header>
 
@@ -113,7 +113,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="top-logos">
             <img className="pdeu-main-logo" src="/assets/pdeu-logo-exact-uploaded.png" alt="Pandit Deendayal Energy University" />
-            <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
+            <img className="hero-icphd-logo" src="/assets/icphd-logo-transparent-clean.png" alt="ICPHD 2026 logo" />
           </div>
 
           <div className="hero-title-block">
@@ -137,9 +137,9 @@ export default function Home() {
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
                   <img src="/assets/fipi-final-transparent.png" alt="FIPI" />
-                  <img src="/assets/spe-pdeu-new-transparent.png" alt="SPE PDEU Student Chapter" />
-                  <img src="/assets/iadc-pdeu-new-transparent.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
-                  <img className="combined-chapters" src="/assets/pdeu-student-chapters-transparent.png" alt="PDEU Student Chapters: SEG, SIG and EAGE" />
+                  <img src="/assets/spe-pdeu-new-transparent-clean.png" alt="SPE PDEU Student Chapter" />
+                  <img src="/assets/iadc-pdeu-new-transparent-clean.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
+                  <img className="combined-chapters" src="/assets/pdeu-student-chapters-transparent-clean.png" alt="PDEU Student Chapters: SEG, SIG and EAGE" />
                 </div>
               </div>
             </div>
