@@ -1,7 +1,7 @@
 :root{--navy:#061b34;--navy2:#0d2d55;--blue:#2f78b6;--blue2:#64a9da;--ink:#173556;--muted:#5c6c7d;--soft:#eef4f8;--line:#cbd8e4;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}p{line-height:1.65}.container{width:min(1180px,calc(100% - 48px));margin:0 auto}.anchor-section{scroll-margin-top:82px}
 .nav{position:sticky;top:0;z-index:50;min-height:60px;padding:3px 24px;background:rgba(4,22,45,.98);border-bottom:1px solid #2b5e8d;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(10px)}.brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;font-weight:700}.brand img{width:62px;height:62px;object-fit:contain}.brand b{color:#5aa1d5}.nav nav{display:flex;gap:22px;color:#d8e7f4;font-size:14px}.nav nav a:hover{color:#fff}
-.hero{position:relative;overflow:hidden;color:#fff;background:#082544}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,25,58,.88),rgba(5,45,91,.80) 55%,rgba(4,37,78,.76)),linear-gradient(0deg,rgba(2,25,56,.78),rgba(4,39,82,.66) 58%,rgba(3,30,67,.78))}.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 42px}.top-logos{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:96px;padding-bottom:8px}.pdeu-main-logo{width:min(600px,64vw);height:108px;object-fit:contain;object-position:left center}.hero-soet-logo{width:168px;height:108px;object-fit:contain;object-position:center;background:transparent;border:0;border-radius:0}.hero-title-block{max-width:1040px;margin:0 auto;text-align:center;padding-top:4px}.edition{margin:14px 0 8px;letter-spacing:5px;color:#f2f7fc;font-size:14px;font-weight:800}.hero h1,.hero h2,.tagline{text-align:center;margin:0}.hero h1{font-size:clamp(26px,3.2vw,42px);font-style:italic;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.28)}.hero h2{margin-top:8px;font-size:clamp(22px,2.7vw,34px);color:#63b7ec;text-shadow:0 2px 10px rgba(0,0,0,.22);line-height:1.05;white-space:nowrap}.hero h2 span{color:#3f89c3}.tagline{margin-top:12px;font-size:clamp(16px,1.8vw,24px);font-weight:800;white-space:nowrap;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.24)}.date-pill{width:fit-content;max-width:100%;margin:24px auto 0;padding:12px 24px;border:1px solid #2f78b6;border-radius:30px;background:rgba(6,35,65,.82);font-size:16px;text-align:center}
+.hero{position:relative;overflow:hidden;color:#fff;background:#082544}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,25,58,.88),rgba(5,45,91,.80) 55%,rgba(4,37,78,.76)),linear-gradient(0deg,rgba(2,25,56,.78),rgba(4,39,82,.66) 58%,rgba(3,30,67,.78))}.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 42px}.top-logos{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:96px;padding-bottom:8px}.pdeu-main-logo{width:min(600px,64vw);height:108px;object-fit:contain;object-position:left center}.hero-soet-logo{width:168px;height:108px;object-fit:contain;object-position:center;background:transparent;border:0;border-radius:0}.hero-title-block{max-width:1040px;margin:0 auto;text-align:center;padding-top:4px}.edition{margin:14px 0 8px;letter-spacing:5px;color:#0d2d55;font-size:14px;font-weight:800}.hero h1,.hero h2,.tagline{text-align:center;margin:0}.hero h1{font-size:clamp(26px,3.2vw,42px);font-style:italic;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.28)}.hero h2{margin-top:8px;font-size:clamp(22px,2.7vw,34px);color:#63b7ec;text-shadow:0 2px 10px rgba(0,0,0,.22);line-height:1.05;white-space:nowrap}.hero h2 span{color:#3f89c3}.tagline{margin-top:12px;font-size:clamp(16px,1.8vw,24px);font-weight:800;white-space:nowrap;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.24)}.date-pill{width:fit-content;max-width:100%;margin:24px auto 0;padding:12px 24px;border:1px solid #2f78b6;border-radius:30px;background:rgba(6,35,65,.82);font-size:16px;text-align:center}
 .hero-lower{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:stretch;margin-top:36px}.organizers-panel{display:flex;flex-direction:column;gap:14px}.org-block,.association-block{padding:12px 4px;border:0;background:transparent;border-radius:0}.org-block{border-left:0}.mini-label,.strip-label,.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#71acd5;margin:0 0 8px}.org-copy{color:#fff;margin:0;font-weight:700;font-size:15px;line-height:1.65}.association-block{border-top:0}.association-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:14px;margin-top:10px}.association-logos img{height:100px;width:100%;object-fit:contain;background:transparent;border-radius:0;padding:0}.association-logos .combined-chapters{height:100px;object-fit:contain}.guest-grid{display:grid;grid-template-columns:1fr;gap:14px}.guest-grid>div{min-height:155px;padding:22px;border:1px solid #2e7fbd;border-radius:14px;background:rgba(5,31,60,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.14)}.guest-grid span{font-size:12px;letter-spacing:1.4px}.guest-grid b{margin-top:3px;font-size:12px}.guest-grid strong{margin-top:10px;font-size:17px;color:#f4f8fc}
 .dark-strip{background:#0b2a50;color:#fff;padding:30px 24px 36px}.partners-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}.strip-block{padding:20px;border:1px solid rgba(111,169,214,.25);border-radius:14px;background:rgba(0,0,0,.09);text-align:center}.strip-label{text-align:center;margin:0 0 14px;color:#9ac5e4}.partner-placeholders{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.partner-placeholders span{border:1px solid #3b86be;border-radius:10px;padding:11px 16px;color:#f1f7fc;font-size:14px;background:rgba(0,0,0,.12);min-width:125px}.announcement{max-width:1180px;margin:24px auto 14px;background:#f2f7fb;color:#163353;border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;gap:20px;font-size:14px}.quick-actions{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1180px;margin:0 auto;gap:10px}.quick-actions a,.primary-btn{display:inline-flex;justify-content:center;align-items:center;min-height:46px;border-radius:8px;font-weight:800;transition:.2s ease}.quick-actions a{border:3px solid white;color:white}.quick-actions a:nth-child(2){background:var(--blue);border-color:var(--blue)}.quick-actions a:hover,.primary-btn:hover{transform:translateY(-2px)}
 .about{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:70px 0 82px}.section-title{margin-bottom:25px}.section-title h2{margin:0;font-size:clamp(21px,2.4vw,30px);color:var(--ink);line-height:1.1;white-space:nowrap}.section-title span{display:block;width:48px;height:3px;background:var(--blue2);margin-top:10px}.soft .section-title{text-align:center}.soft .section-title span{margin-left:auto;margin-right:auto}.about p{color:#4d5d6e;font-size:14px;margin:0 0 14px}
@@ -333,3 +333,108 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
 .nav nav a { padding: 7px 5px; line-height: 1; }
 @media (max-width: 1000px) { .nav { gap: 20px; } .nav nav { gap: 7px; } }
 @media (max-width: 720px) { .nav { padding-inline: 14px; gap: 12px; } .nav nav { gap: 4px; } .nav nav a { padding-inline: 3px; } }
+
+/* Latest requested corrections: student-chapter alignment, highlight centering,
+   flat conference-theme cards, and registration-table columns. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  align-items: center;
+  justify-items: center;
+}
+.association-logos img,
+.association-logos .combined-chapters {
+  height: 138px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.association-logos img:nth-child(1) { transform: scale(1.08); }
+.association-logos img:nth-child(2) { transform: scale(1.08); }
+.association-logos img:nth-child(3) { transform: scale(1.08); }
+.association-logos img:nth-child(4) { transform: scale(1.04); }
+
+/* Highlight artwork sits exactly in the middle of each blue circle. */
+.highlight-icon {
+  width: 84px;
+  height: 84px;
+  flex: 0 0 84px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+.highlight-icon img,
+.highlight-card:last-child .highlight-icon img {
+  display: block;
+  width: 104px;
+  height: 104px;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: 50% 50%;
+  transform: none;
+}
+.highlight-card:last-child .highlight-icon img {
+  width: 136px;
+  height: 136px;
+}
+
+/* No gradient inside conference-theme cards: solid cards + dark-blue outline only. */
+.theme-card {
+  background: #fff !important;
+  border: 1px solid #164b80 !important;
+  box-shadow: 0 0 0 1px rgba(22,75,128,.12), 0 5px 16px rgba(26,60,91,.08) !important;
+}
+.theme-card::before {
+  inset: -4px;
+  background: transparent !important;
+  border: 1px solid rgba(22,75,128,.42);
+  filter: none !important;
+  opacity: 1 !important;
+  z-index: -1;
+}
+
+/* Registration fee table: visible column separation and requested alignment. */
+.fee-table {
+  border: 1px solid #9eb3c6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.fee-head,
+.fee-row {
+  grid-template-columns: minmax(0, 1.45fr) minmax(130px, .8fr);
+}
+.fee-head {
+  padding: 11px 12px;
+}
+.fee-head b:first-child { text-align: left; }
+.fee-head b:last-child { text-align: center; border-left: 1px solid rgba(255,255,255,.45); }
+.fee-row {
+  padding: 10px 12px;
+  border-top: 1px solid #d4dee7;
+}
+.fee-row span {
+  text-align: left !important;
+  padding-right: 12px;
+}
+.fee-row b {
+  text-align: center !important;
+  border-left: 1px solid #d4dee7;
+  padding-left: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  .association-logos { gap: 4px; }
+  .association-logos img,
+  .association-logos .combined-chapters { height: 96px; }
+  .association-logos img:nth-child(1),
+  .association-logos img:nth-child(2),
+  .association-logos img:nth-child(3),
+  .association-logos img:nth-child(4) { transform: none; }
+  .highlight-icon { width: 80px; height: 80px; flex-basis: 80px; }
+  .highlight-icon img,
+  .highlight-card:last-child .highlight-icon img { width: 100px; height: 100px; }
+  .highlight-card:last-child .highlight-icon img { width: 124px; height: 124px; }
+}
