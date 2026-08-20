@@ -709,3 +709,118 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
     animation: none;
   }
 }
+
+/* ===== FINAL USER REQUEST: LOGOS / HIGHLIGHTS / REGISTRATION ===== */
+/* Use the exact latest ICPHD circle mark. */
+.nav .brand img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+.hero-icphd-logo {
+  width: 190px;
+  height: 150px;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* PDEU/SPE logos: no image-box backgrounds. */
+.pdeu-main-logo,
+.association-logos img {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Four association marks: make them large, equal-sized and evenly spaced. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  align-items: center !important;
+  justify-items: center !important;
+}
+.association-logos img,
+.association-logos .combined-chapters {
+  width: min(100%, 150px) !important;
+  height: 132px !important;
+  max-width: 150px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+/* Highlight illustrations stay completely inside the blue circles. */
+.highlight-icon {
+  width: 104px !important;
+  height: 104px !important;
+  flex: 0 0 104px !important;
+  border-radius: 50% !important;
+  background: #0b3f7b !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
+  position: relative !important;
+  margin: 0 auto 16px !important;
+}
+.highlight-icon img,
+.highlight-card:last-child .highlight-icon img {
+  width: 88px !important;
+  height: 88px !important;
+  max-width: 88px !important;
+  max-height: 88px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  transform: none !important;
+}
+.highlight-card:last-child .highlight-icon img {
+  width: 92px !important;
+  height: 92px !important;
+  max-width: 92px !important;
+  max-height: 92px !important;
+}
+
+/* Registration table: only the Category header is centered; data categories remain left aligned. */
+.fee-head > b:first-child {
+  text-align: center !important;
+}
+.fee-head > b:last-child {
+  text-align: center !important;
+}
+.fee-row > span {
+  text-align: left !important;
+}
+.fee-row > b {
+  text-align: center !important;
+}
+.fee-head > b:last-child,
+.fee-row > b {
+  border-left: 2px solid #9eb3c6 !important;
+}
+.fee-row {
+  border-top: 1px solid #c8d5e0 !important;
+}
+
+@media (max-width: 1000px) {
+  .association-logos { gap: 6px !important; }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    width: min(100%, 138px) !important;
+    height: 120px !important;
+  }
+}
+@media (max-width: 720px) {
+  .hero-icphd-logo { width: 112px !important; height: 100px !important; }
+  .association-logos { gap: 4px !important; }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    width: 108px !important;
+    height: 96px !important;
+  }
+  .highlight-icon { width: 94px !important; height: 94px !important; flex-basis: 94px !important; }
+  .highlight-icon img,
+  .highlight-card:last-child .highlight-icon img { width: 78px !important; height: 78px !important; max-width: 78px !important; max-height: 78px !important; }
+}
