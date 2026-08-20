@@ -6,11 +6,11 @@ const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || "#registrati
 const abstractUrl = process.env.NEXT_PUBLIC_ABSTRACT_URL || "#abstract";
 
 const highlights = [
-  ["panel-transparent.png", "Panel Discussions", "by Industry Experts & Academicians"],
-  ["keynote-transparent.png", "Keynote Sessions", ""],
-  ["papers-transparent.png", "Paper & Poster", "Presentations"],
-  ["award-transparent.png", "Best Paper & Best Poster", "Presentation Awards"],
-  ["networking-transparent.png", "Exhibition, Networking", "& Branding"],
+  ["panel-transparent.png", "Panel Discussions"],
+  ["keynote-transparent.png", "Keynote Sessions"],
+  ["papers-transparent.png", "Paper & Poster Presentations"],
+  ["award-transparent.png", "Best Paper & Best Poster Presentation Awards"],
+  ["networking-single-transparent.png", "Exhibition, Networking & Branding"],
 ];
 
 const dates = [
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="hero-title-block">
             <p className="edition">FOURTH EDITION OF</p>
             <h1>International Conference on</h1>
-            <h2>Petroleum, Hydrogen &amp; Decarbonization <span>(ICPHD 2026)</span></h2>
+            <h2>Petroleum, Hydrogen &amp; Decarbonization (ICPHD 2026)</h2>
             <p className="tagline">Driving Innovation, Enabling Transition and Shaping the Energy Future</p>
             <div className="date-pill">December 11–13, 2026 (Friday–Sunday) &nbsp;||&nbsp; PDEU, Gandhinagar</div>
           </div>
@@ -168,7 +168,7 @@ export default function Home() {
         <div className="container">
           <div className="content-section highlights-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
-            <div className="highlight-grid">{highlights.map(([img, title, sub]) => <article className="highlight-card" key={title}><img src={`/assets/${img}`} alt="" /><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}</div>
+            <div className="highlight-grid">{highlights.map(([img, title]) => <article className="highlight-card" key={title}><img src={`/assets/${img}`} alt="" /><h3>{title}</h3></article>)}</div>
           </div>
 
           <div id="dates" className="content-section dates-section anchor-section">
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="dates-panel">
               <div className="dates-layout">
                 <div className="dates-table">{dates.map(([date, label]) => <div className="date-row" key={date + label}><b>{date}</b><span>{label}</span></div>)}</div>
-                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/campus-building.png" alt="PDEU School of Petroleum Technology building" /></div>
+                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/pdeu-oil-pump-new.jpg" alt="PDEU oil pump landmark" /></div>
               </div>
             </div>
           </div>
