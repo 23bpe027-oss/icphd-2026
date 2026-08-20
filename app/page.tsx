@@ -90,7 +90,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="top-logos">
             <img className="pdeu-main-logo" src="/assets/pdeu-logo-new-transparent.png" alt="Pandit Deendayal Energy University" />
-            <img className="soet" src="/assets/soet-logo-final-transparent.png" alt="School of Energy Technology" />
+            <img className="soet" src="/assets/soet-logo-final.jpg" alt="School of Energy Technology" />
           </div>
 
           <div className="hero-title-block">
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="dates-panel">
               <div className="dates-layout">
                 <div className="dates-table">{dates.map(([date, label]) => <div className="date-row" key={date + label}><b>{date}</b><span>{label}</span></div>)}</div>
-                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/pdeu-oil-pump-new.jpg" alt="PDEU oil pump and campus" /></div>
+                <div className="dates-photo-wrap"><img className="dates-photo" src="/assets/campus-building.png" alt="PDEU School of Petroleum Technology building" /></div>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function Home() {
 
       <section className="countdown-section"><div className="container countdown-wrap"><div><p className="eyebrow">DECEMBER 11–13, 2026</p><h2>See you at ICPHD 2026</h2><p>Driving innovation, enabling transition and shaping the energy future.</p></div><Countdown /></div></section>
 
-      <footer id="contact"><div className="container footer-top"><div className="footer-title"><div className="footer-contact-head"><img className="footer-seal-main" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU seal" /><div><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p></div></div></div>{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h3>{name}</h3><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></div>)}</div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
+      <footer id="contact"><div className="container footer-top"><div className="footer-title"><div className="footer-contact-head"><div><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p></div></div></div>{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h3>{name}</h3><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></div>)}<img className="footer-seal-corner" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU seal" /></div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
     </main>
   );
 }
