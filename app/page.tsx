@@ -112,8 +112,8 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <img className="pdeu-main-logo" src="/assets/pdeu-logo-new-transparent.png" alt="Pandit Deendayal Energy University" />
-            <img className="hero-icphd-logo" src="/assets/icphd-logo-transparent.png" alt="ICPHD 2026 logo" />
+            <img className="pdeu-main-logo" src="/assets/pdeu-logo-exact-uploaded.png" alt="Pandit Deendayal Energy University" />
+            <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
           </div>
 
           <div className="hero-title-block">
@@ -130,7 +130,7 @@ export default function Home() {
                 <p className="mini-label">ORGANISED BY</p>
                 <div className="organised-row">
                   <p className="org-copy">Department of Petroleum Engineering, Department of Chemical Engineering, Pandit Deendayal Energy University</p>
-                  <img className="organised-soet" src="/assets/soet-logo-final-transparent.png" alt="School of Energy Technology" />
+                  <img className="organised-soet" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
                 </div>
               </div>
               <div className="association-block">
@@ -194,7 +194,7 @@ export default function Home() {
         <div className="container">
           <div className="content-section highlights-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
-            <div className="highlight-grid">{highlights.map(([img, title, sub]) => <article className="highlight-card" key={title}><img src={`/assets/${img}`} alt="" /><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}</div>
+            <div className="highlight-grid">{highlights.map(([img, title, sub]) => <article className="highlight-card" key={title}><div className="highlight-icon"><img src={`/assets/${img}`} alt="" /></div><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}</div>
           </div>
 
           <div id="dates" className="content-section dates-section anchor-section">

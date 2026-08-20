@@ -1,7 +1,7 @@
 :root{--navy:#061b34;--navy2:#0d2d55;--blue:#2f78b6;--blue2:#64a9da;--ink:#173556;--muted:#5c6c7d;--soft:#eef4f8;--line:#cbd8e4;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}p{line-height:1.65}.container{width:min(1180px,calc(100% - 48px));margin:0 auto}.anchor-section{scroll-margin-top:82px}
 .nav{position:sticky;top:0;z-index:50;min-height:60px;padding:3px 24px;background:rgba(4,22,45,.98);border-bottom:1px solid #2b5e8d;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(10px)}.brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;font-weight:700}.brand img{width:62px;height:62px;object-fit:contain}.brand b{color:#5aa1d5}.nav nav{display:flex;gap:22px;color:#d8e7f4;font-size:14px}.nav nav a:hover{color:#fff}
-.hero{position:relative;overflow:hidden;color:#fff;background:#082544}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,38,88,.82),rgba(7,52,112,.68) 58%,rgba(7,52,112,.54)),linear-gradient(0deg,rgba(4,34,76,.68),rgba(6,44,96,.44) 65%,rgba(6,43,91,.58))}.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 42px}.top-logos{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:96px;padding-bottom:8px}.pdeu-main-logo{width:min(560px,62vw);height:92px;object-fit:contain;object-position:left center}.hero-icphd-logo{width:150px;height:92px;object-fit:contain;background:transparent;border:0;border-radius:0}.hero-title-block{max-width:1040px;margin:0 auto;text-align:center;padding-top:4px}.edition{margin:14px 0 8px;letter-spacing:5px;color:#72afd9;font-size:14px;font-weight:800}.hero h1,.hero h2,.tagline{text-align:center;margin:0}.hero h1{font-size:clamp(26px,3.2vw,42px);font-style:italic}.hero h2{margin-top:8px;font-size:clamp(22px,2.7vw,34px);color:#3f89c3;line-height:1.05;white-space:nowrap}.hero h2 span{color:#3f89c3}.tagline{margin-top:12px;font-size:clamp(16px,1.8vw,24px);font-weight:800;white-space:nowrap}.date-pill{width:fit-content;max-width:100%;margin:24px auto 0;padding:12px 24px;border:1px solid #2f78b6;border-radius:30px;background:rgba(6,35,65,.82);font-size:16px;text-align:center}
+.hero{position:relative;overflow:hidden;color:#fff;background:#082544}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,25,58,.88),rgba(5,45,91,.80) 55%,rgba(4,37,78,.76)),linear-gradient(0deg,rgba(2,25,56,.78),rgba(4,39,82,.66) 58%,rgba(3,30,67,.78))}.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 42px}.top-logos{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:96px;padding-bottom:8px}.pdeu-main-logo{width:min(600px,64vw);height:108px;object-fit:contain;object-position:left center}.hero-soet-logo{width:168px;height:108px;object-fit:contain;object-position:center;background:transparent;border:0;border-radius:0}.hero-title-block{max-width:1040px;margin:0 auto;text-align:center;padding-top:4px}.edition{margin:14px 0 8px;letter-spacing:5px;color:#f2f7fc;font-size:14px;font-weight:800}.hero h1,.hero h2,.tagline{text-align:center;margin:0}.hero h1{font-size:clamp(26px,3.2vw,42px);font-style:italic;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.28)}.hero h2{margin-top:8px;font-size:clamp(22px,2.7vw,34px);color:#63b7ec;text-shadow:0 2px 10px rgba(0,0,0,.22);line-height:1.05;white-space:nowrap}.hero h2 span{color:#3f89c3}.tagline{margin-top:12px;font-size:clamp(16px,1.8vw,24px);font-weight:800;white-space:nowrap;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.24)}.date-pill{width:fit-content;max-width:100%;margin:24px auto 0;padding:12px 24px;border:1px solid #2f78b6;border-radius:30px;background:rgba(6,35,65,.82);font-size:16px;text-align:center}
 .hero-lower{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:stretch;margin-top:36px}.organizers-panel{display:flex;flex-direction:column;gap:14px}.org-block,.association-block{padding:12px 4px;border:0;background:transparent;border-radius:0}.org-block{border-left:0}.mini-label,.strip-label,.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#71acd5;margin:0 0 8px}.org-copy{color:#fff;margin:0;font-weight:700;font-size:15px;line-height:1.65}.association-block{border-top:0}.association-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:14px;margin-top:10px}.association-logos img{height:100px;width:100%;object-fit:contain;background:transparent;border-radius:0;padding:0}.association-logos .combined-chapters{height:100px;object-fit:contain}.guest-grid{display:grid;grid-template-columns:1fr;gap:14px}.guest-grid>div{min-height:155px;padding:22px;border:1px solid #2e7fbd;border-radius:14px;background:rgba(5,31,60,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.14)}.guest-grid span{font-size:12px;letter-spacing:1.4px}.guest-grid b{margin-top:3px;font-size:12px}.guest-grid strong{margin-top:10px;font-size:17px;color:#f4f8fc}
 .dark-strip{background:#0b2a50;color:#fff;padding:30px 24px 36px}.partners-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}.strip-block{padding:20px;border:1px solid rgba(111,169,214,.25);border-radius:14px;background:rgba(0,0,0,.09);text-align:center}.strip-label{text-align:center;margin:0 0 14px;color:#9ac5e4}.partner-placeholders{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.partner-placeholders span{border:1px solid #3b86be;border-radius:10px;padding:11px 16px;color:#f1f7fc;font-size:14px;background:rgba(0,0,0,.12);min-width:125px}.announcement{max-width:1180px;margin:24px auto 14px;background:#f2f7fb;color:#163353;border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;gap:20px;font-size:14px}.quick-actions{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1180px;margin:0 auto;gap:10px}.quick-actions a,.primary-btn{display:inline-flex;justify-content:center;align-items:center;min-height:46px;border-radius:8px;font-weight:800;transition:.2s ease}.quick-actions a{border:3px solid white;color:white}.quick-actions a:nth-child(2){background:var(--blue);border-color:var(--blue)}.quick-actions a:hover,.primary-btn:hover{transform:translateY(-2px)}
 .about{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:70px 0 82px}.section-title{margin-bottom:25px}.section-title h2{margin:0;font-size:clamp(21px,2.4vw,30px);color:var(--ink);line-height:1.1;white-space:nowrap}.section-title span{display:block;width:48px;height:3px;background:var(--blue2);margin-top:10px}.soft .section-title{text-align:center}.soft .section-title span{margin-left:auto;margin-right:auto}.about p{color:#4d5d6e;font-size:14px;margin:0 0 14px}
@@ -17,8 +17,8 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
 .org-copy{color:#fff;margin:0;font-weight:700;font-size:15px;line-height:1.45}
 
 @media(max-width:1000px){.theme-grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:34px}.highlight-grid{grid-template-columns:repeat(3,1fr)}.hero-lower,.venue-grid{grid-template-columns:1fr}.guest-grid{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr 1fr}.association-logos{grid-template-columns:repeat(2,1fr)}.dates-layout{grid-template-columns:1fr}.dates-photo-wrap{min-height:260px}.dates-photo{min-height:260px}}
-@media(max-width:720px){.nav{padding:8px 14px}.nav nav{gap:12px;font-size:12px}.brand{font-size:16px}.brand img{width:48px;height:48px}.hero-inner,.container{width:min(100% - 28px,1180px)}.top-logos{align-items:center}.pdeu-main-logo{width:calc(100% - 110px);height:76px}.hero-icphd-logo{width:96px;height:70px}.edition{margin-top:22px;letter-spacing:3px;font-size:11px}.hero-lower{grid-template-columns:1fr}.guest-grid{grid-template-columns:1fr 1fr}.association-logos img{height:72px}.announcement{flex-direction:column;text-align:center}.quick-actions{grid-template-columns:1fr}.highlight-grid,.theme-grid,.registration-grid{grid-template-columns:1fr}.date-row{grid-template-columns:125px 1fr}.countdown-wrap{flex-direction:column;align-items:flex-start}.countdown{grid-template-columns:repeat(4,minmax(62px,1fr));width:100%}.countdown strong{font-size:22px}.footer-top{grid-template-columns:1fr}.footer-seal{display:none}.footer-contact-head{align-items:flex-start}.footer-seal-main{width:78px;height:78px}.footer-seal-mini{width:40px;height:40px}.maps-card{min-height:360px}.map-preview{height:calc(100% - 78px);min-height:280px}.map-card-footer{flex-direction:column;align-items:flex-start}.content-section+.content-section{margin-top:70px}}
-@media(max-width:520px){.nav nav a:nth-child(2),.nav nav a:nth-child(3){display:none}.pdeu-main-logo{width:calc(100% - 92px);height:72px}.top-logos .soet{width:72px;height:72px}.date-pill{font-size:13px;text-align:center}.date-row{grid-template-columns:1fr;padding:8px 0}.date-row b{margin:0 0 5px}.hero h2{font-size:20px;white-space:nowrap}.hero h1{font-size:22px}.tagline{font-size:14px;white-space:nowrap}.maps-card strong{font-size:28px}.footer-pdeu-logo{width:220px}.guest-grid{grid-template-columns:1fr}.association-logos{grid-template-columns:1fr 1fr;gap:14px}.organised-row{grid-template-columns:minmax(0,1fr) 84px;gap:10px}.organised-soet{width:84px;height:54px}.org-copy{font-size:13px}.partners-grid{grid-template-columns:1fr}.hero-lower{gap:18px}}
+@media(max-width:720px){.nav{padding:8px 14px}.nav nav{gap:12px;font-size:12px}.brand{font-size:16px}.brand img{width:48px;height:48px}.hero-inner,.container{width:min(100% - 28px,1180px)}.top-logos{align-items:center}.pdeu-main-logo{width:calc(100% - 110px);height:76px}.hero-soet-logo{width:96px;height:70px}.edition{margin-top:22px;letter-spacing:3px;font-size:11px}.hero-lower{grid-template-columns:1fr}.guest-grid{grid-template-columns:1fr 1fr}.association-logos img{height:72px}.announcement{flex-direction:column;text-align:center}.quick-actions{grid-template-columns:1fr}.highlight-grid,.theme-grid,.registration-grid{grid-template-columns:1fr}.date-row{grid-template-columns:125px 1fr}.countdown-wrap{flex-direction:column;align-items:flex-start}.countdown{grid-template-columns:repeat(4,minmax(62px,1fr));width:100%}.countdown strong{font-size:22px}.footer-top{grid-template-columns:1fr}.footer-seal{display:none}.footer-contact-head{align-items:flex-start}.footer-seal-main{width:78px;height:78px}.footer-seal-mini{width:40px;height:40px}.maps-card{min-height:360px}.map-preview{height:calc(100% - 78px);min-height:280px}.map-card-footer{flex-direction:column;align-items:flex-start}.content-section+.content-section{margin-top:70px}}
+@media(max-width:520px){.nav nav a:nth-child(2),.nav nav a:nth-child(3){display:none}.pdeu-main-logo{width:calc(100% - 92px);height:72px}.top-logos .hero-soet-logo{width:72px;height:72px}.date-pill{font-size:13px;text-align:center}.date-row{grid-template-columns:1fr;padding:8px 0}.date-row b{margin:0 0 5px}.hero h2{font-size:20px;white-space:nowrap}.hero h1{font-size:22px}.tagline{font-size:14px;white-space:nowrap}.maps-card strong{font-size:28px}.footer-pdeu-logo{width:220px}.guest-grid{grid-template-columns:1fr}.association-logos{grid-template-columns:1fr 1fr;gap:14px}.organised-row{grid-template-columns:minmax(0,1fr) 84px;gap:10px}.organised-soet{width:84px;height:54px}.org-copy{font-size:13px}.partners-grid{grid-template-columns:1fr}.hero-lower{gap:18px}}
 
 
 /* Scroll reveal animations */
@@ -67,4 +67,145 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
     transform: none;
     transition: none;
   }
+}
+
+/* Final visual corrections */
+.mini-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 14px;
+  margin: 0 0 12px;
+  border: 1px solid rgba(151, 208, 244, .72);
+  border-radius: 999px;
+  background: rgba(7, 39, 74, .32);
+  color: #d9efff;
+  letter-spacing: 2.4px;
+}
+
+.org-block,
+.association-block {
+  padding: 10px 0;
+}
+
+.organised-row {
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 22px;
+}
+
+.organised-soet {
+  width: 126px;
+  height: 126px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #147db7;
+  justify-self: end;
+}
+
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+  align-items: center;
+  justify-items: center;
+}
+
+.association-logos img {
+  width: 100%;
+  height: 116px;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+}
+
+.association-logos .combined-chapters {
+  height: 116px;
+}
+
+/* Keep the theme cards clean; the blue gradient lives only outside the cards. */
+.theme-card {
+  background: #fff;
+  border-color: #b9d0e3;
+  box-shadow: 0 5px 16px rgba(26,60,91,.08);
+}
+
+.theme-card::before {
+  inset: -7px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+    rgba(5, 47, 98, .62),
+    rgba(39, 96, 153, .10) 48%,
+    rgba(5, 47, 98, .56));
+  filter: blur(8px);
+  opacity: .72;
+}
+
+.highlight-card {
+  padding: 20px 14px 22px;
+  min-height: 212px;
+}
+
+.highlight-icon {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 18px;
+  flex: 0 0 92px;
+  border-radius: 50%;
+  background: #0b3f7b;
+  display: grid;
+  place-items: center;
+}
+
+.highlight-icon img {
+  width: 116px;
+  height: 116px;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  margin: 0;
+  flex: none;
+}
+
+.highlight-card:last-child .highlight-icon img {
+  width: 122px;
+  height: 122px;
+}
+
+.highlight-card h3,
+.highlight-card p {
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #173556;
+}
+
+/* The networking artwork has extra transparent canvas; enlarge its visible artwork. */
+.highlight-card:last-child .highlight-icon img {
+  transform: scale(1.28);
+}
+
+.footer-title .footer-seal-mini {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  margin: 10px 0 0;
+  opacity: .92;
+}
+
+.footer-contact-head {
+  align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+  .association-logos { gap: 18px; }
+}
+
+@media (max-width: 720px) {
+  .organised-row { grid-template-columns: minmax(0, 1fr) 112px; }
+  .organised-soet { width: 92px; height: 92px; }
+  .association-logos { gap: 14px; }
+  .association-logos img,
+  .association-logos .combined-chapters { height: 88px; }
 }
