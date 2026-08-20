@@ -103,8 +103,8 @@ export default function Home() {
   return (
     <main>
       <header className="nav">
-        <a className="brand" href="#home"><img src="/assets/icphd-logo-transparent-clean.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
-        <nav><a href="#home">Home</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
+        <a className="brand" href="#home"><img src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
+        <nav aria-label="Primary navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#highlights">Highlights</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
       </header>
 
       <section className="reveal reveal-delay-1 hero" id="home">
@@ -113,7 +113,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="top-logos">
             <img className="pdeu-main-logo" src="/assets/pdeu-logo-exact-uploaded.png" alt="Pandit Deendayal Energy University" />
-            <img className="hero-icphd-logo" src="/assets/icphd-logo-transparent-clean.png" alt="ICPHD 2026 logo" />
+            <img className="hero-icphd-logo" src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" />
           </div>
 
           <div className="hero-title-block">
@@ -167,7 +167,7 @@ export default function Home() {
         <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
 
-      <section className="reveal reveal-delay-3 container about">
+      <section id="about" className="reveal reveal-delay-3 container about anchor-section">
         <div>
           <SectionTitle title="About ICPHD 2026" />
           <p>Welcome to the 4th Edition of the International Conference on Petroleum, Hydrogen, and Decarbonization (ICPHD), organized by the Department of Petroleum Engineering and the Department of Chemical Engineering, Pandit Deendayal Energy University (PDEU), Gandhinagar. The conference brings together leading experts, researchers, academicians, industry professionals, and young researchers to explore cutting-edge developments in petroleum, hydrogen, and decarbonization.</p>
@@ -192,7 +192,7 @@ export default function Home() {
 
       <section className="reveal reveal-delay-4 soft conference-content">
         <div className="container">
-          <div className="content-section highlights-section">
+          <div id="highlights" className="content-section highlights-section anchor-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
             <div className="highlight-grid">{highlights.map(([img, title, sub]) => <article className="highlight-card" key={title}><div className="highlight-icon"><img src={`/assets/${img}`} alt="" /></div><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}</div>
           </div>
@@ -218,7 +218,7 @@ export default function Home() {
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
           <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href={registrationUrl}>Click here for Registration</a><div className="fee-table"><div className="fee-head"><b>Category</b><b>Amount</b></div>{fees.map(([category, amount]) => <div className="fee-row" key={category}><span>{category}</span><b>{amount}</b></div>)}</div></article>
-          <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl}>Abstract Submission Link</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be added when supplied.</span></div></article>
+          <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl}>Abstract Submission Link</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
         </div>
       </section>
 

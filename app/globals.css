@@ -229,8 +229,8 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
 }
 
 .hero-icphd-logo {
-  width: 152px;
-  height: 120px;
+  width: 168px;
+  height: 132px;
   object-fit: contain;
   object-position: center;
   background: transparent;
@@ -437,4 +437,275 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
   .highlight-icon img,
   .highlight-card:last-child .highlight-icon img { width: 100px; height: 100px; }
   .highlight-card:last-child .highlight-icon img { width: 124px; height: 124px; }
+}
+
+
+/* FINAL VISUAL PASS */
+.nav .brand img {
+  width: 76px;
+  height: 76px;
+}
+
+/* Slightly lighter, readable fourth-edition label */
+.hero .edition {
+  color: #3d78ad;
+  text-shadow: 0 1px 4px rgba(255,255,255,.08);
+}
+
+/* Four association logos: equal-width cells, equal spacing, larger marks */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  align-items: center;
+  justify-items: center;
+}
+.association-logos img,
+.association-logos .combined-chapters {
+  width: 132px;
+  height: 122px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: none !important;
+}
+.association-logos img:nth-child(1),
+.association-logos img:nth-child(2),
+.association-logos img:nth-child(3),
+.association-logos img:nth-child(4) {
+  transform: none !important;
+}
+
+/* Highlight circles: consistent size and true center alignment */
+.highlight-icon {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  position: relative;
+}
+.highlight-icon img {
+  width: 96px !important;
+  height: 96px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  object-fit: contain;
+  object-position: 50% 50%;
+  transform: none !important;
+}
+.highlight-card:last-child .highlight-icon img {
+  width: 158px !important;
+  height: 158px !important;
+  margin: 0 !important;
+  object-fit: contain;
+  object-position: 50% 50%;
+  transform: none !important;
+}
+
+/* Conference themes: no interior gradient; dark-blue border only */
+.theme-card {
+  background: #fff !important;
+  border: 2px solid #174d82 !important;
+  box-shadow: 0 0 0 1px rgba(23,77,130,.08), 0 5px 16px rgba(26,60,91,.08) !important;
+}
+.theme-card::before {
+  display: none !important;
+}
+
+/* Registration table: unmistakable two-column table with full-height divider */
+.fee-table {
+  border: 1px solid #8fa8bd !important;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.fee-head,
+.fee-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(130px, .8fr);
+  padding: 0 !important;
+}
+.fee-head > b,
+.fee-row > span,
+.fee-row > b {
+  min-width: 0;
+  padding: 11px 12px;
+}
+.fee-head > b:first-child,
+.fee-row > span {
+  text-align: left !important;
+}
+.fee-head > b:last-child,
+.fee-row > b {
+  text-align: center !important;
+  border-left: 2px solid #9eb3c6;
+}
+.fee-row {
+  border-top: 1px solid #c8d5e0 !important;
+}
+.fee-row > b {
+  font-weight: 800;
+}
+
+/* Responsive logo sizing without reintroducing large gaps */
+@media (max-width: 1000px) {
+  .association-logos { gap: 2px; }
+  .association-logos img,
+  .association-logos .combined-chapters { width: 126px; height: 112px; }
+}
+@media (max-width: 720px) {
+  .nav .brand img { width: 62px; height: 62px; }
+  .association-logos { gap: 2px; }
+  .association-logos img,
+  .association-logos .combined-chapters { width: 110px; height: 96px; }
+  .highlight-icon { width: 80px; height: 80px; flex-basis: 80px; }
+  .highlight-icon img { width: 92px !important; height: 92px !important; }
+  .highlight-card:last-child .highlight-icon img { width: 136px !important; height: 136px !important; }
+}
+@media (max-width: 520px) {
+  .association-logos { gap: 0; }
+  .association-logos img,
+  .association-logos .combined-chapters { width: 92px; height: 82px; }
+}
+
+
+/* FINAL NAVIGATION + SCROLL ANIMATION PASS */
+.nav {
+  padding-inline: max(24px, calc((100% - 1180px) / 2));
+  justify-content: space-between;
+  gap: 20px;
+}
+.nav .brand {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.nav nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.nav nav a {
+  padding: 8px 7px;
+  line-height: 1;
+  color: #d8e7f4;
+  transition: color 180ms ease, transform 180ms ease;
+}
+.nav nav a:hover,
+.nav nav a:focus-visible {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Keep the navigation logo at its established size; enlarge only the hero ICPHD mark. */
+.nav .brand img {
+  width: 76px;
+  height: 76px;
+}
+.hero-icphd-logo {
+  width: 178px;
+  height: 136px;
+}
+
+/* Smooth anchor positioning for every navigation destination. */
+.anchor-section,
+#about,
+#highlights,
+#contact {
+  scroll-margin-top: 84px;
+}
+
+/* Make scroll reveals feel deliberate: the section arrives first, then its contents follow. */
+.reveal.is-visible .section-title,
+.reveal.is-visible .hero-title-block,
+.reveal.is-visible .top-logos,
+.reveal.is-visible .hero-lower,
+.reveal.is-visible .partners-grid,
+.reveal.is-visible .announcement,
+.reveal.is-visible .quick-actions,
+.reveal.is-visible .about > div,
+.reveal.is-visible .highlight-card,
+.reveal.is-visible .dates-layout,
+.reveal.is-visible .theme-card,
+.reveal.is-visible .registration-grid > article,
+.reveal.is-visible .venue-grid > *,
+.reveal.is-visible .countdown-wrap > *,
+.reveal.is-visible .footer-title,
+.reveal.is-visible .contact-card {
+  animation: contentRise 720ms cubic-bezier(.22,1,.36,1) both;
+}
+
+.reveal.is-visible .about > div:nth-child(2),
+.reveal.is-visible .highlight-card:nth-child(2),
+.reveal.is-visible .theme-card:nth-child(2),
+.reveal.is-visible .registration-grid > article:nth-child(2),
+.reveal.is-visible .contact-card:nth-child(2) { animation-delay: 90ms; }
+.reveal.is-visible .about > div:nth-child(3),
+.reveal.is-visible .highlight-card:nth-child(3),
+.reveal.is-visible .theme-card:nth-child(3),
+.reveal.is-visible .contact-card:nth-child(3) { animation-delay: 180ms; }
+.reveal.is-visible .highlight-card:nth-child(4),
+.reveal.is-visible .theme-card:nth-child(4),
+.reveal.is-visible .contact-card:nth-child(4) { animation-delay: 270ms; }
+.reveal.is-visible .highlight-card:nth-child(5),
+.reveal.is-visible .theme-card:nth-child(5) { animation-delay: 360ms; }
+.reveal.is-visible .theme-card:nth-child(6) { animation-delay: 450ms; }
+.reveal.is-visible .theme-card:nth-child(7) { animation-delay: 540ms; }
+.reveal.is-visible .theme-card:nth-child(8) { animation-delay: 630ms; }
+.reveal.is-visible .theme-card:nth-child(9) { animation-delay: 720ms; }
+.reveal.is-visible .theme-card:nth-child(10) { animation-delay: 810ms; }
+.reveal.is-visible .theme-card:nth-child(11) { animation-delay: 900ms; }
+.reveal.is-visible .theme-card:nth-child(12) { animation-delay: 990ms; }
+.reveal.is-visible .theme-card:nth-child(13) { animation-delay: 1080ms; }
+.reveal.is-visible .theme-card:nth-child(14) { animation-delay: 1170ms; }
+
+@keyframes contentRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .nav nav { gap: 8px; }
+  .nav nav a { padding-inline: 5px; }
+}
+
+@media (max-width: 720px) {
+  .nav { padding-inline: 14px; gap: 10px; }
+  .nav nav { gap: 5px; overflow-x: auto; justify-content: flex-end; scrollbar-width: none; }
+  .nav nav::-webkit-scrollbar { display: none; }
+  .nav nav a { padding-inline: 4px; }
+  .hero-icphd-logo { width: 112px; height: 98px; }
+}
+
+@media (max-width: 520px) {
+  .nav nav a:nth-child(2),
+  .nav nav a:nth-child(3) { display: inline; }
+  .nav nav { max-width: calc(100vw - 105px); }
+  .nav nav a { font-size: 11px; padding-inline: 3px; }
+  .hero-icphd-logo { width: 86px; height: 80px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal.is-visible .section-title,
+  .reveal.is-visible .hero-title-block,
+  .reveal.is-visible .top-logos,
+  .reveal.is-visible .hero-lower,
+  .reveal.is-visible .partners-grid,
+  .reveal.is-visible .announcement,
+  .reveal.is-visible .quick-actions,
+  .reveal.is-visible .about > div,
+  .reveal.is-visible .highlight-card,
+  .reveal.is-visible .dates-layout,
+  .reveal.is-visible .theme-card,
+  .reveal.is-visible .registration-grid > article,
+  .reveal.is-visible .venue-grid > *,
+  .reveal.is-visible .countdown-wrap > *,
+  .reveal.is-visible .footer-title,
+  .reveal.is-visible .contact-card {
+    animation: none;
+  }
 }
