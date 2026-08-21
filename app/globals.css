@@ -1,1568 +1,460 @@
-:root{--navy:#061b34;--navy2:#0d2d55;--blue:#2f78b6;--blue2:#64a9da;--ink:#173556;--muted:#5c6c7d;--soft:#eef4f8;--line:#cbd8e4;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}p{line-height:1.65}.container{width:min(1180px,calc(100% - 48px));margin:0 auto}.anchor-section{scroll-margin-top:82px}
-.nav{position:sticky;top:0;z-index:50;min-height:60px;padding:3px 24px;background:rgba(4,22,45,.98);border-bottom:1px solid #2b5e8d;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(10px)}.brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:20px;font-weight:700}.brand img{width:62px;height:62px;object-fit:contain}.brand b{color:#5aa1d5}.nav nav{display:flex;gap:22px;color:#d8e7f4;font-size:14px}.nav nav a:hover{color:#fff}
-.hero{position:relative;overflow:hidden;color:#fff;background:#082544}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,25,58,.88),rgba(5,45,91,.80) 55%,rgba(4,37,78,.76)),linear-gradient(0deg,rgba(2,25,56,.78),rgba(4,39,82,.66) 58%,rgba(3,30,67,.78))}.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 42px}.top-logos{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:96px;padding-bottom:8px}.pdeu-main-logo{width:min(600px,64vw);height:108px;object-fit:contain;object-position:left center}.hero-soet-logo{width:168px;height:108px;object-fit:contain;object-position:center;background:transparent;border:0;border-radius:0}.hero-title-block{max-width:1040px;margin:0 auto;text-align:center;padding-top:4px}.edition{margin:14px 0 8px;letter-spacing:5px;color:#0d2d55;font-size:14px;font-weight:800}.hero h1,.hero h2,.tagline{text-align:center;margin:0}.hero h1{font-size:clamp(26px,3.2vw,42px);font-style:italic;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.28)}.hero h2{margin-top:8px;font-size:clamp(22px,2.7vw,34px);color:#63b7ec;text-shadow:0 2px 10px rgba(0,0,0,.22);line-height:1.05;white-space:nowrap}.hero h2 span{color:#3f89c3}.tagline{margin-top:12px;font-size:clamp(16px,1.8vw,24px);font-weight:800;white-space:nowrap;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.24)}.date-pill{width:fit-content;max-width:100%;margin:24px auto 0;padding:12px 24px;border:1px solid #2f78b6;border-radius:30px;background:rgba(6,35,65,.82);font-size:16px;text-align:center}
-.hero-lower{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:stretch;margin-top:36px}.organizers-panel{display:flex;flex-direction:column;gap:14px}.org-block,.association-block{padding:12px 4px;border:0;background:transparent;border-radius:0}.org-block{border-left:0}.mini-label,.strip-label,.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#71acd5;margin:0 0 8px}.org-copy{color:#fff;margin:0;font-weight:700;font-size:15px;line-height:1.65}.association-block{border-top:0}.association-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:14px;margin-top:10px}.association-logos img{height:100px;width:100%;object-fit:contain;background:transparent;border-radius:0;padding:0}.association-logos .combined-chapters{height:100px;object-fit:contain}.guest-grid{display:grid;grid-template-columns:1fr;gap:14px}.guest-grid>div{min-height:155px;padding:22px;border:1px solid #2e7fbd;border-radius:14px;background:rgba(5,31,60,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.14)}.guest-grid span{font-size:12px;letter-spacing:1.4px}.guest-grid b{margin-top:3px;font-size:12px}.guest-grid strong{margin-top:10px;font-size:17px;color:#f4f8fc}
-.dark-strip{background:#0b2a50;color:#fff;padding:30px 24px 36px}.partners-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}.strip-block{padding:20px;border:1px solid rgba(111,169,214,.25);border-radius:14px;background:rgba(0,0,0,.09);text-align:center}.strip-label{text-align:center;margin:0 0 14px;color:#9ac5e4}.partner-placeholders{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.partner-placeholders span{border:1px solid #3b86be;border-radius:10px;padding:11px 16px;color:#f1f7fc;font-size:14px;background:rgba(0,0,0,.12);min-width:125px}.announcement{max-width:1180px;margin:24px auto 14px;background:#f2f7fb;color:#163353;border-radius:8px;padding:12px 20px;display:flex;justify-content:space-between;gap:20px;font-size:14px}.quick-actions{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1180px;margin:0 auto;gap:10px}.quick-actions a,.primary-btn{display:inline-flex;justify-content:center;align-items:center;min-height:46px;border-radius:8px;font-weight:800;transition:.2s ease}.quick-actions a{border:3px solid white;color:white}.quick-actions a:nth-child(2){background:var(--blue);border-color:var(--blue)}.quick-actions a:hover,.primary-btn:hover{transform:translateY(-2px)}
-.about{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:70px 0 82px}.section-title{margin-bottom:25px}.section-title h2{margin:0;font-size:clamp(21px,2.4vw,30px);color:var(--ink);line-height:1.1;white-space:nowrap}.section-title span{display:block;width:48px;height:3px;background:var(--blue2);margin-top:10px}.soft .section-title{text-align:center}.soft .section-title span{margin-left:auto;margin-right:auto}.about p{color:#4d5d6e;font-size:14px;margin:0 0 14px}
-.soft{background:var(--soft)}.conference-content{padding:78px 0 104px}.content-section+.content-section{margin-top:92px}.highlights-section{padding-bottom:6px}.highlight-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;align-items:stretch}.highlight-card{background:#fff;border:1px solid #d9e3eb;border-radius:14px;padding:24px 14px;text-align:center;box-shadow:0 5px 18px rgba(22,52,81,.07);min-height:205px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}.highlight-card img{width:96px;height:96px;object-fit:contain;object-position:center;margin:0 auto 16px;background:#0b3f7b;border-radius:50%;padding:8px;flex:0 0 96px}.highlight-card h3,.highlight-card p{margin:0;font-size:14px;line-height:1.35;font-weight:800;color:#173556}.highlight-card p{margin-top:5px}
-.dates-section{padding-top:2px}.dates-panel{position:relative;overflow:hidden;background:#fff;border:1px solid #d7e1e9;border-radius:16px;box-shadow:0 8px 25px rgba(25,56,86,.07)}.dates-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);align-items:stretch;min-height:430px}.dates-table{padding:24px 24px 24px 28px}.date-row{display:grid;grid-template-columns:205px 1fr;min-height:50px;border-bottom:1px solid #d6e0e8;align-items:center}.date-row:last-child{border-bottom:0}.date-row b{background:#193a61;color:#fff;padding:11px 12px;margin-right:14px;border-radius:5px;text-align:center}.date-row span{font-size:14px;color:#263f59}.dates-photo-wrap{min-height:100%;overflow:hidden;background:#0b2a50}.dates-photo{width:100%;height:100%;min-height:430px;object-fit:cover;object-position:center}
-.theme-section{padding-top:2px}.theme-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.theme-card{position:relative;z-index:0;background:radial-gradient(circle at center,#ffffff 0%,#f3f9fe 68%,#e8f3fb 100%);border:1px solid #b8d2e7;border-radius:12px;padding:22px;min-height:100%;box-shadow:0 5px 16px rgba(26,60,91,.09)}.theme-card::before{content:"";position:absolute;inset:-4px;border-radius:15px;background:linear-gradient(135deg,rgba(31,91,145,.55),rgba(112,177,220,.12) 48%,rgba(31,91,145,.48));filter:blur(5px);opacity:.65;z-index:-1}.theme-card h3{margin:0 0 15px;text-align:center;font-size:16px;line-height:1.3;color:#18395c}.theme-card ul{padding-left:19px;margin:0}.theme-card li{font-size:13px;line-height:1.45;margin:6px 0}
-.registration{padding:82px 0}.registration>.section-title{text-align:center}.registration>.section-title span{margin-left:auto;margin-right:auto}.registration-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px}.registration-grid article{background:#fff;border:1px solid #d7e1e9;border-radius:14px;padding:26px;box-shadow:0 5px 18px rgba(22,52,81,.05)}.registration-grid article h3{font-size:25px;margin:0 0 10px}.registration-grid ul{padding-left:20px;color:#4e5e70}.registration-grid li{margin:9px 0;line-height:1.5;font-size:14px}.primary-btn{width:100%;margin:14px 0;background:var(--blue);color:#fff}.fee-table{border:1px solid #d4dfe8}.fee-head,.fee-row{display:grid;grid-template-columns:1.3fr 1fr}.fee-head{background:#193a61;color:#fff;padding:10px}.fee-row{padding:9px 10px;border-top:1px solid #dfe7ed;font-size:13px;font-weight:700}.fee-row span,.fee-row b{text-align:center}.bank-placeholder{min-height:170px;border:2px dashed #8da4b7;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-top:12px;background:#fafafa;border-radius:10px}.bank-placeholder b{font-size:30px;color:#60798f}.bank-placeholder span{color:#777;margin-top:8px;font-size:13px}
-.venue{padding:82px 0}.venue-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:stretch}.venue-copy{background:#fff;border:1px solid #cbdbe8;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(25,56,86,.06)}.venue-building{width:100%;height:290px;object-fit:cover}.venue-copy-inner{padding:25px}.venue-copy h3{font-size:28px;margin:0 0 10px}.address{font-size:18px;line-height:1.4}.venue-copy p:not(.address){font-size:14px;color:#556474}.maps-card{min-height:100%;border:1px solid #2f78b6;border-radius:16px;background:#0b2a50;color:#fff;padding:0;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 8px 25px rgba(25,56,86,.10);transition:.2s ease}.map-preview{height:calc(100% - 78px);min-height:300px;background:#dfe8ee;overflow:hidden}.map-preview img{width:100%;height:100%;object-fit:cover}.map-card-footer{min-height:78px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:#0b2a50}.map-card-footer span{font-size:11px;letter-spacing:2.5px;color:#9fd0ee}.map-card-footer strong{font-size:18px;color:#fff}.maps-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(25,56,86,.18)}
-.countdown-section{background:#0b2a50;color:#fff;padding:58px 0}.countdown-wrap{display:flex;justify-content:space-between;align-items:center;gap:30px}.countdown-wrap h2{font-size:32px;margin:0}.countdown-wrap p:not(.eyebrow){color:#d2e0ed}.countdown{display:grid;grid-template-columns:repeat(4,92px);gap:8px}.countdown div{border:1px solid #2f78b6;background:rgba(0,0,0,.12);border-radius:10px;padding:12px;text-align:center}.countdown strong{display:block;font-size:28px}.countdown span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#8dbde0}
-footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:22px;padding:30px 0 34px;align-items:start;min-height:190px}.footer-title h2{margin:0}.footer-title p{color:#9bb4cb}.footer-seal-mini{display:block;width:44px;height:44px;object-fit:contain;background:transparent;margin:7px 0 0 auto;opacity:.82}.footer-contact-head{display:flex;align-items:center;gap:18px}.footer-seal-main{width:92px;height:92px;object-fit:contain;background:transparent}.contact-card h3{margin:0 0 2px;font-size:16px}.contact-card p{margin:0 0 6px;color:#b9cad9}.contact-card a{display:block;color:#e6f2fc;font-size:14px;margin:3px 0}.footer-seal{width:78px;height:88px;object-fit:contain;background:transparent}.copyright{border-top:1px solid #2e6c9d;padding:13px 20px;text-align:center;color:#9db4cb;font-size:13px}
-.organised-row{display:grid;grid-template-columns:minmax(0,1fr) 130px;align-items:center;gap:18px}
-.organised-soet{width:130px;height:70px;justify-self:end;object-fit:contain;background:transparent}
-.org-copy{color:#fff;margin:0;font-weight:700;font-size:15px;line-height:1.45}
-
-@media(max-width:1000px){.theme-grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:34px}.highlight-grid{grid-template-columns:repeat(3,1fr)}.hero-lower,.venue-grid{grid-template-columns:1fr}.guest-grid{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr 1fr}.association-logos{grid-template-columns:repeat(2,1fr)}.dates-layout{grid-template-columns:1fr}.dates-photo-wrap{min-height:260px}.dates-photo{min-height:260px}}
-@media(max-width:720px){.nav{padding:8px 14px}.nav nav{gap:12px;font-size:12px}.brand{font-size:16px}.brand img{width:48px;height:48px}.hero-inner,.container{width:min(100% - 28px,1180px)}.top-logos{align-items:center}.pdeu-main-logo{width:calc(100% - 110px);height:76px}.hero-soet-logo{width:96px;height:70px}.edition{margin-top:22px;letter-spacing:3px;font-size:11px}.hero-lower{grid-template-columns:1fr}.guest-grid{grid-template-columns:1fr 1fr}.association-logos img{height:72px}.announcement{flex-direction:column;text-align:center}.quick-actions{grid-template-columns:1fr}.highlight-grid,.theme-grid,.registration-grid{grid-template-columns:1fr}.date-row{grid-template-columns:125px 1fr}.countdown-wrap{flex-direction:column;align-items:flex-start}.countdown{grid-template-columns:repeat(4,minmax(62px,1fr));width:100%}.countdown strong{font-size:22px}.footer-top{grid-template-columns:1fr}.footer-seal{display:none}.footer-contact-head{align-items:flex-start}.footer-seal-main{width:78px;height:78px}.footer-seal-mini{width:40px;height:40px}.maps-card{min-height:360px}.map-preview{height:calc(100% - 78px);min-height:280px}.map-card-footer{flex-direction:column;align-items:flex-start}.content-section+.content-section{margin-top:70px}}
-@media(max-width:520px){.nav nav a:nth-child(2),.nav nav a:nth-child(3){display:none}.pdeu-main-logo{width:calc(100% - 92px);height:72px}.top-logos .hero-soet-logo{width:72px;height:72px}.date-pill{font-size:13px;text-align:center}.date-row{grid-template-columns:1fr;padding:8px 0}.date-row b{margin:0 0 5px}.hero h2{font-size:20px;white-space:nowrap}.hero h1{font-size:22px}.tagline{font-size:14px;white-space:nowrap}.maps-card strong{font-size:28px}.footer-pdeu-logo{width:220px}.guest-grid{grid-template-columns:1fr}.association-logos{grid-template-columns:1fr 1fr;gap:14px}.organised-row{grid-template-columns:minmax(0,1fr) 84px;gap:10px}.organised-soet{width:84px;height:54px}.org-copy{font-size:13px}.partners-grid{grid-template-columns:1fr}.hero-lower{gap:18px}}
-
-
-/* Scroll reveal animations */
-.reveal,
-.reveal-left,
-.reveal-right,
-.reveal-scale {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 700ms ease, transform 700ms cubic-bezier(.22,1,.36,1);
-  will-change: opacity, transform;
+:root {
+  --navy: #061d39;
+  --navy-2: #0b2c52;
+  --blue: #1b6fae;
+  --blue-light: #62b9ec;
+  --ink: #10263e;
+  --muted: #607287;
+  --paper: #f5f8fb;
+  --white: #fff;
+  --line: rgba(8, 42, 76, 0.16);
+  --shadow: 0 18px 45px rgba(4, 26, 48, 0.12);
 }
 
-.reveal-left {
-  transform: translateX(-36px);
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
 }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; }
 
-.reveal-right {
-  transform: translateX(36px);
+.container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.anchor-section { scroll-margin-top: 88px; }
+
+/* NAVIGATION */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 8px 28px;
+  background: rgba(5, 26, 50, 0.97);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(14px);
 }
-
-.reveal-scale {
-  transform: scale(.94);
-}
-
-.reveal.is-visible,
-.reveal-left.is-visible,
-.reveal-right.is-visible,
-.reveal-scale.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-.reveal-delay-1 { transition-delay: 80ms; }
-.reveal-delay-2 { transition-delay: 160ms; }
-.reveal-delay-3 { transition-delay: 240ms; }
-.reveal-delay-4 { transition-delay: 320ms; }
-.reveal-delay-5 { transition-delay: 400ms; }
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-/* Final visual corrections */
-.mini-label {
+.brand {
   display: inline-flex;
   align-items: center;
-  width: fit-content;
-  padding: 6px 14px;
-  margin: 0 0 12px;
-  border: 1px solid rgba(151, 208, 244, .72);
-  border-radius: 999px;
-  background: rgba(7, 39, 74, .32);
-  color: #d9efff;
-  letter-spacing: 2.4px;
-}
-
-.org-block,
-.association-block {
-  padding: 10px 0;
-}
-
-.organised-row {
-  grid-template-columns: minmax(0, 1fr) 150px;
-  gap: 22px;
-}
-
-.organised-soet {
-  width: 126px;
-  height: 126px;
-  object-fit: contain;
-  border-radius: 6px;
-  background: #147db7;
-  justify-self: end;
-}
-
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 26px;
-  align-items: center;
-  justify-items: center;
-}
-
-.association-logos img {
-  width: 100%;
-  height: 116px;
-  object-fit: contain;
-  background: transparent;
-  padding: 0;
-}
-
-.association-logos .combined-chapters {
-  height: 116px;
-}
-
-/* Keep the theme cards clean; the blue gradient lives only outside the cards. */
-.theme-card {
-  background: #fff;
-  border-color: #b9d0e3;
-  box-shadow: 0 5px 16px rgba(26,60,91,.08);
-}
-
-.theme-card::before {
-  inset: -7px;
-  border-radius: 16px;
-  background: linear-gradient(135deg,
-    rgba(5, 47, 98, .62),
-    rgba(39, 96, 153, .10) 48%,
-    rgba(5, 47, 98, .56));
-  filter: blur(8px);
-  opacity: .72;
-}
-
-.highlight-card {
-  padding: 20px 14px 22px;
-  min-height: 212px;
-}
-
-.highlight-icon {
-  position: relative;
-  width: 92px;
-  height: 92px;
-  margin: 0 auto 18px;
-  flex: 0 0 92px;
-  border-radius: 50%;
-  background: #0b3f7b;
-  display: grid;
-  place-items: center;
-}
-
-.highlight-icon img {
-  width: 116px;
-  height: 116px;
-  object-fit: contain;
-  object-position: center;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  margin: 0;
-  flex: none;
-}
-
-.highlight-card:last-child .highlight-icon img {
-  width: 122px;
-  height: 122px;
-}
-
-.highlight-card h3,
-.highlight-card p {
-  font-size: 14px;
-  line-height: 1.35;
-  font-weight: 800;
-  color: #173556;
-}
-
-/* The networking artwork has extra transparent canvas; enlarge its visible artwork. */
-.highlight-card:last-child .highlight-icon img {
-  transform: scale(1.28);
-}
-
-.footer-title .footer-seal-mini {
-  width: 68px;
-  height: 68px;
-  object-fit: contain;
-  margin: 10px 0 0;
-  opacity: .92;
-}
-
-.footer-contact-head {
-  align-items: flex-start;
-}
-
-@media (max-width: 1000px) {
-  .association-logos { gap: 18px; }
-}
-
-@media (max-width: 720px) {
-  .organised-row { grid-template-columns: minmax(0, 1fr) 112px; }
-  .organised-soet { width: 92px; height: 92px; }
-  .association-logos { gap: 14px; }
-  .association-logos img,
-  .association-logos .combined-chapters { height: 88px; }
-}
-
-/* Latest visual corrections */
-.nav .brand img {
-  width: 68px;
-  height: 68px;
-}
-
-/* Keep the campus visible beneath a rich blue tint, matching the supplied reference. */
-.hero-overlay {
-  background:
-    linear-gradient(180deg, rgba(4, 34, 72, .48), rgba(3, 48, 92, .58)),
-    linear-gradient(90deg, rgba(3, 29, 65, .56), rgba(5, 50, 94, .50) 55%, rgba(3, 38, 79, .46));
-}
-
-.pdeu-main-logo {
-  width: min(650px, 68vw);
-  height: 120px;
-}
-
-.hero-icphd-logo {
-  width: 168px;
-  height: 132px;
-  object-fit: contain;
-  object-position: center;
-  background: transparent;
-}
-
-/* SOET is only used beside the organised-by text. */
-.organised-soet {
-  width: 132px;
-  height: 132px;
-  object-fit: contain;
-  background: #147db7;
-  border-radius: 6px;
-}
-
-.org-copy {
-  font-size: 17px;
-  line-height: 1.48;
-}
-
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.association-logos img,
-.association-logos .combined-chapters {
-  height: 126px;
-  width: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-
-/* Smaller, cleaner outside-only theme glow; the cards themselves stay solid white. */
-.theme-card {
-  background: #fff;
-  border-color: #b9d0e3;
-  box-shadow: 0 4px 14px rgba(26,60,91,.08);
-}
-
-.theme-card::before {
-  inset: -4px;
-  border-radius: 15px;
-  background: linear-gradient(135deg,
-    rgba(7, 57, 112, .34),
-    rgba(45, 111, 171, .06) 50%,
-    rgba(7, 57, 112, .28));
-  filter: blur(3px);
-  opacity: .55;
-  z-index: -1;
-}
-
-.highlight-icon {
-  width: 88px;
-  height: 88px;
-  flex-basis: 88px;
-  margin-bottom: 18px;
-}
-
-.highlight-icon img {
-  width: 112px;
-  height: 112px;
-  object-fit: contain;
-  object-position: center;
-  transform: translate(0, 0);
-}
-
-.highlight-card:last-child .highlight-icon img {
-  width: 128px;
-  height: 128px;
-  transform: translate(0, 0);
-}
-
-@media (max-width: 720px) {
-  .hero-icphd-logo { width: 96px; height: 88px; }
-  .pdeu-main-logo { width: calc(100% - 112px); height: 82px; }
-  .association-logos { gap: 8px; }
-  .association-logos img,
-  .association-logos .combined-chapters { height: 92px; }
-  .organised-soet { width: 96px; height: 96px; }
-  .org-copy { font-size: 14px; }
-}
-
-@media (max-width: 520px) {
-  .hero-icphd-logo { width: 72px; height: 72px; }
-  .pdeu-main-logo { width: calc(100% - 88px); height: 74px; }
-  .association-logos { gap: 6px; }
-  .association-logos img,
-  .association-logos .combined-chapters { height: 78px; }
-}
-
-
-/* FULL MERGED NAVIGATION FIX */
-.nav {
-  padding-inline: max(24px, calc((100% - 1180px) / 2));
-  gap: 28px;
-  justify-content: flex-start;
-}
-.nav .brand { flex: 0 0 auto; white-space: nowrap; }
-.nav nav { flex: 0 1 auto; align-items: center; gap: 10px; white-space: nowrap; }
-.nav nav a { padding: 7px 5px; line-height: 1; }
-@media (max-width: 1000px) { .nav { gap: 20px; } .nav nav { gap: 7px; } }
-@media (max-width: 720px) { .nav { padding-inline: 14px; gap: 12px; } .nav nav { gap: 4px; } .nav nav a { padding-inline: 3px; } }
-
-/* Latest requested corrections: student-chapter alignment, highlight centering,
-   flat conference-theme cards, and registration-table columns. */
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-  align-items: center;
-  justify-items: center;
-}
-.association-logos img,
-.association-logos .combined-chapters {
-  height: 138px;
-  width: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-.association-logos img:nth-child(1) { transform: scale(1.08); }
-.association-logos img:nth-child(2) { transform: scale(1.08); }
-.association-logos img:nth-child(3) { transform: scale(1.08); }
-.association-logos img:nth-child(4) { transform: scale(1.04); }
-
-/* Highlight artwork sits exactly in the middle of each blue circle. */
-.highlight-icon {
-  width: 84px;
-  height: 84px;
-  flex: 0 0 84px;
-  margin: 0 auto 18px;
-  display: grid;
-  place-items: center;
-  overflow: visible;
-}
-.highlight-icon img,
-.highlight-card:last-child .highlight-icon img {
-  display: block;
-  width: 104px;
-  height: 104px;
-  margin: 0;
-  padding: 0;
-  object-fit: contain;
-  object-position: 50% 50%;
-  transform: none;
-}
-.highlight-card:last-child .highlight-icon img {
-  width: 136px;
-  height: 136px;
-}
-
-/* No gradient inside conference-theme cards: solid cards + dark-blue outline only. */
-.theme-card {
-  background: #fff !important;
-  border: 1px solid #164b80 !important;
-  box-shadow: 0 0 0 1px rgba(22,75,128,.12), 0 5px 16px rgba(26,60,91,.08) !important;
-}
-.theme-card::before {
-  inset: -4px;
-  background: transparent !important;
-  border: 1px solid rgba(22,75,128,.42);
-  filter: none !important;
-  opacity: 1 !important;
-  z-index: -1;
-}
-
-/* Registration fee table: visible column separation and requested alignment. */
-.fee-table {
-  border: 1px solid #9eb3c6;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.fee-head,
-.fee-row {
-  grid-template-columns: minmax(0, 1.45fr) minmax(130px, .8fr);
-}
-.fee-head {
-  padding: 11px 12px;
-}
-.fee-head b:first-child { text-align: left; }
-.fee-head b:last-child { text-align: center; border-left: 1px solid rgba(255,255,255,.45); }
-.fee-row {
-  padding: 10px 12px;
-  border-top: 1px solid #d4dee7;
-}
-.fee-row span {
-  text-align: left !important;
-  padding-right: 12px;
-}
-.fee-row b {
-  text-align: center !important;
-  border-left: 1px solid #d4dee7;
-  padding-left: 12px;
-  font-weight: 800;
-}
-
-@media (max-width: 720px) {
-  .association-logos { gap: 4px; }
-  .association-logos img,
-  .association-logos .combined-chapters { height: 96px; }
-  .association-logos img:nth-child(1),
-  .association-logos img:nth-child(2),
-  .association-logos img:nth-child(3),
-  .association-logos img:nth-child(4) { transform: none; }
-  .highlight-icon { width: 80px; height: 80px; flex-basis: 80px; }
-  .highlight-icon img,
-  .highlight-card:last-child .highlight-icon img { width: 100px; height: 100px; }
-  .highlight-card:last-child .highlight-icon img { width: 124px; height: 124px; }
-}
-
-
-/* FINAL VISUAL PASS */
-.nav .brand img {
-  width: 76px;
-  height: 76px;
-}
-
-/* Slightly lighter, readable fourth-edition label */
-.hero .edition {
-  color: #3d78ad;
-  text-shadow: 0 1px 4px rgba(255,255,255,.08);
-}
-
-/* Four association logos: equal-width cells, equal spacing, larger marks */
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2px;
-  align-items: center;
-  justify-items: center;
-}
-.association-logos img,
-.association-logos .combined-chapters {
-  width: 132px;
-  height: 122px;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: center;
-  transform: none !important;
-}
-.association-logos img:nth-child(1),
-.association-logos img:nth-child(2),
-.association-logos img:nth-child(3),
-.association-logos img:nth-child(4) {
-  transform: none !important;
-}
-
-/* Highlight circles: consistent size and true center alignment */
-.highlight-icon {
-  width: 88px;
-  height: 88px;
-  flex: 0 0 88px;
-  display: grid;
-  place-items: center;
-  overflow: visible;
-  position: relative;
-}
-.highlight-icon img {
-  width: 96px !important;
-  height: 96px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block;
-  object-fit: contain;
-  object-position: 50% 50%;
-  transform: none !important;
-}
-.highlight-card:last-child .highlight-icon img {
-  width: 158px !important;
-  height: 158px !important;
-  margin: 0 !important;
-  object-fit: contain;
-  object-position: 50% 50%;
-  transform: none !important;
-}
-
-/* Conference themes: no interior gradient; dark-blue border only */
-.theme-card {
-  background: #fff !important;
-  border: 2px solid #174d82 !important;
-  box-shadow: 0 0 0 1px rgba(23,77,130,.08), 0 5px 16px rgba(26,60,91,.08) !important;
-}
-.theme-card::before {
-  display: none !important;
-}
-
-/* Registration table: unmistakable two-column table with full-height divider */
-.fee-table {
-  border: 1px solid #8fa8bd !important;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.fee-head,
-.fee-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(130px, .8fr);
-  padding: 0 !important;
-}
-.fee-head > b,
-.fee-row > span,
-.fee-row > b {
-  min-width: 0;
-  padding: 11px 12px;
-}
-.fee-head > b:first-child,
-.fee-row > span {
-  text-align: left !important;
-}
-.fee-head > b:last-child,
-.fee-row > b {
-  text-align: center !important;
-  border-left: 2px solid #9eb3c6;
-}
-.fee-row {
-  border-top: 1px solid #c8d5e0 !important;
-}
-.fee-row > b {
-  font-weight: 800;
-}
-
-/* Responsive logo sizing without reintroducing large gaps */
-@media (max-width: 1000px) {
-  .association-logos { gap: 2px; }
-  .association-logos img,
-  .association-logos .combined-chapters { width: 126px; height: 112px; }
-}
-@media (max-width: 720px) {
-  .nav .brand img { width: 62px; height: 62px; }
-  .association-logos { gap: 2px; }
-  .association-logos img,
-  .association-logos .combined-chapters { width: 110px; height: 96px; }
-  .highlight-icon { width: 80px; height: 80px; flex-basis: 80px; }
-  .highlight-icon img { width: 92px !important; height: 92px !important; }
-  .highlight-card:last-child .highlight-icon img { width: 136px !important; height: 136px !important; }
-}
-@media (max-width: 520px) {
-  .association-logos { gap: 0; }
-  .association-logos img,
-  .association-logos .combined-chapters { width: 92px; height: 82px; }
-}
-
-
-/* FINAL NAVIGATION + SCROLL ANIMATION PASS */
-.nav {
-  padding-inline: max(24px, calc((100% - 1180px) / 2));
-  justify-content: space-between;
-  gap: 20px;
-}
-.nav .brand {
+  gap: 11px;
   flex: 0 0 auto;
-  white-space: nowrap;
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: .04em;
 }
-.nav nav {
+.brand img { width: 54px; height: 54px; object-fit: contain; }
+.brand b { color: var(--blue-light); }
+.desktop-nav {
   margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
-  flex: 0 0 auto;
-  white-space: nowrap;
+  gap: 24px;
 }
-.nav nav a {
-  padding: 8px 7px;
-  line-height: 1;
-  color: #d8e7f4;
-  transition: color 180ms ease, transform 180ms ease;
-}
-.nav nav a:hover,
-.nav nav a:focus-visible {
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-/* Keep the navigation logo at its established size; enlarge only the hero ICPHD mark. */
-.nav .brand img {
-  width: 76px;
-  height: 76px;
-}
-.hero-icphd-logo {
-  width: 178px;
-  height: 136px;
-}
-
-/* Smooth anchor positioning for every navigation destination. */
-.anchor-section,
-#about,
-#highlights,
-#contact {
-  scroll-margin-top: 84px;
-}
-
-/* Make scroll reveals feel deliberate: the section arrives first, then its contents follow. */
-.reveal.is-visible .section-title,
-.reveal.is-visible .hero-title-block,
-.reveal.is-visible .top-logos,
-.reveal.is-visible .hero-lower,
-.reveal.is-visible .partners-grid,
-.reveal.is-visible .announcement,
-.reveal.is-visible .quick-actions,
-.reveal.is-visible .about > div,
-.reveal.is-visible .highlight-card,
-.reveal.is-visible .dates-layout,
-.reveal.is-visible .theme-card,
-.reveal.is-visible .registration-grid > article,
-.reveal.is-visible .venue-grid > *,
-.reveal.is-visible .countdown-wrap > *,
-.reveal.is-visible .footer-title,
-.reveal.is-visible .contact-card {
-  animation: contentRise 720ms cubic-bezier(.22,1,.36,1) both;
-}
-
-.reveal.is-visible .about > div:nth-child(2),
-.reveal.is-visible .highlight-card:nth-child(2),
-.reveal.is-visible .theme-card:nth-child(2),
-.reveal.is-visible .registration-grid > article:nth-child(2),
-.reveal.is-visible .contact-card:nth-child(2) { animation-delay: 90ms; }
-.reveal.is-visible .about > div:nth-child(3),
-.reveal.is-visible .highlight-card:nth-child(3),
-.reveal.is-visible .theme-card:nth-child(3),
-.reveal.is-visible .contact-card:nth-child(3) { animation-delay: 180ms; }
-.reveal.is-visible .highlight-card:nth-child(4),
-.reveal.is-visible .theme-card:nth-child(4),
-.reveal.is-visible .contact-card:nth-child(4) { animation-delay: 270ms; }
-.reveal.is-visible .highlight-card:nth-child(5),
-.reveal.is-visible .theme-card:nth-child(5) { animation-delay: 360ms; }
-.reveal.is-visible .theme-card:nth-child(6) { animation-delay: 450ms; }
-.reveal.is-visible .theme-card:nth-child(7) { animation-delay: 540ms; }
-.reveal.is-visible .theme-card:nth-child(8) { animation-delay: 630ms; }
-.reveal.is-visible .theme-card:nth-child(9) { animation-delay: 720ms; }
-.reveal.is-visible .theme-card:nth-child(10) { animation-delay: 810ms; }
-.reveal.is-visible .theme-card:nth-child(11) { animation-delay: 900ms; }
-.reveal.is-visible .theme-card:nth-child(12) { animation-delay: 990ms; }
-.reveal.is-visible .theme-card:nth-child(13) { animation-delay: 1080ms; }
-.reveal.is-visible .theme-card:nth-child(14) { animation-delay: 1170ms; }
-
-@keyframes contentRise {
-  from { opacity: 0; transform: translateY(22px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 900px) {
-  .nav nav { gap: 8px; }
-  .nav nav a { padding-inline: 5px; }
-}
-
-@media (max-width: 720px) {
-  .nav { padding-inline: 14px; gap: 10px; }
-  .nav nav { gap: 5px; overflow-x: auto; justify-content: flex-end; scrollbar-width: none; }
-  .nav nav::-webkit-scrollbar { display: none; }
-  .nav nav a { padding-inline: 4px; }
-  .hero-icphd-logo { width: 112px; height: 98px; }
-}
-
-@media (max-width: 520px) {
-  .nav nav a:nth-child(2),
-  .nav nav a:nth-child(3) { display: inline; }
-  .nav nav { max-width: calc(100vw - 105px); }
-  .nav nav a { font-size: 11px; padding-inline: 3px; }
-  .hero-icphd-logo { width: 86px; height: 80px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal.is-visible .section-title,
-  .reveal.is-visible .hero-title-block,
-  .reveal.is-visible .top-logos,
-  .reveal.is-visible .hero-lower,
-  .reveal.is-visible .partners-grid,
-  .reveal.is-visible .announcement,
-  .reveal.is-visible .quick-actions,
-  .reveal.is-visible .about > div,
-  .reveal.is-visible .highlight-card,
-  .reveal.is-visible .dates-layout,
-  .reveal.is-visible .theme-card,
-  .reveal.is-visible .registration-grid > article,
-  .reveal.is-visible .venue-grid > *,
-  .reveal.is-visible .countdown-wrap > *,
-  .reveal.is-visible .footer-title,
-  .reveal.is-visible .contact-card {
-    animation: none;
-  }
-}
-
-/* Latest size refinements */
-.pdeu-main-logo {
-  width: min(640px, 68vw);
-  height: 116px;
-}
-
-/* Make the IADC + combined SEG/SIG/EAGE chapter marks more prominent while keeping
-   the four association slots evenly aligned. */
-.association-logos img:nth-child(2),
-.association-logos img:nth-child(3),
-.association-logos img:nth-child(4),
-.association-logos .combined-chapters {
-  width: 148px;
-  height: 136px;
-}
-
-/* Keep the last Conference Highlight illustration large and centered. */
-.highlight-card:last-child .highlight-icon {
-  width: 92px;
-  height: 92px;
-  flex-basis: 92px;
-  place-items: center;
-}
-.highlight-card:last-child .highlight-icon img {
-  width: 184px !important;
-  height: 184px !important;
-  margin: 0 !important;
-  object-fit: contain;
-  object-position: center;
-}
-
-/* Main hero heading above the Organized By section */
-.hero h1 {
-  font-size: clamp(30px, 3.7vw, 48px);
-}
-.hero h2 {
-  font-size: clamp(25px, 3.05vw, 38px);
-}
-.hero .tagline {
-  font-size: clamp(18px, 2vw, 27px);
-}
-
-@media (max-width: 1000px) {
-  .association-logos img:nth-child(2),
-  .association-logos img:nth-child(3),
-  .association-logos img:nth-child(4),
-  .association-logos .combined-chapters {
-    width: 136px;
-    height: 124px;
-  }
-}
-
-@media (max-width: 720px) {
-  .pdeu-main-logo { width: calc(100% - 110px); height: 82px; }
-  .association-logos img:nth-child(2),
-  .association-logos img:nth-child(3),
-  .association-logos img:nth-child(4),
-  .association-logos .combined-chapters {
-    width: 106px;
-    height: 94px;
-  }
-  .highlight-card:last-child .highlight-icon img {
-    width: 150px !important;
-    height: 150px !important;
-  }
-}
-
-/* Mobile-first final polish: keep the hero/nav inside the viewport and enlarge
-   association marks without forcing horizontal page overflow. */
-.association-logos img,
-.association-logos .combined-chapters {
-  width: 148px;
-  height: 136px;
-}
-
-/* Keep the main hero heading prominent on larger screens. */
-.hero h1 { font-size: clamp(28px, 3.5vw, 46px); }
-.hero h2 { font-size: clamp(24px, 3vw, 38px); }
-
-.highlight-icon {
-  width: 104px;
-  height: 104px;
-  flex-basis: 104px;
-  overflow: hidden;
-}
-.highlight-icon img {
-  width: 104px !important;
-  height: 104px !important;
-}
-.highlight-card:last-child .highlight-icon img {
-  width: 132px !important;
-  height: 132px !important;
-  transform: scale(1.08) !important;
-}
-
-@media (max-width: 720px) {
-  /* The nav becomes a compact horizontal strip instead of pushing the page
-     wider than the phone viewport. */
-  .nav {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 6px 10px;
-    gap: 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    justify-content: flex-start;
-  }
-  .nav::-webkit-scrollbar { display: none; }
-  .nav .brand img { width: 58px; height: 58px; }
-  .nav .brand { font-size: 15px; gap: 7px; }
-  .nav nav {
-    flex: 0 0 auto;
-    margin-left: auto;
-    gap: 5px;
-  }
-  .nav nav a { padding: 7px 4px; font-size: 12px; }
-
-  .top-logos {
-    width: 100%;
-    min-width: 0;
-    gap: 10px;
-  }
-  .pdeu-main-logo {
-    width: min(68vw, 430px);
-    max-width: calc(100% - 92px);
-    height: 76px;
-  }
-  .hero-icphd-logo {
-    width: 86px;
-    height: 86px;
-    flex: 0 0 86px;
-  }
-
-  /* Allow the long conference title/tagline to wrap naturally on phones. */
-  .hero h1,
-  .hero h2,
-  .tagline {
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-  .hero h1 { font-size: 25px; line-height: 1.12; }
-  .hero h2 { font-size: 21px; line-height: 1.15; }
-  .tagline { font-size: 15px; line-height: 1.3; }
-
-  /* Two-column association row: larger, readable marks with equal spacing. */
-  .association-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px 10px;
-    width: 100%;
-  }
-  .association-logos img,
-  .association-logos .combined-chapters {
-    width: 132px;
-    height: 104px;
-    max-width: 100%;
-  }
-
-  /* Keep every illustration completely inside its blue circle. */
-  .highlight-icon {
-    width: 94px;
-    height: 94px;
-    flex-basis: 94px;
-    overflow: hidden;
-  }
-  .highlight-icon img {
-    width: 90px !important;
-    height: 90px !important;
-  }
-  .highlight-card:last-child .highlight-icon img {
-    width: 112px !important;
-    height: 112px !important;
-    transform: scale(1.08) !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .hero-inner { width: calc(100% - 24px); }
-  .top-logos { gap: 7px; }
-  .pdeu-main-logo { max-width: calc(100% - 76px); height: 68px; }
-  .hero-icphd-logo { width: 74px; height: 74px; flex-basis: 74px; }
-  .hero h1 { font-size: 23px; }
-  .hero h2 { font-size: 19px; }
-  .tagline { font-size: 14px; }
-  .association-logos { gap: 10px 8px; }
-  .association-logos img,
-  .association-logos .combined-chapters { width: 124px; height: 96px; }
-}
-
-/* Association logos: match the supplied reference layout — five distinct, evenly spaced marks. */
-.association-logos {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
-  width: 100%;
-}
-.association-logos img,
-.association-logos .combined-chapters {
-  width: 100%;
-  height: 92px;
-  object-fit: contain;
-  object-position: center;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  margin: 0 auto;
-}
-
-@media (max-width: 720px) {
-  .association-logos {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 5px;
-  }
-  .association-logos img,
-  .association-logos .combined-chapters {
-    height: 70px;
-  }
-}
-@media (max-width: 520px) {
-  .association-logos {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 3px;
-  }
-  .association-logos img,
-  .association-logos .combined-chapters {
-    height: 62px;
-  }
-}
-.association-logos img:nth-child(1),
-.association-logos img:nth-child(2),
-.association-logos img:nth-child(3),
-.association-logos img:nth-child(4),
-.association-logos img:nth-child(5) { transform: none !important; }
-
-
-/* SEQUENCE-INSPIRED TYPOGRAPHY + MOBILE NAVIGATION */
-:root {
-  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-html, body, button, input, textarea, select {
-  font-family: var(--font-ui);
-}
-body {
-  letter-spacing: -0.01em;
-}
-.nav {
-  min-height: 68px;
-  padding-block: 5px;
-}
-.nav .brand {
-  font-size: 18px;
-  letter-spacing: -0.02em;
-}
-.nav nav a {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.hero h1 {
-  font-weight: 700;
-  letter-spacing: -0.035em;
-}
-.hero h2 {
-  font-weight: 800;
-  letter-spacing: -0.035em;
-}
-.hero .tagline {
+.desktop-nav a {
+  font-size: .96rem;
   font-weight: 650;
-  letter-spacing: -0.025em;
+  letter-spacing: .035em;
+  opacity: .92;
+  transition: color .2s ease, opacity .2s ease;
 }
-.section-title h2,
-.registration-grid article h3,
-.venue-copy h3,
-.countdown-wrap h2 {
-  letter-spacing: -0.03em;
-}
-
-.menu-toggle {
-  display: none;
-  width: 42px;
-  height: 42px;
-  padding: 8px;
-  border: 0;
-  border-radius: 10px;
-  background: transparent;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-}
-.menu-toggle span {
-  display: block;
-  width: 23px;
-  height: 2px;
-  border-radius: 999px;
-  background: #fff;
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-.nav.menu-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav.menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
-.nav.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.desktop-nav a:hover { color: var(--blue-light); opacity: 1; }
+.menu-toggle { display: none; border: 0; background: transparent; color: white; padding: 8px; cursor: pointer; }
+.menu-toggle span { display: block; width: 28px; height: 2px; margin: 5px 0; background: currentColor; border-radius: 10px; }
 .mobile-menu { display: none; }
 
-@media (max-width: 720px) {
-  .nav {
-    min-height: 66px;
-    padding: 5px 14px;
-    overflow: visible;
-  }
-  .nav .brand {
-    font-size: 16px;
-    gap: 8px;
-  }
-  .nav .brand img {
-    width: 56px;
-    height: 56px;
-  }
-  .desktop-nav { display: none !important; }
-  .menu-toggle { display: inline-flex; margin-left: auto; }
-  .mobile-menu {
-    position: fixed;
-    inset: 66px 0 0;
-    z-index: 49;
-    display: block;
-    background: rgba(5, 24, 47, .98);
-    backdrop-filter: blur(16px);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
-    overflow-y: auto;
-  }
-  .mobile-menu.is-open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .mobile-menu nav {
-    width: min(100% - 32px, 520px);
-    margin: 16px auto 32px;
-    display: grid;
-    gap: 6px;
-  }
-  .mobile-menu a {
-    display: block;
-    padding: 17px 18px;
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    background: rgba(255,255,255,.035);
-  }
-  .mobile-menu a:active,
-  .mobile-menu a:focus-visible { background: rgba(76, 161, 220, .18); }
-
-  .hero h1 { font-size: clamp(24px, 7vw, 31px); line-height: 1.08; }
-  .hero h2 { font-size: clamp(21px, 6vw, 28px); line-height: 1.12; }
-  .hero .tagline { font-size: clamp(15px, 4.2vw, 18px); line-height: 1.35; }
-  .section-title h2 { font-size: clamp(27px, 7vw, 36px); }
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 850px;
+  overflow: hidden;
+  color: white;
+  background: var(--navy);
 }
-
-/* Latest requested visual cleanup */
-.edition {
-  color: #86c8ef !important;
-  text-shadow: 0 1px 6px rgba(2, 25, 55, .45);
-}
-
-/* Use the higher-resolution transparent PDEU artwork in the hero. */
-.pdeu-main-logo {
-  width: min(650px, 69vw) !important;
-  height: 118px !important;
-  object-fit: contain;
-  object-position: left center;
-}
-
-/* SOET belongs beside the PDEU logo in the hero only. */
-.hero-soet-logo {
-  width: 154px !important;
-  height: 112px !important;
-  object-fit: contain;
-  object-position: center;
-  background: #147db7;
-  border: 0;
-  border-radius: 0;
-}
-.organised-row {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
-
-/* SPE: intentionally a little smaller than the other chapter marks. */
-.association-logos img:nth-child(2) {
-  width: 82% !important;
-  height: 82px !important;
-}
-
-/* The supplied association assets are transparent; never paint a black box behind them. */
-.association-logos img {
-  background: transparent !important;
-  mix-blend-mode: normal;
-}
-
-/* Crop the extra transparent canvas from the networking artwork and keep it centered. */
-.highlight-card:last-child .highlight-icon {
-  width: 94px !important;
-  height: 94px !important;
-  flex: 0 0 94px !important;
-  display: grid !important;
-  place-items: center !important;
-  overflow: hidden !important;
-}
-.highlight-card:last-child .highlight-icon img {
-  width: 84px !important;
-  height: 84px !important;
-  max-width: none !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  transform: none !important;
-  margin: 0 !important;
-}
-
-@media (max-width: 720px) {
-  .pdeu-main-logo {
-    width: min(67vw, 420px) !important;
-    max-width: calc(100% - 96px) !important;
-    height: 78px !important;
-  }
-  .hero-soet-logo {
-    width: 88px !important;
-    height: 72px !important;
-    flex: 0 0 88px !important;
-  }
-  .association-logos img:nth-child(2) {
-    width: 88% !important;
-    height: 68px !important;
-  }
-  .highlight-card:last-child .highlight-icon {
-    width: 90px !important;
-    height: 90px !important;
-    flex-basis: 90px !important;
-  }
-  .highlight-card:last-child .highlight-icon img {
-    width: 80px !important;
-    height: 80px !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .pdeu-main-logo {
-    max-width: calc(100% - 84px) !important;
-    height: 68px !important;
-  }
-  .hero-soet-logo {
-    width: 72px !important;
-    height: 66px !important;
-    flex-basis: 72px !important;
-  }
-  .association-logos img:nth-child(2) {
-    width: 88% !important;
-    height: 60px !important;
-  }
-}
-
-/* Current requested corrections */
-.nav { min-height: 66px; padding: 4px 26px; }
-.nav .brand { font-size: 21px; gap: 12px; }
-.nav .brand img { width: 70px; height: 70px; }
-.nav .desktop-nav { gap: 18px; font-size: 15.5px; font-weight: 600; }
-.nav .desktop-nav a { white-space: nowrap; }
-
-.top-logos {
-  min-height: 128px;
-  gap: 28px;
-}
-.hero-left-logos {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  min-width: 0;
-  flex: 1;
-}
-.pdeu-main-logo {
-  width: min(650px, 68vw) !important;
-  height: 118px !important;
-  object-fit: contain;
-  object-position: left center;
-  background: transparent !important;
-}
-.hero-soet-logo {
-  width: 126px !important;
-  height: 126px !important;
-  flex: 0 0 126px;
-  object-fit: contain;
-  background: #147db7 !important;
-  border-radius: 0;
-}
-.hero-icphd-logo {
-  width: 132px !important;
-  height: 132px !important;
-  flex: 0 0 132px;
-  object-fit: contain;
-  background: transparent !important;
-}
-
-/* Give the hero breathing room without changing its wording. */
-.hero-title-block { letter-spacing: .35px; }
-.hero .edition { letter-spacing: 6px; }
-.hero h1 { letter-spacing: .8px; }
-.hero h2 { letter-spacing: .65px; }
-.hero .tagline { letter-spacing: .7px; }
-.hero .date-pill { letter-spacing: .35px; }
-
-/* The guest boxes are intentionally removed; association now spans the hero width. */
-.hero-lower { grid-template-columns: 1fr !important; gap: 10px; }
-.association-block { width: 100%; }
-.association-logos {
+.hero-bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 18px !important;
-  margin-top: 12px;
-}
-.association-logos > img,
-.association-logos > .combined-chapters {
-  width: 100% !important;
-  height: 118px !important;
-  min-width: 0;
-  object-fit: contain;
-  background: transparent !important;
-}
-.association-logos > img:nth-child(2) {
-  width: 100% !important;
-  height: 118px !important;
-}
-.association-logos .combined-chapters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  overflow: visible;
-}
-.association-logos .combined-chapters > img {
-  width: 39%;
-  height: 96px;
-  object-fit: contain;
-  background: transparent !important;
-}
-.spg-mark {
-  width: 22%;
-  min-width: 34px;
-  color: #fff;
-  text-align: center;
-  line-height: 1.05;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.spg-mark strong { font-size: clamp(16px, 1.6vw, 24px); letter-spacing: .5px; }
-.spg-mark span { font-size: 6px; line-height: 1.15; text-transform: uppercase; letter-spacing: .2px; opacity: .95; }
-
-/* Keep the exact supplied PDEU artwork transparent; only the SOET mark keeps its blue field. */
-.association-logos img { background: transparent !important; }
-
-/* The final networking illustration should be smaller than the previous oversized pass, while staying centered. */
-.highlight-card:last-child .highlight-icon img {
-  width: 104px !important;
-  height: 104px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  transform: none !important;
-}
-
-@media (max-width: 1000px) {
-  .nav .desktop-nav { gap: 14px; font-size: 14px; }
-  .hero-left-logos { gap: 16px; }
-  .hero-soet-logo { width: 108px !important; height: 108px !important; flex-basis: 108px; }
-  .hero-icphd-logo { width: 112px !important; height: 112px !important; flex-basis: 112px; }
-  .pdeu-main-logo { width: min(610px, 67vw) !important; height: 104px !important; }
-  .association-logos { gap: 12px !important; }
-}
-
-@media (max-width: 720px) {
-  .nav { min-height: 62px; padding: 4px 14px; }
-  .nav .brand { font-size: 18px; gap: 9px; }
-  .nav .brand img { width: 58px; height: 58px; }
-  .nav .desktop-nav { display: none; }
-  .top-logos {
-    min-height: 92px;
-    gap: 10px;
-    align-items: center;
-  }
-  .hero-left-logos { gap: 8px; }
-  .pdeu-main-logo {
-    width: min(56vw, 390px) !important;
-    max-width: none !important;
-    height: 76px !important;
-  }
-  .hero-soet-logo {
-    width: 68px !important;
-    height: 68px !important;
-    flex-basis: 68px;
-  }
-  .hero-icphd-logo {
-    width: 72px !important;
-    height: 72px !important;
-    flex-basis: 72px;
-  }
-  .hero .edition { letter-spacing: 4px; }
-  .hero h1 { letter-spacing: .55px; }
-  .hero h2,
-  .hero .tagline { white-space: normal; }
-  .hero h2 { line-height: 1.16; }
-  .hero .tagline { line-height: 1.45; }
-  .association-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-  }
-  .association-logos > img,
-  .association-logos > .combined-chapters {
-    height: 88px !important;
-  }
-  .association-logos .combined-chapters > img { height: 70px; }
-  .spg-mark strong { font-size: 15px; }
-  .spg-mark span { font-size: 5px; }
-  .highlight-card:last-child .highlight-icon img {
-    width: 96px !important;
-    height: 96px !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .top-logos { min-height: 78px; }
-  .pdeu-main-logo { width: min(52vw, 280px) !important; height: 62px !important; }
-  .hero-soet-logo { width: 56px !important; height: 56px !important; flex-basis: 56px; }
-  .hero-icphd-logo { width: 60px !important; height: 60px !important; flex-basis: 60px; }
-  .hero-left-logos { gap: 5px; }
-  .association-logos { gap: 8px !important; }
-  .association-logos > img,
-  .association-logos > .combined-chapters { height: 74px !important; }
-  .association-logos .combined-chapters > img { height: 58px; }
-}
-
-/* User-requested final hero/nav corrections */
-.nav .brand,
-.nav .desktop-nav a {
-  letter-spacing: 0.02em;
-}
-.nav .brand {
-  font-size: 22px;
-}
-.nav .desktop-nav {
-  font-size: 16.5px;
-  gap: 20px;
-}
-
-/* Keep the exact supplied PDEU logo; only its black background is transparent. */
-.pdeu-main-logo {
-  width: min(660px, 69vw) !important;
-  height: 122px !important;
-  object-fit: contain !important;
-  object-position: left center !important;
-  background: transparent !important;
-}
-
-/* Hero has exactly three logo positions: PDEU + SOET on left, ICPHD on right. */
-.top-logos {
-  gap: 30px;
-}
-.hero-left-logos {
-  gap: 22px;
-}
-.hero-soet-logo {
-  width: 128px !important;
-  height: 128px !important;
-  flex: 0 0 128px !important;
-}
-.hero-icphd-logo {
-  width: 142px !important;
-  height: 142px !important;
-  flex: 0 0 142px !important;
-}
-
-/* Give the hero typography a little more breathing room. */
-.hero-title-block {
-  letter-spacing: 0.8px;
-}
-.hero h1 { letter-spacing: 1.1px !important; }
-.hero h2 { letter-spacing: 1px !important; }
-.hero .tagline { letter-spacing: 1px !important; }
-.hero .date-pill { letter-spacing: 0.7px !important; }
-.hero .edition { letter-spacing: 6.5px !important; }
-
-/* The association area uses all available hero width now that guest boxes are gone. */
-.hero-lower {
-  grid-template-columns: 1fr !important;
-}
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 18px !important;
-  align-items: center;
-}
-.association-logos > img,
-.association-logos > .combined-chapters {
-  width: 100% !important;
-  height: 124px !important;
-  min-width: 0 !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  background: transparent !important;
-  padding: 0 !important;
-}
-
-/* The supplied combined chapter artwork already contains SEG + SPG + EAGE. */
-.association-logos > .combined-chapters {
-  display: block !important;
-}
-
-/* Slightly smaller networking artwork, still centered in its circle. */
-.highlight-card:last-child .highlight-icon img {
-  width: 100px !important;
-  height: 100px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  transform: none !important;
-  margin: 0 !important;
-}
-
-/* Mobile: keep the three hero logos readable without overflowing. */
-@media (max-width: 720px) {
-  .nav .brand { font-size: 19px; }
-  .nav .brand img { width: 60px; height: 60px; }
-  .mobile-menu a { font-size: 18px !important; letter-spacing: 0.01em; }
-  .pdeu-main-logo {
-    width: min(56vw, 390px) !important;
-    height: 78px !important;
-  }
-  .hero-soet-logo {
-    width: 70px !important;
-    height: 70px !important;
-    flex-basis: 70px !important;
-  }
-  .hero-icphd-logo {
-    width: 76px !important;
-    height: 76px !important;
-    flex-basis: 76px !important;
-  }
-  .hero-left-logos { gap: 7px; }
-  .top-logos { gap: 8px; }
-  .association-logos {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 6px !important;
-  }
-  .association-logos > img,
-  .association-logos > .combined-chapters {
-    height: 82px !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .nav .brand { font-size: 18px; }
-  .nav .brand img { width: 56px; height: 56px; }
-  .pdeu-main-logo {
-    width: min(50vw, 270px) !important;
-    height: 64px !important;
-  }
-  .hero-soet-logo {
-    width: 56px !important;
-    height: 56px !important;
-    flex-basis: 56px !important;
-  }
-  .hero-icphd-logo {
-    width: 62px !important;
-    height: 62px !important;
-    flex-basis: 62px !important;
-  }
-  .association-logos > img,
-  .association-logos > .combined-chapters {
-    height: 70px !important;
-  }
-  .highlight-card:last-child .highlight-icon img {
-    width: 94px !important;
-    height: 94px !important;
-  }
-}
-
-/* User-requested association logo cleanup/alignment */
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  align-items: center;
-  justify-items: center;
-}
-.association-logos img,
-.association-logos .combined-chapters {
-  width: 100%;
-  height: 108px;
-  max-width: 230px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
-  transform: none !important;
 }
-/* FIPI is visually wider in its source artwork, so scale it down slightly to match the other three. */
-.association-logos img:first-child { width: 88%; }
-
-@media (max-width: 720px) {
-  .association-logos { gap: 10px; }
-  .association-logos img,
-  .association-logos .combined-chapters { height: 86px; max-width: 170px; }
-  .association-logos img:first-child { width: 86%; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 29, 57, .68), rgba(4, 43, 80, .76));
 }
-@media (max-width: 520px) {
-  .association-logos { gap: 8px; }
-  .association-logos img,
-  .association-logos .combined-chapters { height: 76px; max-width: 145px; }
-  .association-logos img:first-child { width: 84%; }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 30px 0 38px;
 }
-/* HERO LOGO POSITION - FINAL */
 .top-logos {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
+  min-height: 132px;
 }
-
 .hero-left-logos {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 16px;
+  min-width: 0;
+  flex: 1 1 auto;
 }
-
 .pdeu-main-logo {
-  width: 500px;
-  height: 100px;
+  width: min(590px, 65vw);
+  height: 112px;
   object-fit: contain;
+  object-position: left center;
+  background: transparent;
 }
-
 .hero-soet-logo {
-  width: 130px;
-  height: 100px;
+  width: 118px;
+  height: 104px;
   object-fit: contain;
+  object-position: center;
+  flex: 0 0 118px;
+  border-radius: 8px;
+}
+.hero-icphd-logo {
+  width: 122px;
+  height: 122px;
+  object-fit: contain;
+  object-position: center;
+  flex: 0 0 122px;
+}
+.hero-title-block {
+  max-width: 1120px;
+  margin: 24px auto 0;
+  text-align: center;
+  letter-spacing: .035em;
+}
+.edition {
+  margin: 0 0 5px;
+  color: #77aee0;
+  font-weight: 800;
+  font-size: clamp(.95rem, 1.7vw, 1.2rem);
+  letter-spacing: .22em;
+}
+.hero-title-block h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 760;
+  letter-spacing: .055em;
+}
+.hero-title-block h2 {
+  margin: 9px 0 8px;
+  color: #61b8ec;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 850;
+  letter-spacing: .045em;
+  white-space: nowrap;
+}
+.hero-title-block h2 span { color: #d8efff; }
+.tagline {
+  margin: 0;
+  font-size: clamp(1.02rem, 2vw, 1.42rem);
+  font-weight: 720;
+  letter-spacing: .065em;
+}
+.date-pill {
+  width: fit-content;
+  max-width: 100%;
+  margin: 28px auto 0;
+  padding: 12px 26px;
+  border: 1px solid rgba(96, 189, 245, .7);
+  border-radius: 999px;
+  background: rgba(5, 38, 72, .82);
+  font-size: clamp(.9rem, 1.5vw, 1.05rem);
+  font-weight: 650;
+  letter-spacing: .035em;
+}
+.date-pill span { opacity: .7; margin: 0 6px; }
+.hero-lower { margin-top: 42px; }
+.organizers-panel { max-width: 1180px; margin: 0 auto; }
+.org-block, .association-block { width: 100%; }
+.org-block { margin-bottom: 28px; }
+.mini-label {
+  margin: 0 0 8px;
+  font-size: .88rem;
+  font-weight: 850;
+  letter-spacing: .18em;
+  color: #e8f6ff;
+}
+.org-copy {
+  max-width: 1020px;
+  margin: 0;
+  color: #65baf0;
+  font-size: clamp(1.02rem, 1.7vw, 1.25rem);
+  line-height: 1.42;
+  font-weight: 750;
+  letter-spacing: .035em;
+}
+.association-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 10px;
+}
+.association-slot {
+  width: 100%;
+  height: 116px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.association-slot img {
+  width: 168px;
+  height: 108px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+}
+.association-fipi img { width: 145px; }
+
+/* STRIP */
+.dark-strip {
+  background: var(--navy);
+  color: white;
+  padding: 16px 24px;
+}
+.announcement, .quick-actions { width: min(1180px, calc(100% - 48px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.announcement { font-size: .88rem; letter-spacing: .035em; }
+.quick-actions { justify-content: flex-start; margin-top: 10px; }
+.quick-actions a { padding: 7px 14px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; font-size: .82rem; }
+
+/* GENERAL SECTIONS */
+.about { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; padding-top: 72px; padding-bottom: 72px; }
+.about > div { min-width: 0; }
+.about p { color: #43586d; font-size: .97rem; }
+.section-title { margin-bottom: 24px; }
+.section-title .eyebrow { margin: 0 0 3px; color: var(--blue); font-weight: 850; letter-spacing: .18em; font-size: .78rem; }
+.section-title h2 { margin: 0; color: var(--navy); font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.1; letter-spacing: .02em; }
+.section-title > span { display: block; width: 58px; height: 3px; margin-top: 10px; background: var(--blue); border-radius: 4px; }
+.soft { background: #edf4f9; }
+.conference-content { padding: 72px 0; }
+.content-section + .content-section { margin-top: 84px; }
+
+/* HIGHLIGHTS */
+.highlight-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.highlight-card {
+  text-align: center;
+  padding: 18px 10px 10px;
+}
+.highlight-icon {
+  width: 126px;
+  height: 126px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy-2);
+  box-shadow: 0 10px 24px rgba(4, 31, 59, .14);
+  overflow: hidden;
+}
+.highlight-icon img {
+  width: 94px;
+  height: 94px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  transform: none;
+}
+.highlight-icon.networking-highlight img { width: 82px; height: 82px; }
+.highlight-card h3 { margin: 0; color: var(--navy); font-size: 1rem; line-height: 1.25; font-weight: 850; }
+.highlight-card p { margin: 5px 0 0; color: #52677b; font-size: .92rem; line-height: 1.3; font-weight: 650; }
+
+/* DATES */
+.dates-panel { background: white; border-radius: 22px; box-shadow: var(--shadow); padding: 20px; }
+.dates-layout { display: grid; grid-template-columns: 1.25fr .75fr; gap: 24px; align-items: stretch; }
+.dates-table { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.date-row { display: grid; grid-template-columns: 190px 1fr; border-bottom: 1px solid var(--line); }
+.date-row:last-child { border-bottom: 0; }
+.date-row > * { padding: 13px 15px; }
+.date-row b { background: #eef5fa; color: var(--navy); }
+.date-row span { color: #455d72; }
+.dates-photo-wrap { min-height: 100%; border-radius: 16px; overflow: hidden; }
+.dates-photo { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+
+/* THEME */
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.theme-card {
+  padding: 22px;
+  border: 2px solid #123f69;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 7px 20px rgba(7, 43, 76, .05);
+}
+.theme-card h3 { margin: 0 0 10px; color: var(--navy); font-size: 1.05rem; line-height: 1.3; }
+.theme-card ul { margin: 0; padding-left: 20px; color: #50667a; }
+.theme-card li + li { margin-top: 5px; }
+
+/* REGISTRATION */
+.registration { padding-top: 72px; padding-bottom: 72px; }
+.registration-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.registration-grid article { background: white; border: 1px solid var(--line); border-radius: 20px; padding: 26px; box-shadow: var(--shadow); }
+.registration-grid h3 { margin-top: 0; color: var(--navy); font-size: 1.35rem; }
+.registration-grid li { color: #4b6175; }
+.primary-btn { display: inline-block; margin-top: 12px; padding: 12px 18px; border-radius: 10px; background: var(--navy); color: white; font-weight: 800; }
+.fee-table { margin-top: 24px; border: 1px solid #9fb0c0; border-radius: 10px; overflow: hidden; }
+.fee-head, .fee-row { display: grid; grid-template-columns: 1.4fr .8fr; }
+.fee-head > *, .fee-row > * { padding: 12px 14px; border-right: 1px solid #9fb0c0; border-bottom: 1px solid #9fb0c0; }
+.fee-head > *:last-child, .fee-row > *:last-child { border-right: 0; }
+.fee-row:last-child > * { border-bottom: 0; }
+.fee-head { background: #eaf2f8; color: var(--navy); }
+.fee-head b:first-child { text-align: center; }
+.fee-head b:last-child, .fee-row b { text-align: center; }
+.fee-row span { text-align: left; color: #344d63; }
+.fee-row b { color: #223e58; }
+.bank-placeholder { margin-top: 24px; padding: 16px; border-left: 4px solid var(--blue); background: #edf5fa; display: grid; gap: 3px; }
+.bank-placeholder b { color: var(--navy); }
+.bank-placeholder span { color: #52687c; }
+
+/* VENUE */
+.venue { padding: 72px 0; }
+.venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.venue-copy, .maps-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+.venue-building { width: 100%; height: 290px; object-fit: cover; }
+.venue-copy-inner { padding: 24px; }
+.venue-copy-inner h3 { color: var(--navy); }
+.address { color: #5c7184; font-weight: 650; }
+.maps-card { color: white; background: var(--navy); }
+.map-preview { height: 100%; min-height: 380px; }
+.map-preview img { width: 100%; height: 100%; object-fit: cover; }
+.map-card-footer { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.map-card-footer span { font-size: .75rem; letter-spacing: .16em; color: #9fc5e2; }
+.map-card-footer strong { color: white; }
+
+/* COUNTDOWN */
+.countdown-section { background: var(--navy); color: white; padding: 54px 0; }
+.countdown-wrap { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.countdown-wrap h2 { margin: 5px 0; font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.countdown-wrap > div:first-child p:last-child { color: #b7cce0; }
+.countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; min-width: 420px; }
+.countdown > div { min-width: 90px; padding: 12px 10px; border: 1px solid rgba(255,255,255,.18); border-radius: 12px; text-align: center; background: rgba(255,255,255,.04); }
+.countdown strong { display: block; font-size: 1.75rem; }
+.countdown span { color: #9fb8cf; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+
+/* FOOTER */
+footer { background: #041a31; color: white; }
+.footer-top { display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); gap: 26px; padding: 54px 0; align-items: start; }
+.footer-title h2 { margin: 0; font-size: 2rem; }
+.footer-title p { margin: 2px 0 12px; color: #a8bfd4; }
+.footer-seal-mini { width: 72px; height: 72px; object-fit: contain; margin-top: 12px; }
+.contact-card h3 { margin: 0 0 2px; font-size: 1rem; }
+.contact-card p { margin: 0 0 7px; color: #9db6cb; }
+.contact-card a { display: block; color: #d9e9f6; font-size: .9rem; overflow-wrap: anywhere; }
+.copyright { padding: 16px 24px; border-top: 1px solid rgba(255,255,255,.1); text-align: center; color: #87a3ba; font-size: .76rem; letter-spacing: .04em; }
+
+/* SCROLL ANIMATION */
+.reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 0; transition: opacity .75s ease, transform .75s ease; }
+.reveal { transform: translateY(26px); }
+.reveal-left { transform: translateX(-28px); }
+.reveal-right { transform: translateX(28px); }
+.reveal-scale { transform: scale(.92); }
+.reveal.is-visible, .reveal-left.is-visible, .reveal-right.is-visible, .reveal-scale.is-visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .08s; }
+.reveal-delay-2 { transition-delay: .16s; }
+.reveal-delay-3 { transition-delay: .24s; }
+.reveal-delay-4 { transition-delay: .32s; }
+.reveal-delay-5 { transition-delay: .4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
-.hero-icphd-logo {
-  width: 105px;
-  height: 105px;
-  object-fit: contain;
+/* TABLET */
+@media (max-width: 1050px) {
+  .desktop-nav { gap: 15px; }
+  .desktop-nav a { font-size: .88rem; }
+  .pdeu-main-logo { width: min(460px, 57vw); }
+  .hero-soet-logo { width: 100px; flex-basis: 100px; }
+  .hero-icphd-logo { width: 105px; height: 105px; flex-basis: 105px; }
+  .highlight-grid { grid-template-columns: repeat(3, 1fr); }
+  .about { grid-template-columns: 1fr; }
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+  .container { width: min(100% - 30px, 600px); }
+  .nav { min-height: 68px; padding: 8px 15px; }
+  .brand { font-size: .98rem; }
+  .brand img { width: 48px; height: 48px; }
+  .desktop-nav { display: none; }
+  .menu-toggle { display: block; margin-left: auto; }
+  .mobile-menu { position: fixed; inset: 68px 0 0; z-index: 999; display: block; background: rgba(4, 25, 48, .99); padding: 18px 15px 30px; transform: translateY(-110%); transition: transform .3s ease; }
+  .mobile-menu.is-open { transform: translateY(0); }
+  .mobile-menu nav { display: grid; gap: 8px; }
+  .mobile-menu a { padding: 16px 18px; border-radius: 10px; color: white; font-size: 1.02rem; font-weight: 750; letter-spacing: .03em; background: rgba(255,255,255,.04); }
+
+  .hero { min-height: auto; }
+  .hero-overlay { background: linear-gradient(180deg, rgba(3,29,57,.72), rgba(4,43,80,.82)); }
+  .hero-inner { width: min(100% - 28px, 620px); padding: 18px 0 30px; }
+  .top-logos { min-height: 92px; gap: 10px; align-items: center; }
+  .hero-left-logos { gap: 8px; }
+  .pdeu-main-logo { width: min(260px, 66vw); height: 72px; }
+  .hero-soet-logo { width: 65px; height: 70px; flex-basis: 65px; border-radius: 5px; }
+  .hero-icphd-logo { width: 78px; height: 78px; flex-basis: 78px; }
+  .hero-title-block { margin-top: 20px; letter-spacing: .025em; }
+  .edition { font-size: .72rem; letter-spacing: .18em; }
+  .hero-title-block h1 { font-size: 1.3rem; }
+  .hero-title-block h2 { font-size: 1.18rem; white-space: normal; }
+  .tagline { font-size: .88rem; letter-spacing: .035em; }
+  .date-pill { margin-top: 18px; padding: 10px 14px; font-size: .8rem; line-height: 1.35; }
+  .date-pill span { display: none; }
+  .hero-lower { margin-top: 30px; }
+  .org-block { margin-bottom: 22px; }
+  .mini-label { font-size: .72rem; letter-spacing: .15em; }
+  .org-copy { font-size: .91rem; line-height: 1.55; }
+  .association-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 8px; }
+  .association-slot { height: 92px; }
+  .association-slot img { width: 145px; height: 88px; }
+  .association-fipi img { width: 122px; }
+
+  .announcement, .quick-actions { width: 100%; flex-direction: column; align-items: flex-start; }
+  .quick-actions { gap: 8px; }
+  .quick-actions a { width: 100%; text-align: center; }
+
+  .about { padding-top: 52px; padding-bottom: 52px; gap: 42px; }
+  .conference-content, .registration, .venue { padding-top: 54px; padding-bottom: 54px; }
+  .highlight-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .highlight-card { padding: 8px 4px; }
+  .highlight-icon { width: 108px; height: 108px; }
+  .highlight-icon img { width: 82px; height: 82px; }
+  .highlight-icon.networking-highlight img { width: 74px; height: 74px; }
+
+  .dates-layout, .registration-grid, .venue-grid, .theme-grid { grid-template-columns: 1fr; }
+  .date-row { grid-template-columns: 125px 1fr; }
+  .date-row > * { padding: 10px 9px; font-size: .83rem; }
+  .dates-photo { min-height: 260px; }
+  .map-preview { min-height: 300px; }
+  .map-card-footer { align-items: flex-start; flex-direction: column; gap: 4px; }
+
+  .countdown-wrap { flex-direction: column; align-items: flex-start; }
+  .countdown { width: 100%; min-width: 0; }
+  .countdown > div { min-width: 0; }
+  .countdown strong { font-size: 1.35rem; }
+
+  .footer-top { grid-template-columns: 1fr; padding: 42px 0; }
 }
