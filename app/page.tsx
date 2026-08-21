@@ -100,12 +100,35 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <main>
-      <header className="nav">
-        <a className="brand" href="#home"><img src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
-        <nav aria-label="Primary navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#highlights">Highlights</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
+      <header className={`nav${menuOpen ? ' menu-open' : ''}`}>
+        <a className="brand" href="#home" onClick={closeMenu}><img src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" /><span>ICPHD <b>2026</b></span></a>
+        <nav aria-label="Primary navigation" className="desktop-nav"><a href="#home">Home</a><a href="#about">About</a><a href="#highlights">Highlights</a><a href="#dates">Schedule</a><a href="#theme">Theme</a><a href="#registration">Registration</a><a href="#contact">Contact</a></nav>
+        <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(v => !v)}>
+          <span></span><span></span><span></span>
+        </button>
       </header>
+      <div className={`mobile-menu${menuOpen ? ' is-open' : ''}`} aria-hidden={!menuOpen}>
+        <nav aria-label="Mobile navigation">
+          <a href="#home" onClick={closeMenu}>Home</a>
+          <a href="#about" onClick={closeMenu}>About</a>
+          <a href="#highlights" onClick={closeMenu}>Highlights</a>
+          <a href="#dates" onClick={closeMenu}>Schedule</a>
+          <a href="#theme" onClick={closeMenu}>Theme</a>
+          <a href="#registration" onClick={closeMenu}>Registration</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+        </nav>
+      </div>
 
       <section className="reveal reveal-delay-1 hero" id="home">
         <img className="hero-bg" src="/assets/campus-aerial-final.jpg" alt="PDEU campus" />
