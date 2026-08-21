@@ -710,199 +710,240 @@ footer{background:#061a33;color:#fff}.footer-top{position:relative;display:grid;
   }
 }
 
-/* ===== FINAL USER REQUEST: LOGOS / HIGHLIGHTS / REGISTRATION ===== */
-/* Use the exact latest ICPHD circle mark. */
-.nav .brand img {
-  width: 76px;
-  height: 76px;
-  object-fit: contain;
-}
-.hero-icphd-logo {
-  width: 190px;
-  height: 150px;
-  object-fit: contain;
-  background: transparent;
-}
-
-/* PDEU/SPE logos: no image-box backgrounds. */
-.pdeu-main-logo,
-.association-logos img {
-  background: transparent !important;
-  border: 0 !important;
-}
-
-/* Four association marks: make them large, equal-sized and evenly spaced. */
-.association-logos {
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 8px !important;
-  align-items: center !important;
-  justify-items: center !important;
-}
-.association-logos img,
-.association-logos .combined-chapters {
-  width: min(100%, 150px) !important;
-  height: 132px !important;
-  max-width: 150px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  transform: none !important;
-}
-
-/* Highlight illustrations stay completely inside the blue circles. */
-.highlight-icon {
-  width: 104px !important;
-  height: 104px !important;
-  flex: 0 0 104px !important;
-  border-radius: 50% !important;
-  background: #0b3f7b !important;
-  display: grid !important;
-  place-items: center !important;
-  overflow: hidden !important;
-  position: relative !important;
-  margin: 0 auto 16px !important;
-}
-.highlight-icon img,
-.highlight-card:last-child .highlight-icon img {
-  width: 88px !important;
-  height: 88px !important;
-  max-width: 88px !important;
-  max-height: 88px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block !important;
-  transform: none !important;
-}
-.highlight-card:last-child .highlight-icon img {
-  width: 92px !important;
-  height: 92px !important;
-  max-width: 92px !important;
-  max-height: 92px !important;
-}
-
-/* Registration table: only the Category header is centered; data categories remain left aligned. */
-.fee-head > b:first-child {
-  text-align: center !important;
-}
-.fee-head > b:last-child {
-  text-align: center !important;
-}
-.fee-row > span {
-  text-align: left !important;
-}
-.fee-row > b {
-  text-align: center !important;
-}
-.fee-head > b:last-child,
-.fee-row > b {
-  border-left: 2px solid #9eb3c6 !important;
-}
-.fee-row {
-  border-top: 1px solid #c8d5e0 !important;
-}
-
-@media (max-width: 1000px) {
-  .association-logos { gap: 6px !important; }
-  .association-logos img,
-  .association-logos .combined-chapters {
-    width: min(100%, 138px) !important;
-    height: 120px !important;
-  }
-}
-@media (max-width: 720px) {
-  .hero-icphd-logo { width: 112px !important; height: 100px !important; }
-  .association-logos { gap: 4px !important; }
-  .association-logos img,
-  .association-logos .combined-chapters {
-    width: 108px !important;
-    height: 96px !important;
-  }
-  .highlight-icon { width: 94px !important; height: 94px !important; flex-basis: 94px !important; }
-  .highlight-icon img,
-  .highlight-card:last-child .highlight-icon img { width: 78px !important; height: 78px !important; max-width: 78px !important; max-height: 78px !important; }
-}
-
-/* ===== LATEST SIZE BOOST: PDEU + STUDENT CHAPTERS + EXHIBITION ARTWORK ===== */
+/* Latest size refinements */
 .pdeu-main-logo {
-  width: min(660px, 68vw) !important;
-  height: 122px !important;
+  width: min(640px, 68vw);
+  height: 116px;
 }
 
-.association-logos {
-  gap: 12px !important;
-}
-.association-logos img,
+/* Make the IADC + combined SEG/SIG/EAGE chapter marks more prominent while keeping
+   the four association slots evenly aligned. */
+.association-logos img:nth-child(2),
+.association-logos img:nth-child(3),
+.association-logos img:nth-child(4),
 .association-logos .combined-chapters {
-  width: min(100%, 170px) !important;
-  height: 148px !important;
-  max-width: 170px !important;
-  max-height: 148px !important;
+  width: 148px;
+  height: 136px;
 }
 
-.highlight-icon {
-  width: 108px !important;
-  height: 108px !important;
-  flex-basis: 108px !important;
-}
-.highlight-icon img {
-  width: 92px !important;
-  height: 92px !important;
-  max-width: 92px !important;
-  max-height: 92px !important;
+/* Keep the last Conference Highlight illustration large and centered. */
+.highlight-card:last-child .highlight-icon {
+  width: 92px;
+  height: 92px;
+  flex-basis: 92px;
+  place-items: center;
 }
 .highlight-card:last-child .highlight-icon img {
-  width: 112px !important;
-  height: 112px !important;
-  max-width: 112px !important;
-  max-height: 112px !important;
+  width: 184px !important;
+  height: 184px !important;
+  margin: 0 !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Main hero heading above the Organized By section */
+.hero h1 {
+  font-size: clamp(30px, 3.7vw, 48px);
+}
+.hero h2 {
+  font-size: clamp(25px, 3.05vw, 38px);
+}
+.hero .tagline {
+  font-size: clamp(18px, 2vw, 27px);
 }
 
 @media (max-width: 1000px) {
-  .pdeu-main-logo {
-    width: min(620px, 68vw) !important;
-    height: 112px !important;
-  }
-  .association-logos { gap: 8px !important; }
-  .association-logos img,
+  .association-logos img:nth-child(2),
+  .association-logos img:nth-child(3),
+  .association-logos img:nth-child(4),
   .association-logos .combined-chapters {
-    width: min(100%, 155px) !important;
-    height: 136px !important;
-    max-width: 155px !important;
-    max-height: 136px !important;
+    width: 136px;
+    height: 124px;
   }
 }
 
 @media (max-width: 720px) {
-  .pdeu-main-logo {
-    width: calc(100% - 96px) !important;
-    height: 82px !important;
-  }
-  .association-logos { gap: 5px !important; }
-  .association-logos img,
+  .pdeu-main-logo { width: calc(100% - 110px); height: 82px; }
+  .association-logos img:nth-child(2),
+  .association-logos img:nth-child(3),
+  .association-logos img:nth-child(4),
   .association-logos .combined-chapters {
-    width: 116px !important;
-    height: 104px !important;
-    max-width: 116px !important;
-    max-height: 104px !important;
-  }
-  .highlight-icon {
-    width: 100px !important;
-    height: 100px !important;
-    flex-basis: 100px !important;
-  }
-  .highlight-icon img {
-    width: 86px !important;
-    height: 86px !important;
-    max-width: 86px !important;
-    max-height: 86px !important;
+    width: 106px;
+    height: 94px;
   }
   .highlight-card:last-child .highlight-icon img {
-    width: 104px !important;
-    height: 104px !important;
-    max-width: 104px !important;
-    max-height: 104px !important;
+    width: 150px !important;
+    height: 150px !important;
   }
 }
+
+/* Mobile-first final polish: keep the hero/nav inside the viewport and enlarge
+   association marks without forcing horizontal page overflow. */
+.association-logos img,
+.association-logos .combined-chapters {
+  width: 148px;
+  height: 136px;
+}
+
+/* Keep the main hero heading prominent on larger screens. */
+.hero h1 { font-size: clamp(28px, 3.5vw, 46px); }
+.hero h2 { font-size: clamp(24px, 3vw, 38px); }
+
+.highlight-icon {
+  width: 104px;
+  height: 104px;
+  flex-basis: 104px;
+  overflow: hidden;
+}
+.highlight-icon img {
+  width: 104px !important;
+  height: 104px !important;
+}
+.highlight-card:last-child .highlight-icon img {
+  width: 132px !important;
+  height: 132px !important;
+  transform: scale(1.08) !important;
+}
+
+@media (max-width: 720px) {
+  /* The nav becomes a compact horizontal strip instead of pushing the page
+     wider than the phone viewport. */
+  .nav {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    justify-content: flex-start;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav .brand img { width: 58px; height: 58px; }
+  .nav .brand { font-size: 15px; gap: 7px; }
+  .nav nav {
+    flex: 0 0 auto;
+    margin-left: auto;
+    gap: 5px;
+  }
+  .nav nav a { padding: 7px 4px; font-size: 12px; }
+
+  .top-logos {
+    width: 100%;
+    min-width: 0;
+    gap: 10px;
+  }
+  .pdeu-main-logo {
+    width: min(68vw, 430px);
+    max-width: calc(100% - 92px);
+    height: 76px;
+  }
+  .hero-icphd-logo {
+    width: 86px;
+    height: 86px;
+    flex: 0 0 86px;
+  }
+
+  /* Allow the long conference title/tagline to wrap naturally on phones. */
+  .hero h1,
+  .hero h2,
+  .tagline {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .hero h1 { font-size: 25px; line-height: 1.12; }
+  .hero h2 { font-size: 21px; line-height: 1.15; }
+  .tagline { font-size: 15px; line-height: 1.3; }
+
+  /* Two-column association row: larger, readable marks with equal spacing. */
+  .association-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 10px;
+    width: 100%;
+  }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    width: 132px;
+    height: 104px;
+    max-width: 100%;
+  }
+
+  /* Keep every illustration completely inside its blue circle. */
+  .highlight-icon {
+    width: 94px;
+    height: 94px;
+    flex-basis: 94px;
+    overflow: hidden;
+  }
+  .highlight-icon img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .highlight-card:last-child .highlight-icon img {
+    width: 112px !important;
+    height: 112px !important;
+    transform: scale(1.08) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-inner { width: calc(100% - 24px); }
+  .top-logos { gap: 7px; }
+  .pdeu-main-logo { max-width: calc(100% - 76px); height: 68px; }
+  .hero-icphd-logo { width: 74px; height: 74px; flex-basis: 74px; }
+  .hero h1 { font-size: 23px; }
+  .hero h2 { font-size: 19px; }
+  .tagline { font-size: 14px; }
+  .association-logos { gap: 10px 8px; }
+  .association-logos img,
+  .association-logos .combined-chapters { width: 124px; height: 96px; }
+}
+
+/* Association logos: match the supplied reference layout — five distinct, evenly spaced marks. */
+.association-logos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  width: 100%;
+}
+.association-logos img,
+.association-logos .combined-chapters {
+  width: 100%;
+  height: 92px;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .association-logos {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    height: 70px;
+  }
+}
+@media (max-width: 520px) {
+  .association-logos {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 3px;
+  }
+  .association-logos img,
+  .association-logos .combined-chapters {
+    height: 62px;
+  }
+}
+.association-logos img:nth-child(1),
+.association-logos img:nth-child(2),
+.association-logos img:nth-child(3),
+.association-logos img:nth-child(4),
+.association-logos img:nth-child(5) { transform: none !important; }

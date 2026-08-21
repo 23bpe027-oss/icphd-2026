@@ -112,7 +112,7 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <img className="pdeu-main-logo" src="/assets/pdeu-logo-exact-uploaded-clean.png" alt="Pandit Deendayal Energy University" />
+            <img className="pdeu-main-logo" src="/assets/pdeu-logo-exact-uploaded.png" alt="Pandit Deendayal Energy University" />
             <img className="hero-icphd-logo" src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" />
           </div>
 
@@ -136,16 +136,17 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <img src="/assets/fipi-final-transparent-cropped.png" alt="FIPI" />
-                  <img src="/assets/spe-pdeu-new-transparent-clean-cropped.png" alt="SPE PDEU Student Chapter" />
-                  <img src="/assets/iadc-pdeu-new-transparent-clean-cropped.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
-                  <img className="combined-chapters" src="/assets/pdeu-student-chapters-transparent-clean-cropped.png" alt="PDEU Student Chapters: SEG, SIG and EAGE" />
+                  <img src="/assets/fipi-association-tight.png" alt="FIPI" />
+                  <img src="/assets/spe-association-tight.png" alt="SPE PDEU Student Chapter" />
+                  <img src="/assets/seg-association-tight.png" alt="SEG PDEU Student Chapter" />
+                  <img src="/assets/eage-association-tight.png" alt="EAGE PDEU Student Chapter" />
+                  <img src="/assets/iadc-association-tight.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
                 </div>
               </div>
             </div>
 
             <div className="guest-grid">
-              <div><span>CHIEF GUEST</span><b>(INAUGURAL)</b><strong>To be announced</strong></div>
+              <div><span>CHIEF GUEST</span><strong>To be announced</strong></div>
               <div><span>GUEST OF HONOR</span><strong>To be announced</strong></div>
             </div>
           </div>
