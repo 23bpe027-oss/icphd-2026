@@ -135,8 +135,11 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <img className="pdeu-main-logo" src="/assets/pdeu-logo-new-transparent.png" alt="Pandit Deendayal Energy University" />
-            <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
+            <div className="hero-left-logos">
+              <img className="pdeu-main-logo" src="/assets/pdeu-logo-user-exact-transparent.png" alt="Pandit Deendayal Energy University" />
+              <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
+            </div>
+            <img className="hero-icphd-logo" src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" />
           </div>
 
           <div className="hero-title-block">
@@ -158,19 +161,14 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <img src="/assets/fipi-association-tight.png" alt="FIPI" />
+                  <img src="/assets/fipi-association-tight.png" alt="FIPI PDEU Student Chapter" />
                   <img src="/assets/spe-association-tight.png" alt="SPE PDEU Student Chapter" />
-                  <img src="/assets/seg-association-tight.png" alt="SEG PDEU Student Chapter" />
-                  <img src="/assets/eage-association-tight.png" alt="EAGE PDEU Student Chapter" />
+                  <img className="combined-chapters" src="/assets/seg-spg-eage-combined-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" />
                   <img src="/assets/iadc-association-tight.png" alt="IADC Pandit Deendayal Energy University Student Chapter" />
                 </div>
               </div>
             </div>
 
-            <div className="guest-grid">
-              <div><span>CHIEF GUEST</span><strong>To be announced</strong></div>
-              <div><span>GUEST OF HONOR</span><strong>To be announced</strong></div>
-            </div>
           </div>
         </div>
       </section>

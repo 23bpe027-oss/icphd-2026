@@ -1179,3 +1179,325 @@ body {
     height: 60px !important;
   }
 }
+
+/* Current requested corrections */
+.nav { min-height: 66px; padding: 4px 26px; }
+.nav .brand { font-size: 21px; gap: 12px; }
+.nav .brand img { width: 70px; height: 70px; }
+.nav .desktop-nav { gap: 18px; font-size: 15.5px; font-weight: 600; }
+.nav .desktop-nav a { white-space: nowrap; }
+
+.top-logos {
+  min-height: 128px;
+  gap: 28px;
+}
+.hero-left-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  flex: 1;
+}
+.pdeu-main-logo {
+  width: min(650px, 68vw) !important;
+  height: 118px !important;
+  object-fit: contain;
+  object-position: left center;
+  background: transparent !important;
+}
+.hero-soet-logo {
+  width: 126px !important;
+  height: 126px !important;
+  flex: 0 0 126px;
+  object-fit: contain;
+  background: #147db7 !important;
+  border-radius: 0;
+}
+.hero-icphd-logo {
+  width: 132px !important;
+  height: 132px !important;
+  flex: 0 0 132px;
+  object-fit: contain;
+  background: transparent !important;
+}
+
+/* Give the hero breathing room without changing its wording. */
+.hero-title-block { letter-spacing: .35px; }
+.hero .edition { letter-spacing: 6px; }
+.hero h1 { letter-spacing: .8px; }
+.hero h2 { letter-spacing: .65px; }
+.hero .tagline { letter-spacing: .7px; }
+.hero .date-pill { letter-spacing: .35px; }
+
+/* The guest boxes are intentionally removed; association now spans the hero width. */
+.hero-lower { grid-template-columns: 1fr !important; gap: 10px; }
+.association-block { width: 100%; }
+.association-logos {
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin-top: 12px;
+}
+.association-logos > img,
+.association-logos > .combined-chapters {
+  width: 100% !important;
+  height: 118px !important;
+  min-width: 0;
+  object-fit: contain;
+  background: transparent !important;
+}
+.association-logos > img:nth-child(2) {
+  width: 100% !important;
+  height: 118px !important;
+}
+.association-logos .combined-chapters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  overflow: visible;
+}
+.association-logos .combined-chapters > img {
+  width: 39%;
+  height: 96px;
+  object-fit: contain;
+  background: transparent !important;
+}
+.spg-mark {
+  width: 22%;
+  min-width: 34px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.05;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.spg-mark strong { font-size: clamp(16px, 1.6vw, 24px); letter-spacing: .5px; }
+.spg-mark span { font-size: 6px; line-height: 1.15; text-transform: uppercase; letter-spacing: .2px; opacity: .95; }
+
+/* Keep the exact supplied PDEU artwork transparent; only the SOET mark keeps its blue field. */
+.association-logos img { background: transparent !important; }
+
+/* The final networking illustration should be smaller than the previous oversized pass, while staying centered. */
+.highlight-card:last-child .highlight-icon img {
+  width: 104px !important;
+  height: 104px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
+@media (max-width: 1000px) {
+  .nav .desktop-nav { gap: 14px; font-size: 14px; }
+  .hero-left-logos { gap: 16px; }
+  .hero-soet-logo { width: 108px !important; height: 108px !important; flex-basis: 108px; }
+  .hero-icphd-logo { width: 112px !important; height: 112px !important; flex-basis: 112px; }
+  .pdeu-main-logo { width: min(610px, 67vw) !important; height: 104px !important; }
+  .association-logos { gap: 12px !important; }
+}
+
+@media (max-width: 720px) {
+  .nav { min-height: 62px; padding: 4px 14px; }
+  .nav .brand { font-size: 18px; gap: 9px; }
+  .nav .brand img { width: 58px; height: 58px; }
+  .nav .desktop-nav { display: none; }
+  .top-logos {
+    min-height: 92px;
+    gap: 10px;
+    align-items: center;
+  }
+  .hero-left-logos { gap: 8px; }
+  .pdeu-main-logo {
+    width: min(56vw, 390px) !important;
+    max-width: none !important;
+    height: 76px !important;
+  }
+  .hero-soet-logo {
+    width: 68px !important;
+    height: 68px !important;
+    flex-basis: 68px;
+  }
+  .hero-icphd-logo {
+    width: 72px !important;
+    height: 72px !important;
+    flex-basis: 72px;
+  }
+  .hero .edition { letter-spacing: 4px; }
+  .hero h1 { letter-spacing: .55px; }
+  .hero h2,
+  .hero .tagline { white-space: normal; }
+  .hero h2 { line-height: 1.16; }
+  .hero .tagline { line-height: 1.45; }
+  .association-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .association-logos > img,
+  .association-logos > .combined-chapters {
+    height: 88px !important;
+  }
+  .association-logos .combined-chapters > img { height: 70px; }
+  .spg-mark strong { font-size: 15px; }
+  .spg-mark span { font-size: 5px; }
+  .highlight-card:last-child .highlight-icon img {
+    width: 96px !important;
+    height: 96px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .top-logos { min-height: 78px; }
+  .pdeu-main-logo { width: min(52vw, 280px) !important; height: 62px !important; }
+  .hero-soet-logo { width: 56px !important; height: 56px !important; flex-basis: 56px; }
+  .hero-icphd-logo { width: 60px !important; height: 60px !important; flex-basis: 60px; }
+  .hero-left-logos { gap: 5px; }
+  .association-logos { gap: 8px !important; }
+  .association-logos > img,
+  .association-logos > .combined-chapters { height: 74px !important; }
+  .association-logos .combined-chapters > img { height: 58px; }
+}
+
+/* User-requested final hero/nav corrections */
+.nav .brand,
+.nav .desktop-nav a {
+  letter-spacing: 0.02em;
+}
+.nav .brand {
+  font-size: 22px;
+}
+.nav .desktop-nav {
+  font-size: 16.5px;
+  gap: 20px;
+}
+
+/* Keep the exact supplied PDEU logo; only its black background is transparent. */
+.pdeu-main-logo {
+  width: min(660px, 69vw) !important;
+  height: 122px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  background: transparent !important;
+}
+
+/* Hero has exactly three logo positions: PDEU + SOET on left, ICPHD on right. */
+.top-logos {
+  gap: 30px;
+}
+.hero-left-logos {
+  gap: 22px;
+}
+.hero-soet-logo {
+  width: 128px !important;
+  height: 128px !important;
+  flex: 0 0 128px !important;
+}
+.hero-icphd-logo {
+  width: 142px !important;
+  height: 142px !important;
+  flex: 0 0 142px !important;
+}
+
+/* Give the hero typography a little more breathing room. */
+.hero-title-block {
+  letter-spacing: 0.8px;
+}
+.hero h1 { letter-spacing: 1.1px !important; }
+.hero h2 { letter-spacing: 1px !important; }
+.hero .tagline { letter-spacing: 1px !important; }
+.hero .date-pill { letter-spacing: 0.7px !important; }
+.hero .edition { letter-spacing: 6.5px !important; }
+
+/* The association area uses all available hero width now that guest boxes are gone. */
+.hero-lower {
+  grid-template-columns: 1fr !important;
+}
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: center;
+}
+.association-logos > img,
+.association-logos > .combined-chapters {
+  width: 100% !important;
+  height: 124px !important;
+  min-width: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* The supplied combined chapter artwork already contains SEG + SPG + EAGE. */
+.association-logos > .combined-chapters {
+  display: block !important;
+}
+
+/* Slightly smaller networking artwork, still centered in its circle. */
+.highlight-card:last-child .highlight-icon img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+/* Mobile: keep the three hero logos readable without overflowing. */
+@media (max-width: 720px) {
+  .nav .brand { font-size: 19px; }
+  .nav .brand img { width: 60px; height: 60px; }
+  .mobile-menu a { font-size: 18px !important; letter-spacing: 0.01em; }
+  .pdeu-main-logo {
+    width: min(56vw, 390px) !important;
+    height: 78px !important;
+  }
+  .hero-soet-logo {
+    width: 70px !important;
+    height: 70px !important;
+    flex-basis: 70px !important;
+  }
+  .hero-icphd-logo {
+    width: 76px !important;
+    height: 76px !important;
+    flex-basis: 76px !important;
+  }
+  .hero-left-logos { gap: 7px; }
+  .top-logos { gap: 8px; }
+  .association-logos {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+  .association-logos > img,
+  .association-logos > .combined-chapters {
+    height: 82px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav .brand { font-size: 18px; }
+  .nav .brand img { width: 56px; height: 56px; }
+  .pdeu-main-logo {
+    width: min(50vw, 270px) !important;
+    height: 64px !important;
+  }
+  .hero-soet-logo {
+    width: 56px !important;
+    height: 56px !important;
+    flex-basis: 56px !important;
+  }
+  .hero-icphd-logo {
+    width: 62px !important;
+    height: 62px !important;
+    flex-basis: 62px !important;
+  }
+  .association-logos > img,
+  .association-logos > .combined-chapters {
+    height: 70px !important;
+  }
+  .highlight-card:last-child .highlight-icon img {
+    width: 94px !important;
+    height: 94px !important;
+  }
+}
