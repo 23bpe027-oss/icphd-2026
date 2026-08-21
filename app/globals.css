@@ -1533,3 +1533,36 @@ body {
   .association-logos .combined-chapters { height: 76px; max-width: 145px; }
   .association-logos img:first-child { width: 84%; }
 }
+/* HERO LOGO POSITION - FINAL */
+.top-logos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.hero-left-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.pdeu-main-logo {
+  width: 500px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.hero-soet-logo {
+  width: 130px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.hero-icphd-logo {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+}
