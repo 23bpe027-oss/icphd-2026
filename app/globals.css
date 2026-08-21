@@ -1501,3 +1501,35 @@ body {
     height: 94px !important;
   }
 }
+
+/* User-requested association logo cleanup/alignment */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: center;
+  justify-items: center;
+}
+.association-logos img,
+.association-logos .combined-chapters {
+  width: 100%;
+  height: 108px;
+  max-width: 230px;
+  object-fit: contain;
+  object-position: center;
+  transform: none !important;
+}
+/* FIPI is visually wider in its source artwork, so scale it down slightly to match the other three. */
+.association-logos img:first-child { width: 88%; }
+
+@media (max-width: 720px) {
+  .association-logos { gap: 10px; }
+  .association-logos img,
+  .association-logos .combined-chapters { height: 86px; max-width: 170px; }
+  .association-logos img:first-child { width: 86%; }
+}
+@media (max-width: 520px) {
+  .association-logos { gap: 8px; }
+  .association-logos img,
+  .association-logos .combined-chapters { height: 76px; max-width: 145px; }
+  .association-logos img:first-child { width: 84%; }
+}

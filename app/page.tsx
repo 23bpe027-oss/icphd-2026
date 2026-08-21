@@ -155,7 +155,7 @@ export default function Home() {
               <div className="org-block">
                 <p className="mini-label">ORGANISED BY</p>
                 <div className="organised-row">
-                  <p className="org-copy">Department of Petroleum Engineering, Department of Chemical Engineering, Pandit Deendayal Energy University</p>
+                  <p className="org-copy">Department of Petroleum Engineering, in association with Department of Chemical Engineering and Department of Chemistry, Pandit Deendayal Energy University</p>
                 </div>
               </div>
               <div className="association-block">
