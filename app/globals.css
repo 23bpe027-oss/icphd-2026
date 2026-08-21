@@ -1077,3 +1077,105 @@ body {
   .hero .tagline { font-size: clamp(15px, 4.2vw, 18px); line-height: 1.35; }
   .section-title h2 { font-size: clamp(27px, 7vw, 36px); }
 }
+
+/* Latest requested visual cleanup */
+.edition {
+  color: #86c8ef !important;
+  text-shadow: 0 1px 6px rgba(2, 25, 55, .45);
+}
+
+/* Use the higher-resolution transparent PDEU artwork in the hero. */
+.pdeu-main-logo {
+  width: min(650px, 69vw) !important;
+  height: 118px !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* SOET belongs beside the PDEU logo in the hero only. */
+.hero-soet-logo {
+  width: 154px !important;
+  height: 112px !important;
+  object-fit: contain;
+  object-position: center;
+  background: #147db7;
+  border: 0;
+  border-radius: 0;
+}
+.organised-row {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+/* SPE: intentionally a little smaller than the other chapter marks. */
+.association-logos img:nth-child(2) {
+  width: 82% !important;
+  height: 82px !important;
+}
+
+/* The supplied association assets are transparent; never paint a black box behind them. */
+.association-logos img {
+  background: transparent !important;
+  mix-blend-mode: normal;
+}
+
+/* Crop the extra transparent canvas from the networking artwork and keep it centered. */
+.highlight-card:last-child .highlight-icon {
+  width: 94px !important;
+  height: 94px !important;
+  flex: 0 0 94px !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
+}
+.highlight-card:last-child .highlight-icon img {
+  width: 84px !important;
+  height: 84px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 720px) {
+  .pdeu-main-logo {
+    width: min(67vw, 420px) !important;
+    max-width: calc(100% - 96px) !important;
+    height: 78px !important;
+  }
+  .hero-soet-logo {
+    width: 88px !important;
+    height: 72px !important;
+    flex: 0 0 88px !important;
+  }
+  .association-logos img:nth-child(2) {
+    width: 88% !important;
+    height: 68px !important;
+  }
+  .highlight-card:last-child .highlight-icon {
+    width: 90px !important;
+    height: 90px !important;
+    flex-basis: 90px !important;
+  }
+  .highlight-card:last-child .highlight-icon img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .pdeu-main-logo {
+    max-width: calc(100% - 84px) !important;
+    height: 68px !important;
+  }
+  .hero-soet-logo {
+    width: 72px !important;
+    height: 66px !important;
+    flex-basis: 72px !important;
+  }
+  .association-logos img:nth-child(2) {
+    width: 88% !important;
+    height: 60px !important;
+  }
+}

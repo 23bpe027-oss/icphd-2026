@@ -10,7 +10,7 @@ const highlights = [
   ["keynote-transparent.png", "Keynote Sessions", ""],
   ["papers-transparent.png", "Paper & Poster", "Presentations"],
   ["award-transparent.png", "Best Paper & Best Poster", "Presentation Awards"],
-  ["networking-transparent.png", "Exhibition, Networking", "& Branding"],
+  ["networking-cropped.png", "Exhibition, Networking", "& Branding"],
 ];
 
 const dates = [
@@ -135,8 +135,8 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <img className="pdeu-main-logo" src="/assets/pdeu-logo-exact-uploaded.png" alt="Pandit Deendayal Energy University" />
-            <img className="hero-icphd-logo" src="/assets/icphd-circle-logo.png" alt="ICPHD 2026 logo" />
+            <img className="pdeu-main-logo" src="/assets/pdeu-logo-new-transparent.png" alt="Pandit Deendayal Energy University" />
+            <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
           </div>
 
           <div className="hero-title-block">
@@ -153,7 +153,6 @@ export default function Home() {
                 <p className="mini-label">ORGANISED BY</p>
                 <div className="organised-row">
                   <p className="org-copy">Department of Petroleum Engineering, Department of Chemical Engineering, Pandit Deendayal Energy University</p>
-                  <img className="organised-soet" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
                 </div>
               </div>
               <div className="association-block">
@@ -177,16 +176,6 @@ export default function Home() {
       </section>
 
       <section className="reveal reveal-delay-2 dark-strip">
-        <div className="partners-grid">
-          <div className="strip-block">
-            <p className="strip-label">SPONSORS</p>
-            <div className="partner-placeholders"><span>ONGC</span><span>GAIL (India)</span><span>HPCL</span><span>Sun Petrochemicals</span></div>
-          </div>
-          <div className="strip-block">
-            <p className="strip-label">MEDIA PARTNERS</p>
-            <div className="partner-placeholders"><span>Media Partner 1</span><span>Media Partner 2</span></div>
-          </div>
-        </div>
         <div className="announcement"><b>Registration Starts: August 20th, 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
         <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
