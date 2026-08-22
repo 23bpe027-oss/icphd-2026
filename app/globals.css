@@ -753,194 +753,247 @@ footer { background: #041a31; color: white; }
   .highlight-card { padding: 14px 6px 12px; }
 }
 
-/* FINAL MOBILE POLISH + VENUE RESTORATION */
-html, body { overflow-x: hidden; }
+/* FINAL VISUAL RESTORATION — based on the supplied earlier reference screenshots. */
+.section-title { text-align: center; }
+.section-title > span { margin-left: auto; margin-right: auto; }
 
-.venue-grid {
-  align-items: stretch;
+/* Preserve the earlier schedule / brochure / flyer strip layout. */
+.dark-strip {
+  background: #102f56;
+  color: #fff;
+  padding: 16px 24px 24px;
 }
-.venue-copy,
-.maps-card {
-  min-width: 0;
-}
-.venue-building {
-  height: 235px;
-}
-.venue-copy-inner {
-  padding: 28px;
-}
-.venue-copy-inner h3 {
-  margin: 0 0 18px;
-  font-size: 1.7rem;
-  line-height: 1.2;
-}
-.venue-copy-inner p {
-  margin: 0 0 18px;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-.map-preview {
-  height: 400px;
-  min-height: 0;
-}
-.map-card-footer {
-  min-height: 82px;
-  flex-direction: row;
+.announcement {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 36px;
+  padding: 0 18px;
+  background: #f4f7fa;
+  color: #173554;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
-  padding: 15px 22px;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: .78rem;
+  letter-spacing: .01em;
+}
+.quick-actions {
+  width: min(1180px, calc(100% - 48px));
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.quick-actions a {
+  min-height: 42px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  background: transparent;
+  font-size: .84rem;
+  font-weight: 800;
+  text-align: center;
+}
+.quick-actions a:nth-child(2) {
+  border-color: #3b7db7;
+  border-radius: 0;
+  background: #3b7db7;
+}
+
+/* Highlight cards: restore the visible boxed layout. */
+.highlight-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+.highlight-card {
+  border: 1px solid rgba(18,63,105,.20);
+  border-radius: 14px;
+  background: #fff;
+  padding: 18px 10px 14px;
+  box-shadow: 0 8px 22px rgba(4,31,59,.08);
+  text-align: center;
+}
+.highlight-icon { margin-left: auto; margin-right: auto; }
+.highlight-icon img { object-position: center; transform: none; }
+
+/* Four association slots: equal footprint and equal spacing. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+.association-slot {
+  height: 124px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.association-slot img {
+  width: 100%;
+  max-width: 170px;
+  height: 112px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: normal;
+}
+.association-fipi img { max-width: 142px; }
+.association-slot:nth-child(2) img { max-width: 150px; height: 108px; }
+
+/* Registration table: a complete grid, bold category text, left/right alignment. */
+.fee-table { border: 1px solid #7f95aa; border-radius: 10px; overflow: hidden; }
+.fee-head, .fee-row { grid-template-columns: 1.4fr .8fr; }
+.fee-head > *, .fee-row > * {
+  border-right: 1px solid #7f95aa;
+  border-bottom: 1px solid #7f95aa;
+}
+.fee-head > *:last-child, .fee-row > *:last-child { border-right: 0; }
+.fee-row:last-child > * { border-bottom: 0; }
+.fee-head b:first-child { text-align: center; }
+.fee-head b:last-child { text-align: center; }
+.fee-row span { text-align: left; font-weight: 800; }
+.fee-row b { text-align: center; font-weight: 800; }
+
+/* Venue map footer — match the earlier reference screenshot: one full-width blue bar. */
+.maps-card { background: #0d3159; }
+.map-card-footer {
+  min-height: 74px;
   background: #0d3159;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid rgba(255,255,255,.08);
 }
 .map-card-footer span {
-  white-space: nowrap;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  color: #b7d4eb;
+  font-weight: 800;
 }
 .map-card-footer strong {
-  min-height: 38px;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
   white-space: nowrap;
 }
 
 @media (max-width: 720px) {
-  .hero-inner {
-    width: calc(100% - 24px);
-    padding-top: 14px;
-  }
+  .announcement { width: 100%; min-height: 40px; }
+  .quick-actions { width: 100%; grid-template-columns: 1fr; gap: 8px; }
+  .quick-actions a { width: 100%; }
+  .association-logos { gap: 8px; }
+  .association-slot { height: 86px; }
+  .association-slot img { width: 100%; max-width: 100%; height: 80px; }
+  .association-fipi img { max-width: 96%; }
+  .association-slot:nth-child(2) img { max-width: 94%; height: 76px; }
+  .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
-  /* Keep PDEU + SOET together on the left and ICPHD on the right.
-     This prevents the three hero logos from colliding on narrow screens. */
-  .top-logos {
-    width: 100%;
-    min-height: 76px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: 6px;
-    align-items: center;
-  }
-  .hero-left-logos {
-    width: max-content;
-    max-width: 100%;
-    gap: 2px;
-    flex-wrap: nowrap;
-  }
-  .pdeu-main-logo {
-    width: clamp(145px, 48vw, 190px);
-    height: 54px;
-    flex: 0 1 auto;
-  }
-  .hero-soet-logo {
-    width: 48px;
-    height: 52px;
-    flex: 0 0 48px;
-    border-radius: 3px;
-  }
-  .hero-icphd-logo {
-    width: 62px;
-    height: 62px;
-    flex: 0 0 62px;
-    margin-left: 0;
-  }
+/* FINAL REQUESTED TUNING — logo scale, hero pairing, theme layout, registration styling, venue CTA */
+.hero-left-logos {
+  gap: 0;
+}
+.pdeu-main-logo {
+  width: min(610px, 67vw);
+  height: 124px;
+}
+.hero-soet-logo {
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center;
+}
 
-  .hero-title-block {
-    max-width: 100%;
-    margin-top: 18px;
-    letter-spacing: .035em;
-  }
-  .hero-title-block h1 {
-    font-size: clamp(1.22rem, 6vw, 1.5rem);
-    letter-spacing: .04em;
-  }
-  .hero-title-block h2 {
-    font-size: clamp(1.08rem, 5.2vw, 1.28rem);
-    line-height: 1.2;
-    letter-spacing: .025em;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-  .tagline {
-    font-size: .86rem;
-    line-height: 1.45;
-  }
+/* Student chapter logos: larger, balanced visual footprints with equal slots. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.association-slot {
+  height: 136px;
+  min-width: 0;
+}
+.association-slot img {
+  width: 172px;
+  max-width: 100%;
+  height: 118px;
+}
+.association-fipi img { width: 156px; }
+.association-slot:nth-child(2) img { width: 146px; height: 108px; }
+.association-slot:nth-child(3) img { width: 184px; height: 126px; }
+.association-slot:nth-child(4) img { width: 184px; height: 126px; }
 
-  .hero-lower {
-    margin-top: 28px;
-  }
-  .org-copy {
-    font-size: .88rem;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
-  }
+/* Bigger schedule / brochure / flyer strip, retaining the earlier three-button layout. */
+.dark-strip { padding: 18px 24px 28px; }
+.announcement { min-height: 46px; font-size: .94rem; padding: 0 20px; }
+.quick-actions { margin-top: 12px; gap: 10px; }
+.quick-actions a { min-height: 52px; padding: 11px 16px; font-size: .98rem; }
 
-  .association-logos {
-    width: 100%;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2px;
-  }
-  .association-slot {
-    height: 78px;
-    min-width: 0;
-  }
-  .association-slot img {
-    width: 100%;
-    max-width: 100%;
-    height: 72px;
-    object-fit: contain;
-  }
-  .association-fipi img {
-    width: 96%;
-  }
-  .association-slot:nth-child(2) img {
-    width: 92%;
-    height: 70px;
-  }
+/* Conference themes: compact four-card row on desktop. */
+.theme-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.theme-card { padding: 18px 16px; border-radius: 14px; }
+.theme-card h3 { font-size: 1rem; }
+.theme-card ul { padding-left: 17px; font-size: .92rem; }
 
-  .dark-strip {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .announcement {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-  .quick-actions {
-    width: 100%;
-  }
+/* Registration table: website-blue header and subtle alternating rows. */
+.fee-table {
+  border: 1px solid #8aa6bf;
+  border-radius: 10px;
+  background: #fff;
+}
+.fee-head {
+  background: #e4f1fb;
+  color: #082f57;
+}
+.fee-head > *, .fee-row > * {
+  border-right: 1px solid #8aa6bf;
+  border-bottom: 1px solid #8aa6bf;
+}
+.fee-row:nth-child(odd) { background: #f7fbfe; }
+.fee-row:nth-child(even) { background: #edf6fc; }
+.fee-head b, .fee-row span, .fee-row b { font-weight: 800; }
 
-  .venue {
-    padding-top: 54px;
-    padding-bottom: 54px;
-  }
-  .venue-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .venue-building {
-    height: 205px;
-  }
-  .venue-copy-inner {
-    padding: 22px;
-  }
-  .venue-copy-inner h3 {
-    font-size: 1.42rem;
-  }
-  .venue-copy-inner p {
-    font-size: .92rem;
-    line-height: 1.55;
-  }
-  .map-preview {
-    height: 300px;
-  }
-  .map-card-footer {
-    min-height: 70px;
-    flex-direction: row;
-    padding: 12px 15px;
-    gap: 8px;
-  }
-  .map-card-footer span {
-    font-size: .68rem;
-    letter-spacing: .11em;
-  }
-  .map-card-footer strong {
-    min-height: 34px;
-    padding: 0 10px;
-    font-size: .8rem;
-  }
+/* Venue CTA: preserve the earlier blue Google Maps footer treatment. */
+.maps-card { background: #0d3159; }
+.map-card-footer {
+  min-height: 78px;
+  padding: 14px 20px;
+  background: #0d3159;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.map-card-footer strong {
+  font-size: 1.08rem;
+  font-weight: 850;
+  color: #fff;
+}
+
+@media (max-width: 980px) {
+  .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pdeu-main-logo { width: min(520px, 62vw); }
+  .hero-soet-logo { width: 100px; height: 100px; flex-basis: 100px; }
+}
+
+@media (max-width: 720px) {
+  .pdeu-main-logo { width: 72vw; height: 92px; }
+  .hero-soet-logo { width: 78px; height: 78px; flex-basis: 78px; }
+  .association-logos { gap: 7px; }
+  .association-slot { height: 92px; }
+  .association-slot img,
+  .association-slot:nth-child(3) img,
+  .association-slot:nth-child(4) img { width: 100%; max-width: 100%; height: 84px; }
+  .association-slot:nth-child(2) img { width: 92%; height: 78px; }
+  .theme-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .theme-card { padding: 14px 11px; }
+  .quick-actions a { min-height: 50px; font-size: .94rem; }
 }
