@@ -886,3 +886,112 @@ footer { background: #041a31; color: white; }
   .association-slot:nth-child(2) img { max-width: 94%; height: 76px; }
   .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* USER REQUEST — FINAL SIZE / SPACING PASS */
+/* PDEU hero logo slightly larger; keep SOET directly beside it. */
+.hero-left-logos {
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pdeu-main-logo {
+  width: min(600px, 62vw);
+  height: 122px;
+}
+.hero-soet-logo {
+  width: 104px;
+  height: 104px;
+  flex: 0 0 104px;
+  margin: 0;
+}
+
+/* Association logos: larger, balanced, equal four-column footprint.
+   SPE remains a little visually smaller while occupying the same slot. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.association-slot {
+  height: 136px;
+}
+.association-slot img {
+  width: 100%;
+  max-width: 184px;
+  height: 124px;
+  object-fit: contain;
+}
+.association-fipi img { max-width: 160px; }
+.association-slot:nth-child(2) img {
+  max-width: 156px;
+  height: 112px;
+}
+
+/* Restore the compact four-across conference-theme cards on desktop. */
+.theme-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.theme-card {
+  padding: 16px;
+  border-radius: 14px;
+}
+.theme-card h3 { font-size: .98rem; }
+.theme-card ul { font-size: .88rem; }
+
+/* Make the schedule / brochure / flyer strip more prominent. */
+.dark-strip {
+  padding: 20px 24px 28px;
+}
+.announcement {
+  min-height: 44px;
+  font-size: .9rem;
+}
+.quick-actions {
+  margin-top: 12px;
+  gap: 12px;
+}
+.quick-actions a {
+  min-height: 52px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-width: 2px;
+}
+
+/* Keep the earlier venue treatment with the blue Google Maps action box. */
+.map-card-footer {
+  background: #0d3159;
+  padding: 16px 20px 18px;
+}
+.map-card-footer strong {
+  min-height: 40px;
+  padding: 0 18px;
+  background: #236fa8;
+  border-color: #4e9bd5;
+}
+
+@media (max-width: 1050px) {
+  .pdeu-main-logo { width: min(500px, 58vw); height: 104px; }
+  .hero-soet-logo { width: 88px; height: 88px; flex-basis: 88px; }
+  .theme-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .association-slot img { max-width: 164px; }
+  .association-fipi img { max-width: 146px; }
+  .association-slot:nth-child(2) img { max-width: 146px; }
+}
+
+@media (max-width: 720px) {
+  .pdeu-main-logo { width: min(220px, 58vw); height: 62px; }
+  .hero-soet-logo { width: 54px; height: 58px; flex-basis: 54px; }
+  .association-logos { gap: 6px; }
+  .association-slot { height: 92px; }
+  .association-slot img { max-width: 100%; height: 86px; }
+  .association-fipi img { max-width: 96%; }
+  .association-slot:nth-child(2) img { max-width: 94%; height: 80px; }
+  .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .theme-card { padding: 12px; }
+  .theme-card h3 { font-size: .9rem; }
+  .theme-card ul { font-size: .78rem; }
+  .dark-strip { padding: 18px 16px 24px; }
+  .announcement { min-height: 44px; font-size: .82rem; }
+  .quick-actions { gap: 9px; }
+  .quick-actions a { min-height: 48px; font-size: .94rem; }
+}
