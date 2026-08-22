@@ -153,7 +153,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="top-logos">
             <div className="hero-left-logos" aria-label="PDEU and SOET logos">
-              <img className="pdeu-main-logo" src="/assets/pdeu-logo-final-clean.png" alt="Pandit Deendayal Energy University" />
+              <img className="pdeu-main-logo" src="/assets/pdeu-logo-clean-transparent.png" alt="Pandit Deendayal Energy University" />
               <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
             </div>
             <img className="hero-icphd-logo" src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
@@ -177,10 +177,10 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-final-clean.png" alt="FIPI" /></div>
-                  <div className="association-slot"><img src="/assets/spe-association-final-clean.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-clean.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
-                  <div className="association-slot"><img src="/assets/iadc-association-final-clean.png" alt="IADC PDEU Student Chapter" /></div>
+                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
+                  <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-clean-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/iadc-association-clean-transparent.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
             </div>
