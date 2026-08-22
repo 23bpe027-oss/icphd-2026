@@ -152,7 +152,7 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <div className="hero-left-logos">
+            <div className="hero-left-logos" aria-label="PDEU and SOET logos">
               <img className="pdeu-main-logo" src="/assets/pdeu-logo-clean-final.png" alt="Pandit Deendayal Energy University" />
               <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
             </div>
