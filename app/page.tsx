@@ -153,7 +153,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="top-logos">
             <div className="hero-left-logos" aria-label="PDEU and SOET logos">
-              <img className="pdeu-main-logo" src="/assets/pdeu-logo-clean-final.png" alt="Pandit Deendayal Energy University" />
+              <img className="pdeu-main-logo" src="/assets/pdeu-logo-final-clean.png" alt="Pandit Deendayal Energy University" />
               <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
             </div>
             <img className="hero-icphd-logo" src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
@@ -171,16 +171,16 @@ export default function Home() {
             <div className="organizers-panel">
               <div className="org-block">
                 <p className="mini-label">ORGANISED BY</p>
-                <p className="org-copy">Department of Petroleum Engineering, in association with Department of Chemical Engineering and Department of Chemistry, Pandit Deendayal Energy University</p>
+                <p className="org-copy">Department of Petroleum Engineering with Department of Chemical Engineering and Department of Chemistry, Pandit Deendayal Energy University</p>
               </div>
 
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
-                  <div className="association-slot"><img src="/assets/spe-association-clean-final.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-clean-final.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
-                  <div className="association-slot"><img src="/assets/iadc-association-clean-final.png" alt="IADC PDEU Student Chapter" /></div>
+                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-final-clean.png" alt="FIPI" /></div>
+                  <div className="association-slot"><img src="/assets/spe-association-final-clean.png" alt="SPE PDEU Student Chapter" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-clean.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/iadc-association-final-clean.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
             </div>

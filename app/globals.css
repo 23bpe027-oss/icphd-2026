@@ -623,3 +623,266 @@ footer { background: #041a31; color: white; }
     height: 86px;
   }
 }
+
+/* FINAL RESTORATION: match the original first-PDF quick-action strip */
+.dark-strip {
+  background: #102f56;
+  padding: 16px 24px 24px;
+}
+.announcement {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 31px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  background: #f4f7fa;
+  color: #173554;
+  border-radius: 5px;
+  font-size: .78rem;
+  letter-spacing: .01em;
+}
+.quick-actions {
+  width: min(1180px, calc(100% - 48px));
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  justify-content: stretch;
+}
+.quick-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35px;
+  padding: 7px 14px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  background: transparent;
+  font-size: .82rem;
+  font-weight: 800;
+  text-align: center;
+}
+.quick-actions a:nth-child(2) {
+  border-color: #3b7db7;
+  border-radius: 0;
+  background: #3b7db7;
+}
+
+/* Center the conference section headings and their accent rule. */
+.section-title {
+  text-align: center;
+}
+.section-title > span {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Highlight cards must visibly retain their boxes. */
+.highlight-card {
+  border: 1px solid rgba(18,63,105,.20);
+  border-radius: 14px;
+  background: #fff;
+  padding: 18px 10px 14px;
+  box-shadow: 0 8px 22px rgba(4,31,59,.08);
+}
+.highlight-grid { gap: 18px; }
+
+/* Clean, consistently sized association logos. */
+.pdeu-main-logo,
+.association-slot img {
+  mix-blend-mode: normal;
+}
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.association-slot {
+  height: 124px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.association-slot img {
+  width: 164px;
+  height: 112px;
+  object-fit: contain;
+  object-position: center;
+}
+.association-fipi img { width: 132px; }
+/* SPE is visually heavier, so keep it a little smaller while preserving equal slots. */
+.association-slot:nth-child(2) img { width: 148px; height: 104px; }
+
+/* Registration fee table: bold category labels and clear full grid. */
+.fee-table { border-collapse: collapse; }
+.fee-head > *, .fee-row > * {
+  border-right: 1px solid #7f95aa;
+  border-bottom: 1px solid #7f95aa;
+}
+.fee-row span { font-weight: 800; text-align: left; }
+.fee-row b { text-align: center; font-weight: 800; }
+
+/* Restore the blue Google Maps action footer appearance. */
+.maps-card { background: #0d3159; }
+.map-card-footer {
+  background: #0d3159;
+  padding: 15px 20px 17px;
+}
+.map-card-footer strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid #4e9bd5;
+  border-radius: 7px;
+  background: #236fa8;
+  color: #fff;
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  .announcement, .quick-actions { width: 100%; }
+  .announcement { min-height: 40px; }
+  .quick-actions { grid-template-columns: 1fr; gap: 8px; }
+  .quick-actions a:nth-child(2) { border-radius: 999px; }
+  .association-logos { gap: 8px; }
+  .association-slot { height: 86px; }
+  .association-slot img { width: 100%; height: 80px; }
+  .association-fipi img { width: 96%; }
+  .association-slot:nth-child(2) img { width: 94%; height: 76px; }
+  .highlight-card { padding: 14px 6px 12px; }
+}
+
+/* FINAL VISUAL RESTORATION — based on the supplied earlier reference screenshots. */
+.section-title { text-align: center; }
+.section-title > span { margin-left: auto; margin-right: auto; }
+
+/* Preserve the earlier schedule / brochure / flyer strip layout. */
+.dark-strip {
+  background: #102f56;
+  color: #fff;
+  padding: 16px 24px 24px;
+}
+.announcement {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 36px;
+  padding: 0 18px;
+  background: #f4f7fa;
+  color: #173554;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: .78rem;
+  letter-spacing: .01em;
+}
+.quick-actions {
+  width: min(1180px, calc(100% - 48px));
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.quick-actions a {
+  min-height: 42px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  background: transparent;
+  font-size: .84rem;
+  font-weight: 800;
+  text-align: center;
+}
+.quick-actions a:nth-child(2) {
+  border-color: #3b7db7;
+  border-radius: 0;
+  background: #3b7db7;
+}
+
+/* Highlight cards: restore the visible boxed layout. */
+.highlight-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+.highlight-card {
+  border: 1px solid rgba(18,63,105,.20);
+  border-radius: 14px;
+  background: #fff;
+  padding: 18px 10px 14px;
+  box-shadow: 0 8px 22px rgba(4,31,59,.08);
+  text-align: center;
+}
+.highlight-icon { margin-left: auto; margin-right: auto; }
+.highlight-icon img { object-position: center; transform: none; }
+
+/* Four association slots: equal footprint and equal spacing. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+.association-slot {
+  height: 124px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.association-slot img {
+  width: 100%;
+  max-width: 170px;
+  height: 112px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: normal;
+}
+.association-fipi img { max-width: 142px; }
+.association-slot:nth-child(2) img { max-width: 150px; height: 108px; }
+
+/* Registration table: a complete grid, bold category text, left/right alignment. */
+.fee-table { border: 1px solid #7f95aa; border-radius: 10px; overflow: hidden; }
+.fee-head, .fee-row { grid-template-columns: 1.4fr .8fr; }
+.fee-head > *, .fee-row > * {
+  border-right: 1px solid #7f95aa;
+  border-bottom: 1px solid #7f95aa;
+}
+.fee-head > *:last-child, .fee-row > *:last-child { border-right: 0; }
+.fee-row:last-child > * { border-bottom: 0; }
+.fee-head b:first-child { text-align: center; }
+.fee-head b:last-child { text-align: center; }
+.fee-row span { text-align: left; font-weight: 800; }
+.fee-row b { text-align: center; font-weight: 800; }
+
+/* Restore the earlier venue map footer/button treatment. */
+.maps-card { background: #0d3159; }
+.map-card-footer {
+  background: #0d3159;
+  padding: 15px 20px 17px;
+}
+.map-card-footer strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid #4e9bd5;
+  border-radius: 7px;
+  background: #236fa8;
+  color: #fff;
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  .announcement { width: 100%; min-height: 40px; }
+  .quick-actions { width: 100%; grid-template-columns: 1fr; gap: 8px; }
+  .quick-actions a { width: 100%; }
+  .association-logos { gap: 8px; }
+  .association-slot { height: 86px; }
+  .association-slot img { width: 100%; max-width: 100%; height: 80px; }
+  .association-fipi img { max-width: 96%; }
+  .association-slot:nth-child(2) img { max-width: 94%; height: 76px; }
+  .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
