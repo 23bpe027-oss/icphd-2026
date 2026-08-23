@@ -10,3 +10,9 @@
 - Final request: prevented hero conference title from overflowing/clashing by allowing balanced centered wrapping.
 - Final request: changed Important Dates table colors to match the Registration fee table palette.
 - Final request: kept the supplied high-resolution SEG/SPG/EAGE transparent chapter artwork in the chapter card.
+
+- Mobile hero conference title forced to a single line with responsive sizing; desktop unchanged.
+- SEG/SPG/EAGE chapter artwork updated so textual elements render white while retaining colored logo marks.
+- Networking & Branding illustration intentionally left unchanged pending the user-supplied replacement artwork.
+
+- Reduced the excessive vertical whitespace between the About section and Conference Highlights on desktop. Only the desktop spacing was adjusted; the existing mobile-specific layout was left intact.

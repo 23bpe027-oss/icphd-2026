@@ -1468,3 +1468,113 @@ html, body { overflow-x: hidden; }
     text-wrap: pretty !important;
   }
 }
+
+/* FINAL MOBILE-ONLY POLISH — equal hero-logo spacing + contained registration cards */
+@media (max-width: 720px) {
+  /* Three equal columns keep PDEU, ICPHD and SOET evenly spaced on phones. */
+  .hero-inner .top-logos {
+    width: 100% !important;
+    min-height: 82px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    column-gap: 10px !important;
+    align-items: center !important;
+    justify-items: center !important;
+  }
+
+  .hero-inner .top-logos .pdeu-main-logo,
+  .hero-inner .top-logos .hero-icphd-logo,
+  .hero-inner .top-logos .hero-soet-logo {
+    justify-self: center !important;
+    margin: 0 !important;
+  }
+
+  .hero-inner .top-logos .pdeu-main-logo {
+    width: min(100%, 150px) !important;
+    height: 58px !important;
+  }
+
+  .hero-inner .top-logos .hero-icphd-logo {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .hero-inner .top-logos .hero-soet-logo {
+    width: 68px !important;
+    height: 68px !important;
+    flex-basis: auto !important;
+  }
+
+  /* Keep both Registration and Abstract Submission cards safely inside
+     the phone viewport with a consistent side margin. */
+  .registration {
+    width: min(calc(100% - 24px), 620px) !important;
+    max-width: 620px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .registration-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 14px !important;
+  }
+
+  .registration-grid article {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 18px 14px !important;
+    border-radius: 17px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-inner .top-logos {
+    column-gap: 7px !important;
+  }
+
+  .hero-inner .top-logos .pdeu-main-logo {
+    width: min(100%, 132px) !important;
+    height: 54px !important;
+  }
+
+  .hero-inner .top-logos .hero-icphd-logo {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .hero-inner .top-logos .hero-soet-logo {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .registration {
+    width: calc(100% - 20px) !important;
+  }
+
+  .registration-grid article {
+    padding: 17px 12px !important;
+  }
+}
+
+/* FINAL MOBILE-ONLY REQUEST — keep hero conference title on one line */
+@media (max-width: 720px) {
+  .hero .hero-title-block h2 {
+    white-space: nowrap !important;
+    font-size: clamp(0.70rem, 2.65vw, 1.05rem) !important;
+    letter-spacing: 0.015em !important;
+    line-height: 1.15 !important;
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+}
+/* Latest spacing polish: reduce the large gap between About and Conference Highlights on desktop only. */
+@media (min-width: 861px) {
+  .about { padding-bottom: 36px !important; }
+  .conference-content { padding-top: 36px !important; }
+}
