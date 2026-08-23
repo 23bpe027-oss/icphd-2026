@@ -1332,39 +1332,69 @@ footer { background: #041a31; color: white; }
   }
 }
 
-/* FINAL MERGED FIXES — preserve the previous design; only apply the latest requested adjustments. */
 
-/* Student chapter cards: blue background so white logos remain visible. */
-.association-slot {
-  background: #123f69 !important;
-  border: 2px solid #5aa9d9 !important;
-}
-.association-slot img {
-  filter: none !important;
-}
-/* SPE/SP chapter logo slightly smaller than the other chapter logos. */
-.association-slot:nth-child(2) img {
-  max-width: 150px !important;
-  height: 108px !important;
+/* MOBILE VENUE + PAGE WIDTH FIX — keep the full viewport usable */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* Keep the conference theme cards compact: four per row on desktop, two on mobile. */
-.theme-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 14px !important;
-}
-.theme-card {
-  padding: 16px !important;
-  border: 2px solid #123f69 !important;
-  border-radius: 14px !important;
-  background: #fff !important;
-}
-@media (max-width: 1050px) {
-  .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-}
 @media (max-width: 720px) {
-  .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
-  .theme-card { padding: 12px !important; }
-  .theme-card h3 { font-size: .88rem !important; }
-  .theme-card ul { font-size: .78rem !important; padding-left: 16px !important; }
+  .venue {
+    width: 100%;
+    padding: 48px 0 58px !important;
+  }
+  .venue > .container {
+    width: calc(100% - 30px) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+  }
+  .venue-grid {
+    width: 100% !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+  .venue-copy, .maps-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .venue-building {
+    height: 220px !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+  }
+  .venue-copy-inner {
+    padding: 20px 18px 22px !important;
+  }
+  .venue-copy-inner h3 {
+    font-size: 1.35rem !important;
+    line-height: 1.22 !important;
+  }
+  .venue-copy-inner p {
+    font-size: .93rem !important;
+    line-height: 1.55 !important;
+  }
+  .address {
+    font-size: .98rem !important;
+  }
+  .maps-card {
+    min-height: 0 !important;
+  }
+  .map-preview {
+    min-height: 260px !important;
+    height: 260px !important;
+  }
+  .map-preview img {
+    min-height: 260px !important;
+    height: 260px !important;
+    object-fit: cover !important;
+  }
+  .map-card-footer {
+    min-height: 68px !important;
+    padding: 14px 16px !important;
+  }
+  .map-card-footer strong {
+    font-size: .9rem !important;
+  }
 }

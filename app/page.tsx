@@ -40,14 +40,14 @@ const themes = [
   { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE', 'Minimising Environmental Discharge', 'Environmental Stewardship and Sustainability', 'Emergency Response and Recovery', 'Sensors and Measurements for Environmental Hazards', 'Digitalisation in HSE - Remote Inspection, Automation'] },
   { title: 'Project Management, Economics, & Contracting', items: ['Project Economics', 'Field Development Planning, Strategies, and Methodologies', 'EPC Project Management', 'Governance, Policy and Regulations'] },
   { title: 'Energy Integration and Transition', items: ['Global Energy Transition Outlook and Future', 'Renewable Energy Integration in O&G', 'Policy Regulation and Market Trends', 'Investment, Economics, and Workforce Development'] },
-  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Utilization and Removal', 'Methane Management and Mitigation', 'Electrification and Decarbonisation of Existing Operations'] },
+  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Methane Management and Mitigation', 'Electrification and Decarbonisation of Existing Operations'] },
+  { title: 'Carbon Capture, Utilization and Removal', items: ['Carbon Capture Technologies', 'CO₂ Transport and Storage', 'Carbon Utilization and Conversion', 'Carbon Removal Pathways', 'Monitoring, Verification and Sustainability'] },
   { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production and Conversion', 'Hydrogen Storage and Transportation', 'Hydrogen Utilization and Applications', 'Hydrogen Policy, Economics and Safety'] },
   { title: 'Petroleum Geoscience', items: ['Petroleum Geochemistry and Geology', 'Sedimentology and Stratigraphy', 'Structural Geology and Basin Analysis', 'Core Sampling & Characterisation'] },
   { title: 'Geophysics and Geotechnical Engineering', items: ['Seismic Exploration and Interpretation', 'Gravity and Magnetics', 'Borehole Geophysics and Logging Techniques', 'Near Surface Geophysics', 'Rock Mechanics', 'Remote Sensing and GIS in Geosciences'] },
   { title: 'Efficient Drilling and Completion Technologies', items: ['Drilling Technology', 'Wells Construction and Completion Technology', 'Cementing and Drilling Fluids', 'HPHT and Deep-Water drilling'] },
   { title: 'Reservoir Engineering and Technologies', items: ['Reservoir Characterisation and Modelling', 'Reservoir Simulation', 'Reservoir Modelling/ Surveillance Technology', 'Oil and Gas Field Development', 'Flow through Porous Media', 'Rock-fluid Interactions'] },
   { title: 'Petroleum Production Operations', items: ['Integrated Operations', 'Artificial Lift', 'High CO2 and Contaminated Fields', 'Production Maintenance and Chemistry', 'Subsea Production and Processing System', 'Water Shut-off operations', 'Sustainable Produced Water Management', 'Workover & Well Stimulations'] }
-  ,{ title: 'Carbon Capture, Utilization and Removal', items: ['Carbon Capture Technologies', 'CO₂ Utilization and Conversion', 'Carbon Storage and Sequestration', 'Direct Air Capture', 'Monitoring, Verification and Storage Integrity'] }
 ];
 
 const fees = [
