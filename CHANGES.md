@@ -1,6 +1,10 @@
-# Final text restoration
+# ICPHD 2026 — latest logo/layout changes
 
-Restored all original website text from the earlier reference version. Only flyer-different dates, registration fee table, conference highlight wording, and conference theme headings were updated from the supplied flyer. Layout and styling changes are preserved.
-
-## Venue reference match
-Updated only the Venue section to match the supplied screenshot: wider white information card on the left, 290px campus image, larger heading/address/body text, right-side map card, and dark-blue footer with "VENUE LOCATION" and "Open in Google Maps →".
+- Keeps the supplied PDEU/PDU logo unchanged and places SOET immediately beside it on the left.
+- Keeps the ICPHD circular logo on the right of the hero logo row.
+- Makes the four association/logo slots equal-width and evenly spaced.
+- Keeps FIPI visually smaller so the four association items read as one aligned row.
+- Centers the conference-highlight illustrations and gives Exhibition, Networking & Branding a larger illustration.
+- Gives the registration table full vertical and horizontal cell rules; category rows are left-aligned and amounts are centered.
+- Keeps the existing venue/map section untouched.
+- Keeps the existing scroll-reveal animation system.
