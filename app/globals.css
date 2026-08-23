@@ -1398,3 +1398,191 @@ html, body {
     font-size: .9rem !important;
   }
 }
+
+/* ===== MOBILE FINAL SIZE + TABLE FIX =====
+   Keep all information accessible without horizontal clipping or oversized sections. */
+@media (max-width: 720px) {
+  body { font-size: 14px; }
+  .container { width: calc(100% - 24px) !important; max-width: none !important; }
+
+  /* About: compact typography and spacing so the three blocks don't dominate mobile. */
+  .about {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+  .about > div { min-width: 0 !important; }
+  .about .section-title { margin-bottom: 14px !important; }
+  .about .section-title h2 {
+    font-size: 1.42rem !important;
+    line-height: 1.15 !important;
+  }
+  .about .section-title .eyebrow { font-size: .68rem !important; }
+  .about p {
+    margin: 0 0 11px !important;
+    font-size: .84rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* General mobile section scale. */
+  .section-title { margin-bottom: 18px !important; }
+  .section-title h2 {
+    font-size: 1.48rem !important;
+    line-height: 1.15 !important;
+  }
+  .section-title .eyebrow { font-size: .68rem !important; }
+  .conference-content { padding: 40px 0 !important; }
+  .content-section + .content-section { margin-top: 48px !important; }
+
+  /* Highlights: compact but still easy to tap/read. */
+  .highlight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .highlight-card {
+    padding: 10px 5px 12px !important;
+    min-width: 0 !important;
+  }
+  .highlight-icon {
+    width: 82px !important;
+    height: 82px !important;
+    margin-bottom: 9px !important;
+  }
+  .highlight-icon img { width: 62px !important; height: 62px !important; }
+  .highlight-icon.networking-highlight img { width: 68px !important; height: 68px !important; }
+  .highlight-card h3, .highlight-card p {
+    font-size: .72rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Themes: two compact columns rather than oversized full-width cards. */
+  .theme-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+  .theme-card {
+    padding: 10px !important;
+    border-radius: 10px !important;
+    min-width: 0 !important;
+  }
+  .theme-card h3 {
+    font-size: .76rem !important;
+    line-height: 1.18 !important;
+    margin-bottom: 6px !important;
+  }
+  .theme-card ul {
+    padding-left: 14px !important;
+    font-size: .66rem !important;
+    line-height: 1.28 !important;
+  }
+  .theme-card li + li { margin-top: 2px !important; }
+
+  /* Registration cards: reduce excess whitespace. */
+  .registration {
+    padding-top: 40px !important;
+    padding-bottom: 44px !important;
+  }
+  .registration-grid { gap: 14px !important; }
+  .registration-grid article {
+    padding: 16px !important;
+    border-radius: 15px !important;
+  }
+  .registration-grid h3 {
+    font-size: 1.08rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 9px !important;
+  }
+  .registration-grid ul {
+    padding-left: 18px !important;
+    margin: 7px 0 10px !important;
+  }
+  .registration-grid li {
+    font-size: .78rem !important;
+    line-height: 1.38 !important;
+    margin-bottom: 3px !important;
+  }
+  .primary-btn {
+    margin-top: 8px !important;
+    padding: 10px 12px !important;
+    font-size: .78rem !important;
+    border-radius: 9px !important;
+  }
+
+  /* Registration table: fit the viewport; never force a 620px-wide table. */
+  .flyer-fee-table {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 14px !important;
+    overflow: hidden !important;
+    border-radius: 9px !important;
+  }
+  .flyer-fee-table .fee-head,
+  .flyer-fee-table .fee-row {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: minmax(0, 1.18fr) repeat(3, minmax(0, .72fr)) !important;
+  }
+  .flyer-fee-table .fee-head > *,
+  .flyer-fee-table .fee-row > * {
+    min-width: 0 !important;
+    padding: 7px 3px !important;
+    font-size: .59rem !important;
+    line-height: 1.18 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+  .flyer-fee-table .fee-head b,
+  .flyer-fee-table .fee-row b,
+  .flyer-fee-table .fee-row span {
+    font-size: .59rem !important;
+    line-height: 1.18 !important;
+  }
+  .flyer-fee-table .fee-row span { text-align: left !important; }
+  .flyer-fee-table .fee-row b { text-align: center !important; }
+
+  /* Abstract card: keep the long requirements readable but compact. */
+  .registration-grid article#abstract ul { margin-bottom: 9px !important; }
+  .bank-placeholder {
+    margin-top: 14px !important;
+    padding: 12px !important;
+    font-size: .78rem !important;
+  }
+
+  /* Dates: reduce table density without creating a horizontal crop. */
+  .dates-panel { padding: 12px !important; border-radius: 15px !important; }
+  .date-row { grid-template-columns: 105px minmax(0, 1fr) !important; }
+  .date-row > * {
+    padding: 9px 7px !important;
+    font-size: .72rem !important;
+    line-height: 1.25 !important;
+  }
+  .dates-photo { height: 170px !important; min-height: 170px !important; }
+
+  /* Venue: smaller mobile image/card footprint while retaining the two-card design. */
+  .venue { padding: 40px 0 48px !important; }
+  .venue > .container { width: calc(100% - 24px) !important; }
+  .venue-building { height: 185px !important; }
+  .venue-copy-inner { padding: 16px !important; }
+  .venue-copy-inner h3 { font-size: 1.22rem !important; margin-bottom: 12px !important; }
+  .venue-copy-inner p { font-size: .82rem !important; line-height: 1.48 !important; margin-bottom: 14px !important; }
+  .address { font-size: .84rem !important; }
+  .map-preview, .map-preview img { min-height: 210px !important; height: 210px !important; }
+  .map-card-footer { min-height: 58px !important; padding: 10px 12px !important; }
+  .map-card-footer span { font-size: .65rem !important; }
+  .map-card-footer strong { min-height: 30px !important; padding: 0 10px !important; font-size: .72rem !important; }
+}
+
+@media (max-width: 360px) {
+  .container { width: calc(100% - 18px) !important; }
+  .about p { font-size: .8rem !important; }
+  .section-title h2 { font-size: 1.35rem !important; }
+  .theme-card h3 { font-size: .71rem !important; }
+  .theme-card ul { font-size: .61rem !important; }
+  .flyer-fee-table .fee-head > *,
+  .flyer-fee-table .fee-row > *,
+  .flyer-fee-table .fee-head b,
+  .flyer-fee-table .fee-row b,
+  .flyer-fee-table .fee-row span { font-size: .55rem !important; padding: 6px 2px !important; }
+  .date-row { grid-template-columns: 96px minmax(0, 1fr) !important; }
+}
