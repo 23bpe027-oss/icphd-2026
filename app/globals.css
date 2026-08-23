@@ -1103,3 +1103,153 @@ html, body { overflow-x: hidden; }
   .top-logos .hero-icphd-logo { width: 62px !important; height: 62px !important; }
   .top-logos .hero-soet-logo { width: 68px !important; height: 68px !important; flex-basis: 68px !important; }
 }
+
+/* FINAL MOBILE RESPONSIVE FIX — registration/abstract tables and text */
+@media (max-width: 720px) {
+  .registration {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+    overflow: hidden;
+  }
+
+  .registration .section-title {
+    margin-bottom: 20px;
+    padding: 0 6px;
+  }
+
+  .registration .section-title h2 {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .registration-grid {
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px;
+  }
+
+  .registration-grid article {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .registration-grid h3 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+
+  .registration-grid ul {
+    margin: 0;
+    padding-left: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .registration-grid li {
+    font-size: .86rem;
+    line-height: 1.48;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    margin-bottom: 5px;
+  }
+
+  .registration-grid .primary-btn {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: .92rem;
+    padding: 11px 14px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Keep the complete fee table inside the phone viewport instead of
+     creating a page-wide horizontal overflow. */
+  .registration-grid .flyer-fee-table {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    margin-top: 18px;
+    border-radius: 9px;
+  }
+
+  .registration-grid .flyer-fee-table .fee-head,
+  .registration-grid .flyer-fee-table .fee-row {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: minmax(0, 1.42fr) repeat(3, minmax(0, .72fr)) !important;
+  }
+
+  .registration-grid .flyer-fee-table .fee-head > *,
+  .registration-grid .flyer-fee-table .fee-row > * {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 9px 5px;
+    font-size: .66rem;
+    line-height: 1.22;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .registration-grid .flyer-fee-table .fee-head b {
+    font-size: .64rem;
+  }
+
+  .registration-grid .flyer-fee-table .fee-row span,
+  .registration-grid .flyer-fee-table .fee-row b {
+    font-size: .68rem;
+  }
+
+  .registration-grid #abstract ul {
+    padding-left: 19px;
+  }
+
+  .registration-grid #abstract li {
+    font-size: .82rem;
+    line-height: 1.45;
+  }
+
+  .registration-grid #abstract .bank-placeholder {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-top: 18px;
+  }
+
+  .registration-grid #abstract .bank-placeholder span {
+    font-size: .84rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 430px) {
+  .registration .section-title h2 {
+    font-size: 1.45rem;
+  }
+
+  .registration-grid article {
+    padding: 18px 13px;
+  }
+
+  .registration-grid .flyer-fee-table .fee-head > *,
+  .registration-grid .flyer-fee-table .fee-row > * {
+    padding: 8px 3px;
+    font-size: .61rem;
+  }
+
+  .registration-grid .flyer-fee-table .fee-head b,
+  .registration-grid .flyer-fee-table .fee-row span,
+  .registration-grid .flyer-fee-table .fee-row b {
+    font-size: .62rem;
+  }
+}

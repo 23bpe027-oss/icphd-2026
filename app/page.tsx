@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
 const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || '#registration';
-const abstractUrl = process.env.NEXT_PUBLIC_ABSTRACT_URL || '#abstract';
+const abstractUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8zIIplqNH0R0gzwqkgrfPBg0jQUOMYxPrmiXAJPWOBip66A/viewform?usp=send_form';
 
 const navLinks = [
   ['Home', '#home'],
