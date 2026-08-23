@@ -152,9 +152,9 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="top-logos">
-            <div className="hero-left-logos" aria-label="PDEU and SOET logos">
-              <img className="pdeu-main-logo" src="/assets/pdeu-logo-final-clean.png" alt="Pandit Deendayal Energy University" />
+            <div className="hero-left-logos" aria-label="SOET and PDEU logos">
               <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
+              <img className="pdeu-main-logo" src="/assets/pdeu-logo-clean-transparent.png" alt="Pandit Deendayal Energy University" />
             </div>
             <img className="hero-icphd-logo" src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
           </div>
@@ -177,10 +177,10 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-final-clean.png" alt="FIPI" /></div>
-                  <div className="association-slot"><img src="/assets/spe-association-final-clean.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-clean.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
-                  <div className="association-slot"><img src="/assets/iadc-association-final-clean.png" alt="IADC PDEU Student Chapter" /></div>
+                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
+                  <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-clean-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/iadc-association-clean-transparent.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Registration Starts: August 20th, 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noreferrer">Download Flyer</a></div>
+        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.jpg" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">

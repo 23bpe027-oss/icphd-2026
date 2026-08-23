@@ -8,3 +8,7 @@
 - Gives the registration table full vertical and horizontal cell rules; category rows are left-aligned and amounts are centered.
 - Keeps the existing venue/map section untouched.
 - Keeps the existing scroll-reveal animation system.
+
+- Hero logos reordered: SOET immediately left of PDEU, ICPHD remains right.
+- Added dedicated responsive hero-logo rules for tablet/mobile to prevent overlap and overflow.
+- SOET uses square/sharp edges (border-radius: 0).
