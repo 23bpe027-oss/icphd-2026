@@ -332,20 +332,86 @@ button { font: inherit; }
 .bank-placeholder b { color: var(--navy); }
 .bank-placeholder span { color: #52687c; }
 
-/* VENUE */
-.venue { padding: 72px 0; }
-.venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.venue-copy, .maps-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
-.venue-building { width: 100%; height: 290px; object-fit: cover; }
-.venue-copy-inner { padding: 24px; }
-.venue-copy-inner h3 { color: var(--navy); }
-.address { color: #5c7184; font-weight: 650; }
-.maps-card { color: white; background: var(--navy); }
-.map-preview { height: 100%; min-height: 380px; }
-.map-preview img { width: 100%; height: 100%; object-fit: cover; }
-.map-card-footer { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-.map-card-footer span { font-size: .75rem; letter-spacing: .16em; color: #9fc5e2; }
-.map-card-footer strong { color: white; }
+/* VENUE — matched to the supplied reference screenshot */
+.venue { padding: 72px 0 82px; }
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1.16fr .84fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.venue-copy, .maps-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(4, 26, 48, .12);
+}
+.venue-building {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: center;
+}
+.venue-copy-inner { padding: 26px 28px 28px; }
+.venue-copy-inner h3 {
+  margin: 0 0 18px;
+  color: #13253a;
+  font-size: clamp(1.65rem, 2.4vw, 2.05rem);
+  line-height: 1.2;
+  font-weight: 800;
+}
+.venue-copy-inner p {
+  margin: 0 0 22px;
+  color: #26384b;
+  font-size: 1.03rem;
+  line-height: 1.65;
+}
+.venue-copy-inner p:last-child { margin-bottom: 0; }
+.address {
+  color: #334b62 !important;
+  font-size: 1.14rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500;
+}
+.maps-card {
+  color: #fff;
+  background: #071f3b;
+  display: flex;
+  flex-direction: column;
+}
+.map-preview {
+  flex: 1 1 auto;
+  min-height: 380px;
+  background: #e9eef2;
+}
+.map-preview img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  object-position: center;
+}
+.map-card-footer {
+  min-height: 86px;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  background: #08294d;
+}
+.map-card-footer span {
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  color: #b7d4ea;
+}
+.map-card-footer strong {
+  color: #fff;
+  font-size: 1.02rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
 
 /* COUNTDOWN */
 .countdown-section { background: var(--navy); color: white; padding: 54px 0; }
@@ -450,8 +516,13 @@ footer { background: #041a31; color: white; }
   .date-row { grid-template-columns: 125px 1fr; }
   .date-row > * { padding: 10px 9px; font-size: .83rem; }
   .dates-photo { min-height: 260px; }
-  .map-preview { min-height: 300px; }
-  .map-card-footer { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .venue-copy-inner { padding: 22px 20px 24px; }
+  .venue-copy-inner h3 { font-size: 1.55rem; }
+  .venue-copy-inner p { font-size: .96rem; }
+  .address { font-size: 1.02rem !important; }
+  .map-preview, .map-preview img { min-height: 300px; }
+  .map-card-footer { min-height: 78px; align-items: center; padding: 16px 18px; }
+  .map-card-footer strong { font-size: .95rem; }
 
   .countdown-wrap { flex-direction: column; align-items: flex-start; }
   .countdown { width: 100%; min-width: 0; }
@@ -944,8 +1015,8 @@ footer { background: #041a31; color: white; }
   padding: 12px !important;
   border: 2px solid #5aa9d9 !important;
   border-radius: 14px !important;
-  background: rgba(255,255,255,.96) !important;
-  box-shadow: 0 7px 18px rgba(4,31,59,.10) !important;
+  background: #123f69 !important;
+  box-shadow: 0 7px 18px rgba(4,31,59,.16) !important;
 }
 .association-slot img { width: 100% !important; height: 128px !important; max-width: 190px !important; object-fit: contain !important; }
 .association-fipi img { max-width: 170px !important; }
@@ -1014,4 +1085,171 @@ footer { background: #041a31; color: white; }
   .top-logos .pdeu-main-logo { width: 128px !important; height: 48px !important; }
   .top-logos .hero-icphd-logo { width: 60px !important; height: 60px !important; }
   .top-logos .hero-soet-logo { width: 72px !important; height: 72px !important; }
+}
+
+
+/* FINAL USER REQUEST — logo scale, blue chapter boxes, highlight typography, dates and fee contrast. */
+.top-logos .pdeu-main-logo {
+  width: min(610px, 55vw) !important;
+  height: 126px !important;
+}
+
+/* Student chapter logos: blue branded boxes so white artwork remains visible. */
+.association-logos {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+.association-slot {
+  height: 158px !important;
+  padding: 12px !important;
+  border: 2px solid #2f78b7 !important;
+  border-radius: 14px !important;
+  background: #0b3f73 !important;
+  box-shadow: 0 8px 20px rgba(4,31,59,.14) !important;
+}
+.association-slot img {
+  width: 100% !important;
+  height: 134px !important;
+  max-width: 190px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  mix-blend-mode: normal !important;
+}
+.association-fipi img { max-width: 160px !important; height: 126px !important; }
+.association-slot:nth-child(2) img { max-width: 165px !important; height: 122px !important; }
+.association-slot:nth-child(3) img,
+.association-slot:nth-child(4) img { max-width: 210px !important; height: 140px !important; }
+
+/* All highlight labels use one consistent typographic treatment. */
+.highlight-card h3,
+.highlight-card p {
+  margin: 6px 0 0 !important;
+  color: var(--navy) !important;
+  font-size: .94rem !important;
+  line-height: 1.28 !important;
+  font-family: inherit !important;
+  font-weight: 750 !important;
+}
+.highlight-card p { display: inline !important; }
+
+/* Better-balanced Important Dates panel and photo. */
+.dates-layout {
+  grid-template-columns: minmax(0, 1.38fr) minmax(260px, .62fr) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+.dates-panel { padding: 18px !important; }
+.dates-table {
+  width: 100% !important;
+  border: 1px solid #a9bdd0 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+.date-row {
+  grid-template-columns: 180px minmax(0, 1fr) !important;
+  border-bottom: 1px solid #c3d2df !important;
+}
+.date-row > * { padding: 13px 15px !important; }
+.date-row b {
+  background: #e7f1f8 !important;
+  color: #0a3159 !important;
+  font-weight: 800 !important;
+}
+.date-row span {
+  background: #fff !important;
+  color: #334f68 !important;
+  font-weight: 650 !important;
+}
+.dates-photo-wrap {
+  min-height: 100% !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: #dbe9f3 !important;
+}
+.dates-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 420px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Registration fee table: strong navy header, white text, bold body, clear grid. */
+.flyer-fee-table {
+  border: 1px solid #2f6f9f !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+.flyer-fee-table .fee-head {
+  background: #082b50 !important;
+  color: #fff !important;
+}
+.flyer-fee-table .fee-head b {
+  color: #fff !important;
+  font-weight: 850 !important;
+  text-align: center !important;
+}
+.flyer-fee-table .fee-row {
+  background: #f4f9fd !important;
+}
+.flyer-fee-table .fee-row:nth-child(odd) {
+  background: #e7f2fa !important;
+}
+.flyer-fee-table .fee-head > *,
+.flyer-fee-table .fee-row > * {
+  border-right: 1px solid #6e9fc2 !important;
+  border-bottom: 1px solid #6e9fc2 !important;
+}
+.flyer-fee-table .fee-row span,
+.flyer-fee-table .fee-row b {
+  color: #102f4c !important;
+  font-weight: 850 !important;
+}
+
+@media (max-width: 1050px) {
+  .association-slot { height: 142px !important; }
+  .association-slot img { height: 120px !important; }
+  .association-slot:nth-child(3) img,
+  .association-slot:nth-child(4) img { height: 128px !important; }
+  .top-logos .pdeu-main-logo { width: min(430px, 48vw) !important; height: 104px !important; }
+}
+
+@media (max-width: 720px) {
+  .top-logos .pdeu-main-logo { width: 150px !important; height: 78px !important; }
+  .association-logos { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+  .association-slot { height: 118px !important; padding: 8px !important; }
+  .association-slot img { height: 100px !important; max-width: 150px !important; }
+  .association-slot:nth-child(3) img,
+  .association-slot:nth-child(4) img { height: 108px !important; max-width: 175px !important; }
+  .dates-layout { grid-template-columns: 1fr !important; }
+  .dates-photo { height: 220px !important; max-height: 220px !important; }
+  .date-row { grid-template-columns: 1fr !important; }
+  .date-row b, .date-row span { display: block !important; }
+}
+
+
+/* FINAL MOBILE ASSOCIATION BOX FIX */
+@media (max-width: 720px) {
+  .association-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .association-slot {
+    height: 108px !important;
+    padding: 8px !important;
+    background: #123f69 !important;
+    border: 2px solid #5aa9d9 !important;
+    border-radius: 12px !important;
+  }
+  .association-slot img {
+    height: 90px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+  .association-fipi img { max-width: 96% !important; }
+  .association-slot:nth-child(2) img { max-width: 94% !important; height: 86px !important; }
 }

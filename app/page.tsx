@@ -19,8 +19,8 @@ const highlights = [
   ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
-  ['networking-cropped.png', 'Exhibition', 'opportunities'],
-  ['networking-transparent.png', 'Networking and', 'Branding'],
+  ['networking-transparent.png', 'Exhibition', 'opportunities'],
+  ['networking-cropped.png', 'Networking and', 'Branding'],
   ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
 ];
 
@@ -40,8 +40,8 @@ const themes = [
   { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE', 'Minimising Environmental Discharge', 'Environmental Stewardship and Sustainability', 'Emergency Response and Recovery', 'Sensors and Measurements for Environmental Hazards', 'Digitalisation in HSE - Remote Inspection, Automation'] },
   { title: 'Project Management, Economics, & Contracting', items: ['Project Economics', 'Field Development Planning, Strategies, and Methodologies', 'EPC Project Management', 'Governance, Policy and Regulations'] },
   { title: 'Energy Integration and Transition', items: ['Global Energy Transition Outlook and Future', 'Renewable Energy Integration in O&G', 'Policy Regulation and Market Trends', 'Investment, Economics, and Workforce Development'] },
-  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Storage, and Utilisation', 'Methane Management and Mitigation', 'Storage Resource Management', 'Electrification and Decarbonisation of Existing Operations', 'Low-Carbon Petroleum Products: Advances and Innovations'] },
-  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production', 'Hydrogen Storage', 'Hydrogen Transportation', 'Hydrogen Utilization', 'Hydrogen Policy, Economics and Safety'] },
+  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Utilization and Removal', 'Methane Management and Mitigation', 'Electrification and Decarbonisation of Existing Operations'] },
+  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production and Conversion', 'Hydrogen Storage and Transportation', 'Hydrogen Utilization and Applications', 'Hydrogen Policy, Economics and Safety'] },
   { title: 'Petroleum Geoscience', items: ['Petroleum Geochemistry and Geology', 'Sedimentology and Stratigraphy', 'Structural Geology and Basin Analysis', 'Core Sampling & Characterisation'] },
   { title: 'Geophysics and Geotechnical Engineering', items: ['Seismic Exploration and Interpretation', 'Gravity and Magnetics', 'Borehole Geophysics and Logging Techniques', 'Near Surface Geophysics', 'Rock Mechanics', 'Remote Sensing and GIS in Geosciences'] },
   { title: 'Efficient Drilling and Completion Technologies', items: ['Drilling Technology', 'Wells Construction and Completion Technology', 'Cementing and Drilling Fluids', 'HPHT and Deep-Water drilling'] },
