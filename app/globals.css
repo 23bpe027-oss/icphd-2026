@@ -1023,3 +1023,30 @@ html, body { overflow-x: hidden; }
     line-height: 1.45;
   }
 }
+
+/* Flyer-aligned final data/layout overrides */
+.hero-left-logos { gap: 0 !important; }
+.hero-soet-logo { object-fit: contain !important; object-position: center !important; border-radius: 0 !important; }
+.pdeu-main-logo { margin-left: 0 !important; }
+.flyer-fee-table .fee-head,
+.flyer-fee-table .fee-row { grid-template-columns: minmax(150px, 1.6fr) repeat(3, minmax(80px, 1fr)); }
+.flyer-fee-table .fee-head b,
+.flyer-fee-table .fee-row b { text-align: center; }
+.flyer-fee-table .fee-row span { text-align: left; font-weight: 800; }
+.flyer-fee-table .fee-head { border-bottom: 2px solid var(--blue); }
+.flyer-fee-table .fee-row { border-bottom: 1px solid rgba(27,111,174,.42); }
+.theme-card { border: 2px solid rgba(27,111,174,.55); background: rgba(255,255,255,.94); }
+.theme-card h3 { text-align: center; }
+.highlight-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.highlight-card { border: 1px solid rgba(8,42,76,.12); }
+
+@media (max-width: 720px) {
+  .hero-left-logos { gap: 0 !important; min-width: 0; }
+  .pdeu-main-logo { width: min(205px, calc(100vw - 125px)); height: 58px; }
+  .hero-soet-logo { width: 52px; height: 52px; flex: 0 0 52px; }
+  .hero-icphd-logo { width: 60px; height: 60px; flex: 0 0 60px; }
+  .flyer-fee-table { overflow-x: auto; }
+  .flyer-fee-table .fee-head,
+  .flyer-fee-table .fee-row { min-width: 620px; }
+  .highlight-grid { grid-template-columns: 1fr; }
+}
