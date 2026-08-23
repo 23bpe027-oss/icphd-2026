@@ -16,8 +16,8 @@ const navLinks = [
 ];
 
 const highlights = [
-  ['panel-transparent.png', 'Panel Discussions', 'by Industry Experts & Academicians'],
-  ['keynote-transparent.png', 'Keynote Sessions', 'by eminent industry and academic professionals'],
+  ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
+  ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
   ['networking-cropped.png', 'Exhibition', 'opportunities'],
   ['networking-transparent.png', 'Networking and', 'Branding'],
@@ -26,9 +26,9 @@ const highlights = [
 
 const dates = [
   ['25 August 2026', 'Abstract Submission Starts (Tuesday)'],
-  ['15 October 2026', 'Abstract Submission Closes (Thursday)'],
+  ['18 October 2026', 'Abstract Submission Closes (Sunday)'],
   ['20 October 2026', 'Notification of Acceptance (Tuesday)'],
-  ['20 November 2026', 'Last date for Registration (Friday)'],
+  ['20 November 2026', 'Last date for Registration'],
   ['11 December 2026', 'Conference Inauguration (Friday)'],
   ['13 December 2026', 'Conference Valedictory (Sunday)'],
 ];
@@ -40,13 +40,13 @@ const themes = [
   { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE', 'Minimising Environmental Discharge', 'Environmental Stewardship and Sustainability', 'Emergency Response and Recovery', 'Sensors and Measurements for Environmental Hazards', 'Digitalisation in HSE - Remote Inspection, Automation'] },
   { title: 'Project Management, Economics, & Contracting', items: ['Project Economics', 'Field Development Planning, Strategies, and Methodologies', 'EPC Project Management', 'Governance, Policy and Regulations'] },
   { title: 'Energy Integration and Transition', items: ['Global Energy Transition Outlook and Future', 'Renewable Energy Integration in O&G', 'Policy Regulation and Market Trends', 'Investment, Economics, and Workforce Development'] },
-  { title: 'Decarbonisation and Global Sustainability Hydrogen: Production, Storage, Transportation and Utilization', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Storage, and Utilisation', 'Methane Management and Mitigation', 'Hydrogen Production', 'Hydrogen Storage', 'Hydrogen Transportation', 'Hydrogen Utilization', 'Hydrogen Policy, Economics and Safety'] },
+  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Storage, and Utilisation', 'Methane Management and Mitigation', 'Storage Resource Management', 'Electrification and Decarbonisation of Existing Operations', 'Low-Carbon Petroleum Products: Advances and Innovations'] },
+  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production', 'Hydrogen Storage', 'Hydrogen Transportation', 'Hydrogen Utilization', 'Hydrogen Policy, Economics and Safety'] },
   { title: 'Petroleum Geoscience', items: ['Petroleum Geochemistry and Geology', 'Sedimentology and Stratigraphy', 'Structural Geology and Basin Analysis', 'Core Sampling & Characterisation'] },
   { title: 'Geophysics and Geotechnical Engineering', items: ['Seismic Exploration and Interpretation', 'Gravity and Magnetics', 'Borehole Geophysics and Logging Techniques', 'Near Surface Geophysics', 'Rock Mechanics', 'Remote Sensing and GIS in Geosciences'] },
   { title: 'Efficient Drilling and Completion Technologies', items: ['Drilling Technology', 'Wells Construction and Completion Technology', 'Cementing and Drilling Fluids', 'HPHT and Deep-Water drilling'] },
   { title: 'Reservoir Engineering and Technologies', items: ['Reservoir Characterisation and Modelling', 'Reservoir Simulation', 'Reservoir Modelling/ Surveillance Technology', 'Oil and Gas Field Development', 'Flow through Porous Media', 'Rock-fluid Interactions'] },
-  { title: 'Petroleum Production Operations', items: ['Integrated Operations', 'Artificial Lift', 'High CO2 and Contaminated Fields', 'Production Maintenance and Chemistry', 'Subsea Production and Processing System', 'Water Shut-off operations', 'Sustainable Produced Water Management', 'Workover & Well Stimulations'] },
-  { title: 'Carbon Capture, Utilization and removal', items: ['Carbon Capture, Storage, and Utilisation'] },
+  { title: 'Petroleum Production Operations', items: ['Integrated Operations', 'Artificial Lift', 'High CO2 and Contaminated Fields', 'Production Maintenance and Chemistry', 'Subsea Production and Processing System', 'Water Shut-off operations', 'Sustainable Produced Water Management', 'Workover & Well Stimulations'] }
 ];
 
 const fees = [
