@@ -1,23 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 180" role="img" aria-label="Networking and branding illustration">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Networking and branding illustration">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d6fae"/><stop offset="1" stop-color="#60bdf5"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b3157"/>
+      <stop offset="1" stop-color="#1d6fae"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff3ff"/>
+      <stop offset="1" stop-color="#9fd8f2"/>
+    </linearGradient>
   </defs>
-  <rect x="8" y="8" width="204" height="164" rx="28" fill="#edf6fc" stroke="#b8dff5" stroke-width="3"/>
-  <g fill="none" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round">
-    <path d="M56 62 L102 43 L156 66 L129 112 L79 112 Z"/>
-    <path d="M56 62 L79 112 M102 43 L129 112 M156 66 L129 112"/>
+  <!-- network lines -->
+  <g fill="none" stroke="#1d6fae" stroke-width="5" stroke-linecap="round" opacity=".9">
+    <path d="M72 74 L160 45 L248 74 L220 164 L160 190 L100 164 Z"/>
+    <path d="M72 74 L100 164 M248 74 L220 164 M160 45 L160 190"/>
   </g>
-  <g fill="#fff" stroke="#1d6fae" stroke-width="3">
-    <circle cx="56" cy="62" r="16"/><circle cx="102" cy="43" r="16"/><circle cx="156" cy="66" r="16"/><circle cx="79" cy="112" r="16"/><circle cx="129" cy="112" r="16"/>
+  <g fill="#fff" stroke="#0b3157" stroke-width="5">
+    <circle cx="72" cy="74" r="15"/><circle cx="160" cy="45" r="15"/><circle cx="248" cy="74" r="15"/>
+    <circle cx="100" cy="164" r="15"/><circle cx="160" cy="190" r="15"/><circle cx="220" cy="164" r="15"/>
   </g>
-  <g fill="#1d6fae">
-    <circle cx="56" cy="58" r="5"/><path d="M47 71 Q56 62 65 71"/>
-    <circle cx="102" cy="39" r="5"/><path d="M93 52 Q102 43 111 52"/>
-    <circle cx="156" cy="62" r="5"/><path d="M147 75 Q156 66 165 75"/>
-    <circle cx="79" cy="108" r="5"/><path d="M70 121 Q79 112 88 121"/>
-    <circle cx="129" cy="108" r="5"/><path d="M120 121 Q129 112 138 121"/>
+  <!-- people -->
+  <g stroke="#0b3157" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="124" cy="116" r="18" fill="#fff"/>
+    <path d="M96 154 Q124 132 152 154 L146 177 H102 Z" fill="url(#light)"/>
+    <circle cx="196" cy="116" r="18" fill="#fff"/>
+    <path d="M168 154 Q196 132 224 154 L218 177 H174 Z" fill="#fff"/>
   </g>
-  <path d="M151 128 h31 a10 10 0 0 1 10 10 v6 a10 10 0 0 1-10 10 h-31 l-9 7 3-10 a10 10 0 0 1-4-7 v-6 a10 10 0 0 1 10-10z" fill="#0b3157"/>
-  <path d="M160 140 h20 M160 146 h13" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-  <path d="M38 137 q15-13 30 0" fill="none" stroke="#60bdf5" stroke-width="5" stroke-linecap="round"/>
+  <!-- branding badge -->
+  <g transform="translate(126 7)">
+    <rect width="68" height="28" rx="14" fill="url(#blue)"/>
+    <path d="M17 14 H50" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="17" cy="14" r="5" fill="#69c2ef"/>
+    <circle cx="50" cy="14" r="5" fill="#20a48b"/>
+  </g>
 </svg>

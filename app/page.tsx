@@ -177,7 +177,7 @@ export default function Home() {
                 <div className="association-logos">
                   <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
                   <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-colored-hd.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-clean-card.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
                   <div className="association-slot"><img src="/assets/iadc-colored-card.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       <section className="dark-strip reveal reveal-delay-1">
-        <div className="announcement"><b>Abstract Submission Starts: 25 August 2026</b><b>Last date for Registration: 20 November 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="announcement"><b>Abstract Submission Starts: 25 August 2026</b><b>Last date for Registration: 20 November 2026</b></div>
         <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.jpg" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
 
