@@ -1412,3 +1412,59 @@ html, body { overflow-x: hidden; }
 .highlight-icon.networking-highlight img { width: 92px !important; height: 92px !important; object-fit: contain !important; image-rendering: auto !important; }
 @media (max-width: 1050px) { .about .section-title h2 { font-size: 2.25rem !important; white-space: normal !important; } }
 @media (max-width: 720px) { .announcement { font-size: 1rem !important; line-height: 1.35 !important; } .about .section-title h2 { font-size: 1.85rem !important; white-space: normal !important; } .association-slot:nth-child(3) img { width: 94% !important; height: 76px !important; } .highlight-icon.networking-highlight img { width: 86px !important; height: 86px !important; } }
+
+/* FINAL USER REQUEST — hero title, Important Dates colors, chapter-logo clarity */
+.hero-title-block h2 {
+  white-space: normal !important;
+  width: min(100%, 1040px) !important;
+  max-width: 1040px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  text-wrap: balance !important;
+}
+
+/* Match Important Dates to the established Registration table palette. */
+.dates-table {
+  border-color: #7f95aa !important;
+}
+.dates-table .date-row > * {
+  border-color: #7f95aa !important;
+}
+.dates-table .date-row b {
+  background: #0b3157 !important;
+  color: #fff !important;
+}
+.dates-table .date-row:nth-child(odd) span {
+  background: #eef6fb !important;
+  color: #17334f !important;
+  font-weight: 800 !important;
+}
+.dates-table .date-row:nth-child(even) span {
+  background: #e2eff8 !important;
+  color: #17334f !important;
+  font-weight: 800 !important;
+}
+
+/* Use the supplied high-resolution transparent chapter artwork. */
+.association-slot:nth-child(3) img {
+  content: url('/assets/seg-spg-eage-final-hd-transparent.png') !important;
+  object-fit: contain !important;
+  image-rendering: auto !important;
+}
+
+@media (max-width: 1050px) {
+  .hero-title-block h2 {
+    width: min(100%, 900px) !important;
+    max-width: 900px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-title-block h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: 4px !important;
+    text-wrap: pretty !important;
+  }
+}
