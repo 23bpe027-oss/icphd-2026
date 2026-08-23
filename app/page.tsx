@@ -18,15 +18,15 @@ const navLinks = [
 const highlights = [
   ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
+  ['networking-transparent.png', 'Networking and', 'Branding'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
-  ['networking-transparent.png', 'Exhibition', 'opportunities'],
-  ['networking-cropped.png', 'Networking and', 'Branding'],
+  ['networking-cropped.png', 'Exhibition', 'opportunities'],
   ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
 ];
 
 const dates = [
   ['25 August 2026', 'Abstract Submission Starts'],
-  ['18 October 2026', 'Abstract Submission Closes'],
+  ['15 October 2026', 'Abstract Submission Closes'],
   ['20 October 2026', 'Notification of Acceptance'],
   ['20 November 2026', 'Last date for Registration'],
   ['11 December 2026', 'Conference Inauguration'],
@@ -34,20 +34,20 @@ const dates = [
 ];
 
 const themes = [
-  { title: 'Improved or Enhanced Oil Recovery (IOR/EOR)', items: ['Thermal EOR', 'Chemical EOR', 'Gas Injection Techniques', 'Microbial EOR', 'Emerging Technologies in EOR'] },
-  { title: 'Unconventional Energy Resources', items: ['CBM and Shale', 'Gas Hydrates', 'Geothermal Energy Resources and Utilization', 'Natural Hydrogen', 'Fracturing', 'Emerging Technologies'] },
-  { title: 'Digitalization and Optimization of Oil & Gas Field Operations', items: ['Data Science/Big Data', 'Automation and Digital Operation', 'Remote Operations', 'AI and Machine Learning', 'Smart Field Technologies', 'Digital Operations/Oilfields', 'Computational Fluid dynamics'] },
-  { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE', 'Minimising Environmental Discharge', 'Environmental Stewardship and Sustainability', 'Emergency Response and Recovery', 'Sensors and Measurements for Environmental Hazards', 'Digitalisation in HSE - Remote Inspection, Automation'] },
-  { title: 'Project Management, Economics, & Contracting', items: ['Project Economics', 'Field Development Planning, Strategies, and Methodologies', 'EPC Project Management', 'Governance, Policy and Regulations'] },
-  { title: 'Energy Integration and Transition', items: ['Global Energy Transition Outlook and Future', 'Renewable Energy Integration in O&G', 'Policy Regulation and Market Trends', 'Investment, Economics, and Workforce Development'] },
-  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Methane Management and Mitigation', 'Electrification and Decarbonisation of Existing Operations'] },
-  { title: 'Carbon Capture, Utilization and Removal', items: ['Carbon Capture Technologies', 'CO₂ Transport and Storage', 'Carbon Utilization and Conversion', 'Carbon Removal Pathways', 'Monitoring, Verification and Sustainability'] },
-  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production and Conversion', 'Hydrogen Storage and Transportation', 'Hydrogen Utilization and Applications', 'Hydrogen Policy, Economics and Safety'] },
-  { title: 'Petroleum Geoscience', items: ['Petroleum Geochemistry and Geology', 'Sedimentology and Stratigraphy', 'Structural Geology and Basin Analysis', 'Core Sampling & Characterisation'] },
-  { title: 'Geophysics and Geotechnical Engineering', items: ['Seismic Exploration and Interpretation', 'Gravity and Magnetics', 'Borehole Geophysics and Logging Techniques', 'Near Surface Geophysics', 'Rock Mechanics', 'Remote Sensing and GIS in Geosciences'] },
-  { title: 'Efficient Drilling and Completion Technologies', items: ['Drilling Technology', 'Wells Construction and Completion Technology', 'Cementing and Drilling Fluids', 'HPHT and Deep-Water drilling'] },
-  { title: 'Reservoir Engineering and Technologies', items: ['Reservoir Characterisation and Modelling', 'Reservoir Simulation', 'Reservoir Modelling/ Surveillance Technology', 'Oil and Gas Field Development', 'Flow through Porous Media', 'Rock-fluid Interactions'] },
-  { title: 'Petroleum Production Operations', items: ['Integrated Operations', 'Artificial Lift', 'High CO2 and Contaminated Fields', 'Production Maintenance and Chemistry', 'Subsea Production and Processing System', 'Water Shut-off operations', 'Sustainable Produced Water Management', 'Workover & Well Stimulations'] }
+  { title: 'Improved or Enhanced Oil Recovery (IOR/EOR)', items: ['Thermal, chemical and gas-injection EOR', 'Emerging EOR technologies and field applications', 'Reservoir performance and recovery optimisation'] },
+  { title: 'Unconventional Energy Resources', items: ['CBM, shale and gas hydrates', 'Geothermal and natural hydrogen resources', 'Fracturing and emerging extraction technologies'] },
+  { title: 'Digitalization and Optimization of Oil & Gas Field Operations', items: ['AI, machine learning and data analytics', 'Automation, remote operations and smart fields', 'Digital twins and production optimisation'] },
+  { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE and emergency response', 'Environmental stewardship and sustainability', 'Digital HSE, monitoring and risk management'] },
+  { title: 'Project Management, Economics, & Contracting', items: ['Project economics and field development planning', 'EPC project management and contracting', 'Governance, policy and regulatory frameworks'] },
+  { title: 'Energy Integration and Transition', items: ['Renewable integration in oil and gas', 'Energy transition pathways and policy', 'Investment, economics and workforce development'] },
+  { title: 'Decarbonisation and Global Sustainability', items: ['Low-carbon operations and climate technologies', 'Methane management and emissions reduction', 'Sustainable energy systems and resource management'] },
+  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen production and purification', 'Storage, transportation and infrastructure', 'Utilization, economics, policy and safety'] },
+  { title: 'Petroleum Geoscience', items: ['Geochemistry, geology and sedimentology', 'Structural geology and basin analysis', 'Core characterisation and reservoir studies'] },
+  { title: 'Geophysics and Geotechnical Engineering', items: ['Seismic, gravity and magnetic methods', 'Borehole geophysics and logging', 'Rock mechanics, GIS and near-surface geophysics'] },
+  { title: 'Efficient Drilling and Completion Technologies', items: ['Drilling fluids, cementing and well construction', 'HPHT, deep-water and advanced drilling', 'Completion technologies and well integrity'] },
+  { title: 'Reservoir Engineering and Technologies', items: ['Reservoir characterisation and simulation', 'Field development and surveillance', 'Flow through porous media and rock-fluid interaction'] },
+  { title: 'Petroleum Production Operations', items: ['Artificial lift and integrated operations', 'Production chemistry, subsea and processing systems', 'Produced-water management, workover and stimulation'] },
+  { title: 'Carbon Capture, Utilization and Removal', items: ['CO₂ capture, separation and compression', 'Utilization pathways and value-added products', 'Storage, monitoring and carbon-removal technologies'] },
 ];
 
 const fees = [
@@ -151,8 +151,8 @@ export default function Home() {
         <img className="hero-bg" src="/assets/campus-aerial-final.jpg" alt="PDEU campus aerial view" />
         <div className="hero-overlay" />
         <div className="hero-inner">
-          <div className="top-logos" aria-label="PDEU, ICPHD 2026 and School of Energy Technology logos">
-            <img className="pdeu-main-logo" src="/assets/pdeu-logo-final-clean.png" alt="Pandit Deendayal Energy University" />
+          <div className="top-logos" aria-label="Conference, university and school logos">
+            <img className="pdeu-main-logo" src="/assets/pdeu-logo-clean-transparent.png" alt="Pandit Deendayal Energy University" />
             <img className="hero-icphd-logo" src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
             <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
           </div>
@@ -175,10 +175,10 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-final-clean.png" alt="FIPI" /></div>
-                  <div className="association-slot"><img src="/assets/spe-association-final-clean.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-clean.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
-                  <div className="association-slot"><img src="/assets/iadc-association-final-clean.png" alt="IADC PDEU Student Chapter" /></div>
+                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
+                  <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-colored-card.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/iadc-colored-card.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       <section className="dark-strip reveal reveal-delay-1">
-        <div className="announcement"><b>Registration Starts: August 20th, 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="announcement"><b>Abstract Submission Starts: 25 August 2026</b><b>Last date for Registration: 20 November 2026</b></div>
         <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.jpg" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
 

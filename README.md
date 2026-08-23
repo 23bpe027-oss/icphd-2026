@@ -1,32 +1,19 @@
-# ICPHD 2026 — Clean Rewrite
+# ICPHD 2026 — final merged website update
 
-This version rewrites the website layout/CSS cleanly instead of stacking more override rules on top of the previous stylesheet.
+This build merges the latest requested website changes instead of reverting to an older version.
 
-## Main changes
-- Hero: exact PDEU logo + SOET on the left, ICPHD circle logo on the right.
-- Dark blue hero overlay while keeping the aerial campus photo visible.
-- Larger navigation text and responsive three-line mobile menu.
-- Scroll-in reveal animations using IntersectionObserver.
-- Four association logo slots with equal spacing and consistent sizing.
-- Clean transparent logo assets for PDEU, ICPHD, SPE, FIPI, IADC and the combined SEG/SPG/EAGE mark.
-- No Chief Guest / Guest of Honor boxes.
-- No Sponsor / Media Partner section.
-- Conference Highlights icons centered in blue circles; Exhibition/Networking/Branding is slightly smaller than the other icons.
-- Important Dates keeps the PDEU oil-pump photo.
-- Conference Theme cards use dark-blue borders without the previous internal gradient.
-- Registration fee table has full cell borders; Category is left aligned in body rows and Amount is centered.
-- Bank note reads: “Official bank details will be available soon.”
-- Venue map card remains clickable to Google Maps.
-
-## Run
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the local address shown by Next.js.
-
-## Deploy
-
-Commit the project to GitHub. Vercel can deploy the repository automatically.
+- Preserved the original hero text: “FOURTH EDITION OF” and the previously approved organizer wording.
+- Restored the full About section text from the approved version.
+- Hero logo order: PDEU on the left, ICPHD centered, SOET on the right; mobile has dedicated spacing/sizing.
+- SOET uses the supplied sharp-edged logo asset without removing its blue background.
+- Student chapter association cards are blue, equal-sized and evenly spaced.
+- SEG/SPG/EAGE and IADC are larger; supplied colored references are used, with dark supporting text converted to white for contrast on blue cards. IADC fan is red.
+- FIPI remains visually smaller and SPE remains slightly smaller than the larger chapter group.
+- Conference Highlights restored to six cards, with consistent typography; Exhibition/Networking/Branding illustration is slightly smaller.
+- Important Dates uses flyer dates and removes weekday text in brackets.
+- Conference Theme uses the flyer headings, with concise generated points, including Carbon Capture, Utilization and Removal.
+- Registration table uses the flyer’s Delegate Type / Before / After / International delegate structure with a dark-blue header and stronger contrast.
+- Venue keeps the approved two-card layout with the blue “Open in Google Maps →” footer.
+- Event Schedule / Download Brochure / Download Flyer controls are larger.
+- Mobile styling is responsive in the same `app/page.tsx` + `app/globals.css`; no separate mobile page is required.
+- `'use client';` is the first line of `app/page.tsx` so Vercel/Turbopack can compile the interactive page.
