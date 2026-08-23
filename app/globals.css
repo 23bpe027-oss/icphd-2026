@@ -1605,42 +1605,120 @@ html, body { overflow-x: hidden; }
   .anchor-section { scroll-margin-top: 84px; }
 }
 
-
-/* FINAL REQUEST — supplied Networking & Branding illustration + single-line hero title */
-.highlight-icon.networking-highlight img {
-  width: 78px !important;
-  height: 78px !important;
-  object-fit: contain !important;
-  image-rendering: auto !important;
-}
-
-.hero-title-block h2 {
-  white-space: nowrap !important;
-  text-wrap: nowrap !important;
-  overflow: visible !important;
-  width: 100% !important;
-  max-width: none !important;
-  font-size: clamp(1rem, 2.2vw, 1.65rem) !important;
-  letter-spacing: .01em !important;
+/* FINAL MICRO-ADJUSTMENT — increase only the selected hero conference title text. */
+.hero .hero-title-block h2 {
+  font-size: clamp(1.72rem, 3.35vw, 2.75rem) !important;
 }
 
 @media (max-width: 720px) {
-  .hero-title-block h2 {
+  .hero .hero-title-block h2 {
+    font-size: clamp(0.76rem, 2.9vw, 1.12rem) !important;
     white-space: nowrap !important;
-    text-wrap: nowrap !important;
-    font-size: clamp(.72rem, 2.6vw, 1.15rem) !important;
-    letter-spacing: .005em !important;
-    line-height: 1.12 !important;
-    padding-inline: 0 !important;
   }
-  .highlight-icon.networking-highlight img {
-    width: 72px !important;
-    height: 72px !important;
+}
+
+
+/* Latest request: slightly reduce the Exhibition Opportunities illustration only. */
+.highlight-icon.exhibition-highlight img {
+  width: 74px !important;
+  height: 74px !important;
+  object-fit: contain !important;
+  image-rendering: auto !important;
+}
+@media (max-width: 720px) {
+  .highlight-icon.exhibition-highlight img {
+    width: 66px !important;
+    height: 66px !important;
+  }
+}
+
+/* FINAL MOBILE SPACING POLISH — reduce excessive vertical gaps without changing desktop */
+@media (max-width: 720px) {
+  .conference-content {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .content-section + .content-section {
+    margin-top: 30px !important;
+  }
+
+  .registration {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .registration .section-title {
+    margin-bottom: 16px !important;
+  }
+
+  .registration-grid {
+    gap: 12px !important;
+  }
+
+  .venue {
+    padding-top: 28px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .venue .section-title {
+    margin-bottom: 16px !important;
   }
 }
 
 @media (max-width: 430px) {
-  .hero-title-block h2 {
-    font-size: .72rem !important;
+  .conference-content {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .content-section + .content-section {
+    margin-top: 24px !important;
+  }
+
+  .registration {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .venue {
+    padding-top: 22px !important;
+    padding-bottom: 24px !important;
+  }
+}
+
+/* FINAL USER REQUEST — enlarge the Petroleum/Hydrogen/Decarbonization line,
+   keep it centered on one line without boundary clashes, and tighten desktop spacing. */
+.hero .hero-title-block h2 {
+  display: block !important;
+  width: 116% !important;
+  margin-left: -8% !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  font-size: clamp(1.28rem, 3.1vw, 2.65rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: .025em !important;
+  transform: scaleX(.86) !important;
+  transform-origin: center center !important;
+}
+
+@media (min-width: 721px) {
+  /* Reduce the large desktop breathing room without changing the established layout. */
+  .hero-inner { padding-top: 24px !important; padding-bottom: 30px !important; }
+  .hero .top-logos { margin-bottom: 10px !important; }
+  .hero .hero-title-block { margin-top: 22px !important; }
+  .hero-lower { margin-top: 28px !important; }
+  .about { padding-top: 54px !important; padding-bottom: 54px !important; }
+  .conference-content { padding-top: 46px !important; padding-bottom: 46px !important; }
+  .content-section + .content-section { margin-top: 36px !important; }
+  .registration { padding-top: 44px !important; padding-bottom: 44px !important; }
+  .venue { padding-top: 44px !important; padding-bottom: 44px !important; }
+}
+
+@media (max-width: 720px) {
+  .hero .hero-title-block h2 {
+    font-size: clamp(1.28rem, 5.2vw, 1.55rem) !important;
+    letter-spacing: .015em !important;
+    transform: scaleX(.82) !important;
   }
 }

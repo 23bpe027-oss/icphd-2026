@@ -22,6 +22,3 @@
 - Reduced the spacing before Registration & Abstract Submission and Venue.
 - Slightly tightened dates/theme card gaps while preserving the existing layout and content.
 - Kept mobile sections compact with the same structure.
-
-- Updated Networking & Branding illustration with supplied reference artwork, kept smaller inside the blue icon circle.
-- Forced the Petroleum, Hydrogen & Decarbonization (ICPHD 2026) hero title to remain on one line, including mobile.

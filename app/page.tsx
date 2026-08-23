@@ -18,7 +18,7 @@ const navLinks = [
 const highlights = [
   ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
-  ['networking-branding-user.png', 'Networking and', 'Branding'],
+  ['networking-branding-final.svg', 'Networking and', 'Branding'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
   ['networking-cropped.png', 'Exhibition', 'opportunities'],
   ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
@@ -222,7 +222,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Abstract Submission Starts: 25 August 2026</b><b>Last date for Registration: 20 November 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.jpg" target="_blank" rel="noreferrer">Download Flyer</a></div>
+        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
@@ -236,7 +236,7 @@ export default function Home() {
           <div id="highlights" className="content-section highlights-section anchor-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
             <div className="highlight-grid">
-              {highlights.map(([img, title, sub], index) => <article className="highlight-card reveal-scale" key={title}><div className={`highlight-icon${index === 2 ? ' networking-highlight' : ''}`}><img src={`/assets/${img}`} alt="" /></div><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}
+              {highlights.map(([img, title, sub], index) => <article className="highlight-card reveal-scale" key={title}><div className={`highlight-icon${index === 2 ? ' networking-highlight' : ''}${index === 4 ? ' exhibition-highlight' : ''}`}><img src={`/assets/${img}`} alt="" /></div><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}
             </div>
           </div>
 
