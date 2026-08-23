@@ -16,47 +16,47 @@ const navLinks = [
 ];
 
 const highlights = [
-  ['panel-transparent.png', 'Panel Discussions', 'by Industry Experts & Academicians'],
-  ['keynote-transparent.png', 'Keynote Sessions', ''],
-  ['papers-transparent.png', 'Paper & Poster', 'Presentations'],
-  ['award-transparent.png', 'Best Paper & Best Poster', 'Presentation Awards'],
-  ['networking-cropped.png', 'Exhibition, Networking', '& Branding'],
+  ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
+  ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
+  ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
+  ['networking-transparent.png', 'Exhibition', 'opportunities'],
+  ['networking-cropped.png', 'Networking and', 'Branding'],
+  ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
 ];
 
 const dates = [
-  ['20 Aug 2026', 'Abstract Submission Starts'],
-  ['15 Oct 2026', 'Abstract Submission Closes (extended)'],
-  ['15 Oct 2026', 'Notification of Acceptance/Rejection (on or before, extended)'],
-  ['20 Nov 2026', 'Final Registration Deadline for Authors/Delegates'],
-  ['To Be Announced', 'Pre-conference Workshop'],
-  ['11 Dec 2026', 'Inauguration'],
-  ['13 Dec 2026', 'Valedictory'],
-  ['To Be Announced', 'Full Paper Submission (on call basis)'],
+  ['25 August 2026', 'Abstract Submission Starts'],
+  ['18 October 2026', 'Abstract Submission Closes'],
+  ['20 October 2026', 'Notification of Acceptance'],
+  ['20 November 2026', 'Last date for Registration'],
+  ['11 December 2026', 'Conference Inauguration'],
+  ['13 December 2026', 'Conference Valedictory'],
 ];
 
 const themes = [
-  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Storage, and Utilisation', 'Methane Management and Mitigation', 'Storage Resource Management', 'Electrification and Decarbonisation of Existing Operations', 'Low-Carbon Petroleum Products: Advances and Innovations'] },
-  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production', 'Hydrogen Storage', 'Hydrogen Transportation', 'Hydrogen Utilization', 'Hydrogen Policy, Economics and Safety'] },
+  { title: 'Improved or Enhanced Oil Recovery (IOR/EOR)', items: ['Thermal EOR', 'Chemical EOR', 'Gas Injection Techniques', 'Microbial EOR', 'Emerging Technologies in EOR'] },
+  { title: 'Unconventional Energy Resources', items: ['CBM and Shale', 'Gas Hydrates', 'Geothermal Energy Resources and Utilization', 'Natural Hydrogen', 'Fracturing', 'Emerging Technologies'] },
+  { title: 'Digitalization and Optimization of Oil & Gas Field Operations', items: ['Data Science/Big Data', 'Automation and Digital Operation', 'Remote Operations', 'AI and Machine Learning', 'Smart Field Technologies', 'Digital Operations/Oilfields', 'Computational Fluid dynamics'] },
+  { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE', 'Minimising Environmental Discharge', 'Environmental Stewardship and Sustainability', 'Emergency Response and Recovery', 'Sensors and Measurements for Environmental Hazards', 'Digitalisation in HSE - Remote Inspection, Automation'] },
+  { title: 'Project Management, Economics, & Contracting', items: ['Project Economics', 'Field Development Planning, Strategies, and Methodologies', 'EPC Project Management', 'Governance, Policy and Regulations'] },
+  { title: 'Energy Integration and Transition', items: ['Global Energy Transition Outlook and Future', 'Renewable Energy Integration in O&G', 'Policy Regulation and Market Trends', 'Investment, Economics, and Workforce Development'] },
+  { title: 'Decarbonisation and Global Sustainability', items: ['Decarbonisation and Climate Technologies', 'Carbon Capture, Utilization and Removal', 'Methane Management and Mitigation', 'Electrification and Decarbonisation of Existing Operations'] },
+  { title: 'Hydrogen: Production, Storage, Transportation and Utilization', items: ['Hydrogen Production and Conversion', 'Hydrogen Storage and Transportation', 'Hydrogen Utilization and Applications', 'Hydrogen Policy, Economics and Safety'] },
   { title: 'Petroleum Geoscience', items: ['Petroleum Geochemistry and Geology', 'Sedimentology and Stratigraphy', 'Structural Geology and Basin Analysis', 'Core Sampling & Characterisation'] },
   { title: 'Geophysics and Geotechnical Engineering', items: ['Seismic Exploration and Interpretation', 'Gravity and Magnetics', 'Borehole Geophysics and Logging Techniques', 'Near Surface Geophysics', 'Rock Mechanics', 'Remote Sensing and GIS in Geosciences'] },
   { title: 'Efficient Drilling and Completion Technologies', items: ['Drilling Technology', 'Wells Construction and Completion Technology', 'Cementing and Drilling Fluids', 'HPHT and Deep-Water drilling'] },
   { title: 'Reservoir Engineering and Technologies', items: ['Reservoir Characterisation and Modelling', 'Reservoir Simulation', 'Reservoir Modelling/ Surveillance Technology', 'Oil and Gas Field Development', 'Flow through Porous Media', 'Rock-fluid Interactions'] },
-  { title: 'Petroleum Production Operations', items: ['Integrated Operations', 'Artificial Lift', 'High CO2 and Contaminated Fields', 'Production Maintenance and Chemistry', 'Subsea Production and Processing System', 'Water Shut-off operations', 'Sustainable Produced Water Management', 'Workover & Well Stimulations'] },
-  { title: 'Flow Assurance', items: ['Fluid Characterization and Transport', 'CO2 transport', 'High CO2 and Contaminated Fields', 'Asphaltenes and Wax Mitigation', 'Crude Oil Emulsification/Demulsification', 'Scale Mitigation', 'Corrosion Management'] },
-  { title: 'Improved or Enhanced Oil Recovery (IOR/EOR)', items: ['Thermal EOR', 'Chemical EOR', 'Gas Injection Techniques', 'Microbial EOR', 'Emerging Technologies in EOR'] },
-  { title: 'Unconventional Energy Resources', items: ['CBM and Shale', 'Gas Hydrates', 'Geothermal Energy Resources and Utilization', 'Natural Hydrogen', 'Fracturing', 'Emerging Technologies'] },
-  { title: 'Digitalization and Optimization of Oil & Gas Field operations', items: ['Data Science/Big Data', 'Automation and Digital Operation', 'Remote Operations', 'AI and Machine Learning', 'Smart Field Technologies', 'Digital Operations/Oilfields', 'Computational Fluid dynamics'] },
-  { title: 'Health, Safety, Environment (HSE) and Social Responsibility', items: ['Operational HSE', 'Minimising Environmental Discharge', 'Environmental Stewardship and Sustainability', 'Emergency Response and Recovery', 'Sensors and Measurements for Environmental Hazards', 'Digitalisation in HSE - Remote Inspection, Automation'] },
-  { title: 'Project Management, Economics, and Contracting', items: ['Project Economics', 'Field Development Planning, Strategies, and Methodologies', 'EPC Project Management', 'Governance, Policy and Regulations'] },
-  { title: 'Energy Integration and Transition', items: ['Global Energy Transition Outlook and Future', 'Renewable Energy Integration in O&G', 'Policy Regulation and Market Trends', 'Investment, Economics, and Workforce Development'] },
+  { title: 'Petroleum Production Operations', items: ['Integrated Operations', 'Artificial Lift', 'High CO2 and Contaminated Fields', 'Production Maintenance and Chemistry', 'Subsea Production and Processing System', 'Water Shut-off operations', 'Sustainable Produced Water Management', 'Workover & Well Stimulations'] }
+  ,{ title: 'Carbon Capture, Utilization and Removal', items: ['Carbon Capture Technologies', 'CO₂ Utilization and Conversion', 'Carbon Storage and Sequestration', 'Direct Air Capture', 'Monitoring, Verification and Storage Integrity'] }
 ];
 
 const fees = [
-  ['Industrial', '₹15,000 – 17,700'],
-  ['Start-up Companies / R&D Labs', '₹15,000 – 17,700'],
-  ['Academician', '₹8,000 – 9,440'],
-  ['Post-Doc, PhD & PG Students', '₹8,000 – 9,440'],
-  ['UG Students', '₹2,600 – 2,960'],
+  ['Attendee/Companion', '₹3,540', '₹4,130', '$50'],
+  ['Industrial', '₹17,700', '₹18,290', '$200'],
+  ['Faculty/Academician', '₹9,440', '₹10,030', '$150'],
+  ['Post-Doc', '₹7,080', '₹7,670', '$125'],
+  ['PhD & Research Scholars', '₹5,900', '₹6,490', '$100'],
+  ['UG/PG Students', '₹3,540', '₹4,130', '$50'],
 ];
 
 const contacts = [
@@ -151,12 +151,10 @@ export default function Home() {
         <img className="hero-bg" src="/assets/campus-aerial-final.jpg" alt="PDEU campus aerial view" />
         <div className="hero-overlay" />
         <div className="hero-inner">
-          <div className="top-logos">
-            <div className="hero-left-logos" aria-label="PDEU and SOET logos">
-              <img className="pdeu-main-logo" src="/assets/pdeu-logo-clean-transparent.png" alt="Pandit Deendayal Energy University" />
-              <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
-            </div>
+          <div className="top-logos" aria-label="PDEU, ICPHD 2026 and School of Energy Technology logos">
+            <img className="pdeu-main-logo" src="/assets/pdeu-logo-final-clean.png" alt="Pandit Deendayal Energy University" />
             <img className="hero-icphd-logo" src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
+            <img className="hero-soet-logo" src="/assets/soet-logo-exact.jpg" alt="School of Energy Technology" />
           </div>
 
           <div className="hero-title-block reveal reveal-delay-2">
@@ -177,10 +175,10 @@ export default function Home() {
               <div className="association-block">
                 <p className="mini-label">IN ASSOCIATION WITH</p>
                 <div className="association-logos">
-                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
-                  <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-clean-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
-                  <div className="association-slot"><img src="/assets/iadc-association-clean-transparent.png" alt="IADC PDEU Student Chapter" /></div>
+                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-final-clean.png" alt="FIPI" /></div>
+                  <div className="association-slot"><img src="/assets/spe-association-final-clean.png" alt="SPE PDEU Student Chapter" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-clean.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/iadc-association-final-clean.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
             </div>
@@ -190,7 +188,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Registration Starts: August 20th, 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noreferrer">Download Flyer</a></div>
+        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.jpg" target="_blank" rel="noreferrer">Download Flyer</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
@@ -223,7 +221,7 @@ export default function Home() {
       <section className="container registration anchor-section reveal reveal-delay-2" id="registration">
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
-          <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href={registrationUrl}>Click here for Registration</a><div className="fee-table"><div className="fee-head"><b>Category</b><b>Amount</b></div>{fees.map(([category, amount]) => <div className="fee-row" key={category}><span>{category}</span><b>{amount}</b></div>)}</div></article>
+          <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href={registrationUrl}>Click here for Registration</a><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
           <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl}>Abstract Submission Link</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
         </div>
       </section>

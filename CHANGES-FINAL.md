@@ -1,16 +1,11 @@
-ICPHD 2026 — Final merge of the previous two requested changes
+# Corrected final merge
 
-1. Venue section: restored/matched to the supplied reference screenshot:
-   - large white venue information card on the left
-   - campus image at top of left card
-   - map card on the right
-   - dark blue VENUE LOCATION footer
-   - Open in Google Maps → action
-   - responsive stacking on mobile
+Built from the last known good MOBILE-POLISHED version, not from the stale dates/themes package.
 
-2. Student chapter boxes:
-   - four association/chapter logo slots use a dark blue background
-   - white logos remain white and are visible against the blue
-   - equal spacing and consistent card treatment
-
-No other requested sections were intentionally changed in this merge.
+Latest requested changes only:
+- Removed weekday text in Important Dates.
+- Added Carbon Capture, Utilization and Removal as a conference-theme card.
+- Kept flyer-derived theme headings and generated concise supporting points.
+- Kept student chapter cards blue with white logos.
+- Made the SPE/SP chapter logo slightly smaller.
+- Preserved the prior venue/map, mobile layout, hero, chapter-box, highlight, registration and other requested changes.
