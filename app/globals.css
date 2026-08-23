@@ -1322,3 +1322,128 @@ html, body { overflow-x: hidden; }
 @media (max-width: 430px) {
   .association-slot:nth-child(3) img { width: 100% !important; height: 100px !important; max-width: 170px !important; }
 }
+
+/* FINAL HERO SPACING FIX — prevent SOET logo from visually colliding with hero title */
+.hero .top-logos {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 18px !important;
+}
+.hero .hero-title-block {
+  position: relative;
+  z-index: 2;
+  margin-top: 34px !important;
+  clear: both;
+}
+.hero .hero-soet-logo {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.22));
+}
+
+@media (max-width: 720px) {
+  .hero .top-logos {
+    margin-bottom: 12px !important;
+  }
+  .hero .hero-title-block {
+    margin-top: 24px !important;
+  }
+}
+
+/* LATEST REQUESTS — abstract link, sharper student chapter artwork, sponsorship strip,
+   improved networking illustration, and registration table fit. */
+.association-slot:nth-child(3) img {
+  content: url('/assets/seg-spg-eage-colored-ultra.png') !important;
+  width: 246px !important;
+  height: 142px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  image-rendering: auto !important;
+}
+.association-slot:nth-child(3) img,
+.association-slot:nth-child(3) img + * { filter: none !important; }
+
+.announcement {
+  gap: 22px !important;
+  flex-wrap: wrap !important;
+  font-size: .98rem !important;
+}
+.announcement b { white-space: nowrap; }
+.quick-actions a {
+  font-size: 1.14rem !important;
+  min-height: 64px !important;
+  padding: 17px 26px !important;
+}
+.highlight-icon.networking-highlight img {
+  width: 92px !important;
+  height: 92px !important;
+  object-fit: contain !important;
+}
+
+/* Registration table: keep every column readable without clipping. */
+.flyer-fee-table .fee-head,
+.flyer-fee-table .fee-row {
+  grid-template-columns: minmax(155px, 1.45fr) repeat(3, minmax(82px, .82fr)) !important;
+}
+.flyer-fee-table .fee-head > *,
+.flyer-fee-table .fee-row > * {
+  min-width: 0 !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+.flyer-fee-table .fee-head b { font-size: .78rem !important; line-height: 1.18 !important; }
+.flyer-fee-table .fee-row span,
+.flyer-fee-table .fee-row b { font-size: .82rem !important; line-height: 1.25 !important; }
+
+@media (max-width: 720px) {
+  .announcement {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+    font-size: .98rem !important;
+    line-height: 1.35 !important;
+  }
+  .announcement b { white-space: normal !important; }
+  .quick-actions a {
+    min-height: 64px !important;
+    font-size: 1.08rem !important;
+    padding: 16px 18px !important;
+  }
+  .association-slot:nth-child(3) img {
+    width: 100% !important;
+    height: 106px !important;
+    max-width: 190px !important;
+  }
+  .highlight-icon.networking-highlight img {
+    width: 78px !important;
+    height: 78px !important;
+  }
+  .registration-grid .flyer-fee-table .fee-head,
+  .registration-grid .flyer-fee-table .fee-row {
+    grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, .72fr)) !important;
+  }
+  .registration-grid .flyer-fee-table .fee-head > *,
+  .registration-grid .flyer-fee-table .fee-row > * {
+    padding: 7px 3px !important;
+    font-size: .61rem !important;
+    line-height: 1.18 !important;
+    overflow-wrap: anywhere !important;
+  }
+  .registration-grid .flyer-fee-table .fee-head b { font-size: .58rem !important; }
+  .registration-grid .flyer-fee-table .fee-row span,
+  .registration-grid .flyer-fee-table .fee-row b { font-size: .61rem !important; }
+}
+
+@media (max-width: 430px) {
+  .registration-grid .flyer-fee-table .fee-head,
+  .registration-grid .flyer-fee-table .fee-row {
+    grid-template-columns: minmax(0, 1.28fr) repeat(3, minmax(0, .72fr)) !important;
+  }
+  .registration-grid .flyer-fee-table .fee-head > *,
+  .registration-grid .flyer-fee-table .fee-row > * {
+    padding: 6px 2px !important;
+    font-size: .56rem !important;
+  }
+  .registration-grid .flyer-fee-table .fee-head b,
+  .registration-grid .flyer-fee-table .fee-row span,
+  .registration-grid .flyer-fee-table .fee-row b { font-size: .57rem !important; }
+}
