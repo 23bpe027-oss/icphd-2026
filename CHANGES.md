@@ -1,10 +1,10 @@
-# ICPHD 2026 final flyer-aligned update
+# ICPHD 2026 — latest logo/layout changes
 
-- Updated website content to match the supplied ICPHD 2026 flyer.
-- Updated organizer wording, conference title/tagline, dates, themes, highlights, registration fees, abstract submission text, venue address, and contact details from the flyer.
-- Updated Conference Highlights to the six flyer items.
-- Updated registration table to the flyer’s Delegate Type / Before / After / International delegate structure.
-- Kept the venue Google Maps card with the blue “Open in Google Maps →” footer.
-- Kept the official uploaded flyer as `public/ICPHD-2026-Flyer.jpg` and the Download Flyer button opens that JPG.
-- Hero logo order is PDEU first, SOET immediately beside it, ICPHD on the right, with mobile-specific sizing/spacing overrides.
-- No sponsor/media-partner content was added.
+- Keeps the supplied PDEU/PDU logo unchanged and places SOET immediately beside it on the left.
+- Keeps the ICPHD circular logo on the right of the hero logo row.
+- Makes the four association/logo slots equal-width and evenly spaced.
+- Keeps FIPI visually smaller so the four association items read as one aligned row.
+- Centers the conference-highlight illustrations and gives Exhibition, Networking & Branding a larger illustration.
+- Gives the registration table full vertical and horizontal cell rules; category rows are left-aligned and amounts are centered.
+- Keeps the existing venue/map section untouched.
+- Keeps the existing scroll-reveal animation system.
