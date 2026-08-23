@@ -1365,8 +1365,8 @@ html, body { overflow-x: hidden; }
 }
 .about .section-title h2 {
   white-space: nowrap !important;
-  font-size: clamp(1.5rem, 2.0vw, 1.82rem) !important;
-  line-height: 1.12 !important;
+  font-size: clamp(1.5rem, 1.85vw, 1.72rem) !important;
+  line-height: 1.15 !important;
   letter-spacing: .01em !important;
   display: block !important;
   width: 100% !important;
@@ -1385,7 +1385,7 @@ html, body { overflow-x: hidden; }
 
 @media (max-width: 1050px) and (min-width: 721px) {
   .about .section-title h2 {
-    font-size: 1.42rem !important;
+    font-size: 1.34rem !important;
   }
 }
 
@@ -1399,7 +1399,7 @@ html, body { overflow-x: hidden; }
   }
   .about .section-title h2 {
     white-space: normal !important;
-    font-size: 1.8rem !important;
+    font-size: 1.68rem !important;
     line-height: 1.15 !important;
   }
 }
