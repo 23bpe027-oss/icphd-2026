@@ -1403,3 +1403,12 @@ html, body { overflow-x: hidden; }
     line-height: 1.15 !important;
   }
 }
+
+/* FINAL POLISH — preserve the established layout; only requested size/asset updates */
+.announcement { font-size: 1.02rem !important; line-height: 1.25 !important; letter-spacing: .02em !important; }
+.about .section-title h2 { font-size: clamp(1.9rem, 2.6vw, 2.55rem) !important; white-space: nowrap !important; }
+.about .section-title { margin-bottom: 24px !important; }
+.association-slot:nth-child(3) img { width: 220px !important; height: 132px !important; object-fit: contain !important; image-rendering: auto !important; }
+.highlight-icon.networking-highlight img { width: 92px !important; height: 92px !important; object-fit: contain !important; image-rendering: auto !important; }
+@media (max-width: 1050px) { .about .section-title h2 { font-size: 2.25rem !important; white-space: normal !important; } }
+@media (max-width: 720px) { .announcement { font-size: 1rem !important; line-height: 1.35 !important; } .about .section-title h2 { font-size: 1.85rem !important; white-space: normal !important; } .association-slot:nth-child(3) img { width: 94% !important; height: 76px !important; } .highlight-icon.networking-highlight img { width: 86px !important; height: 86px !important; } }

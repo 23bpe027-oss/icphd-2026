@@ -8,3 +8,7 @@
 - Gives the registration table full vertical and horizontal cell rules; category rows are left-aligned and amounts are centered.
 - Keeps the existing venue/map section untouched.
 - Keeps the existing scroll-reveal animation system.
+
+- Updated SEG/SPG/EAGE logo from user-supplied reference with transparent background and HD sharpening.
+- Increased announcement strip text and About section heading text slightly while preserving layout.
+- Replaced Networking & Branding illustration with a navy/blue/teal network illustration matching highlight styling.

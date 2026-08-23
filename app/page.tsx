@@ -18,7 +18,7 @@ const navLinks = [
 const highlights = [
   ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
-  ['networking-branding.svg', 'Networking and', 'Branding'],
+  ['networking-branding-final.svg', 'Networking and', 'Branding'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
   ['networking-cropped.png', 'Exhibition', 'opportunities'],
   ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
@@ -177,7 +177,7 @@ export default function Home() {
                 <div className="association-logos">
                   <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
                   <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-updated.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-hd-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
                   <div className="association-slot"><img src="/assets/iadc-colored-card.png" alt="IADC PDEU Student Chapter" /></div>
                 </div>
               </div>
