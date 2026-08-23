@@ -18,7 +18,7 @@ const navLinks = [
 const highlights = [
   ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
-  ['networking-branding-final.svg', 'Networking and', 'Branding'],
+  ['networking-branding-user.png', 'Networking and', 'Branding'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
   ['networking-cropped.png', 'Exhibition', 'opportunities'],
   ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
@@ -103,7 +103,28 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    const elements = Array.from(document.querySelectorAll<HTMLElement>('.reveal, .reveal-left, .reveal-right, .reveal-scale'));
+    if (!elements.length) return;
+
+    // Keep scroll reveals reliable across browsers: reveal anything already in
+    // the viewport immediately, then observe the rest as the page scrolls.
+    const revealVisible = () => {
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < viewport * 0.92 && rect.bottom > 0) {
+          element.classList.add('is-visible');
+        }
+      });
+    };
+
+    revealVisible();
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(element => element.classList.add('is-visible'));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       entries => entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -111,10 +132,23 @@ export default function Home() {
           observer.unobserve(entry.target);
         }
       }),
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
     );
-    elements.forEach(element => observer.observe(element));
-    return () => observer.disconnect();
+
+    elements.forEach(element => {
+      if (!element.classList.contains('is-visible')) observer.observe(element);
+    });
+
+    window.addEventListener('resize', revealVisible);
+    window.addEventListener('orientationchange', revealVisible);
+    const kickoff = window.setTimeout(revealVisible, 120);
+
+    return () => {
+      window.clearTimeout(kickoff);
+      window.removeEventListener('resize', revealVisible);
+      window.removeEventListener('orientationchange', revealVisible);
+      observer.disconnect();
+    };
   }, []);
 
   useEffect(() => {
@@ -202,7 +236,7 @@ export default function Home() {
           <div id="highlights" className="content-section highlights-section anchor-section">
             <SectionTitle eyebrow="FOURTH EDITION" title="Conference Highlights" />
             <div className="highlight-grid">
-              {highlights.map(([img, title, sub], index) => <article className="highlight-card reveal-scale" key={title}><div className={`highlight-icon${index === 4 ? ' networking-highlight' : ''}`}><img src={`/assets/${img}`} alt="" /></div><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}
+              {highlights.map(([img, title, sub], index) => <article className="highlight-card reveal-scale" key={title}><div className={`highlight-icon${index === 2 ? ' networking-highlight' : ''}`}><img src={`/assets/${img}`} alt="" /></div><h3>{title}</h3>{sub && <p>{sub}</p>}</article>)}
             </div>
           </div>
 

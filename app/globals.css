@@ -252,8 +252,8 @@ button { font: inherit; }
 .section-title h2 { margin: 0; color: var(--navy); font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.1; letter-spacing: .02em; }
 .section-title > span { display: block; width: 58px; height: 3px; margin-top: 10px; background: var(--blue); border-radius: 4px; }
 .soft { background: #edf4f9; }
-.conference-content { padding: 72px 0; }
-.content-section + .content-section { margin-top: 84px; }
+.conference-content { padding: 58px 0; }
+.content-section + .content-section { margin-top: 52px; }
 
 /* HIGHLIGHTS */
 .highlight-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
@@ -286,7 +286,7 @@ button { font: inherit; }
 
 /* DATES */
 .dates-panel { background: white; border-radius: 22px; box-shadow: var(--shadow); padding: 20px; }
-.dates-layout { display: grid; grid-template-columns: 1.25fr .75fr; gap: 24px; align-items: stretch; }
+.dates-layout { display: grid; grid-template-columns: 1.25fr .75fr; gap: 18px; align-items: stretch; }
 .dates-table { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
 .date-row { display: grid; grid-template-columns: 190px 1fr; border-bottom: 1px solid var(--line); }
 .date-row:last-child { border-bottom: 0; }
@@ -297,9 +297,9 @@ button { font: inherit; }
 .dates-photo { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
 
 /* THEME */
-.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .theme-card {
-  padding: 22px;
+  padding: 18px;
   border: 2px solid #123f69;
   box-shadow: 0 0 0 2px rgba(27,111,174,.08), 0 7px 20px rgba(7, 43, 76, .05);
   border-radius: 18px;
@@ -311,8 +311,8 @@ button { font: inherit; }
 .theme-card li + li { margin-top: 5px; }
 
 /* REGISTRATION */
-.registration { padding-top: 72px; padding-bottom: 72px; }
-.registration-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.registration { padding-top: 52px; padding-bottom: 52px; }
+.registration-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .registration-grid article { background: white; border: 1px solid var(--line); border-radius: 20px; padding: 26px; box-shadow: var(--shadow); }
 .registration-grid h3 { margin-top: 0; color: var(--navy); font-size: 1.35rem; }
 .registration-grid li { color: #4b6175; }
@@ -333,8 +333,8 @@ button { font: inherit; }
 .bank-placeholder span { color: #52687c; }
 
 /* VENUE */
-.venue { padding: 72px 0; }
-.venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.venue { padding: 52px 0; }
+.venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .venue-copy, .maps-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
 .venue-building { width: 100%; height: 290px; object-fit: cover; }
 .venue-copy-inner { padding: 24px; }
@@ -439,7 +439,7 @@ footer { background: #041a31; color: white; }
   .quick-actions a { width: 100%; text-align: center; }
 
   .about { padding-top: 52px; padding-bottom: 52px; gap: 42px; }
-  .conference-content, .registration, .venue { padding-top: 54px; padding-bottom: 54px; }
+  .conference-content, .registration, .venue { padding-top: 44px; padding-bottom: 44px; }
   .highlight-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .highlight-card { padding: 8px 4px; }
   .highlight-icon { width: 104px; height: 104px; }
@@ -1577,4 +1577,70 @@ html, body { overflow-x: hidden; }
 @media (min-width: 861px) {
   .about { padding-bottom: 36px !important; }
   .conference-content { padding-top: 36px !important; }
+}
+
+/* FINAL STABILITY FIX: keep navigation visible throughout scrolling. */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.hero {
+  margin-top: 76px;
+}
+.anchor-section {
+  scroll-margin-top: 96px;
+}
+
+/* FINAL SCROLL-REVEAL FALLBACK: animations remain visible even when an
+   IntersectionObserver is delayed or unavailable in the browser. */
+.reveal, .reveal-left, .reveal-right, .reveal-scale {
+  will-change: opacity, transform;
+}
+
+@media (max-width: 720px) {
+  .hero { margin-top: 68px; }
+  .anchor-section { scroll-margin-top: 84px; }
+}
+
+
+/* FINAL REQUEST — supplied Networking & Branding illustration + single-line hero title */
+.highlight-icon.networking-highlight img {
+  width: 78px !important;
+  height: 78px !important;
+  object-fit: contain !important;
+  image-rendering: auto !important;
+}
+
+.hero-title-block h2 {
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+  overflow: visible !important;
+  width: 100% !important;
+  max-width: none !important;
+  font-size: clamp(1rem, 2.2vw, 1.65rem) !important;
+  letter-spacing: .01em !important;
+}
+
+@media (max-width: 720px) {
+  .hero-title-block h2 {
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+    font-size: clamp(.72rem, 2.6vw, 1.15rem) !important;
+    letter-spacing: .005em !important;
+    line-height: 1.12 !important;
+    padding-inline: 0 !important;
+  }
+  .highlight-icon.networking-highlight img {
+    width: 72px !important;
+    height: 72px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-title-block h2 {
+    font-size: .72rem !important;
+  }
 }
