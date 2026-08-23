@@ -1253,3 +1253,72 @@ html, body { overflow-x: hidden; }
     font-size: .62rem;
   }
 }
+
+
+/* Latest visual refinements — logo clarity, About layout, networking illustration, dates */
+.about {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 30px !important;
+  align-items: start !important;
+}
+.about .section-title h2 {
+  white-space: nowrap !important;
+  font-size: clamp(1.35rem, 2.15vw, 1.95rem) !important;
+}
+.about .section-title {
+  min-height: 76px !important;
+  margin-bottom: 18px !important;
+}
+
+/* High-resolution SEG + SPG + EAGE artwork. */
+.association-slot:nth-child(3) img {
+  width: 238px !important;
+  height: 138px !important;
+  max-width: none !important;
+  image-rendering: auto !important;
+  filter: none !important;
+}
+
+/* Purpose-built networking + branding illustration. */
+.highlight-icon.networking-highlight img {
+  width: 92px !important;
+  height: 92px !important;
+  object-fit: contain !important;
+}
+
+/* Keep the Important Dates panel tight to its actual rows; no trailing blank area. */
+.dates-layout {
+  align-items: start !important;
+}
+.dates-table {
+  height: fit-content !important;
+}
+.dates-photo-wrap {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+.dates-photo {
+  min-height: 0 !important;
+  aspect-ratio: 4 / 3 !important;
+  height: auto !important;
+  display: block !important;
+}
+
+@media (max-width: 1050px) and (min-width: 721px) {
+  .about { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 18px !important; }
+  .about .section-title h2 { font-size: 1.18rem !important; }
+  .about .section-title { min-height: 62px !important; }
+}
+
+@media (max-width: 720px) {
+  .about { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .about .section-title { min-height: 0 !important; }
+  .about .section-title h2 { white-space: normal !important; font-size: 1.7rem !important; }
+  .association-slot:nth-child(3) img { width: 100% !important; height: 106px !important; max-width: 180px !important; }
+  .highlight-icon.networking-highlight img { width: 76px !important; height: 76px !important; }
+  .dates-photo { aspect-ratio: 16 / 10 !important; }
+}
+
+@media (max-width: 430px) {
+  .association-slot:nth-child(3) img { width: 100% !important; height: 100px !important; max-width: 170px !important; }
+}
