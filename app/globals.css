@@ -2007,3 +2007,38 @@ html, body { overflow-x: hidden; }
     display: block !important;
   }
 }
+
+/* FINAL IMPORTANT DATES PHOTO FIX — preserve full image, size and rounded corners on all viewports */
+.dates-photo-wrap {
+  width: 100% !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 3 !important;
+  align-self: start !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+.dates-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 16px !important;
+}
+
+@media (max-width: 720px) {
+  .dates-photo-wrap {
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    min-height: 0 !important;
+    border-radius: 16px !important;
+  }
+  .dates-photo {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    border-radius: 16px !important;
+    object-fit: cover !important;
+  }
+}
