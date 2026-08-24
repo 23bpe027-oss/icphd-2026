@@ -23,3 +23,7 @@ This build merges the latest requested website changes instead of reverting to a
 - Hero conference title remains centered on desktop and mobile.
 - “Driving Innovation, Enabling Transition and Shaping the Energy Future” is now italic on desktop and mobile.
 - Removed “Last date for Registration: 20 November 2026” from the announcement strip.
+
+
+## Latest update
+- Reordered the Conference Highlights cards for a cleaner sequence: Keynote, Panel Discussions, Technical Paper & Poster, Networking & Branding, Exhibition, and Best Paper & Poster Awards.

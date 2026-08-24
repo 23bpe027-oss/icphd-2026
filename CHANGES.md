@@ -12,3 +12,7 @@
 - Updated SEG/SPG/EAGE logo from user-supplied reference with transparent background and HD sharpening.
 - Increased announcement strip text and About section heading text slightly while preserving layout.
 - Replaced Networking & Branding illustration with a navy/blue/teal network illustration matching highlight styling.
+
+
+## Latest update
+- Reordered the Conference Highlights cards for a cleaner sequence: Keynote, Panel Discussions, Technical Paper & Poster, Networking & Branding, Exhibition, and Best Paper & Poster Awards.

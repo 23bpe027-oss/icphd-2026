@@ -22,3 +22,7 @@
 - Reduced the spacing before Registration & Abstract Submission and Venue.
 - Slightly tightened dates/theme card gaps while preserving the existing layout and content.
 - Kept mobile sections compact with the same structure.
+
+
+## Latest update
+- Reordered the Conference Highlights cards for a cleaner sequence: Keynote, Panel Discussions, Technical Paper & Poster, Networking & Branding, Exhibition, and Best Paper & Poster Awards.

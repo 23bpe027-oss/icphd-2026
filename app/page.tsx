@@ -16,10 +16,10 @@ const navLinks = [
 ];
 
 const highlights = [
-  ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
-  ['networking-branding-final.svg', 'Networking and', 'Branding'],
+  ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
+  ['networking-branding-final.svg', 'Networking and', 'Branding'],
   ['networking-cropped.png', 'Exhibition', 'opportunities'],
   ['award-transparent.png', 'Best Paper and Poster', 'Presentation Awards'],
 ];
@@ -203,7 +203,7 @@ export default function Home() {
             <div className="organizers-panel">
               <div className="org-block">
                 <p className="mini-label">ORGANISED BY</p>
-                <p className="org-copy">Department of Petroleum Engineering with Department of Chemical Engineering and Department of Chemistry, Pandit Deendayal Energy University</p>
+                <p className="org-copy">Department of Petroleum Engineering with Department of Chemical Engineering and Department of Chemistry,<span className="desktop-org-break"><br /></span> Pandit Deendayal Energy University</p>
               </div>
 
               <div className="association-block">
