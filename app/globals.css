@@ -1811,3 +1811,54 @@ html, body { overflow-x: hidden; }
     margin-top: 42px !important;
   }
 }
+
+/* FINAL USER POLISH — tighten the highlights transition and refine networking artwork. */
+@media (min-width: 721px) {
+  .about { padding-bottom: 24px !important; }
+  .conference-content { padding-top: 24px !important; }
+}
+
+.highlight-icon.networking-highlight img {
+  width: 98px !important;
+  height: 98px !important;
+}
+
+@media (max-width: 720px) {
+  .highlight-icon.networking-highlight img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+
+/* FINAL HERO TITLE — centered and fully contained on desktop and mobile. */
+.hero .hero-title-block h2 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-inline: 8px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  transform: none !important;
+  font-size: clamp(1.35rem, 3.0vw, 2.65rem) !important;
+  letter-spacing: .01em !important;
+  line-height: 1.15 !important;
+}
+
+@media (max-width: 720px) {
+  .hero .hero-title-block h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: 0 !important;
+    font-size: 3.5vw !important;
+    letter-spacing: -.012em !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+}
