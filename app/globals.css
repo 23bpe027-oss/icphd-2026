@@ -1990,3 +1990,20 @@ html, body { overflow-x: hidden; }
     font-size: .59rem !important;
   }
 }
+
+/* FINAL MOBILE FIX — show the full Important Dates photo without bottom cropping */
+@media (max-width: 720px) {
+  .dates-photo-wrap {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .dates-photo {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
