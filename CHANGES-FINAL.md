@@ -17,3 +17,9 @@ This build merges the latest requested website changes instead of reverting to a
 - Event Schedule / Download Brochure / Download Flyer controls are larger.
 - Mobile styling is responsive in the same `app/page.tsx` + `app/globals.css`; no separate mobile page is required.
 - `'use client';` is the first line of `app/page.tsx` so Vercel/Turbopack can compile the interactive page.
+
+## Latest update — 24 Aug 2026
+- Mobile hero conference title now uses the same sizing scale as “International Conference on” and may wrap naturally on narrow screens instead of clipping.
+- Hero conference title remains centered on desktop and mobile.
+- “Driving Innovation, Enabling Transition and Shaping the Energy Future” is now italic on desktop and mobile.
+- Removed “Last date for Registration: 20 November 2026” from the announcement strip.

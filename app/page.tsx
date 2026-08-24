@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       <section className="dark-strip reveal reveal-delay-1">
-        <div className="announcement"><b>Abstract Submission Starts: 25 August 2026</b><b>Last date for Registration: 20 November 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="announcement"><b>Abstract Submission Starts: 25 August 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
         <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
       </section>
 

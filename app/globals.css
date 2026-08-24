@@ -1862,3 +1862,56 @@ html, body { overflow-x: hidden; }
     transform: none !important;
   }
 }
+
+
+/* LATEST USER REQUEST — mobile hero title sizing, italic tagline, remove registration deadline notice. */
+.tagline {
+  font-style: italic !important;
+}
+
+.hero .hero-title-block h2 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 720px) {
+  /* Match the conference title size to “International Conference on”.
+     Allow wrapping on narrow screens rather than clipping the title. */
+  .hero .hero-title-block h2 {
+    font-size: clamp(1.22rem, 6vw, 1.5rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: .01em !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    text-wrap: balance !important;
+    text-align: center !important;
+    padding-inline: 0 !important;
+  }
+}
+
+/* Latest desktop organizer + networking polish */
+@media (min-width: 1051px) {
+  .hero .org-copy {
+    max-width: none !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+    font-size: clamp(.94rem, 1.35vw, 1.08rem) !important;
+    line-height: 1.35 !important;
+    letter-spacing: .02em !important;
+  }
+}
+
+.highlight-icon.networking-highlight img {
+  width: 106px !important;
+  height: 106px !important;
+}
+
+@media (max-width: 720px) {
+  .highlight-icon.networking-highlight img {
+    width: 84px !important;
+    height: 84px !important;
+  }
+}
