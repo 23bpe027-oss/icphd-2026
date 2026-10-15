@@ -26,3 +26,9 @@
 
 ## Latest update
 - Reordered the Conference Highlights cards for a cleaner sequence: Keynote, Panel Discussions, Technical Paper & Poster, Networking & Branding, Exhibition, and Best Paper & Poster Awards.
+
+
+## Date and flyer update (15 October 2026)
+- Updated Important Dates to match the latest supplied flyer: abstract submission starts 10 October 2026, closes 10 November 2026, and acceptance notification 12 November 2026.
+- Updated the announcement strip abstract-start date to 10 October 2026.
+- Replaced the downloadable flyer JPG and PDF with the latest supplied flyer image.
