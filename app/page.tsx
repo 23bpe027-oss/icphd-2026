@@ -66,14 +66,14 @@ const contacts = [
 ];
 
 const coConvenors = [
-  ['Abhinav Kumar', 'Co-Convenor', 'Abhinav.K@spt.pdpu.ac.in', '+91 70048 95463'],
-  ['Anirudh Bardhan', 'Co-Convenor', 'Anirudh.Bardhan@spt.pdpu.ac.in', '+91 98724 94478'],
+  ['Dr. Abhinav Kumar', 'Co-Convenor', 'Abhinav.K@spt.pdpu.ac.in', '+91 70048 95463'],
+  ['Dr. Anirudh Bardhan', 'Co-Convenor', 'Anirudh.Bardhan@spt.pdpu.ac.in', '+91 98724 94478'],
 ];
 
 const studentVolunteers = [
-  ['Abrarhussain Virani', 'Student Convenor', '', '+91 88661 28781'],
-  ['Avani Gupta', 'Student Convenor', '', '+91 82005 44890'],
-  ['Padam Pandey', 'Student Convenor', '', '+91 63066 89036'],
+  ['Mr. Abrarhussain Virani', 'Student Convenor', '', '+91 88661 28781'],
+  ['Ms. Avani Gupta', 'Student Convenor', '', '+91 82005 44890'],
+  ['Mr. Padam Pandey', 'Student Convenor', '', '+91 63066 89036'],
 ];
 
 function Countdown() {
@@ -237,9 +237,9 @@ export default function Home() {
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
-        <div><SectionTitle title="About ICPHD 2026" /><p>Welcome to the 4th Edition of the International Conference on Petroleum, Hydrogen, and Decarbonization (ICPHD), organized by the Department of Petroleum Engineering and the Department of Chemical Engineering, Pandit Deendayal Energy University (PDEU), Gandhinagar. The conference brings together leading experts, researchers, academicians, industry professionals, and young researchers to explore cutting-edge developments in petroleum, hydrogen, and decarbonization.</p><p>As we navigate an era marked by the urgent need for sustainable energy solutions, ICPHD focuses on the advances, challenges, and opportunities shaping the future of the energy sector, aiming to highlight recent innovations and address emerging challenges through technical presentations, panel sessions, and knowledge sharing.</p><p>The conference provides a platform for researchers, industry professionals, academicians, and students to exchange ideas, showcase their work, and foster meaningful collaborations toward a future powered by advanced technologies and a strong commitment to sustainability.</p></div>
-        <div><SectionTitle title="About the Departments" /><p>The conference is jointly organized by the Department of Petroleum Engineering and the Department of Chemical Engineering, Pandit Deendayal Energy University. The two departments represent complementary domains that play a vital role in the energy and process industries, with a shared focus on innovation, research, technology development, and sustainable solutions.</p><p>The Department of Petroleum Engineering focuses on the exploration, production, processing, and management of petroleum resources while addressing the evolving challenges of the energy sector, encouraging students and researchers to develop innovative solutions across the upstream and broader energy industries.</p><p>The Department of Chemical Engineering combines fundamental sciences and engineering principles to address challenges across chemical processing, energy, petroleum refining, materials, and other industrial applications, promoting interdisciplinary research, industry collaboration, and sustainable development.</p><p>Together, the two departments provide a strong interdisciplinary platform for ICPHD, bringing together expertise from petroleum, chemical, hydrogen, energy, and decarbonization domains to facilitate the exchange of knowledge and encourage technological advancements for a sustainable energy future.</p></div>
-        <div><SectionTitle title="About the Institute" /><p>Pandit Deendayal Energy University (PDEU), located in Gandhinagar, Gujarat, is a leading institution dedicated to education, research, innovation, and human resource development in the energy sector, bringing together engineering, science, technology, management, and other allied disciplines.</p><p>With its strong focus on energy education and research, PDEU aims to develop skilled professionals and researchers capable of addressing the evolving challenges of the global energy landscape, promoting innovation, interdisciplinary collaboration, industry interaction, and research-driven learning.</p><p>PDEU&apos;s academic and research ecosystem is supported by its schools, departments, laboratories, industry collaborations, and academic partnerships, providing an appropriate platform for a conference dedicated to petroleum, hydrogen, and decarbonization.</p><p>Through ICPHD, PDEU continues its commitment to bringing together academia, industry, researchers, and students to exchange knowledge, foster collaboration, and explore innovative pathways towards a cleaner, sustainable, and resilient energy future.</p></div>
+        <div><SectionTitle title="About ICPHD 2026" /><p>ICPHD 2026, the fourth edition of the International Conference on Petroleum, Hydrogen, and Decarbonization, brings together researchers, academicians, students, and industry professionals to share ideas and advances across the energy sector. Through technical presentations and discussion, the conference encourages collaboration and explores practical pathways towards a more sustainable energy future.</p></div>
+        <div><SectionTitle title="About the Departments" /><p>Jointly organized by PDEU’s Departments of Petroleum Engineering and Chemical Engineering, the conference combines expertise in petroleum resources, process engineering, hydrogen, and emerging energy technologies. Their interdisciplinary research and industry engagement support innovation and sustainable solutions for the evolving energy landscape.</p></div>
+        <div><SectionTitle title="About the Institute" /><p>Pandit Deendayal Energy University (PDEU), located in Gandhinagar, Gujarat, focuses on education, research, and innovation across energy and allied disciplines. Its interdisciplinary academic environment and industry partnerships make it a fitting platform for ICPHD 2026 to connect academia and industry and advance cleaner, more resilient energy solutions.</p></div>
       </section>
 
       <section className="soft conference-content reveal reveal-delay-3">

@@ -2682,3 +2682,54 @@ html, body { overflow-x: hidden; }
   #contact .contact-card h4 { font-size: .78rem !important; }
   #contact .contact-card p, #contact .contact-card a { font-size: .67rem !important; }
 }
+
+
+/* Registration fee table: prevent text crossing into adjacent columns. */
+.flyer-fee-table {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box !important;
+}
+.flyer-fee-table .fee-head,
+.flyer-fee-table .fee-row {
+  grid-template-columns: minmax(0, 1.45fr) repeat(3, minmax(0, 1fr)) !important;
+  min-width: 620px;
+  box-sizing: border-box !important;
+}
+.flyer-fee-table .fee-head > *,
+.flyer-fee-table .fee-row > * {
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  padding: 12px 9px !important;
+  line-height: 1.35 !important;
+}
+.flyer-fee-table .fee-head b { font-size: clamp(.78rem, 1.2vw, 1rem) !important; }
+.flyer-fee-table .fee-row span,
+.flyer-fee-table .fee-row b { font-size: clamp(.8rem, 1.25vw, 1rem) !important; }
+@media (max-width: 520px) {
+  .flyer-fee-table .fee-head,
+  .flyer-fee-table .fee-row { min-width: 600px !important; }
+  .flyer-fee-table .fee-head > *,
+  .flyer-fee-table .fee-row > * { padding: 10px 8px !important; }
+}
+
+
+/* Latest refinement: clearer highlight text and stronger, concise About headings */
+.about .section-title h2 {
+  font-size: clamp(1.9rem, 2.7vw, 2.65rem);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.highlight-card h3,
+.highlight-card p {
+  color: var(--navy) !important;
+}
+@media (max-width: 640px) {
+  .about .section-title h2 { font-size: clamp(1.8rem, 6vw, 2.25rem); }
+}
