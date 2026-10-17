@@ -2608,3 +2608,77 @@ html, body { overflow-x: hidden; }
   overflow-wrap: anywhere !important;
 }
 #contact .contact-group-grid { align-items: start !important; }
+
+/* 17 Oct 2026 — fix contact section spacing and readability on narrow/mobile-desktop viewports. */
+#contact {
+  box-sizing: border-box !important;
+  padding-left: clamp(14px, 2.2vw, 28px) !important;
+  padding-right: clamp(14px, 2.2vw, 28px) !important;
+  overflow: hidden !important;
+}
+#contact .footer-heading-row {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: clamp(12px, 2.4vw, 28px) !important;
+  margin-bottom: clamp(22px, 3vw, 38px) !important;
+}
+#contact .footer-title { min-width: 0 !important; }
+#contact .footer-title h2 { margin: 0 0 4px !important; }
+#contact .footer-title p { margin: 0 !important; }
+#contact .footer-seal-mini { max-width: 100% !important; object-fit: contain !important; }
+#contact .footer-groups { width: 100% !important; max-width: 100% !important; }
+#contact .contact-group { width: 100% !important; box-sizing: border-box !important; }
+#contact .contact-group-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px 24px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+#contact .contact-card {
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 10px 8px 12px !important;
+  text-align: left !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.4 !important;
+}
+#contact .contact-card h4 { margin: 0 0 5px !important; line-height: 1.25 !important; }
+#contact .contact-card p { margin: 0 0 4px !important; line-height: 1.35 !important; }
+#contact .contact-card a { display: block !important; margin-top: 4px !important; line-height: 1.4 !important; }
+#contact .footer-groups > .contact-group + .contact-group {
+  border-top: 1px solid rgba(125, 190, 225, 0.58) !important;
+  margin-top: 18px !important;
+  padding-top: 18px !important;
+}
+@media (max-width: 760px) {
+  #contact { padding: 30px 16px 22px !important; }
+  #contact .footer-heading-row {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+  }
+  #contact .footer-title h2 { font-size: clamp(1.35rem, 4.5vw, 1.8rem) !important; }
+  #contact .footer-title p { font-size: clamp(.76rem, 2.6vw, .95rem) !important; }
+  #contact .footer-seal-mini { width: clamp(58px, 12vw, 82px) !important; max-height: 76px !important; }
+  #contact .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 16px 12px !important; }
+  #contact .contact-card { padding: 8px 4px 12px !important; text-align: left !important; }
+  #contact .contact-card h4 { font-size: clamp(.82rem, 2.7vw, 1rem) !important; line-height: 1.28 !important; margin-bottom: 5px !important; }
+  #contact .contact-card p,
+  #contact .contact-card a { font-size: clamp(.7rem, 2.25vw, .86rem) !important; line-height: 1.42 !important; overflow-wrap: anywhere !important; word-break: normal !important; }
+  #contact .footer-groups > .contact-group + .contact-group { margin-top: 16px !important; padding-top: 16px !important; }
+}
+/* Small phones and browsers forced into desktop-site mode: keep gutters and prevent heading/logo collisions. */
+@media (max-width: 430px) {
+  #contact { padding-left: 14px !important; padding-right: 14px !important; }
+  #contact .footer-heading-row { grid-template-columns: minmax(0, 1fr) 58px !important; gap: 8px !important; }
+  #contact .footer-title h2 { font-size: clamp(1.22rem, 5vw, 1.5rem) !important; }
+  #contact .footer-title p { font-size: clamp(.7rem, 3vw, .8rem) !important; }
+  #contact .footer-seal-mini { width: 58px !important; max-height: 62px !important; }
+  #contact .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 14px 10px !important; }
+  #contact .contact-card h4 { font-size: .78rem !important; }
+  #contact .contact-card p, #contact .contact-card a { font-size: .67rem !important; }
+}
