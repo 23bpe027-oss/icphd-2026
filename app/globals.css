@@ -2112,16 +2112,107 @@ html, body { overflow-x: hidden; }
 }
 
 
-/* Final requested polish: equal contact cards, more readable contact text, and blue non-clickable brochure label. */
-.contact-group-grid { align-items: stretch !important; }
-.contact-card { height: 100% !important; min-height: 220px !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; }
-.contact-card h4 { font-size: clamp(1.08rem, 1.35vw, 1.28rem) !important; line-height: 1.3 !important; }
-.contact-card p, .contact-card a { font-size: clamp(.96rem, 1.1vw, 1.08rem) !important; line-height: 1.5 !important; overflow-wrap: anywhere !important; }
-.contact-card a { margin-top: 5px !important; }
-.quick-action-disabled { color: #8ecbff !important; background: transparent !important; border: 1px solid rgba(142,203,255,.75) !important; opacity: 1 !important; cursor: default !important; text-decoration: none !important; }
+/* Final requested polish: uniform contact cards, clearer contact text, and restored blue brochure styling. */
+#contact .contact-group-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; align-items: stretch !important; }
+#contact .contact-card { width: 100% !important; height: 100% !important; min-height: 220px !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; }
+#contact .contact-card h4 { font-size: clamp(1.12rem, 1.4vw, 1.3rem) !important; line-height: 1.35 !important; }
+#contact .contact-card p, #contact .contact-card a { font-size: clamp(1rem, 1.15vw, 1.1rem) !important; line-height: 1.55 !important; overflow-wrap: anywhere !important; }
+#contact .contact-card a { margin-top: 5px !important; }
+.quick-actions .quick-action-disabled { display: inline-flex !important; align-items: center !important; justify-content: center !important; color: #ffffff !important; background: #1674d1 !important; border: 1px solid #1674d1 !important; opacity: 1 !important; cursor: default !important; text-decoration: none !important; }
+.quick-actions .quick-action-disabled:hover { color: #ffffff !important; background: #0f5fb1 !important; border-color: #0f5fb1 !important; }
 @media (max-width: 720px) {
-  .contact-group-grid { grid-template-columns: minmax(0, 1fr) !important; }
-  .contact-card { min-height: 0 !important; }
-  .contact-card h4 { font-size: 1.16rem !important; }
-  .contact-card p, .contact-card a { font-size: 1rem !important; }
+  #contact .contact-group-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  #contact .contact-card { min-height: 0 !important; }
+  #contact .contact-card h4 { font-size: 1.18rem !important; }
+  #contact .contact-card p, #contact .contact-card a { font-size: 1.02rem !important; }
+}
+
+/* Compact contact cards: smaller type, tight padding, and no forced empty height. */
+#contact .contact-group-grid,
+#contact .contact-group:nth-child(2) .contact-group-grid,
+#contact .contact-group:nth-child(3) .contact-group-grid {
+  align-items: start !important;
+  row-gap: 10px !important;
+  column-gap: 12px !important;
+}
+#contact .contact-card {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 8px 10px !important;
+  gap: 0 !important;
+  justify-content: flex-start !important;
+  align-self: start !important;
+}
+#contact .contact-card h4 {
+  margin: 0 0 2px !important;
+  font-size: 0.94rem !important;
+  line-height: 1.3 !important;
+}
+#contact .contact-card p {
+  margin: 0 0 3px !important;
+  font-size: 0.8rem !important;
+  line-height: 1.35 !important;
+}
+#contact .contact-card a {
+  margin-top: 2px !important;
+  font-size: 0.8rem !important;
+  line-height: 1.35 !important;
+}
+@media (max-width: 720px) {
+  #contact .contact-card { padding: 8px 10px !important; }
+  #contact .contact-card h4 { font-size: 0.94rem !important; }
+  #contact .contact-card p,
+  #contact .contact-card a { font-size: 0.8rem !important; }
+}
+
+/* Final combined requested refinements: reference brochure button, compact contacts, and single-line About headings. */
+.quick-actions .quick-action-disabled {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 35px !important;
+  padding: 7px 14px !important;
+  border: 2px solid #3b7db7 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  background: #3b7db7 !important;
+  font-size: .82rem !important;
+  font-weight: 800 !important;
+  opacity: 1 !important;
+  text-align: center !important;
+  cursor: default !important;
+}
+#contact .contact-group-grid { align-items: start !important; }
+#contact .contact-card {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 7px 9px !important;
+  gap: 0 !important;
+  justify-content: flex-start !important;
+}
+#contact .contact-card h4 { font-size: .92rem !important; line-height: 1.25 !important; margin: 0 0 2px !important; }
+#contact .contact-card p { font-size: .78rem !important; line-height: 1.3 !important; margin: 0 0 2px !important; }
+#contact .contact-card a { font-size: .78rem !important; line-height: 1.3 !important; margin-top: 1px !important; overflow-wrap: anywhere !important; }
+.about {
+  width: min(1480px, calc(100% - 40px)) !important;
+  max-width: 1480px !important;
+}
+.about .section-title { min-width: 0 !important; min-height: 44px !important; margin-bottom: 14px !important; }
+.about .section-title h2 {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  font-size: clamp(.95rem, 1.3vw, 1.35rem) !important;
+  letter-spacing: -.02em !important;
+}
+@media (max-width: 900px) {
+  .about { width: calc(100% - 28px) !important; }
+  .about .section-title h2 { font-size: clamp(.8rem, 1.7vw, 1.05rem) !important; }
+}
+@media (max-width: 720px) {
+  .about .section-title h2 { font-size: clamp(.92rem, 3.4vw, 1.25rem) !important; white-space: nowrap !important; }
+  #contact .contact-card { padding: 7px 9px !important; }
+  #contact .contact-card h4 { font-size: .92rem !important; }
+  #contact .contact-card p, #contact .contact-card a { font-size: .78rem !important; }
 }

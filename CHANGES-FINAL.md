@@ -27,3 +27,6 @@ This build merges the latest requested website changes instead of reverting to a
 
 ## Latest update
 - Reordered the Conference Highlights cards for a cleaner sequence: Keynote, Panel Discussions, Technical Paper & Poster, Networking & Branding, Exhibition, and Best Paper & Poster Awards.
+
+
+Latest requested refinement (17 October 2026): contact cards use a consistent three-column desktop grid with equal sizing and slightly larger text; the Download Brochure label is restored to a solid blue button style. Mobile contact cards stack in one column.

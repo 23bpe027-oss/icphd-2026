@@ -16,3 +16,8 @@
 
 ## Latest update
 - Reordered the Conference Highlights cards for a cleaner sequence: Keynote, Panel Discussions, Technical Paper & Poster, Networking & Branding, Exhibition, and Best Paper & Poster Awards.
+
+## Final combined refinements
+- Restored the Download Brochure control to the blue rectangular style shown in the supplied reference.
+- Tightened contact cards to content with smaller typography and minimal padding, preserving the convenor/co-convenor/student convenor order.
+- Expanded the About section container and tuned heading sizing to keep all three About headings on one line without overlapping.
