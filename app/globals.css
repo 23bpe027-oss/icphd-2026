@@ -2053,32 +2053,3 @@ html, body { overflow-x: hidden; }
 .contact-card a { overflow-wrap: anywhere; }
 @media (max-width: 900px) { .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .contact-group-grid { grid-template-columns: minmax(0, 1fr); } .contact-card { padding: 14px; } }
-
-
-/* Contact section layout refinement: title first, groups directly below, PDEU logo on the right. */
-#contact .footer-top { display: block; padding-top: 30px; padding-bottom: 30px; }
-#contact .footer-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
-#contact .footer-title h2 { margin: 0; font-size: 2rem; }
-#contact .footer-title p { margin: 3px 0 0; }
-#contact .footer-seal-mini { display: block; width: clamp(125px, 18vw, 205px); height: auto; max-height: 105px; object-fit: contain; object-position: center right; margin: 0; }
-#contact .footer-groups { display: grid; grid-template-columns: 1.2fr 1fr 1fr; align-items: start; gap: 24px; }
-#contact .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-#contact .contact-card { padding: 13px; }
-#contact .contact-group-title { margin-bottom: 10px; }
-/* Slightly enlarge About body text for readability. */
-.about p { font-size: 1.05rem; line-height: 1.7; }
-@media (max-width: 900px) {
-  #contact .footer-groups { grid-template-columns: 1fr; gap: 20px; }
-  #contact .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 600px) {
-  #contact .footer-heading-row { gap: 12px; margin-bottom: 16px; }
-  #contact .footer-title h2 { font-size: 1.7rem; }
-  #contact .footer-title p { font-size: .9rem; }
-  #contact .footer-seal-mini { width: 115px; max-height: 78px; }
-  #contact .contact-group-grid { grid-template-columns: 1fr; }
-  .about p { font-size: 1rem; line-height: 1.65; }
-}
-
-/* Registration opening notice */
-.registration-notice { display: inline-block; text-align: center; white-space: normal; cursor: default; }
