@@ -2007,3 +2007,49 @@ html, body { overflow-x: hidden; }
     display: block !important;
   }
 }
+
+/* Targeted fix: keep the three About headings clear and within their own columns. */
+.about .section-title {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 52px !important;
+  margin-bottom: 18px !important;
+}
+.about .section-title h2 {
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: clamp(1.15rem, 1.45vw, 1.45rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+@media (max-width: 1050px) and (min-width: 721px) {
+  .about .section-title h2 {
+    font-size: clamp(1.05rem, 1.35vw, 1.25rem) !important;
+  }
+}
+@media (max-width: 720px) {
+  .about .section-title {
+    min-height: 0 !important;
+  }
+  .about .section-title h2 {
+    font-size: 1.65rem !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+
+/* Contact section hierarchy: convenors, co-convenors, then student volunteers. */
+.footer-top { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; }
+.footer-title { display: flex; flex-direction: column; align-items: flex-start; }
+.contact-group { width: 100%; min-width: 0; }
+.contact-group-title { margin: 0 0 14px; color: #ffffff; font-size: 1.2rem; font-weight: 800; padding-bottom: 8px; border-bottom: 1px solid rgba(159,197,226,.35); }
+.contact-group-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.contact-card { min-width: 0; padding: 16px; border: 1px solid rgba(159,197,226,.25); border-radius: 12px; background: rgba(255,255,255,.035); }
+.contact-card h3, .contact-card h4 { margin: 0 0 4px; font-size: 1rem; overflow-wrap: anywhere; }
+.contact-card a { overflow-wrap: anywhere; }
+@media (max-width: 900px) { .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .contact-group-grid { grid-template-columns: minmax(0, 1fr); } .contact-card { padding: 14px; } }
