@@ -2379,3 +2379,81 @@ html, body { overflow-x: hidden; }
     border-radius: 16px !important;
   }
 }
+
+/* Corrective contact-card sizing: compact equal cards with no oversized empty squares. */
+#contact .contact-group-grid,
+#contact .contact-group:nth-child(2) .contact-group-grid,
+#contact .contact-group:nth-child(3) .contact-group-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+}
+#contact .contact-card {
+  width: 100% !important;
+  height: 112px !important;
+  min-height: 112px !important;
+  max-height: 112px !important;
+  aspect-ratio: auto !important;
+  box-sizing: border-box !important;
+  padding: 10px 11px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+#contact .contact-card h4 { font-size: .84rem !important; line-height: 1.2 !important; margin: 0 0 2px !important; }
+#contact .contact-card p,
+#contact .contact-card a { font-size: .72rem !important; line-height: 1.22 !important; margin: 0 !important; max-width: 100% !important; overflow-wrap: anywhere !important; }
+@media (max-width: 760px) {
+  #contact .contact-group-grid,
+  #contact .contact-group:nth-child(2) .contact-group-grid,
+  #contact .contact-group:nth-child(3) .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 9px !important; }
+  #contact .contact-card { height: 108px !important; min-height: 108px !important; max-height: 108px !important; padding: 8px !important; }
+  #contact .contact-card h4 { font-size: .78rem !important; }
+  #contact .contact-card p, #contact .contact-card a { font-size: .66rem !important; }
+}
+@media (max-width: 420px) {
+  #contact .contact-group-grid,
+  #contact .contact-group:nth-child(2) .contact-group-grid,
+  #contact .contact-group:nth-child(3) .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+
+/* Mobile contact layout: preserve the three role groups and keep cards side-by-side. */
+@media (max-width: 760px) {
+  #contact .contact-group-grid,
+  #contact .contact-group:nth-child(2) .contact-group-grid,
+  #contact .contact-group:nth-child(3) .contact-group-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  #contact .contact-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 108px !important;
+    min-height: 108px !important;
+    max-height: 108px !important;
+    padding: 7px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  #contact .contact-card h4 { font-size: .76rem !important; line-height: 1.18 !important; }
+  #contact .contact-card p,
+  #contact .contact-card a { font-size: .64rem !important; line-height: 1.2 !important; overflow-wrap: anywhere !important; }
+}
+@media (max-width: 360px) {
+  #contact .contact-group-grid,
+  #contact .contact-group:nth-child(2) .contact-group-grid,
+  #contact .contact-group:nth-child(3) .contact-group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 6px !important; }
+  #contact .contact-card { padding: 6px !important; }
+  #contact .contact-card h4 { font-size: .7rem !important; }
+  #contact .contact-card p, #contact .contact-card a { font-size: .59rem !important; }
+}
