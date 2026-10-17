@@ -21,3 +21,6 @@
 - Restored the Download Brochure control to the blue rectangular style shown in the supplied reference.
 - Tightened contact cards to content with smaller typography and minimal padding, preserving the convenor/co-convenor/student convenor order.
 - Expanded the About section container and tuned heading sizing to keep all three About headings on one line without overlapping.
+
+## Width correction
+- Restored the original centered 1180px content width and 48px side gutters; removed the expanded-to-1500px layout. Contact cards remain equal square cards within the original page width.
