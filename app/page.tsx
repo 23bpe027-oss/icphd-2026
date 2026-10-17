@@ -71,9 +71,9 @@ const coConvenors = [
 ];
 
 const studentVolunteers = [
-  ['Abrarhussain Virani', 'Student Volunteer', '', '+91 88661 28781'],
-  ['Avani Gupta', 'Student Volunteer', '', '+91 82005 44890'],
-  ['Padam Pandey', 'Student Volunteer', '', '+91 63066 89036'],
+  ['Abrarhussain Virani', 'Student Convenor', '', '+91 88661 28781'],
+  ['Avani Gupta', 'Student Convenor', '', '+91 82005 44890'],
+  ['Padam Pandey', 'Student Convenor', '', '+91 63066 89036'],
 ];
 
 function Countdown() {
@@ -233,7 +233,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Abstract Submission Starts: 10 October 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Preview.pdf" target="_blank" rel="noreferrer">Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
+        <div className="quick-actions"><a href="#dates">Event Schedule</a><span className="quick-action-disabled" aria-disabled="true">Download Brochure</span><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
@@ -266,7 +266,7 @@ export default function Home() {
       <section className="container registration anchor-section reveal reveal-delay-2" id="registration">
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
-          <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href={registrationUrl}>Click here for Registration</a><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
+          <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><span className="primary-btn registration-notice" aria-label="Registrations start 12 November 2026">Registrations start 12 November 2026</span><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
           <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
         </div>
       </section>
@@ -278,10 +278,12 @@ export default function Home() {
       <section className="countdown-section reveal reveal-delay-1"><div className="container countdown-wrap"><div><p className="eyebrow">DECEMBER 11–13, 2026</p><h2>See you at ICPHD 2026</h2><p>Driving innovation, enabling transition and shaping the energy future.</p></div><Countdown /></div></section>
 
       <footer id="contact"><div className="container footer-top">
-        <div className="footer-title"><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p><img className="footer-seal-mini" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU seal" /></div>
-        <section className="contact-group" aria-label="Convenors"><h3 className="contact-group-title">Convenors</h3><div className="contact-group-grid">{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
-        <section className="contact-group" aria-label="Co-Convenors"><h3 className="contact-group-title">Co-Convenors</h3><div className="contact-group-grid">{coConvenors.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
-        <section className="contact-group" aria-label="Student Volunteers"><h3 className="contact-group-title">Student Volunteers</h3><div className="contact-group-grid">{studentVolunteers.map(([name, role, email, phone]) => <div className="contact-card" key={name}><h4>{name}</h4><p>{role}</p><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
+        <div className="footer-heading-row"><div className="footer-title"><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p></div><img className="footer-seal-mini" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU circular seal" /></div>
+        <div className="footer-groups">
+        <section className="contact-group" aria-label="Convenors"><div className="contact-group-grid">{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
+        <section className="contact-group" aria-label="Co-Convenors"><div className="contact-group-grid">{coConvenors.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
+        <section className="contact-group" aria-label="Student Convenors"><div className="contact-group-grid">{studentVolunteers.map(([name, role, email, phone]) => <div className="contact-card" key={name}><h4>{name}</h4><p>{role}</p><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
+        </div>
       </div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
     </main>
   );
