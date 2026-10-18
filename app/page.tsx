@@ -244,7 +244,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Abstract Submission Starts: 10 October 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Brochure.pdf", "ICPHD-2026-Brochure.pdf"); }}>Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a></div>
+        <div className="quick-actions"><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Brochure.pdf", "ICPHD-2026-Brochure.pdf"); }}>Download Brochure</a><a href="#dates">Event Schedule</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
@@ -289,9 +289,9 @@ export default function Home() {
       <section className="countdown-section reveal reveal-delay-1"><div className="container countdown-wrap"><div><p className="eyebrow">DECEMBER 11–13, 2026</p><h2>See you at ICPHD 2026</h2><p>Driving innovation, enabling transition and shaping the energy future.</p></div><Countdown /></div></section>
 
       <footer id="contact"><div className="container footer-top">
-        <div className="footer-heading-row"><div className="footer-title"><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p></div><img className="footer-seal-mini" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU circular seal" /></div>
+        <div className="footer-heading-row"><div className="footer-title"><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p><a className="contact-email" href="mailto:ICPHD2026@pdpu.ac.in">ICPHD2026@pdpu.ac.in</a></div><img className="footer-seal-mini" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU circular seal" /></div>
         <div className="footer-groups">
-        <section className="contact-group" aria-label="Convenors"><div className="contact-group-grid">{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
+        <section className="contact-group" aria-label="Convenors"><div className="contact-group-grid">{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={name}><h4>{name}</h4><p>{role}</p><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
         <section className="contact-group" aria-label="Student Convenors"><div className="contact-group-grid">{studentVolunteers.map(([name, role, email, phone]) => <div className="contact-card" key={name}><h4>{name}</h4><p>{role}</p><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
         </div>
       </div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
