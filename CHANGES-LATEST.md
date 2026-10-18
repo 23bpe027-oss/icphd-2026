@@ -32,3 +32,7 @@
 - Updated Important Dates to match the latest supplied flyer: abstract submission starts 10 October 2026, closes 10 November 2026, and acceptance notification 12 November 2026.
 - Updated the announcement strip abstract-start date to 10 October 2026.
 - Replaced the downloadable flyer JPG and PDF with the latest supplied flyer image.
+
+## Latest change — remove co-convenors
+- Removed the Co-Convenors group from the Contact section, including the two co-convenor entries.
+- Kept the Convenors and Student Convenors groups and the existing contact styling/layout.

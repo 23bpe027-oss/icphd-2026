@@ -65,15 +65,13 @@ const contacts = [
   ['Dr. Paul Naveen', 'Convenor', 'Paul.Naveen@spt.pdpu.ac.in', '+91-80510 50067'],
 ];
 
-const coConvenors = [
-  ['Dr. Abhinav Kumar', 'Co-Convenor', 'Abhinav.K@spt.pdpu.ac.in', '+91 70048 95463'],
-  ['Dr. Anirudh Bardhan', 'Co-Convenor', 'Anirudh.Bardhan@spt.pdpu.ac.in', '+91 98724 94478'],
-];
 
 const studentVolunteers = [
   ['Mr. Abrarhussain Virani', 'Student Convenor', '', '+91 88661 28781'],
   ['Ms. Avani Gupta', 'Student Convenor', '', '+91 82005 44890'],
   ['Mr. Padam Pandey', 'Student Convenor', '', '+91 63066 89036'],
+  ['Mr. Jinay Jain', 'Student Convenor', '', '+91 70023 84081'],
+  ['Mr. Dhananjay Nathani', 'Student Convenor', '', '+91 96648 35463'],
 ];
 
 function Countdown() {
@@ -233,7 +231,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Abstract Submission Starts: 10 October 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><span className="quick-action-disabled" aria-disabled="true">Download Brochure</span><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
+        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" download>Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
@@ -281,7 +279,6 @@ export default function Home() {
         <div className="footer-heading-row"><div className="footer-title"><h2>Contact</h2><p>ICPHD 2026 — Fourth Edition</p></div><img className="footer-seal-mini" src="/assets/pdeu-seal-new-transparent.png" alt="PDEU circular seal" /></div>
         <div className="footer-groups">
         <section className="contact-group" aria-label="Convenors"><div className="contact-group-grid">{contacts.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
-        <section className="contact-group" aria-label="Co-Convenors"><div className="contact-group-grid">{coConvenors.map(([name, role, email, phone]) => <div className="contact-card" key={email}><h4>{name}</h4><p>{role}</p><a href={`mailto:${email}`}>{email}</a><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
         <section className="contact-group" aria-label="Student Convenors"><div className="contact-group-grid">{studentVolunteers.map(([name, role, email, phone]) => <div className="contact-card" key={name}><h4>{name}</h4><p>{role}</p><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></div>)}</div></section>
         </div>
       </div><div className="copyright">COPYRIGHT- ICPHD 2026 — Fourth Edition &nbsp;|&nbsp; December 11–13, 2026 &nbsp;|&nbsp; PDEU, Raysan Gandhinagar, 382009</div></footer>
