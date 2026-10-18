@@ -5,6 +5,19 @@ import { useEffect, useMemo, useState } from 'react';
 const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || '#registration';
 const abstractUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8zIIplqNH0R0gzwqkgrfPBg0jQUOMYxPrmiXAJPWOBip66A/viewform?usp=send_form';
 
+function openAndDownloadPdf(url: string, filename: string) {
+  // Open the PDF in a new tab and start a download from the same user click.
+  window.open(url, '_blank', 'noopener,noreferrer');
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+
 const navLinks = [
   ['Home', '#home'],
   ['About', '#about'],
@@ -231,7 +244,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Abstract Submission Starts: 10 October 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" download>Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer">Download Flyer</a></div>
+        <div className="quick-actions"><a href="#dates">Event Schedule</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Brochure.pdf", "ICPHD-2026-Brochure.pdf"); }}>Download Brochure</a><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
