@@ -2777,3 +2777,14 @@ html, body { overflow-x: hidden; }
     padding: 18px 14px !important;
   }
 }
+
+/* Contact section social icons */
+.footer-title .contact-link-row { display: flex; align-items: center; gap: 10px; margin: 5px 0 12px; }
+.contact-social-icon { width: 21px; height: 21px; flex: 0 0 21px; display: inline-block; }
+.mail-icon { color: #75c9ff; }
+.instagram-icon { color: #e7a0d8; }
+.contact-link-row span { min-width: 0; }
+@media (max-width: 640px) {
+  .footer-title .contact-link-row { align-items: flex-start; gap: 8px; }
+  .contact-social-icon { margin-top: 2px; }
+}
