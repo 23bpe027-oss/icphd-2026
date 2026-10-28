@@ -243,7 +243,7 @@ export default function Home() {
       </section>
 
       <section className="dark-strip reveal reveal-delay-1">
-        <div className="announcement"><b>Abstract Submission Has Started!!!</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="announcement"><b>Abstract Submission Started.</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
         <div className="quick-actions"><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Brochure.pdf", "ICPHD-2026-Brochure.pdf"); }}>Download Brochure</a><a href="/Sponsorship-ICPHD-2026.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Sponsorship-ICPHD-2026.pdf", "Sponsorship-ICPHD-2026.pdf"); }}>Sponsorship Details</a></div>
       </section>
 

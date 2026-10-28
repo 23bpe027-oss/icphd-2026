@@ -2788,3 +2788,24 @@ html, body { overflow-x: hidden; }
   .footer-title .contact-link-row { align-items: flex-start; gap: 8px; }
   .contact-social-icon { margin-top: 2px; }
 }
+
+
+/* Mobile announcement alignment: center both announcement messages and prevent left-shifted text. */
+@media (max-width: 720px) {
+  .announcement {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+  }
+  .announcement > b {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
