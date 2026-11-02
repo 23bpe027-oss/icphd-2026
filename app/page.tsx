@@ -17,6 +17,18 @@ function openAndDownloadPdf(url: string, filename: string) {
   link.remove();
 }
 
+function openPreviewAndDownload(previewUrl: string, downloadUrl: string, filename: string) {
+  // Open a readable preview and download the editable source from the same click.
+  window.open(previewUrl, '_blank', 'noopener,noreferrer');
+  const link = document.createElement('a');
+  link.href = downloadUrl;
+  link.download = filename;
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
 
 const navLinks = [
   ['Home', '#home'],
@@ -25,6 +37,7 @@ const navLinks = [
   ['Schedule', '#dates'],
   ['Theme', '#theme'],
   ['Registration', '#registration'],
+  ['Organizing Committee', '#committee'],
   ['Contact', '#contact'],
 ];
 
@@ -280,8 +293,66 @@ export default function Home() {
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
           <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><span className="primary-btn registration-notice" aria-label="Registrations Start 12 November 2026">Registrations Start 12 November 2026</span><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
-          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" download>Download Abstract Template</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
+          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
         </div>
+      </section>
+
+
+      <section id="committee" className="container committee-section anchor-section reveal reveal-delay-2">
+        <SectionTitle title="Organizing Committee" />
+        <div className="committee-chief">
+          <img src="/assets/committee-chief-patron.jpg" alt="Prof. S. Sundar Manoharan" />
+          <div><span className="committee-role">Chief Patron</span><h3>Prof. S. Sundar Manoharan</h3><p>Director General, PDEU</p></div>
+        </div>
+        {[
+          { title: 'Patrons', people: [
+            ['committee-patrons-1.jpg','Prof. Rajesh Patel','Director, SoET, PDEU'],
+            ['committee-patrons-2.jpg','Prof. Anirbid Sircar','Director, SoT, PDEU'],
+            ['committee-patrons-3.jpg','Prof. Bhawanisingh Desai','Dean R & D, PDEU']
+          ]},
+          { title: 'Conference Chairs', people: [
+            ['committee-chairs-1.jpg','Dr. Hari S','HoD PE, SoET, PDEU'],
+            ['committee-chairs-2.jpg','Prof. Anirban Das','HoD Chemistry, SoET, PDEU'],
+            ['committee-chairs-3.jpg','Dr. Pravin Kodgire','HoD CE, SoET, PDEU']
+          ]},
+          { title: 'Conveners', people: [
+            ['committee-conveners-1.jpg','Dr. Shanker Krishna','Associate Dean SoET, PDEU'],
+            ['committee-conveners-2.jpg','Dr. Achinta Bera','SoET, PDEU'],
+            ['committee-conveners-3.jpg','Dr. Paul Naveen','SoET, PDEU']
+          ]},
+          { title: 'Co-Conveners', people: [
+            ['committee-coconveners-1.jpg','Dr. R Balasubramanian','SoET, PDEU'],
+            ['committee-coconveners-2.jpg','Dr. Vivek Ramalingam','SoET, PDEU'],
+            ['committee-coconveners-3.jpg','Prof. Uttam Kumar Bhui','SoET, PDEU']
+          ]},
+          { title: 'Organizing Secretaries', people: [
+            ['committee-secretaries-1.jpg','Dr. Anirudh Bardhan','SoET, PDEU'],
+            ['committee-secretaries-2.jpg','Dr. Atul Kumar Patidar','SoET, PDEU'],
+            ['committee-secretaries-3.jpg','Dr. Amit Verma','SoET, PDEU']
+          ]},
+          { title: 'Treasurers', people: [
+            ['committee-treasurers-1.jpg','Dr. Namrata Bist','SoET, PDEU'],
+            ['committee-treasurers-2.jpg','Dr. Abhinav Kumar','SoET, PDEU'],
+            ['committee-treasurers-3.jpg','Dr. Maunish Shah','SoET, PDEU']
+          ]},
+          { title: 'Members', people: [
+            ['committee-members-1.jpg','Dr. Ramanand Singh','SoET, PDEU'],
+            ['committee-members-2.jpg','Dr. Lakshmanarao Jeeru','SoET, PDEU'],
+            ['committee-members-3.jpg','Dr. N. Madhavan','SoET, PDEU']
+          ]}
+        ].map((group) => (
+          <div className="committee-group" key={group.title}>
+            <h3 className="committee-group-title">{group.title}</h3>
+            <div className="committee-grid">
+              {group.people.map(([photo, name, role]) => (
+                <article className="committee-card" key={name}>
+                  <img src={`/assets/${photo}`} alt={name} loading="lazy" />
+                  <div><h4>{name}</h4><p>{role}</p></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
       <section className="soft venue reveal reveal-delay-2">

@@ -2826,3 +2826,84 @@ html, body { overflow-x: hidden; }
 @media (max-width: 640px) {
   .abstract-template-btn { display: block; width: fit-content; margin: 10px 0 0; }
 }
+
+
+/* Refined download actions: clearer typography, larger labels, and more breathing room. */
+.quick-actions > a,
+.quick-actions > .quick-action-disabled {
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.35 !important;
+  min-height: 72px !important;
+  padding: 16px 22px !important;
+}
+.quick-actions {
+  gap: 18px !important;
+}
+@media (max-width: 720px) {
+  .quick-actions {
+    gap: 14px !important;
+  }
+  .quick-actions > a,
+  .quick-actions > .quick-action-disabled {
+    min-height: 66px !important;
+    padding: 17px 20px !important;
+    font-size: 1.16rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* Align abstract-template action directly under the primary submission link. */
+.abstract-template-btn {
+  display: block !important;
+  width: fit-content !important;
+  margin: 10px 0 0 0 !important;
+  text-align: center !important;
+}
+
+
+/* Organizing committee section built from the official ICPHD 2026 brochure, page 7. */
+.committee-section { padding-top: 58px; padding-bottom: 64px; }
+.committee-chief {
+  display: flex; align-items: center; gap: 18px; max-width: 540px;
+  margin: 0 auto 26px; padding: 18px 22px; border-radius: 16px;
+  background: #edf5fa; border: 1px solid #c7ddeb;
+}
+.committee-chief img {
+  width: 96px; height: 104px; object-fit: cover; border-radius: 8px;
+  border: 1px solid #9bb5c8;
+}
+.committee-role { color: var(--blue); font-size: .9rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+.committee-chief h3 { margin: 5px 0 3px; color: var(--navy); font-size: 1.18rem; }
+.committee-chief p { margin: 0; color: #52687c; }
+.committee-group { margin-top: 25px; }
+.committee-group-title {
+  margin: 0 0 14px; padding: 9px 14px; border-radius: 8px;
+  background: #104b88; color: #fff; text-align: center;
+  font-size: 1rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.committee-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.committee-card {
+  display: flex; align-items: center; gap: 11px; min-width: 0;
+  padding: 10px; background: #fff; border: 1px solid #d8e2eb;
+  border-radius: 12px; box-shadow: 0 4px 14px rgba(12,45,75,.06);
+}
+.committee-card img {
+  flex: 0 0 76px; width: 76px; height: 84px; object-fit: cover;
+  border-radius: 6px; border: 1px solid #b8c8d5;
+}
+.committee-card h4 { margin: 0 0 4px; color: var(--navy); font-size: .94rem; line-height: 1.25; }
+.committee-card p { margin: 0; color: #52687c; font-size: .82rem; line-height: 1.35; }
+@media (max-width: 900px) {
+  .committee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .committee-section { padding-top: 38px; padding-bottom: 44px; }
+  .committee-chief { padding: 14px; gap: 13px; }
+  .committee-chief img { width: 78px; height: 86px; }
+  .committee-grid { grid-template-columns: 1fr; gap: 10px; }
+  .committee-card { padding: 9px; }
+  .committee-card img { flex-basis: 70px; width: 70px; height: 76px; }
+}
