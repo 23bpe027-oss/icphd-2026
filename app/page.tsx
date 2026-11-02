@@ -60,37 +60,37 @@ const dates = [
 
 
 const organizingCommittee = [
-  { group: 'Patrons', people: [
+  { group: 'PATRONS', people: [
     ['patron-rajesh-patel.jpg', 'Prof. Rajesh Patel', 'Director, SoET, PDEU'],
     ['patron-anirbid-sircar.jpg', 'Prof. Anirbid Sircar', 'Director, SoT, PDEU'],
     ['patron-bhawansingh-desai.jpg', 'Prof. Bhawansingh Desai', 'Dean R & D, PDEU'],
   ]},
-  { group: 'Conference Chairs', people: [
+  { group: 'CONFERENCE CHAIRS', people: [
     ['chair-hari-s.jpg', 'Dr. Hari S', 'HoD PE, SoET, PDEU'],
     ['chair-anirban-das.jpg', 'Prof. Anirban Das', 'HoD Chemistry, SoET, PDEU'],
     ['chair-pravin-kodgire.jpg', 'Dr. Pravin Kodgire', 'HoD CE, SoET, PDEU'],
   ]},
-  { group: 'Conveners', people: [
+  { group: 'CONVENERS', people: [
     ['convener-shanker-krishna.jpg', 'Dr. Shanker Krishna', 'Associate Dean SoET, PDEU'],
     ['convener-achinta-bera.jpg', 'Dr. Achinta Bera', 'SoET, PDEU'],
     ['convener-paul-naveen.jpg', 'Dr. Paul Naveen', 'SoET, PDEU'],
   ]},
-  { group: 'Co-Conveners', people: [
+  { group: 'CO-CONVENERS', people: [
     ['co-convener-r-balasubramanian.jpg', 'Dr. R Balasubramanian', 'SoET, PDEU'],
     ['co-convener-vivek-ramalingam.jpg', 'Dr. Vivek Ramalingam', 'SoET, PDEU'],
     ['co-convener-uttam-kumar-bhui.jpg', 'Prof. Uttam Kumar Bhui', 'SoET, PDEU'],
   ]},
-  { group: 'Organizing Secretaries', people: [
+  { group: 'ORGANIZING SECRETARIES', people: [
     ['secretary-anirudh-bardhan.jpg', 'Dr. Anirudh Bardhan', 'SoET, PDEU'],
     ['secretary-atul-kumar-patidar.jpg', 'Dr. Atul Kumar Patidar', 'SoET, PDEU'],
     ['secretary-amit-verma.jpg', 'Dr. Amit Verma', 'SoET, PDEU'],
   ]},
-  { group: 'Treasurers', people: [
+  { group: 'TREASURERS', people: [
     ['treasurer-namrata-bist.jpg', 'Dr. Namrata Bist', 'SoET, PDEU'],
     ['treasurer-abhinav-kumar.jpg', 'Dr. Abhinav Kumar', 'SoET, PDEU'],
     ['treasurer-maunish-shah.jpg', 'Dr. Maunish Shah', 'SoET, PDEU'],
   ]},
-  { group: 'Members', people: [
+  { group: 'MEMBERS', people: [
     ['member-ramanand-singh.jpg', 'Dr. Ramanand Singh', 'SoET, PDEU'],
     ['member-lakshmanarao-jeeru.jpg', 'Dr. Lakshmanarao Jeeru', 'SoET, PDEU'],
     ['member-n-madhavan.jpg', 'Dr. N. Madhavan', 'SoET, PDEU'],
@@ -367,8 +367,8 @@ export default function Home() {
       </section>
 
       <section className="dark-strip reveal reveal-delay-1">
-        <div className="announcement"><b>Abstract Submission Has Begun.</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
-        <div className="quick-actions"><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Brochure.pdf", "ICPHD-2026-Brochure.pdf"); }}>Download Brochure</a><a href="/Sponsorship-ICPHD-2026.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Sponsorship-ICPHD-2026.pdf", "Sponsorship-ICPHD-2026.pdf"); }}>Sponsorship Details</a></div>
+        <div className="announcement"><b>Abstract Submission Has Begun</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="quick-actions"><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a><a href="/Sponsorship-ICPHD-2026.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Sponsorship-ICPHD-2026.pdf", "Sponsorship-ICPHD-2026.pdf"); }}>Sponsorship Details</a></div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
@@ -434,7 +434,7 @@ export default function Home() {
         <div className="container">
           <SectionTitle title="Organizing Committee" />
           <section className="committee-group committee-chief-group">
-            <h3>Chief Patron</h3>
+            <h3>CHIEF PATRON</h3>
             <div className="committee-chief">
               <img src="/assets/committee/chief-patron.jpg" alt="Prof. S. Sundar Manoharan" />
               <div><h4>Prof. S. Sundar Manoharan</h4><p>Director General, PDEU</p></div>
