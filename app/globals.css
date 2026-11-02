@@ -3612,3 +3612,14 @@ main.page-registration .section-title {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Themes page: reduce excess space above the Conference Themes heading. */
+main.page-themes .conference-content {
+  padding-top: 88px !important;
+}
+@media (max-width: 720px) {
+  main.page-themes .conference-content {
+    padding-top: 58px !important;
+  }
+}

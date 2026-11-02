@@ -142,7 +142,7 @@ const nationalAdvisory = [
   { name: 'Dr. Praghnesh Bhatt', detail: 'Dean Academic, PDEU' },
   { name: 'Dr. Swapnil Dharaskar', detail: 'Dean SoET, PDEU' },
   { name: 'Prof. Bhawanisingh Desai', detail: 'Dean-R&D, PDEU' },
-  { name: 'Dr. Anurag Kandy', detail: 'Dean-Student Affairs, PDEU' },
+  { name: 'Dr. Anurag Kandya', detail: 'Dean-Student Affairs, PDEU' },
   { name: 'Prof. R.K. Vij', detail: 'Professor of Practice, PDEU' },
   { name: 'Dr. Sachidanand Singh', detail: 'Dean-IT, PDEU' },
 ];
