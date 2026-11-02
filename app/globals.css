@@ -2809,3 +2809,20 @@ html, body { overflow-x: hidden; }
     margin: 0 auto !important;
   }
 }
+
+/* Abstract template download: secondary light-blue action matching the site palette. */
+.abstract-template-btn {
+  display: inline-block;
+  margin: 10px 0 0 8px;
+  padding: 11px 17px;
+  border-radius: 10px;
+  background: #dceefa;
+  color: #174d78;
+  border: 1px solid #9cc9e8;
+  font-weight: 800;
+  text-decoration: none;
+}
+.abstract-template-btn:hover { background: #c9e4f6; }
+@media (max-width: 640px) {
+  .abstract-template-btn { display: block; width: fit-content; margin: 10px 0 0; }
+}

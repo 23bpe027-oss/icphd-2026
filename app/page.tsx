@@ -61,6 +61,8 @@ const themes = [
   { title: 'Reservoir Engineering and Technologies', items: ['Reservoir characterisation and simulation', 'Field development and surveillance', 'Flow through porous media and rock-fluid interaction'] },
   { title: 'Petroleum Production Operations', items: ['Artificial lift and integrated operations', 'Production chemistry, subsea and processing systems', 'Produced-water management, workover and stimulation'] },
   { title: 'Carbon Capture, Utilization and Removal', items: ['CO₂ capture, separation and compression', 'Utilization pathways and value-added products', 'Storage, monitoring and carbon-removal technologies'] },
+  { title: 'Refining and Petrochemicals', items: ['Advances in refining processes, catalysts and process intensification', 'Petrochemical production, polymers and value-chain integration', 'Refinery digitalization, energy efficiency and cleaner fuels'] },
+  { title: 'Alternative Fuels for a Sustainable Future', items: ['Biofuels, sustainable aviation fuels and waste-to-fuel pathways', 'Synthetic fuels, e-fuels and low-carbon fuel technologies', 'Fuel blending, lifecycle assessment and commercialization challenges'] },
 ];
 
 const fees = [
@@ -243,7 +245,7 @@ export default function Home() {
       </section>
 
       <section className="dark-strip reveal reveal-delay-1">
-        <div className="announcement"><b>Abstract Submission Started.</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="announcement"><b>Abstract Submission Has Begun.</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
         <div className="quick-actions"><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a><a href="/ICPHD-2026-Brochure.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Brochure.pdf", "ICPHD-2026-Brochure.pdf"); }}>Download Brochure</a><a href="/Sponsorship-ICPHD-2026.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Sponsorship-ICPHD-2026.pdf", "Sponsorship-ICPHD-2026.pdf"); }}>Sponsorship Details</a></div>
       </section>
 
@@ -268,7 +270,7 @@ export default function Home() {
           </div>
 
           <div id="theme" className="content-section theme-section anchor-section">
-            <SectionTitle title="Conference Theme" />
+            <SectionTitle title="Conference Themes" />
             <div className="theme-grid">{themes.map(theme => <article className="theme-card" key={theme.title}><h3>{theme.title}</h3><ul>{theme.items.map(item => <li key={item}>{item}</li>)}</ul></article>)}</div>
           </div>
         </div>
@@ -278,7 +280,7 @@ export default function Home() {
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
           <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><span className="primary-btn registration-notice" aria-label="Registrations Start 12 November 2026">Registrations Start 12 November 2026</span><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
-          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
+          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" download>Download Abstract Template</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
         </div>
       </section>
 
