@@ -2363,9 +2363,9 @@ html, body { overflow-x: hidden; }
 }
 .quick-actions .quick-action-disabled {
   color: #fff !important;
-  background: linear-gradient(135deg, #287dbb 0%, #1766a7 100%) !important;
-  border: 1px solid #287dbb !important;
-  border-radius: 18px !important;
+  background: #3b7db7 !important;
+  border: 2px solid #3b7db7 !important;
+  border-radius: 0 !important;
 }
 @media (max-width: 720px) {
   .quick-actions {
@@ -3638,4 +3638,49 @@ main.page-advisory-committee .advisory-committee-section .container {
     padding: 14px !important;
     border-radius: 13px !important;
   }
+}
+
+
+
+/* Advisory committee panels: match the Conference Themes card border exactly. */
+main.page-advisory-committee .advisory-panels > .advisory-panel {
+  border: 2px solid #1d6fae !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+}
+.quick-action-disabled {
+  display: inline-block;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  opacity: .72;
+}
+
+
+/* Restore the brochure control to the original highlighted middle quick-action style. */
+.quick-actions > .quick-action-disabled {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 72px !important;
+  padding: 16px 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: normal !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.35 !important;
+  color: #fff !important;
+  background: #3b7db7 !important;
+  border: 2px solid #3b7db7 !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  text-decoration: none !important;
 }
