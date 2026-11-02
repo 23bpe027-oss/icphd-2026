@@ -38,7 +38,6 @@ const navLinks = [
   ['Schedule', '/#dates'],
   ['Themes', '/themes'],
   ['Registration', '/registration'],
-  ['Contact', '/#contact'],
 ];
 
 const highlights = [
@@ -99,52 +98,52 @@ const organizingCommittee = [
 ];
 
 const internationalAdvisory = [
-  'Prof. Hadi Belhaj',
-  'Dr. Emad W. Al-Shalabi',
-  'Dr. Ashkan Jahanbani Gharfarokhi',
-  'Prof. Japan Trivedi',
-  'Dr. Kamaljit Singh',
-  'Prof. Reza Barati',
-  'Dr. Prashant Jadhawar',
-  'Dr. Jyoti Phirani',
-  'Dr. Jyoti Shankrr Pandey',
-  'Dr. Deepak Devegowda',
-  'Prof. Stefan Iglauer',
-  'Dr. Munawar Shaik',
-  'Dr. Francisco Arguelles Vivas',
-  'Prof. Dayanand Saini',
+  { name: 'Prof. Hadi Belhaj', detail: 'Dalhousie University, Canada' },
+  { name: 'Dr. Emad W. Al-Shalabi', detail: 'Khalifa University, UAE' },
+  { name: 'Dr. Ashkan Jahanbani Gharfarokhi', detail: 'NTNU Norway' },
+  { name: 'Prof. Japan Trivedi', detail: 'University of Alberta, Canada' },
+  { name: 'Dr. Kamaljit Singh', detail: 'Heriot-Watt University, UK' },
+  { name: 'Prof. Reza Barati', detail: 'Kansas University, USA' },
+  { name: 'Dr. Prashant Jadhawar', detail: 'University of Aberdeen, UK' },
+  { name: 'Dr. Jyoti Phirani', detail: 'Baker Hughes, UK' },
+  { name: 'Dr. Jyoti Shankrr Pandey', detail: 'Denmark Technological University, Denmark' },
+  { name: 'Dr. Deepak Devegowda', detail: 'Oklahoma University, USA' },
+  { name: 'Prof. Stefan Iglauer', detail: 'Edith Cowan University, Australia' },
+  { name: 'Dr. Munawar Shaik', detail: 'UAE University, Al-Ain UAE' },
+  { name: 'Dr. Francisco Arguelles Vivas', detail: 'ExxonMobil, TX-USA' },
+  { name: 'Prof. Dayanand Saini', detail: 'California State University, USA' },
 ];
 
 const nationalAdvisory = [
-  'Col (Dr) R. K. Shrivastawa',
-  'Dr. Praghnesh Bhatt',
-  'Dr. Anil Bhardwaj',
-  'Dr. Sachidanand Singh',
-  'Prof. Tushar Sharma',
-  'Prof. Harish Hirani',
-  'Prof. Vikas Mahto',
-  'Prof. Keka Ojha',
-  'Dr. Hari Prakash Veluswamy',
-  'Dr. Ravi Sharma',
-  'Prof. Rajesh Patel',
-  'Dr. Swapnil Dharaskar',
-  'Dr. Anurag Kandy',
-  'Prof. Pankaj Tiwari',
-  'Dr. Pankaj Khanna',
-  'Prof. Shalivahan',
-  'Prof. Jitendra Sangwai',
-  'Prof. Vikram Vishal',
-  'Dr. Anand Gupta',
-  'Dr. Sandeep Kulkarni',
-  'Prof. Anirbid Sircar',
-  'Dr. Bhawanisingh Desai',
-  'Prof. R.K. Vij',
-  'Prof. Tarun Kumar Naiya',
-  'Prof. Anugrah Singh',
-  'Prof. Ajay Mandal',
-  'Prof. Satish Kumar Sinha',
-  'Prof. Alok Kumar Singh',
-  'Dr. Himanshu Sharma',
+  { name: 'Col (Dr) R. K. Shrivastawa', detail: 'Registrar, PDEU' },
+  { name: 'Dr. Praghnesh Bhatt', detail: 'Dean Academic, PDEU' },
+  { name: 'Dr. Anil Bhardwaj', detail: 'Former GGM (Chemistry), ONGC' },
+  { name: 'Dr. Sachidanand Singh', detail: 'Dean-IT, PDEU' },
+  { name: 'Prof. Tushar Sharma', detail: 'RGIPT Jais, India' },
+  { name: 'Prof. Harish Hirani', detail: 'Director, RGIPT Jais, India' },
+  { name: 'Prof. Vikas Mahto', detail: 'IIT(ISM) Dhanbad, India' },
+  { name: 'Prof. Keka Ojha', detail: 'IIT(ISM) Dhanbad, India' },
+  { name: 'Dr. Hari Prakash Veluswamy', detail: 'IIT Roorkee, India' },
+  { name: 'Dr. Ravi Sharma', detail: 'IIT Roorkee, India' },
+  { name: 'Prof. Rajesh Patel', detail: 'Director, SoET, PDEU' },
+  { name: 'Dr. Swapnil Dharaskar', detail: 'Dean SoET, PDEU' },
+  { name: 'Dr. Anurag Kandya', detail: 'Dean-Student Affairs, PDEU' },
+  { name: 'Prof. Pankaj Tiwari', detail: 'IIT Guwahati, India' },
+  { name: 'Dr. Pankaj Khanna', detail: 'IIT Gandhinagar, India' },
+  { name: 'Prof. Shalivahan', detail: 'Director, IIPE Vishakhapatnam, India' },
+  { name: 'Prof. Jitendra Sangwai', detail: 'IIT Madras, India' },
+  { name: 'Prof. Vikram Vishal', detail: 'IIT Bombay, India' },
+  { name: 'Dr. Anand Gupta', detail: 'RBM Infracon Limited, India' },
+  { name: 'Dr. Sandeep Kulkarni', detail: 'IIT Kharagpur, India' },
+  { name: 'Prof. Anirbid Sircar', detail: 'Director, SoT, PDEU' },
+  { name: 'Prof. Bhavani Singh Desai', detail: 'Dean-R&D, PDEU' },
+  { name: 'Prof. R.K. Vij', detail: 'Professor of Practice, PDEU' },
+  { name: 'Prof. Tarun Kumar Naiya', detail: 'IT(SM) Dhanbad, India' },
+  { name: 'Prof. Anugrah Singh', detail: 'IIT-Guwahati, India' },
+  { name: 'Prof. Ajay Mandal', detail: 'IIT(ISM) Dhanbad, India' },
+  { name: 'Prof. Satish Kumar Sinha', detail: 'RGIPT Jais, India' },
+  { name: 'Prof. Alok Kumar Singh', detail: 'RGIPT Jais, India' },
+  { name: 'Dr. Himanshu Sharma', detail: 'IIT Kanpur, India' },
 ];
 
 const themes = [
@@ -299,12 +298,13 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navLinks.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
           <details className="nav-dropdown">
-            <summary>Committees <span aria-hidden="true">⌄</span></summary>
+            <summary>Committees</summary>
             <div className="nav-dropdown-menu">
               <a href="/advisory-committee">Advisory Committee</a>
               <a href="/organizing-committee">Organizing Committee</a>
             </div>
           </details>
+          <a href="/#contact">Contact</a>
         </nav>
 
         <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(value => !value)}>
@@ -316,12 +316,13 @@ export default function Home() {
         <nav aria-label="Mobile navigation">
           {navLinks.map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}</a>)}
           <details className="mobile-nav-dropdown">
-            <summary>Committees <span aria-hidden="true">⌄</span></summary>
+            <summary>Committees</summary>
             <div>
               <a href="/advisory-committee" onClick={closeMenu}>Advisory Committee</a>
               <a href="/organizing-committee" onClick={closeMenu}>Organizing Committee</a>
             </div>
           </details>
+          <a href="/#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </div>
 
@@ -413,13 +414,13 @@ export default function Home() {
               <section className="advisory-panel">
                 <h3>International Advisory Committee</h3>
                 <div className="advisory-name-grid">
-                  {internationalAdvisory.map(name => <p key={name}>{name}</p>)}
+                  {internationalAdvisory.map(person => <div className="advisory-person" key={person.name}><strong>{person.name}</strong><span>{person.detail}</span></div>)}
                 </div>
               </section>
               <section className="advisory-panel">
                 <h3>National Advisory Committee</h3>
                 <div className="advisory-name-grid">
-                  {nationalAdvisory.map(name => <p key={name}>{name}</p>)}
+                  {nationalAdvisory.map(person => <div className="advisory-person" key={person.name}><strong>{person.name}</strong><span>{person.detail}</span></div>)}
                 </div>
               </section>
             </div>
