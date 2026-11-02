@@ -3571,3 +3571,44 @@ main.page-registration .section-title h2 {
   display: block !important;
   padding-top: 2px !important;
 }
+
+
+/* FINAL FIX — dedicated page titles must sit clearly below the sticky navigation. */
+main.page-advisory-committee > .advisory-committee-section,
+main.page-organizing-committee > .organizing-committee-section,
+main.page-themes .conference-content,
+main.page-registration > .registration {
+  padding-top: 118px !important;
+  margin-top: 0 !important;
+}
+main.page-advisory-committee .section-title,
+main.page-organizing-committee .section-title,
+main.page-themes .section-title,
+main.page-registration .section-title {
+  margin-top: 0 !important;
+  margin-bottom: 34px !important;
+}
+@media (max-width: 720px) {
+  main.page-advisory-committee > .advisory-committee-section,
+  main.page-organizing-committee > .organizing-committee-section,
+  main.page-themes .conference-content,
+  main.page-registration > .registration {
+    padding-top: 82px !important;
+  }
+}
+
+
+
+
+
+/* National Advisory Committee: row-by-row order, matching brochure page 6. */
+.advisory-panel .advisory-name-grid {
+  grid-auto-flow: row !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: none !important;
+}
+@media (max-width: 720px) {
+  .advisory-panel .advisory-name-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
