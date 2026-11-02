@@ -37,7 +37,7 @@ const navLinks = [
   ['Schedule', '#dates'],
   ['Theme', '#theme'],
   ['Registration', '#registration'],
-  ['Organizing Committee', '#committee'],
+  ['Organizing Committee', '#organizing-committee'],
   ['Contact', '#contact'],
 ];
 
@@ -57,6 +57,45 @@ const dates = [
   ['20 November 2026', 'Last date for Registration'],
   ['11 December 2026', 'Conference Inauguration'],
   ['13 December 2026', 'Conference Valedictory'],
+];
+
+
+const organizingCommittee = [
+  { group: 'Patrons', people: [
+    ['patron-rajesh-patel.jpg', 'Prof. Rajesh Patel', 'Director, SoET, PDEU'],
+    ['patron-anirbid-sircar.jpg', 'Prof. Anirbid Sircar', 'Director, SoT, PDEU'],
+    ['patron-bhawansingh-desai.jpg', 'Prof. Bhawansingh Desai', 'Dean R & D, PDEU'],
+  ]},
+  { group: 'Conference Chairs', people: [
+    ['chair-hari-s.jpg', 'Dr. Hari S', 'HoD PE, SoET, PDEU'],
+    ['chair-anirban-das.jpg', 'Prof. Anirban Das', 'HoD Chemistry, SoET, PDEU'],
+    ['chair-pravin-kodgire.jpg', 'Dr. Pravin Kodgire', 'HoD CE, SoET, PDEU'],
+  ]},
+  { group: 'Conveners', people: [
+    ['convener-shanker-krishna.jpg', 'Dr. Shanker Krishna', 'Associate Dean SoET, PDEU'],
+    ['convener-achinta-bera.jpg', 'Dr. Achinta Bera', 'SoET, PDEU'],
+    ['convener-paul-naveen.jpg', 'Dr. Paul Naveen', 'SoET, PDEU'],
+  ]},
+  { group: 'Co-Conveners', people: [
+    ['co-convener-r-balasubramanian.jpg', 'Dr. R Balasubramanian', 'SoET, PDEU'],
+    ['co-convener-vivek-ramalingam.jpg', 'Dr. Vivek Ramalingam', 'SoET, PDEU'],
+    ['co-convener-uttam-kumar-bhui.jpg', 'Prof. Uttam Kumar Bhui', 'SoET, PDEU'],
+  ]},
+  { group: 'Organizing Secretaries', people: [
+    ['secretary-anirudh-bardhan.jpg', 'Dr. Anirudh Bardhan', 'SoET, PDEU'],
+    ['secretary-atul-kumar-patidar.jpg', 'Dr. Atul Kumar Patidar', 'SoET, PDEU'],
+    ['secretary-amit-verma.jpg', 'Dr. Amit Verma', 'SoET, PDEU'],
+  ]},
+  { group: 'Treasurers', people: [
+    ['treasurer-namrata-bist.jpg', 'Dr. Namrata Bist', 'SoET, PDEU'],
+    ['treasurer-abhinav-kumar.jpg', 'Dr. Abhinav Kumar', 'SoET, PDEU'],
+    ['treasurer-maunish-shah.jpg', 'Dr. Maunish Shah', 'SoET, PDEU'],
+  ]},
+  { group: 'Members', people: [
+    ['member-ramanand-singh.jpg', 'Dr. Ramanand Singh', 'SoET, PDEU'],
+    ['member-lakshmanarao-jeeru.jpg', 'Dr. Lakshmanarao Jeeru', 'SoET, PDEU'],
+    ['member-n-madhavan.jpg', 'Dr. N. Madhavan', 'SoET, PDEU'],
+  ]},
 ];
 
 const themes = [
@@ -298,61 +337,28 @@ export default function Home() {
       </section>
 
 
-      <section id="committee" className="container committee-section anchor-section reveal reveal-delay-2">
-        <SectionTitle title="Organizing Committee" />
-        <div className="committee-chief">
-          <img src="/assets/committee-chief-patron.jpg" alt="Prof. S. Sundar Manoharan" />
-          <div><span className="committee-role">Chief Patron</span><h3>Prof. S. Sundar Manoharan</h3><p>Director General, PDEU</p></div>
-        </div>
-        {[
-          { title: 'Patrons', people: [
-            ['committee-patrons-1.jpg','Prof. Rajesh Patel','Director, SoET, PDEU'],
-            ['committee-patrons-2.jpg','Prof. Anirbid Sircar','Director, SoT, PDEU'],
-            ['committee-patrons-3.jpg','Prof. Bhawanisingh Desai','Dean R & D, PDEU']
-          ]},
-          { title: 'Conference Chairs', people: [
-            ['committee-chairs-1.jpg','Dr. Hari S','HoD PE, SoET, PDEU'],
-            ['committee-chairs-2.jpg','Prof. Anirban Das','HoD Chemistry, SoET, PDEU'],
-            ['committee-chairs-3.jpg','Dr. Pravin Kodgire','HoD CE, SoET, PDEU']
-          ]},
-          { title: 'Conveners', people: [
-            ['committee-conveners-1.jpg','Dr. Shanker Krishna','Associate Dean SoET, PDEU'],
-            ['committee-conveners-2.jpg','Dr. Achinta Bera','SoET, PDEU'],
-            ['committee-conveners-3.jpg','Dr. Paul Naveen','SoET, PDEU']
-          ]},
-          { title: 'Co-Conveners', people: [
-            ['committee-coconveners-1.jpg','Dr. R Balasubramanian','SoET, PDEU'],
-            ['committee-coconveners-2.jpg','Dr. Vivek Ramalingam','SoET, PDEU'],
-            ['committee-coconveners-3.jpg','Prof. Uttam Kumar Bhui','SoET, PDEU']
-          ]},
-          { title: 'Organizing Secretaries', people: [
-            ['committee-secretaries-1.jpg','Dr. Anirudh Bardhan','SoET, PDEU'],
-            ['committee-secretaries-2.jpg','Dr. Atul Kumar Patidar','SoET, PDEU'],
-            ['committee-secretaries-3.jpg','Dr. Amit Verma','SoET, PDEU']
-          ]},
-          { title: 'Treasurers', people: [
-            ['committee-treasurers-1.jpg','Dr. Namrata Bist','SoET, PDEU'],
-            ['committee-treasurers-2.jpg','Dr. Abhinav Kumar','SoET, PDEU'],
-            ['committee-treasurers-3.jpg','Dr. Maunish Shah','SoET, PDEU']
-          ]},
-          { title: 'Members', people: [
-            ['committee-members-1.jpg','Dr. Ramanand Singh','SoET, PDEU'],
-            ['committee-members-2.jpg','Dr. Lakshmanarao Jeeru','SoET, PDEU'],
-            ['committee-members-3.jpg','Dr. N. Madhavan','SoET, PDEU']
-          ]}
-        ].map((group) => (
-          <div className="committee-group" key={group.title}>
-            <h3 className="committee-group-title">{group.title}</h3>
-            <div className="committee-grid">
-              {group.people.map(([photo, name, role]) => (
-                <article className="committee-card" key={name}>
-                  <img src={`/assets/${photo}`} alt={name} loading="lazy" />
-                  <div><h4>{name}</h4><p>{role}</p></div>
-                </article>
-              ))}
+      <section className="soft organizing-committee-section anchor-section reveal reveal-delay-2" id="organizing-committee">
+        <div className="container">
+          <SectionTitle title="Organizing Committee" />
+          <section className="committee-group committee-chief-group">
+            <h3>Chief Patron</h3>
+            <div className="committee-chief">
+              <img src="/assets/committee/chief-patron.jpg" alt="Prof. S. Sundar Manoharan" />
+              <div><h4>Prof. S. Sundar Manoharan</h4><p>Director General, PDEU</p></div>
             </div>
+          </section>
+          <div className="committee-groups">
+            {organizingCommittee.map(group => <section className="committee-group" key={group.group}>
+              <h3>{group.group}</h3>
+              <div className="committee-grid">
+                {group.people.map(([photo, name, detail]) => <article className="committee-person" key={name}>
+                  <img src={`/assets/committee/${photo}`} alt={name} loading="lazy" />
+                  <div><h4>{name}</h4><p>{detail}</p></div>
+                </article>)}
+              </div>
+            </section>)}
           </div>
-        ))}
+        </div>
       </section>
 
       <section className="soft venue reveal reveal-delay-2">
