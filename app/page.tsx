@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || '#registration';
 const abstractUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8zIIplqNH0R0gzwqkgrfPBg0jQUOMYxPrmiXAJPWOBip66A/viewform?usp=send_form';
@@ -31,14 +32,13 @@ function openPreviewAndDownload(previewUrl: string, downloadUrl: string, filenam
 
 
 const navLinks = [
-  ['Home', '#home'],
-  ['About', '#about'],
-  ['Highlights', '#highlights'],
-  ['Schedule', '#dates'],
-  ['Theme', '#theme'],
-  ['Registration', '#registration'],
-  ['Organizing Committee', '#organizing-committee'],
-  ['Contact', '#contact'],
+  ['Home', '/'],
+  ['About', '/#about'],
+  ['Highlights', '/#highlights'],
+  ['Schedule', '/#dates'],
+  ['Themes', '/themes'],
+  ['Registration', '/registration'],
+  ['Contact', '/#contact'],
 ];
 
 const highlights = [
@@ -96,6 +96,55 @@ const organizingCommittee = [
     ['member-lakshmanarao-jeeru.jpg', 'Dr. Lakshmanarao Jeeru', 'SoET, PDEU'],
     ['member-n-madhavan.jpg', 'Dr. N. Madhavan', 'SoET, PDEU'],
   ]},
+];
+
+const internationalAdvisory = [
+  'Prof. Hadi Belhaj',
+  'Dr. Emad W. Al-Shalabi',
+  'Dr. Ashkan Jahanbani Gharfarokhi',
+  'Prof. Japan Trivedi',
+  'Dr. Kamaljit Singh',
+  'Prof. Reza Barati',
+  'Dr. Prashant Jadhawar',
+  'Dr. Jyoti Phirani',
+  'Dr. Jyoti Shankrr Pandey',
+  'Dr. Deepak Devegowda',
+  'Prof. Stefan Iglauer',
+  'Dr. Munawar Shaik',
+  'Dr. Francisco Arguelles Vivas',
+  'Prof. Dayanand Saini',
+];
+
+const nationalAdvisory = [
+  'Col (Dr) R. K. Shrivastawa',
+  'Dr. Praghnesh Bhatt',
+  'Dr. Anil Bhardwaj',
+  'Dr. Sachidanand Singh',
+  'Prof. Tushar Sharma',
+  'Prof. Harish Hirani',
+  'Prof. Vikas Mahto',
+  'Prof. Keka Ojha',
+  'Dr. Hari Prakash Veluswamy',
+  'Dr. Ravi Sharma',
+  'Prof. Rajesh Patel',
+  'Dr. Swapnil Dharaskar',
+  'Dr. Anurag Kandy',
+  'Prof. Pankaj Tiwari',
+  'Dr. Pankaj Khanna',
+  'Prof. Shalivahan',
+  'Prof. Jitendra Sangwai',
+  'Prof. Vikram Vishal',
+  'Dr. Anand Gupta',
+  'Dr. Sandeep Kulkarni',
+  'Prof. Anirbid Sircar',
+  'Dr. Bhawanisingh Desai',
+  'Prof. R.K. Vij',
+  'Prof. Tarun Kumar Naiya',
+  'Prof. Anugrah Singh',
+  'Prof. Ajay Mandal',
+  'Prof. Satish Kumar Sinha',
+  'Prof. Alok Kumar Singh',
+  'Dr. Himanshu Sharma',
 ];
 
 const themes = [
@@ -176,6 +225,11 @@ function SectionTitle({ eyebrow, title }: { eyebrow?: string; title: string }) {
 }
 
 export default function Home() {
+  const pathname = usePathname();
+  const isThemesPage = pathname === '/themes';
+  const isCommitteePage = pathname === '/organizing-committee';
+  const isAdvisoryPage = pathname === '/advisory-committee';
+  const isRegistrationPage = pathname === '/registration';
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -235,15 +289,22 @@ export default function Home() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <main>
+    <main className={isThemesPage ? "page-themes" : isCommitteePage ? "page-organizing-committee" : isRegistrationPage ? "page-registration" : isAdvisoryPage ? "page-advisory-committee" : "page-home"}>
       <header className={`nav${menuOpen ? ' menu-open' : ''}`}>
-        <a className="brand" href="#home" onClick={closeMenu}>
+        <a className="brand" href="/" onClick={closeMenu}>
           <img src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
           <span>ICPHD <b>2026</b></span>
         </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navLinks.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+          <details className="nav-dropdown">
+            <summary>Committees <span aria-hidden="true">⌄</span></summary>
+            <div className="nav-dropdown-menu">
+              <a href="/advisory-committee">Advisory Committee</a>
+              <a href="/organizing-committee">Organizing Committee</a>
+            </div>
+          </details>
         </nav>
 
         <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(value => !value)}>
@@ -254,6 +315,13 @@ export default function Home() {
       <div className={`mobile-menu${menuOpen ? ' is-open' : ''}`} aria-hidden={!menuOpen}>
         <nav aria-label="Mobile navigation">
           {navLinks.map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}</a>)}
+          <details className="mobile-nav-dropdown">
+            <summary>Committees <span aria-hidden="true">⌄</span></summary>
+            <div>
+              <a href="/advisory-committee" onClick={closeMenu}>Advisory Committee</a>
+              <a href="/organizing-committee" onClick={closeMenu}>Organizing Committee</a>
+            </div>
+          </details>
         </nav>
       </div>
 
@@ -337,6 +405,29 @@ export default function Home() {
       </section>
 
 
+      {isAdvisoryPage && (
+        <section className="soft advisory-committee-section">
+          <div className="container">
+            <SectionTitle title="Advisory Committee" />
+            <div className="advisory-panels">
+              <section className="advisory-panel">
+                <h3>International Advisory Committee</h3>
+                <div className="advisory-name-grid">
+                  {internationalAdvisory.map(name => <p key={name}>{name}</p>)}
+                </div>
+              </section>
+              <section className="advisory-panel">
+                <h3>National Advisory Committee</h3>
+                <div className="advisory-name-grid">
+                  {nationalAdvisory.map(name => <p key={name}>{name}</p>)}
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {isCommitteePage && (
       <section className="soft organizing-committee-section anchor-section reveal reveal-delay-2" id="organizing-committee">
         <div className="container">
           <SectionTitle title="Organizing Committee" />
@@ -360,6 +451,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       <section className="soft venue reveal reveal-delay-2">
         <div className="container"><SectionTitle title="Venue" /><div className="venue-grid"><article className="venue-copy"><img className="venue-building" src="/assets/pdeu-building-new.jpg" alt="PDEU campus building" /><div className="venue-copy-inner"><h3>Pandit Deendayal Energy University Campus</h3><p className="address">Knowledge Corridor, Raysan Village, PDPU Rd, Gandhinagar, Raysan, Gujarat 382426</p><p>ICPHD 2026 will be held at Pandit Deendayal Energy University (PDEU), Gandhinagar, Gujarat, India. Located in Raisan, on the outskirts of Gandhinagar, the university is well connected to Ahmedabad and other major cities by road, rail, and air.</p></div></article><a className="maps-card" href="https://www.google.com/maps/search/?api=1&query=Pandit+Deendayal+Energy+University+Gandhinagar" target="_blank" rel="noreferrer"><div className="map-preview"><img src="/assets/venue-map.png" alt="PDEU location on Google Maps" /></div><div className="map-card-footer"><span>VENUE LOCATION</span><strong>Open in Google Maps →</strong></div></a></div></div>
