@@ -3659,3 +3659,66 @@ main.page-advisory-committee .advisory-committee-section .container {
 main.page-advisory-committee .advisory-committee-section .container {
   border: 2px solid #123d63 !important;
 }
+
+
+/* MEDIA PARTNER — DEW Journal */
+.dark-strip {
+  padding-top: 22px !important;
+  padding-bottom: 28px !important;
+}
+.media-partner-panel {
+  width: min(1180px, calc(100% - 48px));
+  margin: 22px auto 0;
+  padding: 16px 20px 18px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 12px;
+  background: rgba(255,255,255,.055);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  box-sizing: border-box;
+}
+.media-partner-label {
+  margin: 0;
+  color: #e8f6ff;
+  font-size: .88rem;
+  font-weight: 850;
+  letter-spacing: .18em;
+}
+.media-partner-logo-card {
+  width: 280px;
+  min-height: 104px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.media-partner-logo-card img {
+  display: block;
+  width: 100%;
+  max-width: 248px;
+  height: 92px;
+  object-fit: contain;
+}
+@media (max-width: 720px) {
+  .media-partner-panel {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px 14px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .media-partner-logo-card {
+    width: min(100%, 280px);
+    min-height: 94px;
+  }
+  .media-partner-logo-card img {
+    height: 82px;
+  }
+}

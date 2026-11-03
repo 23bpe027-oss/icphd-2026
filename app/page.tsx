@@ -369,6 +369,12 @@ export default function Home() {
       <section className="dark-strip reveal reveal-delay-1">
         <div className="announcement"><b>Abstract Submission Has Begun</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
         <div className="quick-actions"><a href="/ICPHD-2026-Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD-2026-Flyer.pdf", "ICPHD-2026-Flyer.pdf"); }}>Download Flyer</a><span className="quick-action-disabled" aria-disabled="true" title="Updated brochure coming soon">Download Brochure</span><a href="/Sponsorship-ICPHD-2026.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Sponsorship-ICPHD-2026.pdf", "Sponsorship-ICPHD-2026.pdf"); }}>Sponsorship Details</a></div>
+        <div className="media-partner-panel">
+          <p className="media-partner-label">MEDIA PARTNER</p>
+          <div className="media-partner-logo-card">
+            <img src="/assets/dew-journal-media-partner.png" alt="DEW Journal — The Complete Energy Journal" />
+          </div>
+        </div>
       </section>
 
       <section id="about" className="container about anchor-section reveal reveal-delay-2">
