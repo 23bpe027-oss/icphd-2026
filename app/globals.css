@@ -3661,64 +3661,59 @@ main.page-advisory-committee .advisory-committee-section .container {
 }
 
 
-/* MEDIA PARTNER — DEW Journal */
-.dark-strip {
-  padding-top: 22px !important;
-  padding-bottom: 28px !important;
-}
+/* MEDIA PARTNER — compact centered box below the association logos */
 .media-partner-panel {
-  width: min(1180px, calc(100% - 48px));
-  margin: 22px auto 0;
-  padding: 16px 20px 18px;
-  border: 1px solid rgba(255,255,255,.28);
-  border-radius: 12px;
-  background: rgba(255,255,255,.055);
+  width: 220px;
+  margin: 0 auto 20px;
+  padding: 10px 14px 12px;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 9px;
+  background: rgba(255,255,255,.045);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 22px;
+  justify-content: center;
+  gap: 7px;
   box-sizing: border-box;
 }
 .media-partner-label {
-  margin: 0;
-  color: #e8f6ff;
-  font-size: .88rem;
-  font-weight: 850;
-  letter-spacing: .18em;
+  margin: 0 !important;
+  font-family: inherit !important;
+  font-size: .88rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  color: #e8f6ff !important;
+  text-align: center;
 }
 .media-partner-logo-card {
-  width: 280px;
-  min-height: 104px;
-  padding: 8px 16px;
+  width: 174px;
+  height: 76px;
+  padding: 4px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 .media-partner-logo-card img {
   display: block;
   width: 100%;
-  max-width: 248px;
-  height: 92px;
+  height: 68px;
   object-fit: contain;
 }
 @media (max-width: 720px) {
   .media-partner-panel {
-    width: 100%;
-    margin-top: 18px;
-    padding: 16px 14px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    text-align: center;
+    width: 205px;
+    margin: 0 auto 18px;
+    padding: 9px 12px 11px;
   }
   .media-partner-logo-card {
-    width: min(100%, 280px);
-    min-height: 94px;
+    width: 164px;
+    height: 72px;
   }
   .media-partner-logo-card img {
-    height: 82px;
+    height: 64px;
   }
 }
