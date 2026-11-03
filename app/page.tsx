@@ -368,7 +368,7 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="media-partner-panel">
-          <p className="mini-label media-partner-label">MEDIA PARTNER</p>
+          <p className="mini-label">MEDIA PARTNER</p>
           <div className="media-partner-logo-card">
             <img src="/assets/dew-journal-media-partner.png" alt="DEW Journal — The Complete Energy Journal" />
           </div>

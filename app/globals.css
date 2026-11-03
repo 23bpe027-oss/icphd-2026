@@ -3719,24 +3719,18 @@ main.page-advisory-committee .advisory-committee-section .container {
 }
 
 
-/* MEDIA PARTNER heading sits outside the logo box, matching IN ASSOCIATION WITH */
+
+/* MEDIA PARTNER: heading matches the IN ASSOCIATION WITH label; logo card matches one association slot. */
 .media-partner-panel {
-  width: 220px !important;
-  margin: 0 auto 20px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  box-sizing: border-box !important;
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
 }
-.media-partner-label {
-  display: block !important;
-  width: 100% !important;
+.media-partner-panel > .mini-label {
   margin: 0 0 1px !important;
   font-family: inherit !important;
   font-size: .88rem !important;
@@ -3747,33 +3741,38 @@ main.page-advisory-committee .advisory-committee-section .container {
   text-align: center !important;
 }
 .media-partner-logo-card {
-  width: 174px !important;
-  height: 76px !important;
-  padding: 4px 8px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background: #fff !important;
-  border: 1px solid rgba(255,255,255,.32) !important;
-  border-radius: 5px !important;
-  box-sizing: border-box !important;
+  width: calc((100% - 24px) / 4);
+  height: 124px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.48);
+  border-radius: 8px;
+  background: rgba(255,255,255,.08);
+  box-sizing: border-box;
 }
 .media-partner-logo-card img {
-  display: block !important;
-  width: 100% !important;
-  height: 68px !important;
-  object-fit: contain !important;
+  display: block;
+  width: 164px;
+  height: 112px;
+  object-fit: contain;
+  object-position: center;
 }
 @media (max-width: 720px) {
   .media-partner-panel {
-    width: 205px !important;
-    margin: 0 auto 18px !important;
+    width: 100%;
+    margin-bottom: 18px;
+    gap: 7px;
   }
   .media-partner-logo-card {
-    width: 164px !important;
-    height: 72px !important;
+    width: calc((100% - 24px) / 4);
+    height: 86px;
   }
   .media-partner-logo-card img {
-    height: 64px !important;
+    width: 100%;
+    height: 80px;
   }
 }
