@@ -3893,3 +3893,16 @@ main.page-advisory-committee .advisory-committee-section .container {
     max-height: 84% !important;
   }
 }
+
+
+/* MEDIA PARTNER heading uses the same .mini-label typography as ORGANISED BY and IN ASSOCIATION WITH. */
+.media-partner-panel > .mini-label {
+  font-family: inherit !important;
+  font-size: .88rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  color: #e8f6ff !important;
+  text-align: center !important;
+  margin: 0 0 1px !important;
+}
