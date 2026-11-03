@@ -3868,3 +3868,28 @@ main.page-advisory-committee .advisory-committee-section .container {
     border-radius: 14px !important;
   }
 }
+
+
+/* DEW logo refinement: retain the association-sized box, add more white space around a smaller logo. */
+.media-partner-logo-card {
+  padding: 18px !important;
+  background: #ffffff !important;
+}
+.media-partner-logo-card img {
+  width: 84% !important;
+  height: 84% !important;
+  max-width: 84% !important;
+  max-height: 84% !important;
+  object-fit: contain !important;
+}
+@media (max-width: 720px) {
+  .media-partner-logo-card {
+    padding: 14px !important;
+  }
+  .media-partner-logo-card img {
+    width: 84% !important;
+    height: 84% !important;
+    max-width: 84% !important;
+    max-height: 84% !important;
+  }
+}
