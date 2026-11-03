@@ -3776,3 +3776,95 @@ main.page-advisory-committee .advisory-committee-section .container {
     height: 80px;
   }
 }
+
+
+/* DEW logo tile: no outer media-partner container; white logo tile sized like one association tile. */
+.media-partner-panel {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.media-partner-logo-card {
+  width: calc((100% - 24px) / 4) !important;
+  height: 124px !important;
+  padding: 5px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+.media-partner-logo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+@media (max-width: 720px) {
+  .media-partner-logo-card {
+    width: calc((100% - 24px) / 4) !important;
+    height: 86px !important;
+    padding: 3px !important;
+  }
+}
+
+
+/* Final sizing: DEW logo tile matches one IN ASSOCIATION WITH logo tile. */
+.media-partner-panel {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto 20px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.media-partner-panel > .mini-label {
+  font-size: .88rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  margin: 0 0 1px !important;
+  color: #e8f6ff !important;
+}
+.media-partner-logo-card {
+  width: calc((100% - 48px) / 4) !important;
+  height: 150px !important;
+  min-width: 0 !important;
+  padding: 8px !important;
+  border: 1.5px solid rgba(98,185,236,.75) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(2,25,48,.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+.media-partner-logo-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+@media (max-width: 720px) {
+  .media-partner-panel {
+    width: 100% !important;
+    margin-bottom: 18px !important;
+  }
+  .media-partner-logo-card {
+    width: calc((100% - 10px) / 2) !important;
+    height: 122px !important;
+    padding: 8px !important;
+    border-radius: 14px !important;
+  }
+}
