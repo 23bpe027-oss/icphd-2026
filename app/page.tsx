@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL || '#registration';
 const abstractUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8zIIplqNH0R0gzwqkgrfPBg0jQUOMYxPrmiXAJPWOBip66A/viewform?usp=send_form';
 
 function openAndDownloadPdf(url: string, filename: string) {
@@ -51,9 +50,9 @@ const highlights = [
 
 const dates = [
   ['10 October 2026', 'Abstract Submission Starts'],
-  ['10 November 2026', 'Abstract Submission Closes'],
-  ['12 November 2026', 'Notification of Acceptance'],
-  ['20 November 2026', 'Last date for Registration'],
+  ['16 November 2026', 'Abstract Submission Closes'],
+  ['18 November 2026', 'Notification of Acceptance'],
+  ['25 November 2026', 'Final Date for Registration'],
   ['11 December 2026', 'Conference Inauguration'],
   ['13 December 2026', 'Conference Valedictory'],
 ];
@@ -63,9 +62,9 @@ const organizingCommittee = [
   { group: 'PATRONS', people: [
     ['patron-rajesh-patel.jpg', 'Prof. Rajesh Patel', 'Director, SoET, PDEU'],
     ['patron-anirbid-sircar.jpg', 'Prof. Anirbid Sircar', 'Director, SoT, PDEU'],
-    ['patron-bhawansingh-desai.jpg', 'Prof. Bhawansingh Desai', 'Dean R & D, PDEU'],
   ]},
   { group: 'CONFERENCE CHAIRS', people: [
+    ['patron-bhawansingh-desai.jpg', 'Prof. Bhawanisingh Desai', 'Dean R & D, PDEU'],
     ['chair-hari-s.jpg', 'Dr. Hari S', 'HoD PE, SoET, PDEU'],
     ['chair-anirban-das.jpg', 'Prof. Anirban Das', 'HoD Chemistry, SoET, PDEU'],
     ['chair-pravin-kodgire.jpg', 'Dr. Pravin Kodgire', 'HoD CE, SoET, PDEU'],
@@ -106,12 +105,13 @@ const internationalAdvisory = [
   { name: 'Prof. Reza Barati', detail: 'Kansas University, USA' },
   { name: 'Dr. Prashant Jadhawar', detail: 'University of Aberdeen, UK' },
   { name: 'Dr. Jyoti Phirani', detail: 'Baker Hughes, UK' },
-  { name: 'Dr. Jyoti Shankrr Pandey', detail: 'Denmark Technological University, Denmark' },
+  { name: 'Prof. Prem K. Bikkina', detail: 'Oklahoma State University, USA' },
   { name: 'Dr. Deepak Devegowda', detail: 'Oklahoma University, USA' },
   { name: 'Prof. Stefan Iglauer', detail: 'Edith Cowan University, Australia' },
   { name: 'Dr. Munawar Shaik', detail: 'UAE University, Al-Ain UAE' },
   { name: 'Dr. Francisco Arguelles Vivas', detail: 'ExxonMobil, TX-USA' },
   { name: 'Prof. Dayanand Saini', detail: 'California State University, USA' },
+  { name: 'Prof. Praveen Linga', detail: 'National University of Singapore' },
 ];
 
 const nationalAdvisory = [
@@ -145,6 +145,7 @@ const nationalAdvisory = [
   { name: 'Dr. Anurag Kandya', detail: 'Dean-Student Affairs, PDEU' },
   { name: 'Prof. R.K. Vij', detail: 'Professor of Practice, PDEU' },
   { name: 'Dr. Sachidanand Singh', detail: 'Dean-IT, PDEU' },
+  { name: 'Prof. Subrata K. Majumdar', detail: 'IIT, Guwahati' },
 ];
 
 const themes = [
@@ -408,8 +409,8 @@ export default function Home() {
       <section className="container registration anchor-section reveal reveal-delay-2" id="registration">
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
-          <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><span className="primary-btn registration-notice" aria-label="Registrations Start 12 November 2026">Registrations Start 12 November 2026</span><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
-          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Bank Details</b><span>Official bank details will be available soon.</span></div></article>
+          <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href="https://forms.gle/pWQjc1RdnkQr9Sqs7" target="_blank" rel="noopener noreferrer">Register Here</a><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />20 Nov, 26</b><b>After<br />20 Nov, 26</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
+          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Payment Link</b><a href="https://onlinepayment.pdpu.ac.in/conferences/?event=414" target="_blank" rel="noopener noreferrer">https://onlinepayment.pdpu.ac.in/conferences/?event=414</a></div></article>
         </div>
       </section>
 
