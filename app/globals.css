@@ -3906,3 +3906,57 @@ main.page-advisory-committee .advisory-committee-section .container {
   text-align: center !important;
   margin: 0 0 1px !important;
 }
+
+
+/* Center the two Patrons and four Conference Chairs as balanced groups. */
+.organizing-committee-section .committee-groups > .committee-group:nth-child(1) .committee-grid {
+  width: min(760px, 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  justify-content: center !important;
+}
+.organizing-committee-section .committee-groups > .committee-group:nth-child(1) .committee-person {
+  text-align: left !important;
+}
+.organizing-committee-section .committee-groups > .committee-group:nth-child(2) .committee-grid {
+  width: min(900px, 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  justify-content: center !important;
+}
+.organizing-committee-section .committee-groups > .committee-group:nth-child(2) .committee-person {
+  text-align: left !important;
+}
+@media (max-width: 760px) {
+  .organizing-committee-section .committee-groups > .committee-group:nth-child(1) .committee-grid,
+  .organizing-committee-section .committee-groups > .committee-group:nth-child(2) .committee-grid {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Conference Chairs: show exactly two centered profile cards per row. */
+.organizing-committee-section .committee-groups > .committee-group:nth-child(2) .committee-grid {
+  display: grid !important;
+  width: min(820px, 100%) !important;
+  margin-inline: auto !important;
+  grid-template-columns: repeat(2, minmax(0, 360px)) !important;
+  justify-content: center !important;
+  justify-items: stretch !important;
+  column-gap: 22px !important;
+  row-gap: 16px !important;
+}
+.organizing-committee-section .committee-groups > .committee-group:nth-child(2) .committee-person {
+  width: 100% !important;
+  max-width: 360px !important;
+  margin-inline: auto !important;
+}
+@media (max-width: 520px) {
+  .organizing-committee-section .committee-groups > .committee-group:nth-child(2) .committee-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+  }
+}
