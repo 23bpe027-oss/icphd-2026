@@ -469,55 +469,58 @@ export default function Home() {
       {isPreviousEditionsPage && (
         <section className="soft previous-editions-section">
           <div className="container">
-            <SectionTitle eyebrow="THE ICPHD JOURNEY" title="Previous Editions" />
+            <SectionTitle title="Previous Editions" />
             <p className="previous-editions-intro">
               Explore the conferences that have brought researchers, academicians and energy professionals together
               to exchange ideas on petroleum, hydrogen and decarbonisation.
             </p>
 
             <div className="previous-editions-grid">
-              <article className="previous-edition-card">
+              <div className="previous-edition-item">
+                <p className="previous-edition-edition-label">FIRST EDITION</p>
+                <article className="previous-edition-card">
                 <div className="previous-edition-image-wrap">
                   <img src="https://media.licdn.com/dms/image/v2/D4D22AQGDFN-egkEQkQ/feedshare-shrink_800/feedshare-shrink_800/0/1699354791845?e=2147483647&t=9BV6GgFoimWOAFVZ5aROslrS9W4gI1CesIQyRn73iVg&v=beta" alt="ICPHD 2023 conference at IIT Guwahati" loading="lazy" />
                 </div>
                 <div className="previous-edition-content">
-                  <p className="previous-edition-edition-label">FIRST EDITION</p>
-                  <p className="previous-edition-year">2023</p>
                   <h3>ICPHD 2023</h3>
                   <p className="previous-edition-venue">Indian Institute of Technology Guwahati</p>
                   <p className="previous-edition-date">3–5 November 2023 · Guwahati, Assam</p>
-                  <p>The inaugural conference was jointly organised by the Department of Chemical Engineering, IIT Guwahati, and the IIT Guwahati SPE Student Chapter, bringing together students, researchers, industry leaders and policymakers to exchange ideas on sustainable petroleum production and the energy transition.</p>
+                  <p>The inaugural conference was jointly organised by the <strong>Department of Chemical Engineering, IIT Guwahati</strong>, and the <strong>IIT Guwahati SPE Student Chapter</strong>, bringing together students, researchers, industry leaders and policymakers to exchange ideas on <strong>sustainable petroleum production</strong> and the <strong>energy transition</strong>.</p>
                 </div>
-              </article>
+                </article>
+              </div>
 
-              <article className="previous-edition-card">
+              <div className="previous-edition-item">
+                <p className="previous-edition-edition-label">SECOND EDITION</p>
+                <article className="previous-edition-card">
                 <div className="previous-edition-image-wrap">
                   <img src="https://www.theresearchers.us/wp-content/uploads/2024/12/ICPHD-ISM-png.avif" alt="ICPHD 2024 conference at IIT ISM Dhanbad" loading="lazy" />
                 </div>
                 <div className="previous-edition-content">
-                  <p className="previous-edition-edition-label">SECOND EDITION</p>
-                  <p className="previous-edition-year">2024</p>
                   <h3>ICPHD 2024</h3>
                   <p className="previous-edition-venue">Indian Institute of Technology (ISM) Dhanbad</p>
                   <p className="previous-edition-date">12–14 December 2024 · Dhanbad, Jharkhand</p>
                   <p>Held under the theme <strong>“Sustainability through Transition”</strong>, the conference brought together delegates, researchers and professionals for plenary lectures, invited talks, and oral and poster presentations on emerging developments in petroleum, hydrogen and sustainable energy.</p>
                 </div>
-              </article>
+                </article>
+              </div>
 
-              <article className="previous-edition-card">
+              <div className="previous-edition-item">
+                <p className="previous-edition-edition-label">THIRD EDITION</p>
+                <article className="previous-edition-card">
                 <div className="previous-edition-image-wrap">
                   <img src="https://www.rgipt.ac.in/site/writereaddata/uploadedImages/Image/I_202505311358272315.jpg" alt="RGIPT Jais campus, host of ICPHD 2025" loading="lazy" />
                 </div>
                 <div className="previous-edition-content">
-                  <p className="previous-edition-edition-label">THIRD EDITION</p>
-                  <p className="previous-edition-year">2025</p>
                   <h3>ICPHD 2025</h3>
                   <p className="previous-edition-venue">Rajiv Gandhi Institute of Petroleum Technology (RGIPT)</p>
                   <p className="previous-edition-date">7–9 November 2025 · Jais, Amethi, Uttar Pradesh</p>
                   <p>Organised by RGIPT’s Department of Petroleum Engineering and Geoengineering, the conference focused on <strong>“Advances, Challenges &amp; Opportunities for a Sustainable Future”</strong>, creating a platform for discussions and knowledge exchange on sustainable energy technologies and the evolving energy landscape.</p>
                   <div className="previous-edition-actions"><a className="previous-edition-website-link" href="https://icphd2025.com/" target="_blank" rel="noopener noreferrer">ICPHD 2025 Website <span aria-hidden="true">↗</span></a></div>
                 </div>
-              </article>
+                </article>
+              </div>
             </div>
           </div>
         </section>

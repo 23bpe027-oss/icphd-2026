@@ -4175,3 +4175,77 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
   .desktop-nav a, .nav-dropdown > summary { font-size: .82rem !important; letter-spacing: 0 !important; }
 }
 @media (max-width: 720px) { main.page-previous-editions > .previous-editions-section { padding-top: 92px !important; } }
+
+
+/* Edition labels sit clearly above each card, centered and prominent. */
+.previous-edition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+.previous-edition-item > .previous-edition-edition-label {
+  display: block;
+  width: 100%;
+  margin: 0 0 13px !important;
+  color: #126b9e !important;
+  text-align: center !important;
+  font-size: 1.12rem !important;
+  line-height: 1.25 !important;
+  font-weight: 850 !important;
+  letter-spacing: .12em !important;
+}
+.previous-edition-item .previous-edition-card {
+  height: 100%;
+}
+@media (max-width: 720px) {
+  .previous-edition-item > .previous-edition-edition-label {
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+
+/* Small conference wordmarks over the archival photographs. These are
+   typographic identifiers, not substituted institutional logos. */
+.previous-edition-image-wrap {
+  position: relative;
+}
+.previous-edition-photo-logo {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 8px 12px;
+  color: #fff;
+  background: rgba(7, 31, 55, .88);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 7px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.22);
+  line-height: 1;
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+.previous-edition-photo-logo strong {
+  font-size: .82rem;
+  font-weight: 900;
+}
+.previous-edition-photo-logo small {
+  font-size: .76rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+.previous-edition-website-link {
+  padding: 9px 13px !important;
+  font-size: .94rem !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+}
+
+
+/* Photo overlays are intentionally omitted; keep the archival photographs clean. */
+.previous-edition-photo-logo {
+  display: none !important;
+}
