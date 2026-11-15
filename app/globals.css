@@ -4160,3 +4160,18 @@ main.page-previous-editions > footer {
   font-size: .82rem;
   font-weight: 700;
 }
+
+
+/* Previous Editions refinements: clear separation from the fixed navigation
+   and a clean, text-led presentation without photo overlays or feature panels. */
+main.page-previous-editions > .previous-editions-section { padding-top: 112px !important; }
+.previous-edition-edition-label { margin: 0 0 7px !important; color: #1684bd !important; font-size: .68rem !important; font-weight: 850 !important; letter-spacing: .13em !important; }
+.previous-edition-content > p.previous-edition-year { margin: 0 0 4px !important; }
+.previous-edition-actions { margin-top: 10px !important; padding-top: 0 !important; border-top: 0 !important; }
+.previous-edition-website-link { display: inline-flex; align-items: center; gap: 5px; padding: 6px 10px; border: 1px solid #cfe2f0; border-radius: 7px; background: #f3f8fc; font-size: .76rem !important; font-weight: 750 !important; }
+@media (min-width: 721px) and (max-width: 1200px) {
+  .nav { gap: 12px !important; padding-inline: 18px !important; }
+  .desktop-nav { gap: 11px !important; }
+  .desktop-nav a, .nav-dropdown > summary { font-size: .82rem !important; letter-spacing: 0 !important; }
+}
+@media (max-width: 720px) { main.page-previous-editions > .previous-editions-section { padding-top: 92px !important; } }
