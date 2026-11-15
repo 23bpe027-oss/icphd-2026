@@ -36,6 +36,7 @@ const navLinks = [
   ['Highlights', '/#highlights'],
   ['Schedule', '/#dates'],
   ['Themes', '/themes'],
+  ['Previous Editions', '/previous-editions'],
   ['Registration', '/registration'],
 ];
 
@@ -228,6 +229,7 @@ function SectionTitle({ eyebrow, title }: { eyebrow?: string; title: string }) {
 export default function Home() {
   const pathname = usePathname();
   const isThemesPage = pathname === '/themes';
+  const isPreviousEditionsPage = pathname === '/previous-editions';
   const isCommitteePage = pathname === '/organizing-committee';
   const isAdvisoryPage = pathname === '/advisory-committee';
   const isRegistrationPage = pathname === '/registration';
@@ -290,7 +292,7 @@ export default function Home() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <main className={isThemesPage ? "page-themes" : isCommitteePage ? "page-organizing-committee" : isRegistrationPage ? "page-registration" : isAdvisoryPage ? "page-advisory-committee" : "page-home"}>
+    <main className={isThemesPage ? "page-themes" : isPreviousEditionsPage ? "page-previous-editions" : isCommitteePage ? "page-organizing-committee" : isRegistrationPage ? "page-registration" : isAdvisoryPage ? "page-advisory-committee" : "page-home"}>
       <header className={`nav${menuOpen ? ' menu-open' : ''}`}>
         <a className="brand" href="/" onClick={closeMenu}>
           <img src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
@@ -461,6 +463,122 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
+
+
+      {isPreviousEditionsPage && (
+        <section className="soft previous-editions-section">
+          <div className="container">
+            <SectionTitle eyebrow="THE ICPHD JOURNEY" title="Previous Editions" />
+            <p className="previous-editions-intro">
+              Explore the conferences that have brought researchers, academicians and energy professionals together
+              to exchange ideas on petroleum, hydrogen and decarbonisation.
+            </p>
+
+            <div className="previous-editions-grid">
+              <article className="previous-edition-card">
+                <div className="previous-edition-image-wrap">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D4D22AQGDFN-egkEQkQ/feedshare-shrink_800/feedshare-shrink_800/0/1699354791845?e=2147483647&t=9BV6GgFoimWOAFVZ5aROslrS9W4gI1CesIQyRn73iVg&v=beta"
+                    alt="ICPHD 2023 technical presentation at IIT Guwahati"
+                    loading="lazy"
+                  />
+                  <span className="previous-edition-number">01 / FIRST EDITION</span>
+                </div>
+                <div className="previous-edition-content">
+                  <p className="previous-edition-year">2023</p>
+                  <h3>ICPHD 2023</h3>
+                  <p className="previous-edition-venue">Indian Institute of Technology Guwahati</p>
+                  <p className="previous-edition-date">3–5 November 2023 · Guwahati, Assam</p>
+                  <p>
+                    The inaugural edition was jointly organised by the Department of Chemical Engineering,
+                    IIT Guwahati, and the IIT Guwahati SPE Student Chapter. It brought together students,
+                    researchers, industry leaders and policymakers for discussions on sustainable petroleum
+                    production and the energy transition.
+                  </p>
+                  <div className="previous-edition-highlights">
+                    <span>Keynote sessions</span><span>Panel discussions</span><span>Paper & poster presentations</span><span>Start-up showcase</span>
+                  </div>
+                  <div className="previous-edition-actions">
+                    <span className="previous-edition-unavailable">2023 website currently unavailable</span>
+                  </div>
+                  <p className="previous-edition-photo-credit">Event photograph: attendee post from ICPHD 2023</p>
+                </div>
+              </article>
+
+              <article className="previous-edition-card">
+                <div className="previous-edition-image-wrap">
+                  <img
+                    src="https://www.theresearchers.us/wp-content/uploads/2024/12/ICPHD-ISM-png.avif"
+                    alt="ICPHD 2024 conference closing ceremony at IIT ISM Dhanbad"
+                    loading="lazy"
+                  />
+                  <span className="previous-edition-number">02 / SECOND EDITION</span>
+                </div>
+                <div className="previous-edition-content">
+                  <p className="previous-edition-year">2024</p>
+                  <h3>ICPHD 2024</h3>
+                  <p className="previous-edition-venue">Indian Institute of Technology (ISM) Dhanbad</p>
+                  <p className="previous-edition-date">12–14 December 2024 · Dhanbad, Jharkhand</p>
+                  <p>
+                    Held under the theme <strong>“Sustainability through Transition”</strong>, the second edition
+                    welcomed around 250 delegates. Its programme included plenary and keynote lectures,
+                    invited talks, oral and poster presentations across 28 technical sessions.
+                  </p>
+                  <div className="previous-edition-stats">
+                    <div><strong>250</strong><span>approx. delegates</span></div>
+                    <div><strong>28</strong><span>keynote lectures</span></div>
+                    <div><strong>87</strong><span>oral presentations</span></div>
+                    <div><strong>32</strong><span>poster presentations</span></div>
+                  </div>
+                  <div className="previous-edition-highlights">
+                    <span>Plenary lectures</span><span>Invited talks</span><span>Technical sessions</span><span>Industry–academia exchange</span>
+                  </div>
+                  <div className="previous-edition-actions">
+                    <span className="previous-edition-unavailable">2024 website currently unavailable</span>
+                  </div>
+                  <p className="previous-edition-photo-credit">Event photograph: The Researchers, 14 December 2024</p>
+                </div>
+              </article>
+
+              <article className="previous-edition-card">
+                <div className="previous-edition-image-wrap previous-edition-image-pair">
+                  <img
+                    src="https://www.rgipt.ac.in/site/writereaddata/uploadedImages/Image/I_202505311358272315.jpg"
+                    alt="RGIPT Jais campus, host of ICPHD 2025"
+                    loading="lazy"
+                  />
+                  <img
+                    src="https://icphd2025.com/assets/img/clients/client-1.jpg"
+                    alt="ICPHD 2025 conference identity"
+                    loading="lazy"
+                  />
+                  <span className="previous-edition-number">03 / THIRD EDITION</span>
+                </div>
+                <div className="previous-edition-content">
+                  <p className="previous-edition-year">2025</p>
+                  <h3>ICPHD 2025</h3>
+                  <p className="previous-edition-venue">Rajiv Gandhi Institute of Petroleum Technology (RGIPT)</p>
+                  <p className="previous-edition-date">7–9 November 2025 · Jais, Amethi, Uttar Pradesh</p>
+                  <p>
+                    The third edition, organised by RGIPT’s Department of Petroleum Engineering and Geoengineering,
+                    focused on <strong>“Advances, Challenges & Opportunities for a Sustainable Future.”</strong>
+                    The programme featured keynote sessions, panel discussions, technical presentations,
+                    exhibitions, networking and best paper and poster awards.
+                  </p>
+                  <div className="previous-edition-highlights">
+                    <span>Keynote sessions</span><span>Panel discussions</span><span>Exhibition</span><span>Best paper & poster awards</span>
+                  </div>
+                  <div className="previous-edition-actions">
+                    <a href="https://icphd2025.com/" target="_blank" rel="noopener noreferrer">Visit 2025 website <span aria-hidden="true">↗</span></a>
+                    <a href="https://icphd2025.com/assets/ICPHD-2025-Brochure.pdf" target="_blank" rel="noopener noreferrer">View brochure</a>
+                  </div>
+                  <p className="previous-edition-photo-credit">Images: RGIPT official campus gallery and ICPHD 2025 website</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       )}
 
       <section className="soft venue reveal reveal-delay-2">

@@ -3960,3 +3960,203 @@ main.page-advisory-committee .advisory-committee-section .container {
     width: 100% !important;
   }
 }
+
+
+/* Dedicated Previous Editions page and responsive edition cards. */
+main.page-previous-editions > section:not(.previous-editions-section) {
+  display: none !important;
+}
+main.page-previous-editions > .previous-editions-section {
+  display: block !important;
+  min-height: 58vh;
+  padding: 46px 0 64px;
+  background: #f5f8fc;
+}
+main.page-previous-editions > footer {
+  display: block !important;
+}
+.previous-editions-intro {
+  max-width: 760px;
+  margin: -8px auto 30px;
+  color: #52677d;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.previous-editions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+.previous-edition-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dce6f0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(13, 48, 78, .08);
+}
+.previous-edition-image-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #e7eef6;
+}
+.previous-edition-image-wrap > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.previous-edition-image-pair {
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.previous-edition-image-pair > img:first-child {
+  object-position: center;
+}
+.previous-edition-image-pair > img:nth-child(2) {
+  object-fit: contain;
+  padding: 16px;
+  background: #ffffff;
+}
+.previous-edition-number {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(5, 31, 58, .86);
+  color: #ffffff;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+.previous-edition-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px;
+}
+.previous-edition-year {
+  margin: 0 0 4px;
+  color: #1684bd;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+.previous-edition-content h3 {
+  margin: 0 0 8px;
+  color: #092b4c;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+.previous-edition-venue {
+  margin: 0 0 4px;
+  color: #183f63;
+  font-weight: 750;
+  line-height: 1.45;
+}
+.previous-edition-date {
+  margin: 0 0 14px;
+  color: #6b7d8f;
+  font-size: .82rem;
+}
+.previous-edition-content > p:not(.previous-edition-year):not(.previous-edition-venue):not(.previous-edition-date):not(.previous-edition-photo-credit) {
+  margin: 0 0 16px;
+  color: #52677d;
+  font-size: .91rem;
+  line-height: 1.65;
+}
+.previous-edition-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 18px;
+}
+.previous-edition-highlights span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: #edf5fb;
+  color: #245477;
+  font-size: .72rem;
+  font-weight: 700;
+}
+.previous-edition-stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin: 0 0 16px;
+}
+.previous-edition-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #f3f7fb;
+}
+.previous-edition-stats strong {
+  color: #0c5685;
+  font-size: 1.2rem;
+}
+.previous-edition-stats span {
+  color: #667b8f;
+  font-size: .7rem;
+}
+.previous-edition-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #e7edf3;
+}
+.previous-edition-actions a {
+  color: #0879b5;
+  font-size: .82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.previous-edition-actions a:hover {
+  text-decoration: underline;
+}
+.previous-edition-photo-credit {
+  margin: 12px 0 0;
+  color: #8291a0;
+  font-size: .68rem;
+  line-height: 1.45;
+}
+@media (max-width: 1050px) {
+  .previous-editions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  main.page-previous-editions > .previous-editions-section {
+    padding: 32px 0 44px;
+  }
+  .previous-editions-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .previous-edition-image-wrap {
+    height: 205px;
+  }
+  .previous-edition-content {
+    padding: 18px;
+  }
+}
+
+.previous-edition-unavailable {
+  color: #7b8997;
+  font-size: .82rem;
+  font-weight: 700;
+}
