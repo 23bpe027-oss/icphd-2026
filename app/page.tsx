@@ -377,19 +377,14 @@ export default function Home() {
               <img src="/assets/dew-journal-media-partner.png" alt="DEW Journal — The Complete Energy Journal" />
             </div>
           </div>
-          <div className="prize-sponsor-group">
-            <div className="media-partner-item prize-sponsor-item">
-              <p className="media-partner-item-label">PRIZE SPONSOR</p>
-              <div className="media-partner-logo-card acs-media-partner-logo-card">
-                <img src="/assets/acs-publications-media-partner.png" alt="ACS Publications — Most Trusted. Most Cited. Most Read." />
-              </div>
+          <div className="media-partner-item">
+            <p className="media-partner-item-label">PRIZE SPONSOR</p>
+            <div className="media-partner-logo-card acs-media-partner-logo-card">
+              <img src="/assets/acs-publications-media-partner.png" alt="ACS Publications — Most Trusted. Most Cited. Most Read." />
             </div>
-            <div className="prize-description-card">
-            <p>We would be delighted to support the researchers at ICPHD 2026 through <strong>five award certificates—three for poster presentations and two for oral presentations.</strong> The certificates would come from <em>Energy &amp; Fuels</em> (1 oral and 1 poster prize), <em>Industrial &amp; Engineering Chemistry Research</em> (1 oral and 1 poster prize), and <em>ACS Omega</em> (1 poster prize). Each certificate will also include a <strong>complimentary ACS Membership</strong> for the recipient.</p>
-          </div>
           </div>
         </div>
-        <div className="announcement"><b>Abstract Submission Extended to 20th November 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
+        <div className="announcement"><b>Abstract Submission Extended to 20th November</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
         <div className="quick-actions"><a href="/ICPHD%202026_PDEU%20Gandhinagar_Flyer.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/ICPHD%202026_PDEU%20Gandhinagar_Flyer.pdf", "ICPHD 2026_PDEU Gandhinagar_Flyer.pdf"); }}>Download Flyer</a><a href="/Brochure_ICPHD%202026_PDEU%20Gandhinagar.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Brochure_ICPHD%202026_PDEU%20Gandhinagar.pdf", "Brochure_ICPHD 2026_PDEU Gandhinagar.pdf"); }}>Download Brochure</a><a href="/Sponsorship-ICPHD-2026.pdf" target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); openAndDownloadPdf("/Sponsorship-ICPHD-2026.pdf", "Sponsorship-ICPHD-2026.pdf"); }}>Sponsorship Details</a></div>
 
       </section>
