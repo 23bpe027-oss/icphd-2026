@@ -5673,3 +5673,303 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     height: 58px !important;
   }
 }
+
+
+/* FIXED SPONSOR GROUPING — one DEW card on the left; ACS + awards card together on the right. */
+@media (min-width: 601px) {
+  .media-partner-panel {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    width: min(calc(100% - 36px), 1000px) !important;
+    max-width: 1000px !important;
+    gap: 14px !important;
+    margin: 0 auto 16px !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .prize-sponsor-group {
+    display: flex !important;
+    flex: 2 1 0 !important;
+    width: 0 !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .prize-sponsor-item,
+  .media-partner-panel .prize-description-card {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .media-partner-item-label {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    margin: 0 0 7px !important;
+    font-size: clamp(8px, 1vw, 12px) !important;
+  }
+  .media-partner-panel .media-partner-logo-card,
+  .media-partner-panel .prize-description-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1.48 / 1 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    padding: 7px !important;
+  }
+  .media-partner-panel .prize-description-card {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    margin: 0 !important;
+    font-size: clamp(9px, .95vw, 13px) !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+/* Desktop site viewed on a phone: same grouped layout, scaled to available width. */
+@media (min-width: 601px) and (max-width: 1100px) {
+  .media-partner-panel {
+    width: calc(100% - 24px) !important;
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+  }
+  .media-partner-panel .prize-sponsor-group {
+    gap: 8px !important;
+  }
+  .media-partner-panel .media-partner-item-label {
+    font-size: clamp(6px, 1.05vw, 9px) !important;
+    letter-spacing: .08em !important;
+    margin-bottom: 4px !important;
+  }
+  .media-partner-panel .media-partner-logo-card,
+  .media-partner-panel .prize-description-card {
+    aspect-ratio: 1.48 / 1 !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    padding: 4px !important;
+  }
+  .media-partner-panel .prize-description-card {
+    padding: 6px !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    font-size: clamp(6px, .95vw, 9px) !important;
+    line-height: 1.2 !important;
+  }
+}
+
+
+/* FINAL GEOMETRY: one DEW card on the left; two equal PRIZE SPONSOR cards on the right. */
+@media (min-width: 601px) {
+  .media-partner-panel {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    width: min(1180px, calc(100% - 48px)) !important;
+    max-width: 1180px !important;
+    gap: 12px !important;
+    margin: 0 auto 16px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child {
+    grid-column: 1 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child .media-partner-item-label {
+    text-align: center !important;
+    margin: 0 0 7px !important;
+  }
+  .media-partner-panel .prize-sponsor-group {
+    grid-column: 2 / 4 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: auto 116px !important;
+    align-items: start !important;
+    gap: 7px 12px !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .prize-group-label {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+    margin: 0 0 0 !important;
+    text-align: center !important;
+  }
+  .media-partner-panel .prize-sponsor-item {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .prize-description-card {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: 116px !important;
+    min-height: 116px !important;
+    max-height: 116px !important;
+    aspect-ratio: auto !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 9px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    width: 100% !important;
+    max-width: none !important;
+    height: 116px !important;
+    min-height: 116px !important;
+    max-height: 116px !important;
+    aspect-ratio: auto !important;
+    box-sizing: border-box !important;
+    padding: 6px 10px !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .media-partner-logo-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    margin: 0 !important;
+    font-size: clamp(9px, .9vw, 13px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+  .media-partner-panel .media-partner-item-label {
+    font-size: clamp(8px, .8vw, 11px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: .12em !important;
+  }
+}
+
+/* Desktop site viewed on a phone: same geometry, scaled to available width. */
+@media (min-width: 601px) and (max-width: 900px) {
+  .media-partner-panel {
+    width: calc(100% - 24px) !important;
+    gap: 8px !important;
+  }
+  .media-partner-panel .prize-sponsor-group {
+    gap: 5px 8px !important;
+    grid-template-rows: auto 104px !important;
+  }
+  .media-partner-panel .media-partner-logo-card,
+  .media-partner-panel .prize-description-card {
+    height: 104px !important;
+    min-height: 104px !important;
+    max-height: 104px !important;
+  }
+  .media-partner-panel .prize-description-card {
+    padding: 6px 7px !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    font-size: clamp(7px, .95vw, 9px) !important;
+    line-height: 1.2 !important;
+  }
+  .media-partner-panel .media-partner-item-label {
+    font-size: clamp(6px, .9vw, 8px) !important;
+  }
+}
+
+/* Regular mobile: DEW + ACS logos side by side, award text in a second row. */
+@media (max-width: 600px) {
+  .media-partner-panel {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: calc(100% - 32px) !important;
+    max-width: 440px !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 auto 16px !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child,
+  .media-partner-panel .prize-sponsor-item {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .prize-sponsor-group {
+    display: contents !important;
+  }
+  .media-partner-panel .media-partner-item-label {
+    font-size: .68rem !important;
+    letter-spacing: .08em !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    margin: 0 0 5px !important;
+  }
+  .media-partner-panel .prize-group-label {
+    display: none !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    width: 100% !important;
+    height: 88px !important;
+    min-height: 88px !important;
+    max-height: 88px !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .media-partner-panel .media-partner-logo-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+  .media-partner-panel .prize-description-card {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 10px 12px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    margin: 0 !important;
+    font-size: .76rem !important;
+    line-height: 1.3 !important;
+  }
+}

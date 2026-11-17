@@ -378,15 +378,15 @@ export default function Home() {
             </div>
           </div>
           <div className="prize-sponsor-group">
+            <p className="media-partner-item-label prize-group-label">PRIZE SPONSOR</p>
             <div className="media-partner-item prize-sponsor-item">
-              <p className="media-partner-item-label">PRIZE SPONSOR</p>
               <div className="media-partner-logo-card acs-media-partner-logo-card">
                 <img src="/assets/acs-publications-media-partner.png" alt="ACS Publications — Most Trusted. Most Cited. Most Read." />
               </div>
             </div>
             <div className="prize-description-card">
-            <p><strong>Poster Presentation</strong> and <strong>Oral Presentation</strong> awards will be supported by <em>Energy &amp; Fuels</em>, <em>Industrial &amp; Engineering Chemistry Research</em>, and <em>ACS Omega</em>. Award recipients will receive certificates along with a complimentary ACS Membership.</p>
-          </div>
+              <p><strong>Poster Presentation</strong> and <strong>Oral Presentation</strong> awards will be supported by <em>Energy &amp; Fuels</em>, <em>Industrial &amp; Engineering Chemistry Research</em>, and <em>ACS Omega</em>. Award recipients will receive certificates along with a complimentary ACS Membership.</p>
+            </div>
           </div>
         </div>
         <div className="announcement"><b>Abstract Submission Extended to 20th November 2026</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
