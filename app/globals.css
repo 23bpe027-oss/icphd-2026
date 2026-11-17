@@ -4285,3 +4285,27 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     padding: 10px !important;
   }
 }
+
+
+/* Enlarge ACS Publications artwork within its own tile to reduce excess whitespace. */
+.media-partner-logo-card.acs-media-partner-logo-card {
+  padding: 5px !important;
+}
+.media-partner-logo-card.acs-media-partner-logo-card img {
+  width: 98% !important;
+  height: 98% !important;
+  max-width: 98% !important;
+  max-height: 98% !important;
+  object-fit: contain !important;
+}
+@media (max-width: 720px) {
+  .media-partner-logo-card.acs-media-partner-logo-card {
+    padding: 4px !important;
+  }
+  .media-partner-logo-card.acs-media-partner-logo-card img {
+    width: 98% !important;
+    height: 98% !important;
+    max-width: 98% !important;
+    max-height: 98% !important;
+  }
+}
