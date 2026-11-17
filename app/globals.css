@@ -7355,3 +7355,50 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
   text-justify: inter-word !important;
   hyphens: auto !important;
 }
+
+
+/* VISUAL TWO-COLUMN GROUPING:
+   Left column = MEDIA PARTNER + DEW.
+   Right column = PRIZE SPONSOR + ACS + award note.
+   Double the separation between the left and right groups, while keeping
+   ACS and the award note close together as one right-hand group.
+   Applied only to desktop and desktop-site-on-mobile. */
+@media (min-width: 1051px) {
+  .media-partner-panel {
+    column-gap: 40px !important;
+    justify-content: center !important;
+    justify-items: stretch !important;
+  }
+  .media-partner-panel .prize-description-card {
+    margin-left: -30px !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1050px) {
+  .media-partner-panel {
+    column-gap: 40px !important;
+    justify-content: center !important;
+    justify-items: stretch !important;
+  }
+  .media-partner-panel .prize-description-card {
+    margin-left: -30px !important;
+  }
+}
+
+
+/* AWARD COPY: JUSTIFIED WITHOUT BREAKING WORDS ACROSS LINES.
+   Desktop and desktop-site-on-mobile only; normal mobile remains unchanged. */
+@media (min-width: 721px) {
+  .media-partner-panel .prize-description-card {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+  }
+}
