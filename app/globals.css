@@ -6741,3 +6741,111 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     overflow-wrap: anywhere !important;
   }
 }
+
+
+/* FINAL MOBILE RESTORE + DESKTOP HEADING/CENTER ALIGNMENT */
+@media (min-width: 721px) {
+  .media-partner-panel .prize-group-label {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    text-align: center !important;
+  }
+  .media-partner-panel .prize-description-card {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+    padding: 12px 14px !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Original mobile two-row layout: two logos above, full-width copy below. */
+  .media-partner-panel {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: min(calc(100% - 28px), 560px) !important;
+    min-width: 0 !important;
+    max-width: 560px !important;
+    gap: 8px 10px !important;
+    margin: 0 auto 14px !important;
+    overflow: visible !important;
+  }
+  .dark-strip { overflow-x: hidden !important; }
+  .media-partner-panel > .media-partner-item:first-child,
+  .media-partner-panel .prize-sponsor-item,
+  .media-partner-panel .prize-sponsor-group { display: contents !important; }
+
+  .media-partner-panel .media-partner-item-label,
+  .media-partner-panel .prize-group-label {
+    grid-row: 1 !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    margin: 0 0 4px !important;
+    font-size: clamp(8px, 2.2vw, 11px) !important;
+    line-height: 1.2 !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child .media-partner-item-label { grid-column: 1 !important; }
+  .media-partner-panel .prize-group-label { grid-column: 2 !important; }
+
+  .media-partner-panel > .media-partner-item:first-child .media-partner-logo-card {
+    grid-column: 1 !important; grid-row: 2 !important;
+  }
+  .media-partner-panel .prize-sponsor-item .media-partner-logo-card {
+    grid-column: 2 !important; grid-row: 2 !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 122px !important;
+    min-height: 122px !important;
+    max-height: 122px !important;
+    aspect-ratio: auto !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 8px !important;
+  }
+  .media-partner-panel .media-partner-logo-card img {
+    width: 100% !important; height: 100% !important;
+    max-width: 100% !important; max-height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .media-partner-panel .prize-description-card {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 10px 12px !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(10px, 2.6vw, 13px) !important;
+    line-height: 1.32 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+}
