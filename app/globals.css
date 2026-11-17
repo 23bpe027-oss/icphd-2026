@@ -6995,3 +6995,59 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     margin-bottom: 0 !important;
   }
 }
+
+
+/* DESKTOP RESTORE:
+   Restore the sponsor cards to their previous 150px height.
+   Keep the reduced, equal heading-to-card gap. Set award copy to a readable
+   size that fits the full paragraph inside the card.
+   Regular mobile (max-width:720px) is intentionally untouched. */
+@media (min-width: 721px) {
+  .media-partner-panel .media-partner-logo-card {
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    box-sizing: border-box !important;
+  }
+  .media-partner-panel .prize-description-card {
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(10px, .95vw, 12px) !important;
+    line-height: 1.22 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+  /* Keep the heading-to-card gap matched on both sponsor groups. */
+  .media-partner-panel > .media-partner-item:first-child,
+  .media-partner-panel .prize-sponsor-group {
+    row-gap: 8px !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child .media-partner-item-label,
+  .media-partner-panel .prize-sponsor-group > .prize-group-label {
+    margin-bottom: 0 !important;
+  }
+}
+
+
+/* MATCH SPONSOR HEADING-TO-CARD GAP TO ASSOCIATION HEADING-TO-CHAPTER-CARDS.
+   The association section uses 8px label bottom margin + 10px logo-row top margin.
+   Apply the same 18px total spacing to sponsor headings on desktop views only.
+   Normal mobile is deliberately untouched. */
+@media (min-width: 721px) {
+  .media-partner-panel > .media-partner-item:first-child .media-partner-item-label,
+  .media-partner-panel .prize-sponsor-group > .prize-group-label {
+    margin-bottom: 18px !important;
+  }
+}
