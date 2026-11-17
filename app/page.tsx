@@ -41,7 +41,7 @@ const navLinks = [
 ];
 
 const highlights = [
-  ['keynote-transparent.png', 'Keynote sessions by', 'eminent industry and academic professionals'],
+  ['keynote-transparent.png', 'Keynote Sessions and', 'Plenary Lectures'],
   ['panel-transparent.png', 'Panel Discussions by', 'Industrial and Academic Professionals'],
   ['papers-transparent.png', 'Technical Paper and Poster', 'Presentations'],
   ['networking-branding-final.svg', 'Networking and', 'Branding'],
@@ -51,8 +51,8 @@ const highlights = [
 
 const dates = [
   ['10 October 2026', 'Abstract Submission Starts'],
-  ['16 November 2026', 'Abstract Submission Closes'],
-  ['18 November 2026', 'Notification of Acceptance'],
+  ['20 November 2026', 'Abstract Submission Closes'],
+  ['23 November 2026', 'Notification of Acceptance'],
   ['25 November 2026', 'Final Date for Registration'],
   ['11 December 2026', 'Conference Inauguration'],
   ['13 December 2026', 'Conference Valedictory'],
@@ -371,9 +371,12 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="media-partner-panel">
-          <p className="mini-label">MEDIA PARTNER</p>
+          <p className="mini-label">MEDIA PARTNERS</p>
           <div className="media-partner-logo-card">
             <img src="/assets/dew-journal-media-partner.png" alt="DEW Journal — The Complete Energy Journal" />
+          </div>
+          <div className="media-partner-logo-card">
+            <img src="/assets/acs-publications-media-partner.png" alt="ACS Publications — Most Trusted. Most Cited. Most Read." />
           </div>
         </div>
         <div className="announcement"><b>Abstract Submission Has Begun</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
@@ -412,7 +415,7 @@ export default function Home() {
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
           <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href="https://forms.gle/pWQjc1RdnkQr9Sqs7" target="_blank" rel="noopener noreferrer">Register Here</a><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />25th November 2026</b><b>After<br />25th November 2026</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
-          <article id="abstract"><h3>Abstract Submission (Started 10th October 2026)</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Payment Link</b><a href="https://onlinepayment.pdpu.ac.in/conferences/?event=414" target="_blank" rel="noopener noreferrer">https://onlinepayment.pdpu.ac.in/conferences/?event=414</a></div></article>
+          <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Payment Link</b><a href="https://onlinepayment.pdpu.ac.in/conferences/?event=414" target="_blank" rel="noopener noreferrer">https://onlinepayment.pdpu.ac.in/conferences/?event=414</a></div></article>
         </div>
       </section>
 

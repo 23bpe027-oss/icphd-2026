@@ -4249,3 +4249,39 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
 .previous-edition-photo-logo {
   display: none !important;
 }
+
+
+/* Two media partners displayed as matching, centered logo tiles. */
+.media-partner-panel {
+  width: min(1180px, calc(100% - 48px)) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  column-gap: 22px !important;
+  row-gap: 10px !important;
+}
+.media-partner-panel > .mini-label {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+.media-partner-panel > .media-partner-logo-card {
+  flex: 0 1 240px !important;
+  width: 240px !important;
+  height: 150px !important;
+  margin: 0 !important;
+}
+@media (max-width: 720px) {
+  .media-partner-panel {
+    width: calc(100% - 28px) !important;
+    column-gap: 12px !important;
+  }
+  .media-partner-panel > .media-partner-logo-card {
+    flex: 0 1 calc((100% - 12px) / 2) !important;
+    width: calc((100% - 12px) / 2) !important;
+    height: 112px !important;
+    padding: 10px !important;
+  }
+}
