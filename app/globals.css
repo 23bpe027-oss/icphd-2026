@@ -4352,3 +4352,85 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     max-width: 174px;
   }
 }
+
+
+/* FINAL FIX: keep the two sponsor groups together, centered, and fully visible. */
+.media-partner-panel {
+  width: min(100% - 32px, 560px) !important;
+  max-width: 560px !important;
+  margin: 0 auto 20px !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 24px !important;
+  box-sizing: border-box !important;
+}
+.media-partner-panel > .media-partner-item {
+  flex: 0 1 240px !important;
+  width: 240px !important;
+  min-width: 0 !important;
+  max-width: 240px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  box-sizing: border-box !important;
+}
+.media-partner-panel .media-partner-item-label {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+.media-partner-panel .media-partner-logo-card {
+  flex: 0 0 150px !important;
+  width: 240px !important;
+  max-width: 100% !important;
+  height: 150px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  box-sizing: border-box !important;
+}
+.media-partner-panel .media-partner-logo-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+.media-partner-panel .acs-media-partner-logo-card {
+  padding: 4px !important;
+}
+@media (max-width: 720px) {
+  .media-partner-panel {
+    width: calc(100% - 24px) !important;
+    max-width: 520px !important;
+    gap: 12px !important;
+  }
+  .media-partner-panel > .media-partner-item {
+    flex: 1 1 0 !important;
+    width: calc((100% - 12px) / 2) !important;
+    max-width: 240px !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    width: 100% !important;
+    height: 112px !important;
+    flex-basis: 112px !important;
+    padding: 6px !important;
+  }
+  .media-partner-panel .acs-media-partner-logo-card {
+    padding: 3px !important;
+  }
+}
