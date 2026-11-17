@@ -7278,3 +7278,80 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     margin-bottom: 18px !important;
   }
 }
+
+
+/* FIX THE DESKTOP-SITE-ON-MOBILE SCREENSHOT:
+   association student-chapter cards are 150px tall at this breakpoint,
+   so all three sponsor cards must also be 150px tall (not 116px).
+   Increase award text to use the full card. Desktop >1050px and
+   normal mobile <=720px are not modified. */
+@media (min-width: 721px) and (max-width: 1050px) {
+  .media-partner-panel > .media-partner-item:first-child .media-partner-logo-card,
+  .media-partner-panel .prize-sponsor-item .media-partner-logo-card,
+  .media-partner-panel .prize-description-card {
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    box-sizing: border-box !important;
+  }
+  .media-partner-panel .prize-description-card {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 11px !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(12px, 1.35vw, 15px) !important;
+    line-height: 1.22 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+
+/* CENTER THE THREE SPONSOR CARDS IN THE DESKTOP-SITE-ON-MOBILE ROW.
+   Keep normal desktop and normal mobile exactly as they are. */
+@media (min-width: 721px) and (max-width: 1050px) {
+  .media-partner-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: min(75%, 885px) !important;
+    max-width: 885px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+    justify-items: stretch !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child .media-partner-item-label {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+  .media-partner-panel .prize-group-label {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child .media-partner-logo-card {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+  .media-partner-panel .prize-sponsor-item .media-partner-logo-card {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+  .media-partner-panel .prize-description-card {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+  }
+}
+
+
+/* JUSTIFY THE POSTER / ORAL PRESENTATION AWARD COPY IN ALL THREE VIEWS.
+   Applies to normal mobile, desktop-site-on-mobile, and normal desktop. */
+.media-partner-panel .prize-description-card p {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  hyphens: auto !important;
+}
