@@ -4287,25 +4287,68 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
 }
 
 
-/* Enlarge ACS Publications artwork within its own tile to reduce excess whitespace. */
+/* ACS artwork is tightly cropped at source so the complete wordmark fills its tile. */
 .media-partner-logo-card.acs-media-partner-logo-card {
-  padding: 5px !important;
+  padding: 4px !important;
 }
 .media-partner-logo-card.acs-media-partner-logo-card img {
-  width: 98% !important;
-  height: 98% !important;
-  max-width: 98% !important;
-  max-height: 98% !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   object-fit: contain !important;
 }
 @media (max-width: 720px) {
   .media-partner-logo-card.acs-media-partner-logo-card {
-    padding: 4px !important;
+    padding: 3px !important;
   }
   .media-partner-logo-card.acs-media-partner-logo-card img {
-    width: 98% !important;
-    height: 98% !important;
-    max-width: 98% !important;
-    max-height: 98% !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+
+/* Separate labels for the DEW media partner and ACS prize sponsor. */
+.media-partner-panel {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 20px !important;
+}
+.media-partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.media-partner-item-label {
+  margin: 0 !important;
+  font-family: inherit !important;
+  font-size: .88rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  color: #e8f6ff !important;
+  text-align: center !important;
+}
+@media (max-width: 720px) {
+  .media-partner-panel {
+    width: calc(100% - 28px) !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+  .media-partner-item {
+    flex: 0 1 calc((100% - 14px) / 2);
+    min-width: 0;
+  }
+  .media-partner-item .media-partner-logo-card {
+    width: 100% !important;
+    max-width: 174px;
   }
 }

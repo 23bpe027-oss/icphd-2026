@@ -371,12 +371,17 @@ export default function Home() {
 
       <section className="dark-strip reveal reveal-delay-1">
         <div className="media-partner-panel">
-          <p className="mini-label">MEDIA PARTNERS</p>
-          <div className="media-partner-logo-card">
-            <img src="/assets/dew-journal-media-partner.png" alt="DEW Journal — The Complete Energy Journal" />
+          <div className="media-partner-item">
+            <p className="media-partner-item-label">MEDIA PARTNER</p>
+            <div className="media-partner-logo-card">
+              <img src="/assets/dew-journal-media-partner.png" alt="DEW Journal — The Complete Energy Journal" />
+            </div>
           </div>
-          <div className="media-partner-logo-card acs-media-partner-logo-card">
-            <img src="/assets/acs-publications-media-partner.png" alt="ACS Publications — Most Trusted. Most Cited. Most Read." />
+          <div className="media-partner-item">
+            <p className="media-partner-item-label">PRIZE SPONSOR</p>
+            <div className="media-partner-logo-card acs-media-partner-logo-card">
+              <img src="/assets/acs-publications-media-partner.png" alt="ACS Publications — Most Trusted. Most Cited. Most Read." />
+            </div>
           </div>
         </div>
         <div className="announcement"><b>Abstract Submission Extended to 20th November</b><b>Sponsorship &amp; Exhibition Opportunities Open</b></div>
