@@ -6932,3 +6932,66 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     column-gap: 20px !important;
   }
 }
+
+
+/* MOBILE FIX: separate the award-description card from the DEW and ACS logo row.
+   Applies only to regular mobile; desktop and desktop-site-on-mobile stay unchanged. */
+@media (max-width: 720px) {
+  .media-partner-panel .prize-description-card {
+    margin-top: 14px !important;
+  }
+}
+
+
+/* DESKTOP + DESKTOP-MOBILE VIEW ONLY:
+   match sponsor cards to the student-chapter card dimensions and make
+   the award copy readable. Regular mobile (<=720px) is unchanged. */
+@media (min-width: 721px) {
+  .media-partner-panel {
+    width: min(881px, calc(100% - 32px)) !important;
+    max-width: 881px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    column-gap: 20px !important;
+    align-items: stretch !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    height: 116px !important;
+    min-height: 116px !important;
+    max-height: 116px !important;
+    box-sizing: border-box !important;
+  }
+  .media-partner-panel .prize-description-card {
+    height: 116px !important;
+    min-height: 116px !important;
+    max-height: 116px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 8px 10px !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+
+/* EQUAL HEADING-TO-CARD SPACING FOR BOTH SPONSOR GROUPS
+   Desktop and desktop-site-on-mobile only; normal mobile is unchanged. */
+@media (min-width: 721px) {
+  .media-partner-panel > .media-partner-item:first-child,
+  .media-partner-panel .prize-sponsor-group {
+    row-gap: 8px !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child .media-partner-item-label,
+  .media-partner-panel .prize-sponsor-group > .prize-group-label {
+    margin-bottom: 0 !important;
+  }
+}
