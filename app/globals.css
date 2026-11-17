@@ -6849,3 +6849,86 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     overflow-wrap: anywhere !important;
   }
 }
+
+
+/* MATCH SPONSOR HEADINGS TO ORGANISER / ASSOCIATION LABELS
+   Keep the existing desktop one-row and mobile two-row card arrangements. */
+.media-partner-panel .media-partner-item-label,
+.media-partner-panel .prize-group-label {
+  font-family: inherit !important;
+  font-size: .88rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  color: #e8f6ff !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+/* The heading-to-card distance matches the 8px .mini-label spacing. */
+@media (min-width: 721px) {
+  .media-partner-panel {
+    row-gap: 0 !important;
+    column-gap: 10px !important;
+  }
+  .media-partner-panel .media-partner-item-label,
+  .media-partner-panel .prize-group-label {
+    height: auto !important;
+    min-height: 0 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 8px !important;
+    align-self: end !important;
+  }
+}
+@media (max-width: 720px) {
+  .media-partner-panel {
+    row-gap: 0 !important;
+    column-gap: 10px !important;
+  }
+  .media-partner-panel .media-partner-item-label,
+  .media-partner-panel .prize-group-label {
+    height: auto !important;
+    min-height: 0 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 8px !important;
+    font-size: .88rem !important;
+  }
+}
+
+
+/* DESKTOP + DESKTOP-SITE-ON-MOBILE ONLY:
+   make the award copy more readable and use the card height efficiently.
+   Normal mobile (<=720px) remains exactly as it was. */
+@media (min-width: 721px) {
+  .media-partner-panel .prize-description-card {
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    overflow: hidden !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(12px, 1.15vw, 15px) !important;
+    line-height: 1.28 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+
+/* DESKTOP GROUPING: create a clearer visual separation between the
+   left-side MEDIA PARTNER/DEW card and right-side PRIZE SPONSOR cards.
+   Normal mobile layout is intentionally untouched. */
+@media (min-width: 721px) {
+  .media-partner-panel {
+    column-gap: 20px !important;
+  }
+}
