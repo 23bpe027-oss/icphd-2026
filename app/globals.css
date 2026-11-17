@@ -4693,3 +4693,78 @@ main.page-previous-editions > .previous-editions-section { padding-top: 112px !i
     margin-left: 0 !important;
   }
 }
+
+
+/* MOBILE: keep DEW, ACS and the prize paragraph in one compact horizontal row. */
+@media (max-width: 600px) {
+  .media-partner-panel {
+    width: calc(100% - 16px) !important;
+    max-width: none !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    margin: 0 auto 14px !important;
+  }
+  .media-partner-panel > .media-partner-item:first-child {
+    flex: 0 0 24% !important;
+    width: 24% !important;
+    max-width: 24% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .prize-sponsor-group {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+  }
+  .media-partner-panel .prize-sponsor-item {
+    flex: 0 0 31% !important;
+    width: 31% !important;
+    max-width: 31% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+  .media-partner-panel .media-partner-item-label {
+    font-size: clamp(6px, 1.65vw, 8px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: .08em !important;
+    white-space: nowrap !important;
+    margin: 0 0 5px !important;
+  }
+  .media-partner-panel .media-partner-logo-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 76px !important;
+    flex: 0 0 76px !important;
+    padding: 3px !important;
+    border-radius: 9px !important;
+  }
+  .media-partner-panel .acs-media-partner-logo-card {
+    padding: 3px !important;
+  }
+  .media-partner-panel .prize-description-card {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 76px !important;
+    padding: 7px 8px !important;
+    border-radius: 9px !important;
+    align-items: center !important;
+  }
+  .media-partner-panel .prize-description-card p {
+    font-size: clamp(7px, 1.85vw, 9px) !important;
+    line-height: 1.32 !important;
+    letter-spacing: 0 !important;
+  }
+}
