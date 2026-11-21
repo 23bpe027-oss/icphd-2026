@@ -7498,3 +7498,28 @@ main.page-nearby-stays > footer { display: block !important; }
   .nearby-stay-card { padding: 20px; }
   .nearby-stay-actions a { flex: 1 1 auto; }
 }
+
+
+/* Nearby Stays page spacing and grouped accommodation sections */
+main.page-nearby-stays > .nearby-stays-section {
+  padding-top: 76px !important;
+  scroll-margin-top: 96px;
+}
+main.page-nearby-stays .nearby-stays-section .section-title {
+  margin-top: 8px;
+  margin-bottom: 34px;
+}
+.nearby-stays-group {
+  margin-top: 34px;
+}
+.nearby-stays-group:first-of-type {
+  margin-top: 0;
+}
+.nearby-stays-group-title {
+  margin: 0 0 18px;
+  color: #0b2c52;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 850;
+  letter-spacing: .015em;
+  line-height: 1.25;
+}

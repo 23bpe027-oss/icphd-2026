@@ -34,7 +34,6 @@ const navLinks = [
   ['Home', '/'],
   ['About', '/#about'],
   ['Previous Editions', '/previous-editions'],
-  ['Nearby Stays', '/nearby-stays'],
   ['Schedule', '/#dates'],
   ['Themes', '/themes'],
   ['Registration', '/registration'],
@@ -309,6 +308,7 @@ export default function Home() {
               <a href="/organizing-committee">Organizing Committee</a>
             </div>
           </details>
+          <a href="/nearby-stays">Nearby Stays</a>
           <a href="/#contact">Contact</a>
         </nav>
 
@@ -327,6 +327,7 @@ export default function Home() {
               <a href="/organizing-committee" onClick={closeMenu}>Organizing Committee</a>
             </div>
           </details>
+          <a href="/nearby-stays" onClick={closeMenu}>Nearby Stays</a>
           <a href="/#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </div>
@@ -484,40 +485,61 @@ export default function Home() {
         <section className="soft nearby-stays-section">
           <div className="container">
             <SectionTitle title="Nearby Stays" />
-            <p className="nearby-stays-intro">
-              Accommodation options shared for ICPHD 2026 delegates around the conference venue at PDEU, Gandhinagar.
-              Please contact the property directly to confirm availability, tariffs and facilities.
-            </p>
-            <div className="nearby-stays-grid">
-              {[
-                { category: 'Hostel', name: 'GR Hostel for Boys and Girls', area: 'Near the conference venue', distance: '850 m from venue', phone: '+91-6357903723', map: 'GR Hostel for Boys and Girls, Gandhinagar' },
-                { category: 'PG', name: '2nd Home Luxuries PG for Boys and Girls', area: 'Near the conference venue', distance: '900 m from venue', phone: '+91-9662343427', map: '2nd Home Luxuries PG, Gandhinagar' },
-                { category: 'Hotel', name: 'The Eiffel Hotel', area: 'Gandhinagar', distance: '900 m from venue', phone: '+91-8153811117', map: 'The Eiffel Hotel, Gandhinagar' },
-                { category: 'Hotel', name: 'Hotel The Velvet', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8980012315', map: 'Hotel The Velvet, Gandhinagar' },
-                { category: 'Hotel', name: 'Hotel The Vibes', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8866360460', map: 'Hotel The Vibes, Gandhinagar' },
-                { category: 'Hotel', name: 'Gift City Club, a member of Radisson Individuals', area: 'GIFT City', distance: '4.7 km from venue', phone: '079617 10101', map: 'Gift City Club, a member of Radisson Individuals, GIFT City' },
-                { category: 'Hotel', name: 'Grand Mercure Ahmedabad GIFT City', area: 'GIFT City', distance: '5.9 km from venue', phone: '079618 01300', map: 'Grand Mercure Ahmedabad GIFT City' },
-                { category: 'Hotel', name: 'Hotel Royal Heritage', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9257271170', map: 'Hotel Royal Heritage, Gandhinagar' },
-                { category: 'Hotel', name: 'Hotel Vivan', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9974945884', map: 'Hotel Vivan, Gandhinagar' },
-                { category: 'Hotel', name: 'Hotel Kajri Residency', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '998969900', map: 'Hotel Kajri Residency, Gandhinagar' },
-                { category: 'Hotel', name: 'Hotel Avenue Gold', area: 'Koba, Gandhinagar', distance: 'Approx. 2.3 km from venue', phone: '+91 76002 90701', map: 'Hotel Avenue Gold, Koba, Gandhinagar' },
-                { category: 'Hotel', name: 'Hotel Kingdom', area: 'PDPU Road, Raysan', distance: 'Approx. 2.3 km from venue', phone: '+91 87994 47257', map: 'Hotel Kingdom, Raysan, Gandhinagar' },
-                { category: 'Hotel', name: 'The Lemongrass Hotels', area: 'Bhaijipura, Gandhinagar', distance: 'Approx. 3.5 km from venue', phone: '', map: 'The Lemongrass Hotels, Gandhinagar' },
-              ].map((stay) => (
-                <article className="nearby-stay-card" key={stay.name}>
-                  <div className="nearby-stay-card-top">
-                    <span className="nearby-stay-tag">{stay.category}</span>
-                    <h3>{stay.name}</h3>
-                    <p className="nearby-stay-area">{stay.area}</p>
-                  </div>
-                  <p className="nearby-stay-distance">{stay.distance}</p>
-                  <div className="nearby-stay-actions">
-                    {stay.phone && <a href={`tel:${stay.phone.replace(/\\s/g, '')}`}>Call {stay.phone}</a>}
-                    <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.map)}`} target="_blank" rel="noopener noreferrer">View Location</a>
-                  </div>
-                </article>
-              ))}
-            </div>
+
+            <section className="nearby-stays-group">
+              <h3 className="nearby-stays-group-title">Hostels and PG</h3>
+              <div className="nearby-stays-grid">
+                {[
+                  { category: 'Hostel', name: 'GR Hostel for Boys and Girls', area: 'Near the conference venue', distance: '850 m from venue', phone: '+91-6357903723', map: 'GR Hostel for Boys and Girls, Gandhinagar' },
+                  { category: 'PG', name: '2nd Home Luxuries PG for Boys and Girls', area: 'Near the conference venue', distance: '900 m from venue', phone: '+91-9662343427', map: '2nd Home Luxuries PG, Gandhinagar' },
+                ].map((stay) => (
+                  <article className="nearby-stay-card" key={stay.name}>
+                    <div className="nearby-stay-card-top">
+                      <span className="nearby-stay-tag">{stay.category}</span>
+                      <h3>{stay.name}</h3>
+                      <p className="nearby-stay-area">{stay.area}</p>
+                    </div>
+                    <p className="nearby-stay-distance">{stay.distance}</p>
+                    <div className="nearby-stay-actions">
+                      <a href={`tel:${stay.phone.replace(/\s/g, '')}`}>Call {stay.phone}</a>
+                      <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.map)}`} target="_blank" rel="noopener noreferrer">View Location</a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="nearby-stays-group">
+              <h3 className="nearby-stays-group-title">Hotels</h3>
+              <div className="nearby-stays-grid">
+                {[
+                  { name: 'The Eiffel Hotel', area: 'Gandhinagar', distance: '900 m from venue', phone: '+91-8153811117', map: 'The Eiffel Hotel, Gandhinagar' },
+                  { name: 'Hotel The Velvet', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8980012315', map: 'Hotel The Velvet, Gandhinagar' },
+                  { name: 'Hotel The Vibes', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8866360460', map: 'Hotel The Vibes, Gandhinagar' },
+                  { name: 'Gift City Club, a member of Radisson Individuals', area: 'GIFT City', distance: '4.7 km from venue', phone: '079617 10101', map: 'Gift City Club, a member of Radisson Individuals, GIFT City' },
+                  { name: 'Grand Mercure Ahmedabad GIFT City', area: 'GIFT City', distance: '5.9 km from venue', phone: '079618 01300', map: 'Grand Mercure Ahmedabad GIFT City' },
+                  { name: 'Hotel Royal Heritage', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9257271170', map: 'Hotel Royal Heritage, Gandhinagar' },
+                  { name: 'Hotel Vivan', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9974945884', map: 'Hotel Vivan, Gandhinagar' },
+                  { name: 'Hotel Kajri Residency', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '998969900', map: 'Hotel Kajri Residency, Gandhinagar' },
+                  { name: 'Hotel Avenue Gold', area: 'Koba, Gandhinagar', distance: 'Approx. 2.3 km from venue', phone: '+91 76002 90701', map: 'Hotel Avenue Gold, Koba, Gandhinagar' },
+                  { name: 'Hotel Kingdom', area: 'PDPU Road, Raysan', distance: 'Approx. 2.3 km from venue', phone: '+91 87994 47257', map: 'Hotel Kingdom, Raysan, Gandhinagar' },
+                  { name: 'The Lemongrass Hotels', area: 'Bhaijipura, Gandhinagar', distance: 'Approx. 3.5 km from venue', phone: '', map: 'The Lemongrass Hotels, Gandhinagar' },
+                ].map((stay) => (
+                  <article className="nearby-stay-card" key={stay.name}>
+                    <div className="nearby-stay-card-top">
+                      <span className="nearby-stay-tag">Hotel</span>
+                      <h3>{stay.name}</h3>
+                      <p className="nearby-stay-area">{stay.area}</p>
+                    </div>
+                    <p className="nearby-stay-distance">{stay.distance}</p>
+                    <div className="nearby-stay-actions">
+                      {stay.phone && <a href={`tel:${stay.phone.replace(/\s/g, '')}`}>Call {stay.phone}</a>}
+                      <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.map)}`} target="_blank" rel="noopener noreferrer">View Location</a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
           </div>
         </section>
       )}
