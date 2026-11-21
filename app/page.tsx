@@ -34,7 +34,7 @@ const navLinks = [
   ['Home', '/'],
   ['About', '/#about'],
   ['Previous Editions', '/previous-editions'],
-  ['Highlights', '/#highlights'],
+  ['Nearby Stays', '/nearby-stays'],
   ['Schedule', '/#dates'],
   ['Themes', '/themes'],
   ['Registration', '/registration'],
@@ -232,6 +232,7 @@ export default function Home() {
   const isPreviousEditionsPage = pathname === '/previous-editions';
   const isCommitteePage = pathname === '/organizing-committee';
   const isAdvisoryPage = pathname === '/advisory-committee';
+  const isNearbyStaysPage = pathname === '/nearby-stays';
   const isRegistrationPage = pathname === '/registration';
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -292,7 +293,7 @@ export default function Home() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <main className={isThemesPage ? "page-themes" : isPreviousEditionsPage ? "page-previous-editions" : isCommitteePage ? "page-organizing-committee" : isRegistrationPage ? "page-registration" : isAdvisoryPage ? "page-advisory-committee" : "page-home"}>
+    <main className={isThemesPage ? "page-themes" : isPreviousEditionsPage ? "page-previous-editions" : isCommitteePage ? "page-organizing-committee" : isRegistrationPage ? "page-registration" : isAdvisoryPage ? "page-advisory-committee" : isNearbyStaysPage ? "page-nearby-stays" : "page-home"}>
       <header className={`nav${menuOpen ? ' menu-open' : ''}`}>
         <a className="brand" href="/" onClick={closeMenu}>
           <img src="/assets/icphd-circle-clean-final.png" alt="ICPHD 2026 logo" />
@@ -425,7 +426,7 @@ export default function Home() {
         <SectionTitle title="Registration & Abstract Submission" />
         <div className="registration-grid">
           <article><h3>Registration</h3><ul><li>Delegates are advised to pay first and then complete the registration process.</li><li>Payment via NEFT/SWIFT/Wire Transfer or UPI (Indian participants only).</li><li>Registration form must be completed after payment for confirmation.</li><li>Certificates issued only to registered participants.</li></ul><a className="primary-btn" href="https://forms.gle/pWQjc1RdnkQr9Sqs7" target="_blank" rel="noopener noreferrer">Register Here</a><div className="fee-table flyer-fee-table"><div className="fee-head"><b>Delegate Type</b><b>Before<br />25th November 2026</b><b>After<br />25th November 2026</b><b>International<br />delegate</b></div>{fees.map(([category, before, after, international]) => <div className="fee-row" key={category}><span>{category}</span><b>{before}</b><b>{after}</b><b>{international}</b></div>)}</div></article>
-          <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, 300–400 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Payment Link</b><a href="https://onlinepayment.pdpu.ac.in/conferences/?event=414" target="_blank" rel="noopener noreferrer">https://onlinepayment.pdpu.ac.in/conferences/?event=414</a></div></article>
+          <article id="abstract"><h3>Abstract Submission</h3><ul><li><b>Title:</b> Times New Roman, 14pt, Bold</li><li><b>Author:</b> Times New Roman, 12pt, Bold</li><li><b>Affiliations:</b> Times New Roman, 11pt, Bold Italic</li><li><b>Abstract:</b> Times New Roman, 12pt, up to 300 words</li><li><b>Keywords:</b> Times New Roman, 11pt, Italic, 3–5 keywords</li><li><b>Format:</b> MS Word-compatible file, A4 Portrait, 1.5 spacing</li><li>Selected abstracts may be offered publication in a reputed journal/proceedings.</li></ul><a className="primary-btn" href={abstractUrl} target="_blank" rel="noopener noreferrer">Abstract Submission Link</a><a className="abstract-template-btn" href="/ICPHD-2026-Abstract-Template.docx" onClick={(event) => { event.preventDefault(); openPreviewAndDownload("/ICPHD-2026-Abstract-Template.pdf", "/ICPHD-2026-Abstract-Template.docx", "ICPHD-2026-Abstract-Template.docx"); }}>Download Abstract Template</a><div className="bank-placeholder"><b>Payment Link</b><a href="https://onlinepayment.pdpu.ac.in/conferences/?event=414" target="_blank" rel="noopener noreferrer">https://onlinepayment.pdpu.ac.in/conferences/?event=414</a></div></article>
         </div>
       </section>
 
@@ -478,6 +479,48 @@ export default function Home() {
       </section>
       )}
 
+
+      {isNearbyStaysPage && (
+        <section className="soft nearby-stays-section">
+          <div className="container">
+            <SectionTitle title="Nearby Stays" />
+            <p className="nearby-stays-intro">
+              Accommodation options shared for ICPHD 2026 delegates around the conference venue at PDEU, Gandhinagar.
+              Please contact the property directly to confirm availability, tariffs and facilities.
+            </p>
+            <div className="nearby-stays-grid">
+              {[
+                { category: 'Hostel', name: 'GR Hostel for Boys and Girls', area: 'Near the conference venue', distance: '850 m from venue', phone: '+91-6357903723', map: 'GR Hostel for Boys and Girls, Gandhinagar' },
+                { category: 'PG', name: '2nd Home Luxuries PG for Boys and Girls', area: 'Near the conference venue', distance: '900 m from venue', phone: '+91-9662343427', map: '2nd Home Luxuries PG, Gandhinagar' },
+                { category: 'Hotel', name: 'The Eiffel Hotel', area: 'Gandhinagar', distance: '900 m from venue', phone: '+91-8153811117', map: 'The Eiffel Hotel, Gandhinagar' },
+                { category: 'Hotel', name: 'Hotel The Velvet', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8980012315', map: 'Hotel The Velvet, Gandhinagar' },
+                { category: 'Hotel', name: 'Hotel The Vibes', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8866360460', map: 'Hotel The Vibes, Gandhinagar' },
+                { category: 'Hotel', name: 'Gift City Club, a member of Radisson Individuals', area: 'GIFT City', distance: '4.7 km from venue', phone: '079617 10101', map: 'Gift City Club, a member of Radisson Individuals, GIFT City' },
+                { category: 'Hotel', name: 'Grand Mercure Ahmedabad GIFT City', area: 'GIFT City', distance: '5.9 km from venue', phone: '079618 01300', map: 'Grand Mercure Ahmedabad GIFT City' },
+                { category: 'Hotel', name: 'Hotel Royal Heritage', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9257271170', map: 'Hotel Royal Heritage, Gandhinagar' },
+                { category: 'Hotel', name: 'Hotel Vivan', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9974945884', map: 'Hotel Vivan, Gandhinagar' },
+                { category: 'Hotel', name: 'Hotel Kajri Residency', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '998969900', map: 'Hotel Kajri Residency, Gandhinagar' },
+                { category: 'Hotel', name: 'Hotel Avenue Gold', area: 'Koba, Gandhinagar', distance: 'Approx. 2.3 km from venue', phone: '+91 76002 90701', map: 'Hotel Avenue Gold, Koba, Gandhinagar' },
+                { category: 'Hotel', name: 'Hotel Kingdom', area: 'PDPU Road, Raysan', distance: 'Approx. 2.3 km from venue', phone: '+91 87994 47257', map: 'Hotel Kingdom, Raysan, Gandhinagar' },
+                { category: 'Hotel', name: 'The Lemongrass Hotels', area: 'Bhaijipura, Gandhinagar', distance: 'Approx. 3.5 km from venue', phone: '', map: 'The Lemongrass Hotels, Gandhinagar' },
+              ].map((stay) => (
+                <article className="nearby-stay-card" key={stay.name}>
+                  <div className="nearby-stay-card-top">
+                    <span className="nearby-stay-tag">{stay.category}</span>
+                    <h3>{stay.name}</h3>
+                    <p className="nearby-stay-area">{stay.area}</p>
+                  </div>
+                  <p className="nearby-stay-distance">{stay.distance}</p>
+                  <div className="nearby-stay-actions">
+                    {stay.phone && <a href={`tel:${stay.phone.replace(/\\s/g, '')}`}>Call {stay.phone}</a>}
+                    <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.map)}`} target="_blank" rel="noopener noreferrer">View Location</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {isPreviousEditionsPage && (
         <section className="soft previous-editions-section">
