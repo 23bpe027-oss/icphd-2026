@@ -551,13 +551,8 @@ export default function Home() {
         <section className="soft nearby-attractions-section">
           <div className="container">
             <SectionTitle title="Nearby Attractions" />
-            <p className="nearby-attractions-intro">
-              Explore heritage, green spaces, shopping and entertainment around Gandhinagar during your visit to ICPHD 2026.
-            </p>
-
             <section className="nearby-attraction-category">
               <h3 className="nearby-attraction-category-title">Places to Visit</h3>
-              <div className="nearby-attraction-feature-text"><h4>Heritage and Culture</h4><p>Discover Gandhinagar’s celebrated temples, historic architecture and museums.</p></div>
               <div className="nearby-attractions-grid">
                 {[
                   { name: 'Swaminarayan Akshardham Temple', distance: 'Approx. 10 km from PDEU', description: 'A major cultural and spiritual complex known for its intricately carved pink sandstone temple, exhibitions and gardens.', map: 'Swaminarayan Akshardham Temple, Gandhinagar', image: 'https://imagesvs.oneindia.com/hi/img/2017/11/02-1509617085-temple-601.jpg' },
@@ -580,15 +575,14 @@ export default function Home() {
 
             <section className="nearby-attraction-category">
               <h3 className="nearby-attraction-category-title">Parks &amp; Nature</h3>
-              <div className="nearby-attraction-feature-text"><h4>Nature and Outdoor Escapes</h4><p>Enjoy gardens, riverside green spaces, wildlife and outdoor walks around Gandhinagar.</p></div>
               <div className="nearby-attractions-grid">
                 {[
-                  { name: 'Indroda Nature Park', distance: 'Approx. 10 km from PDEU', description: 'A large nature park with dinosaur and fossil exhibits, wildlife sections and botanical gardens.', map: 'Indroda Nature Park, Gandhinagar', image: 'https://mindtrip.ai/attractions/d3d7/88f8/67f8/05bb/3038/439c/ec91/cf3a' },
-                  { name: 'Sarita Udyan', distance: 'Approx. 8 km from PDEU', description: 'A riverside garden and popular picnic spot along the Sabarmati.', map: 'Sarita Udyan, Gandhinagar', image: 'https://images.beyondyatra.com/dest/gandhinagar/places/sarita-udyan-gujarat-india_img_1.jpg' },
-                  { name: 'Punit Van', distance: 'Gandhinagar', description: 'A themed botanical garden with landscaped green spaces and tree collections.', map: 'Punit Van, Gandhinagar', image: 'https://mindtrip.ai/attractions/6537/d687/eb52/6d14/0054/568b/8050/9d07' },
+                  { name: 'Indroda Nature Park', distance: 'Approx. 10 km from PDEU', description: 'A large nature park with dinosaur and fossil exhibits, wildlife sections and botanical gardens.', map: 'Indroda Nature Park, Gandhinagar', image: 'https://img-cdn.publive.online/fit-in/1200x675/english-betterindia/media/media_files/uploads/2014/06/indroda_nature_park_gandhinagar.jpeg' },
+                  { name: 'Sarita Udyan', distance: 'Approx. 8 km from PDEU', description: 'A riverside garden and popular picnic spot along the Sabarmati.', map: 'Sarita Udyan, Gandhinagar', image: 'https://media1.thrillophilia.com/filestore/awn8rn34bo4wzqalnvhbzs9y06k6_1581164255_sarita2.jpg?dpr=2&w=1440' },
+                  { name: 'Punit Van', distance: 'Gandhinagar', description: 'A themed botanical garden with landscaped green spaces and tree collections.', map: 'Punit Van, Gandhinagar', image: 'https://wanderon-images.gumlet.io/blogs/new/2024/02/489ef017-dae3-408a-9090-07eaf72e271f.jpg' },
                   { name: 'Thol Bird Sanctuary', distance: 'Approx. 40 km from PDEU', description: 'A wetland destination known for birdwatching and seasonal migratory birds.', map: 'Thol Bird Sanctuary, Gujarat', image: 'https://media.assettype.com/outlooktraveller%2F2025-06-27%2F4iajxsq7%2FGreater-Flamingoat-Thol-Bird-Sanctury-KRG03581.jpg' },
                   { name: 'Nalsarovar Bird Sanctuary', distance: 'Approx. 85–100 km from PDEU · Day trip', description: 'A major wetland and bird sanctuary known for migratory birds and seasonal boat rides.', map: 'Nalsarovar Bird Sanctuary, Gujarat', image: 'https://www.clubmahindra.com/blog/images/Nalsarovar-resized.jpg' },
-                  { name: 'Polo Forest', distance: 'Approx. 130–150 km from PDEU · Long day trip', description: 'A scenic forest region with historic temple ruins, trails and seasonal streams, especially popular during the monsoon and winter.', map: 'Polo Forest, Gujarat', image: 'https://images.mindtrip.ai/attractions/2c53/e217/4b55/2989/8b40/1d5f/7a8b/b2e5' },
+                  { name: 'Polo Forest', distance: 'Approx. 130–150 km from PDEU · Long day trip', description: 'A scenic forest region with historic temple ruins, trails and seasonal streams, especially popular during the monsoon and winter.', map: 'Polo Forest, Gujarat', image: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/0081423_Surya_Temple_Ruins%2C_Shiva_Shakti_Temple%2C_Abhapur_Gujarat_010.jpg' },
                   { name: 'Zanzari Waterfall', distance: 'Approx. 60–70 km from PDEU', description: 'A rocky riverside waterfall and natural outing near the Vatrak River; conditions vary by season and monsoon flow.', map: 'Zanzari Waterfall, Gujarat', image: 'https://wanderon-images.gumlet.io/gallery/new/2025/09/03/1756902202697-zanzari-waterfall-gujarat.jpg' },
                 ].map(place => <article className="nearby-attraction-card" key={place.name}>
                   <img className="nearby-attraction-card-image" src={place.image} alt={place.name} loading="lazy" />
@@ -599,14 +593,13 @@ export default function Home() {
 
             <section className="nearby-attraction-category">
               <h3 className="nearby-attraction-category-title">Shopping &amp; Entertainment</h3>
-              <div className="nearby-attraction-feature-text"><h4>Shopping, Dining and Leisure</h4><p>Find shopping destinations, dining options and entertainment hubs for your free time.</p></div>
               <div className="nearby-attractions-grid">
                 {[
                   { name: 'Swagat Holiday Mall', distance: 'Gandhinagar', description: 'A shopping and leisure destination with retail stores, food options and entertainment.', map: 'Swagat Holiday Mall, Gandhinagar', image: 'https://www.swagatgroup.in/swagat-holiday-mall/gallery/swagat-holiday-mall-8.jpg' },
                   { name: 'The Landmark', distance: 'Kudasan, Gandhinagar', description: 'A local shopping and lifestyle complex with retail outlets and everyday services.', map: 'The Landmark, Kudasan, Gandhinagar', image: 'https://imgcdn.houssed.com/assets/Files/Projects/151179/Project%20Image/hou-1764241032.webp' },
                   { name: 'Pramukh Anand Mall', distance: 'Kudasan, Gandhinagar', description: 'A commercial and lifestyle destination with shopping, food and entertainment options.', map: 'Pramukh Anand Mall, Kudasan, Gandhinagar', image: 'https://imgcdn.houssed.com/assets/Files/Projects/150407/Project%20Image/p3-1761718547.webp' },
                   { name: 'GIFT City', distance: 'Approx. 5–6 km from PDEU', description: 'A modern financial and business district known for its skyline, public spaces, dining and urban architecture.', map: 'GIFT City, Gandhinagar', image: 'https://im.rediff.com/money/2020/aug/04gift-city.jpg' },
-                  { name: 'Infocity & Super Mall 1', distance: 'Gandhinagar', description: 'A convenient area for cafés, restaurants, shopping and casual outings.', map: 'Super Mall 1, Infocity, Gandhinagar', image: 'https://www.mappls.com/place/3ORZFF_1733709702055_0.jpeg' },
+                  { name: 'Infocity & Super Mall 1', distance: 'Gandhinagar', description: 'A convenient area for cafés, restaurants, shopping and casual outings.', map: 'Super Mall 1, Infocity, Gandhinagar', image: 'https://img.magicpin.com/lh3/xs-IwyWgARPu8OAZqlM74C1oorJ0tqV4SAi8Ftmik7m_SNDUU05un9C3HcJ_s1FKVmAmxocZZSd7RBw7eC1nWHUyO_nSZBARnSlFu_w' },
                   { name: 'City Pulse', distance: 'Gandhinagar', description: 'A cinema and entertainment option for a relaxed outing.', map: 'City Pulse, Gandhinagar', image: 'https://files.yappe.in/place/full/city-pulse-cinema-gandhinagar-9405524.webp' },
                 ].map(place => <article className="nearby-attraction-card" key={place.name}>
                   <img className="nearby-attraction-card-image" src={place.image} alt={place.name} loading="lazy" />
