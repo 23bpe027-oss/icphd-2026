@@ -308,7 +308,7 @@ export default function Home() {
               <a href="/organizing-committee">Organizing Committee</a>
             </div>
           </details>
-          <a href="/nearby-stays">Nearby Stays</a>
+          <a href="/nearby-stays">Accommodation</a>
           <a href="/#contact">Contact</a>
         </nav>
 
@@ -327,7 +327,7 @@ export default function Home() {
               <a href="/organizing-committee" onClick={closeMenu}>Organizing Committee</a>
             </div>
           </details>
-          <a href="/nearby-stays" onClick={closeMenu}>Nearby Stays</a>
+          <a href="/nearby-stays" onClick={closeMenu}>Accommodation</a>
           <a href="/#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </div>
@@ -495,9 +495,11 @@ export default function Home() {
                 ].map((stay) => (
                   <article className="nearby-stay-card" key={stay.name}>
                     <div className="nearby-stay-card-top">
-                      <span className="nearby-stay-tag">{stay.category}</span>
+                      
                       <h3>{stay.name}</h3>
                       <p className="nearby-stay-area">{stay.area}</p>
+                      {stay.rating && <p className="nearby-stay-rating">Guest rating: {stay.rating}</p>}
+                      {stay.rating && <p className="nearby-stay-rating">Guest rating: {stay.rating}</p>}
                     </div>
                     <p className="nearby-stay-distance">{stay.distance}</p>
                     <div className="nearby-stay-actions">
@@ -513,21 +515,21 @@ export default function Home() {
               <h3 className="nearby-stays-group-title">Hotels</h3>
               <div className="nearby-stays-grid">
                 {[
-                  { name: 'The Eiffel Hotel', area: 'Gandhinagar', distance: '900 m from venue', phone: '+91-8153811117', map: 'The Eiffel Hotel, Gandhinagar' },
-                  { name: 'Hotel The Velvet', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8980012315', map: 'Hotel The Velvet, Gandhinagar' },
-                  { name: 'Hotel The Vibes', area: 'Gandhinagar', distance: '1.6 km from venue', phone: '+91-8866360460', map: 'Hotel The Vibes, Gandhinagar' },
+                  { name: 'The Eiffel Hotel & Banquet', area: 'Gandhinagar', distance: 'Approx. 2.1 km from PDEU', rating: '4.0/5 (151 ratings)', phone: '+91-8153811117', map: 'The Eiffel Hotel & Banquet, Gandhinagar' },
+                  { name: 'Hotel The Velvet', area: 'Raysan', distance: '1.8 km from PDEU', rating: '4.0/5 (52 ratings)', phone: '+91-8980012315', map: 'Hotel The Velvet, Raysan, Gandhinagar' },
+                  { name: 'Hotel The Vibes', area: 'Raysan', distance: '1.8 km from PDEU', rating: '3.8/5 (4 ratings)', phone: '+91-8866360460', map: 'Hotel The Vibes, Raysan, Gandhinagar' },
                   { name: 'Gift City Club, a member of Radisson Individuals', area: 'GIFT City', distance: '4.7 km from venue', phone: '079617 10101', map: 'Gift City Club, a member of Radisson Individuals, GIFT City' },
-                  { name: 'Grand Mercure Ahmedabad GIFT City', area: 'GIFT City', distance: '5.9 km from venue', phone: '079618 01300', map: 'Grand Mercure Ahmedabad GIFT City' },
+                  { name: 'Grand Mercure Ahmedabad GIFT City', area: 'GIFT City', distance: 'Approx. 4.8 km from PDEU', rating: '4.2/5 (331 ratings)', phone: '079618 01300', map: 'Grand Mercure Ahmedabad GIFT City' },
                   { name: 'Hotel Royal Heritage', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9257271170', map: 'Hotel Royal Heritage, Gandhinagar' },
+                  { name: 'Hotel Royal Empire', area: 'Koba, Gandhinagar', distance: '3.9 km from PDEU', rating: '4.2/5 (124 ratings)', phone: '+91 99250 43599', map: 'Hotel Royal Empire, Koba, Gandhinagar' },
+                  { name: 'The Zuree Hotel', area: 'Gandhinagar', distance: '3.8 km from PDEU', rating: '4.3/5 (135 ratings)', phone: '', map: 'The Zuree Hotel, Gandhinagar' },
                   { name: 'Hotel Vivan', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '9974945884', map: 'Hotel Vivan, Gandhinagar' },
-                  { name: 'Hotel Kajri Residency', area: 'Gandhinagar', distance: '3.3 km from venue', phone: '998969900', map: 'Hotel Kajri Residency, Gandhinagar' },
-                  { name: 'Hotel Avenue Gold', area: 'Koba, Gandhinagar', distance: 'Approx. 2.3 km from venue', phone: '+91 76002 90701', map: 'Hotel Avenue Gold, Koba, Gandhinagar' },
-                  { name: 'Hotel Kingdom', area: 'PDPU Road, Raysan', distance: 'Approx. 2.3 km from venue', phone: '+91 87994 47257', map: 'Hotel Kingdom, Raysan, Gandhinagar' },
-                  { name: 'The Lemongrass Hotels', area: 'Bhaijipura, Gandhinagar', distance: 'Approx. 3.5 km from venue', phone: '', map: 'The Lemongrass Hotels, Gandhinagar' },
+                  { name: 'Hotel Avenue Gold', area: 'Koba, Gandhinagar', distance: '2.3 km from PDEU', rating: '3.9/5 (125 ratings)', phone: '+91 76002 90701', map: 'Hotel Avenue Gold, Koba, Gandhinagar' },
+                  { name: 'The Lemongrass Hotels', area: 'Bhaijipura, Gandhinagar', distance: '3.5 km from PDEU', rating: '4.1/5 (270 ratings)', phone: '+91 90237 63664', map: 'The Lemongrass Hotels, Gandhinagar' },
                 ].map((stay) => (
                   <article className="nearby-stay-card" key={stay.name}>
                     <div className="nearby-stay-card-top">
-                      <span className="nearby-stay-tag">Hotel</span>
+                      
                       <h3>{stay.name}</h3>
                       <p className="nearby-stay-area">{stay.area}</p>
                     </div>

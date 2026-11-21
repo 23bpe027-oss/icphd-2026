@@ -7523,3 +7523,19 @@ main.page-nearby-stays .nearby-stays-section .section-title {
   letter-spacing: .015em;
   line-height: 1.25;
 }
+
+
+/* Extra clearance below the sticky navigation on the Accommodation page */
+main.page-nearby-stays > .nearby-stays-section {
+  padding-top: 112px !important;
+}
+main.page-nearby-stays .nearby-stays-section .section-title {
+  margin-top: 12px !important;
+}
+
+.nearby-stay-rating {
+  margin: 7px 0 0;
+  color: #1b6b42;
+  font-size: .88rem;
+  font-weight: 750;
+}
