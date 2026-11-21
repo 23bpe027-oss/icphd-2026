@@ -501,8 +501,6 @@ export default function Home() {
                       
                       <h3>{stay.name}</h3>
                       <p className="nearby-stay-area">{stay.area}</p>
-                      {stay.rating && <p className="nearby-stay-rating">Guest rating: {stay.rating}</p>}
-                      {stay.rating && <p className="nearby-stay-rating">Guest rating: {stay.rating}</p>}
                     </div>
                     <p className="nearby-stay-distance">{stay.distance}</p>
                     <div className="nearby-stay-actions">
