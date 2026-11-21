@@ -487,7 +487,7 @@ export default function Home() {
       {isNearbyStaysPage && (
         <section className="soft nearby-stays-section">
           <div className="container">
-            <SectionTitle title="Nearby Stays" />
+            <SectionTitle title="Accommodation" />
 
             <section className="nearby-stays-group">
               <h3 className="nearby-stays-group-title">Hostels and PG</h3>
@@ -563,18 +563,19 @@ export default function Home() {
               </div>
               <div className="nearby-attractions-grid">
                 {[
-                  { name: 'Swaminarayan Akshardham Temple', distance: 'Approx. 10 km from PDEU', description: 'A major cultural and spiritual complex known for its intricately carved pink sandstone temple, exhibitions and gardens.', map: 'Swaminarayan Akshardham Temple, Gandhinagar' },
-                  { name: 'Adalaj Stepwell', distance: 'Approx. 18 km from PDEU', description: 'A five-storey, 15th-century stepwell celebrated for its detailed stone carvings and Indo-Islamic architecture.', map: 'Adalaj Stepwell, Adalaj, Gujarat' },
-                  { name: 'Dandi Kutir Museum', distance: 'Approx. 12 km from PDEU', description: 'An interactive museum presenting the life and teachings of Mahatma Gandhi and the history of the Dandi March.', map: 'Dandi Kutir Museum, Gandhinagar' },
-                  { name: 'Sabarmati Ashram', distance: 'Approx. 12 km from PDEU', description: 'A historic ashram and museum on the Sabarmati River associated with Mahatma Gandhi.', map: 'Sabarmati Ashram, Ahmedabad' },
-                  { name: 'Trimandir, Adalaj', distance: 'Approx. 17 km from PDEU', description: 'A distinctive non-sectarian temple complex near Adalaj.', map: 'Trimandir Adalaj, Gujarat' },
-                  { name: 'Statue of Unity', distance: 'Approx. 200–220 km from PDEU · Full-day trip', description: 'The 182-metre statue of Sardar Vallabhbhai Patel at Ekta Nagar, with the viewing gallery, Valley of Flowers and other attractions in the surrounding destination.', map: 'Statue of Unity, Ekta Nagar, Gujarat' },
-                  { name: 'Kankaria Lake', distance: 'Approx. 25–30 km from PDEU', description: 'A historic lakefront in Ahmedabad with a promenade, gardens, boating and family entertainment attractions.', map: 'Kankaria Lake, Ahmedabad, Gujarat' },
-                  { name: 'Rani ki Vav', distance: 'Approx. 115–130 km from PDEU · Day trip', description: 'A UNESCO World Heritage stepwell in Patan, renowned for its elaborate multi-level sculptural architecture.', map: 'Rani ki Vav, Patan, Gujarat' },
-                  { name: 'Modhera Sun Temple', distance: 'Approx. 85–90 km from PDEU · Day trip', description: 'An 11th-century Sun Temple celebrated for its stone carvings and the stepped Surya Kund.', map: 'Modhera Sun Temple, Gujarat' },
-                  { name: 'Champaner–Pavagadh Archaeological Park', distance: 'Approx. 160–175 km from PDEU · Day trip', description: 'A UNESCO World Heritage landscape of forts, mosques, temples and historic remains around Pavagadh Hill.', map: 'Champaner Pavagadh Archaeological Park, Gujarat' },
-                  { name: 'Lothal Archaeological Site', distance: 'Approx. 100–110 km from PDEU · Day trip', description: 'An important archaeological site of the ancient Indus Valley Civilisation, known for its planned settlement and dockyard remains.', map: 'Lothal Archaeological Site, Gujarat' },
+                  { name: 'Swaminarayan Akshardham Temple', distance: 'Approx. 10 km from PDEU', description: 'A major cultural and spiritual complex known for its intricately carved pink sandstone temple, exhibitions and gardens.', map: 'Swaminarayan Akshardham Temple, Gandhinagar', image: 'https://imagesvs.oneindia.com/hi/img/2017/11/02-1509617085-temple-601.jpg' },
+                  { name: 'Adalaj Stepwell', distance: 'Approx. 18 km from PDEU', description: 'A five-storey, 15th-century stepwell celebrated for its detailed stone carvings and Indo-Islamic architecture.', map: 'Adalaj Stepwell, Adalaj, Gujarat', image: 'https://upload.wikimedia.org/wikipedia/commons/e/e8/Adalaj_ki_Vav_Gujarat_240A1370_72.jpg' },
+                  { name: 'Dandi Kutir Museum', distance: 'Approx. 12 km from PDEU', description: 'An interactive museum presenting the life and teachings of Mahatma Gandhi and the history of the Dandi March.', map: 'Dandi Kutir Museum, Gandhinagar', image: 'https://www.gujarattourism.com/content/dam/gujrattourism/images/gandhi-circuit/dandi-kutir-museum/gallery/Dandi%20Kutir%20Museum7.jpg' },
+                  { name: 'Sabarmati Ashram', distance: 'Approx. 12 km from PDEU', description: 'A historic ashram and museum on the Sabarmati River associated with Mahatma Gandhi.', map: 'Sabarmati Ashram, Ahmedabad', image: 'https://images.hindustantimes.com/img/2021/07/31/960x540/_7bb567d6-4f3b-11eb-983b-26bf3b8bba69_1627697096179.png' },
+                  { name: 'Trimandir, Adalaj', distance: 'Approx. 17 km from PDEU', description: 'A distinctive non-sectarian temple complex near Adalaj.', map: 'Trimandir Adalaj, Gujarat', image: 'https://images.bhaskarassets.com/thumb/1200x900/web2images/960/2024/06/17/7-adalaj-trimandirr_1718633317.jpg' },
+                  { name: 'Statue of Unity', distance: 'Approx. 200–220 km from PDEU · Full-day trip', description: 'The 182-metre statue of Sardar Vallabhbhai Patel at Ekta Nagar, with the viewing gallery, Valley of Flowers and other attractions in the surrounding destination.', map: 'Statue of Unity, Ekta Nagar, Gujarat', image: 'https://static.abplive.com/wp-content/uploads/sites/2/2019/02/18080711/statue-of-unity-720.jpg' },
+                  { name: 'Kankaria Lake', distance: 'Approx. 25–30 km from PDEU', description: 'A historic lakefront in Ahmedabad with a promenade, gardens, boating and family entertainment attractions.', map: 'Kankaria Lake, Ahmedabad, Gujarat', image: 'https://miro.medium.com/1%2A295IIw82SKQ9Kj4NT7iTAw.jpeg' },
+                  { name: 'Rani ki Vav', distance: 'Approx. 115–130 km from PDEU · Day trip', description: 'A UNESCO World Heritage stepwell in Patan, renowned for its elaborate multi-level sculptural architecture.', map: 'Rani ki Vav, Patan, Gujarat', image: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Rani_ki_vav-Patan-Ahmedabad-Gujarat-O0A0110A.jpg' },
+                  { name: 'Modhera Sun Temple', distance: 'Approx. 85–90 km from PDEU · Day trip', description: 'An 11th-century Sun Temple celebrated for its stone carvings and the stepped Surya Kund.', map: 'Modhera Sun Temple, Gujarat', image: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Sun_Temple%2C_Modhera_-_the_Sabha_Mandapa_01.jpg' },
+                  { name: 'Champaner–Pavagadh Archaeological Park', distance: 'Approx. 160–175 km from PDEU · Day trip', description: 'A UNESCO World Heritage landscape of forts, mosques, temples and historic remains around Pavagadh Hill.', map: 'Champaner Pavagadh Archaeological Park, Gujarat', image: 'https://www.gujarattourguide.in/images/place-champaner-archaeological-park.jpg' },
+                  { name: 'Lothal Archaeological Site', distance: 'Approx. 100–110 km from PDEU · Day trip', description: 'An important archaeological site of the ancient Indus Valley Civilisation, known for its planned settlement and dockyard remains.', map: 'Lothal Archaeological Site, Gujarat', image: 'https://2.bp.blogspot.com/-DqTq34Ll_vo/XlUAjuHsZpI/AAAAAAAAk74/uFpnPa2Wg04A-iQaMhOXVur7wx8N6VEmQCLcBGAsYHQ/s1600/lothal-india-6.jpg' },
                 ].map(place => <article className="nearby-attraction-card" key={place.name}>
+                  <img className="nearby-attraction-card-image" src={place.image} alt={place.name} loading="lazy" />
                   <div className="nearby-attraction-card-body"><h4>{place.name}</h4><p className="nearby-attraction-distance">{place.distance}</p><p>{place.description}</p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.map)}`} target="_blank" rel="noopener noreferrer">View Location</a></div>
                 </article>)}
               </div>
@@ -588,14 +589,15 @@ export default function Home() {
               </div>
               <div className="nearby-attractions-grid">
                 {[
-                  { name: 'Indroda Nature Park', distance: 'Approx. 10 km from PDEU', description: 'A large nature park with dinosaur and fossil exhibits, wildlife sections and botanical gardens.', map: 'Indroda Nature Park, Gandhinagar' },
-                  { name: 'Sarita Udyan', distance: 'Approx. 8 km from PDEU', description: 'A riverside garden and popular picnic spot along the Sabarmati.', map: 'Sarita Udyan, Gandhinagar' },
-                  { name: 'Punit Van', distance: 'Gandhinagar', description: 'A themed botanical garden with landscaped green spaces and tree collections.', map: 'Punit Van, Gandhinagar' },
-                  { name: 'Thol Bird Sanctuary', distance: 'Approx. 40 km from PDEU', description: 'A wetland destination known for birdwatching and seasonal migratory birds.', map: 'Thol Bird Sanctuary, Gujarat' },
-                  { name: 'Nalsarovar Bird Sanctuary', distance: 'Approx. 85–100 km from PDEU · Day trip', description: 'A major wetland and bird sanctuary known for migratory birds and seasonal boat rides.', map: 'Nalsarovar Bird Sanctuary, Gujarat' },
-                  { name: 'Polo Forest', distance: 'Approx. 130–150 km from PDEU · Long day trip', description: 'A scenic forest region with historic temple ruins, trails and seasonal streams, especially popular during the monsoon and winter.', map: 'Polo Forest, Gujarat' },
-                  { name: 'Zanzari Waterfall', distance: 'Approx. 60–70 km from PDEU', description: 'A rocky riverside waterfall and natural outing near the Vatrak River; conditions vary by season and monsoon flow.', map: 'Zanzari Waterfall, Gujarat' },
+                  { name: 'Indroda Nature Park', distance: 'Approx. 10 km from PDEU', description: 'A large nature park with dinosaur and fossil exhibits, wildlife sections and botanical gardens.', map: 'Indroda Nature Park, Gandhinagar', image: 'https://mindtrip.ai/attractions/d3d7/88f8/67f8/05bb/3038/439c/ec91/cf3a' },
+                  { name: 'Sarita Udyan', distance: 'Approx. 8 km from PDEU', description: 'A riverside garden and popular picnic spot along the Sabarmati.', map: 'Sarita Udyan, Gandhinagar', image: 'https://images.beyondyatra.com/dest/gandhinagar/places/sarita-udyan-gujarat-india_img_1.jpg' },
+                  { name: 'Punit Van', distance: 'Gandhinagar', description: 'A themed botanical garden with landscaped green spaces and tree collections.', map: 'Punit Van, Gandhinagar', image: 'https://mindtrip.ai/attractions/6537/d687/eb52/6d14/0054/568b/8050/9d07' },
+                  { name: 'Thol Bird Sanctuary', distance: 'Approx. 40 km from PDEU', description: 'A wetland destination known for birdwatching and seasonal migratory birds.', map: 'Thol Bird Sanctuary, Gujarat', image: 'https://media.assettype.com/outlooktraveller%2F2025-06-27%2F4iajxsq7%2FGreater-Flamingoat-Thol-Bird-Sanctury-KRG03581.jpg' },
+                  { name: 'Nalsarovar Bird Sanctuary', distance: 'Approx. 85–100 km from PDEU · Day trip', description: 'A major wetland and bird sanctuary known for migratory birds and seasonal boat rides.', map: 'Nalsarovar Bird Sanctuary, Gujarat', image: 'https://www.clubmahindra.com/blog/images/Nalsarovar-resized.jpg' },
+                  { name: 'Polo Forest', distance: 'Approx. 130–150 km from PDEU · Long day trip', description: 'A scenic forest region with historic temple ruins, trails and seasonal streams, especially popular during the monsoon and winter.', map: 'Polo Forest, Gujarat', image: 'https://images.mindtrip.ai/attractions/2c53/e217/4b55/2989/8b40/1d5f/7a8b/b2e5' },
+                  { name: 'Zanzari Waterfall', distance: 'Approx. 60–70 km from PDEU', description: 'A rocky riverside waterfall and natural outing near the Vatrak River; conditions vary by season and monsoon flow.', map: 'Zanzari Waterfall, Gujarat', image: 'https://wanderon-images.gumlet.io/gallery/new/2025/09/03/1756902202697-zanzari-waterfall-gujarat.jpg' },
                 ].map(place => <article className="nearby-attraction-card" key={place.name}>
+                  <img className="nearby-attraction-card-image" src={place.image} alt={place.name} loading="lazy" />
                   <div className="nearby-attraction-card-body"><h4>{place.name}</h4><p className="nearby-attraction-distance">{place.distance}</p><p>{place.description}</p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.map)}`} target="_blank" rel="noopener noreferrer">View Location</a></div>
                 </article>)}
               </div>
@@ -609,13 +611,14 @@ export default function Home() {
               </div>
               <div className="nearby-attractions-grid">
                 {[
-                  { name: 'Swagat Holiday Mall', distance: 'Gandhinagar', description: 'A shopping and leisure destination with retail stores, food options and entertainment.', map: 'Swagat Holiday Mall, Gandhinagar' },
-                  { name: 'The Landmark', distance: 'Kudasan, Gandhinagar', description: 'A local shopping and lifestyle complex with retail outlets and everyday services.', map: 'The Landmark, Kudasan, Gandhinagar' },
-                  { name: 'Pramukh Anand Mall', distance: 'Kudasan, Gandhinagar', description: 'A commercial and lifestyle destination with shopping, food and entertainment options.', map: 'Pramukh Anand Mall, Kudasan, Gandhinagar' },
-                  { name: 'GIFT City', distance: 'Approx. 5–6 km from PDEU', description: 'A modern financial and business district known for its skyline, public spaces, dining and urban architecture.', map: 'GIFT City, Gandhinagar' },
-                  { name: 'Infocity & Super Mall 1', distance: 'Gandhinagar', description: 'A convenient area for cafés, restaurants, shopping and casual outings.', map: 'Super Mall 1, Infocity, Gandhinagar' },
-                  { name: 'City Pulse', distance: 'Gandhinagar', description: 'A cinema and entertainment option for a relaxed outing.', map: 'City Pulse, Gandhinagar' },
+                  { name: 'Swagat Holiday Mall', distance: 'Gandhinagar', description: 'A shopping and leisure destination with retail stores, food options and entertainment.', map: 'Swagat Holiday Mall, Gandhinagar', image: 'https://www.swagatgroup.in/swagat-holiday-mall/gallery/swagat-holiday-mall-8.jpg' },
+                  { name: 'The Landmark', distance: 'Kudasan, Gandhinagar', description: 'A local shopping and lifestyle complex with retail outlets and everyday services.', map: 'The Landmark, Kudasan, Gandhinagar', image: 'https://imgcdn.houssed.com/assets/Files/Projects/151179/Project%20Image/hou-1764241032.webp' },
+                  { name: 'Pramukh Anand Mall', distance: 'Kudasan, Gandhinagar', description: 'A commercial and lifestyle destination with shopping, food and entertainment options.', map: 'Pramukh Anand Mall, Kudasan, Gandhinagar', image: 'https://imgcdn.houssed.com/assets/Files/Projects/150407/Project%20Image/p3-1761718547.webp' },
+                  { name: 'GIFT City', distance: 'Approx. 5–6 km from PDEU', description: 'A modern financial and business district known for its skyline, public spaces, dining and urban architecture.', map: 'GIFT City, Gandhinagar', image: 'https://im.rediff.com/money/2020/aug/04gift-city.jpg' },
+                  { name: 'Infocity & Super Mall 1', distance: 'Gandhinagar', description: 'A convenient area for cafés, restaurants, shopping and casual outings.', map: 'Super Mall 1, Infocity, Gandhinagar', image: 'https://www.mappls.com/place/3ORZFF_1733709702055_0.jpeg' },
+                  { name: 'City Pulse', distance: 'Gandhinagar', description: 'A cinema and entertainment option for a relaxed outing.', map: 'City Pulse, Gandhinagar', image: 'https://files.yappe.in/place/full/city-pulse-cinema-gandhinagar-9405524.webp' },
                 ].map(place => <article className="nearby-attraction-card" key={place.name}>
+                  <img className="nearby-attraction-card-image" src={place.image} alt={place.name} loading="lazy" />
                   <div className="nearby-attraction-card-body"><h4>{place.name}</h4><p className="nearby-attraction-distance">{place.distance}</p><p>{place.description}</p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.map)}`} target="_blank" rel="noopener noreferrer">View Location</a></div>
                 </article>)}
               </div>
