@@ -7664,3 +7664,21 @@ main.page-nearby-attractions > footer { display: block !important; }
   .nearby-attraction-feature img { height: 190px; }
   .nearby-attraction-feature > div { padding: 2px 4px 6px; }
 }
+
+/* Text-only category descriptors; destination photos remain on individual cards. */
+.nearby-attraction-feature-text {
+  margin: 0 0 20px;
+  padding: 2px 0 4px;
+}
+.nearby-attraction-feature-text h4 {
+  margin: 0 0 6px;
+  color: #0b2c52;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+.nearby-attraction-feature-text p {
+  margin: 0;
+  color: #52677d;
+  font-size: .94rem;
+  line-height: 1.6;
+}

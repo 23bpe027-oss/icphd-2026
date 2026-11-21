@@ -557,10 +557,7 @@ export default function Home() {
 
             <section className="nearby-attraction-category">
               <h3 className="nearby-attraction-category-title">Places to Visit</h3>
-              <div className="nearby-attraction-feature">
-                <img src="https://www.yourvacationtrip.com/wp-content/uploads/2023/12/swaminarayan-akshardham-temple-ahmedabad.jpg" alt="Swaminarayan Akshardham Temple, Gandhinagar" loading="lazy" />
-                <div><h4>Heritage and Culture</h4><p>Discover Gandhinagar’s celebrated temples, historic architecture and museums.</p></div>
-              </div>
+              <div className="nearby-attraction-feature-text"><h4>Heritage and Culture</h4><p>Discover Gandhinagar’s celebrated temples, historic architecture and museums.</p></div>
               <div className="nearby-attractions-grid">
                 {[
                   { name: 'Swaminarayan Akshardham Temple', distance: 'Approx. 10 km from PDEU', description: 'A major cultural and spiritual complex known for its intricately carved pink sandstone temple, exhibitions and gardens.', map: 'Swaminarayan Akshardham Temple, Gandhinagar', image: 'https://imagesvs.oneindia.com/hi/img/2017/11/02-1509617085-temple-601.jpg' },
@@ -583,10 +580,7 @@ export default function Home() {
 
             <section className="nearby-attraction-category">
               <h3 className="nearby-attraction-category-title">Parks &amp; Nature</h3>
-              <div className="nearby-attraction-feature">
-                <img src="https://airial.travel/_next/image?q=70&url=https%3A%2F%2Fcoinventmediastorage.blob.core.windows.net%2Fmedia-storage-container%2Fgphoto_ChIJm1AccUQqXDkRJ-J9FZHhL2Y_0.jpg&w=3840" alt="Dinosaur exhibit at Indroda Nature Park" loading="lazy" />
-                <div><h4>Nature and Outdoor Escapes</h4><p>Enjoy gardens, riverside green spaces, wildlife and outdoor walks around Gandhinagar.</p></div>
-              </div>
+              <div className="nearby-attraction-feature-text"><h4>Nature and Outdoor Escapes</h4><p>Enjoy gardens, riverside green spaces, wildlife and outdoor walks around Gandhinagar.</p></div>
               <div className="nearby-attractions-grid">
                 {[
                   { name: 'Indroda Nature Park', distance: 'Approx. 10 km from PDEU', description: 'A large nature park with dinosaur and fossil exhibits, wildlife sections and botanical gardens.', map: 'Indroda Nature Park, Gandhinagar', image: 'https://mindtrip.ai/attractions/d3d7/88f8/67f8/05bb/3038/439c/ec91/cf3a' },
@@ -605,10 +599,7 @@ export default function Home() {
 
             <section className="nearby-attraction-category">
               <h3 className="nearby-attraction-category-title">Shopping &amp; Entertainment</h3>
-              <div className="nearby-attraction-feature">
-                <img src="https://www.swagatgroup.in/swagat-holiday-mall/swagat-holiday-mall-banner-4.jpg" alt="Interior of Swagat Holiday Mall" loading="lazy" />
-                <div><h4>Shopping, Dining and Leisure</h4><p>Find shopping destinations, dining options and entertainment hubs for your free time.</p></div>
-              </div>
+              <div className="nearby-attraction-feature-text"><h4>Shopping, Dining and Leisure</h4><p>Find shopping destinations, dining options and entertainment hubs for your free time.</p></div>
               <div className="nearby-attractions-grid">
                 {[
                   { name: 'Swagat Holiday Mall', distance: 'Gandhinagar', description: 'A shopping and leisure destination with retail stores, food options and entertainment.', map: 'Swagat Holiday Mall, Gandhinagar', image: 'https://www.swagatgroup.in/swagat-holiday-mall/gallery/swagat-holiday-mall-8.jpg' },
