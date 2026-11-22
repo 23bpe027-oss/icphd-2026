@@ -8256,10 +8256,10 @@ main.page-nearby-attractions > footer { display: block !important; }
   }
 }
 
-/* Tighten only the vertical row gap between student-chapter boxes on desktop. */
+/* Match horizontal and vertical student-chapter box spacing on desktop. */
 @media (min-width: 901px) {
   .association-chapters .association-logos {
-    row-gap: 2px !important;
+    row-gap: 11px !important;
   }
 }
 
