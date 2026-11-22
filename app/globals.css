@@ -8485,9 +8485,9 @@ main.page-nearby-attractions > footer { display: block !important; }
     white-space: nowrap !important;
     overflow: visible !important;
     text-overflow: clip !important;
-    font-size: clamp(.48rem, 1.75vw, .62rem) !important;
+    font-size: .58rem !important;
     line-height: 1.5 !important;
-    letter-spacing: -.035em !important;
+    letter-spacing: -.055em !important;
     text-align: center !important;
   }
   .guest-of-honor-caption p {
@@ -8500,7 +8500,35 @@ main.page-nearby-attractions > footer { display: block !important; }
 }
 @media (max-width: 390px) {
   .guest-of-honor-caption h3 {
-    font-size: .46rem !important;
-    letter-spacing: -.04em !important;
+    font-size: .54rem !important;
+    letter-spacing: -.055em !important;
+  }
+}
+
+
+/* Guest of Honor: differences-table alignment.
+   On desktop and desktop-site mobile/tablet, reserve the same two-line name
+   row in both cards so the designations always begin on one shared baseline.
+   Regular mobile (<=720px) is intentionally untouched. */
+@media (min-width: 721px) {
+  .guest-of-honor-caption {
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+  }
+  .guest-of-honor-caption h3 {
+    display: block !important;
+    width: 100% !important;
+    height: 2.44em !important;
+    min-height: 2.44em !important;
+    flex: 0 0 2.44em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+  }
+  .guest-of-honor-caption p {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
   }
 }
