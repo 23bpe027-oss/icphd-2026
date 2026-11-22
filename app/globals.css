@@ -8400,3 +8400,107 @@ main.page-nearby-attractions > footer { display: block !important; }
     flex-basis: 108px !important;
   }
 }
+
+
+/* Slightly narrow Guest of Honor cards without changing their height or typography. */
+@media (min-width: 901px) {
+  .guest-of-honor-grid {
+    justify-items: center !important;
+  }
+  .guest-of-honor-card {
+    width: calc(100% - 12px) !important;
+    max-width: none !important;
+  }
+}
+
+
+/* Scale Guest of Honor portraits and caption typography slightly for the
+   narrower desktop cards; keep tablet and regular mobile sizing unchanged. */
+@media (min-width: 901px) {
+  .guest-of-honor-card > img {
+    width: calc(100% - 42px) !important;
+    height: 180px !important;
+    flex-basis: 180px !important;
+  }
+  .guest-of-honor-caption h3 {
+    font-size: clamp(.75rem, .97vw, .96rem) !important;
+  }
+  .guest-of-honor-caption p {
+    font-size: .81rem !important;
+  }
+}
+
+
+/* Match the Guest of Honor portrait width to the slightly narrower desktop cards. */
+@media (min-width: 901px) {
+  .guest-of-honor-card > img {
+    width: calc(100% - 46px) !important;
+  }
+}
+
+
+/* Apply the narrower Guest of Honor cards and inset portrait width in desktop-site
+   mobile/tablet widths too; regular mobile (720px and below) stays unchanged. */
+@media (min-width: 721px) and (max-width: 900px) {
+  .guest-of-honor-grid {
+    justify-items: center !important;
+  }
+  .guest-of-honor-card {
+    width: calc(100% - 12px) !important;
+    max-width: none !important;
+  }
+  .guest-of-honor-card > img {
+    width: calc(100% - 46px) !important;
+  }
+}
+
+
+/* Regular mobile: slightly narrow the Guest of Honor cards and inset portraits
+   a little further, while keeping both guest names on one line and aligning
+   the name and designation rows evenly across the two cards. */
+@media (max-width: 720px) {
+  .guest-of-honor-grid {
+    justify-items: center !important;
+  }
+  .guest-of-honor-card {
+    width: calc(100% - 4px) !important;
+    max-width: none !important;
+  }
+  .guest-of-honor-card > img {
+    width: calc(100% - 24px) !important;
+  }
+  .guest-of-honor-caption {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+  }
+  .guest-of-honor-caption h3 {
+    display: block !important;
+    width: 100% !important;
+    height: 1.5em !important;
+    min-height: 1.5em !important;
+    margin: 0 0 2px !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: clamp(.48rem, 1.75vw, .62rem) !important;
+    line-height: 1.5 !important;
+    letter-spacing: -.035em !important;
+    text-align: center !important;
+  }
+  .guest-of-honor-caption p {
+    min-height: 2.5em !important;
+    margin: 0 !important;
+    font-size: .66rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+}
+@media (max-width: 390px) {
+  .guest-of-honor-caption h3 {
+    font-size: .46rem !important;
+    letter-spacing: -.04em !important;
+  }
+}
