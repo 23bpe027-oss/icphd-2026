@@ -8283,3 +8283,14 @@ main.page-nearby-attractions > footer { display: block !important; }
     font-size: .72rem !important;
   }
 }
+
+
+
+
+/* Desktop only: tighten the horizontal gap between the two student-chapter columns.
+   Do not alter chapter-card width, height, or any mobile/tablet sizing. */
+@media (min-width: 901px) {
+  .association-chapters .association-logos {
+    column-gap: 8px !important;
+  }
+}
