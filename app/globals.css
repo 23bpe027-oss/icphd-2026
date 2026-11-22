@@ -8241,3 +8241,45 @@ main.page-nearby-attractions > footer { display: block !important; }
     font-size: .67rem !important;
   }
 }
+
+
+/* Increase Guest of Honor text in desktop and desktop-site mobile/tablet views.
+   Regular mobile (720px and below) keeps its current text sizing. */
+@media (min-width: 721px) {
+  .guest-of-honor-caption h3 {
+    font-size: clamp(.78rem, 1vw, 1rem) !important;
+    line-height: 1.22 !important;
+  }
+  .guest-of-honor-caption p {
+    font-size: .84rem !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* Tighten only the vertical row gap between student-chapter boxes on desktop. */
+@media (min-width: 901px) {
+  .association-chapters .association-logos {
+    row-gap: 8px !important;
+  }
+}
+
+
+/* Further increase Guest of Honor name and designation text on regular mobile only. */
+@media (max-width: 720px) {
+  .guest-of-honor-caption h3 {
+    font-size: clamp(.72rem, 2.9vw, .88rem) !important;
+    line-height: 1.22 !important;
+  }
+  .guest-of-honor-caption p {
+    font-size: .76rem !important;
+    line-height: 1.32 !important;
+  }
+}
+@media (max-width: 390px) {
+  .guest-of-honor-caption h3 {
+    font-size: .69rem !important;
+  }
+  .guest-of-honor-caption p {
+    font-size: .72rem !important;
+  }
+}
