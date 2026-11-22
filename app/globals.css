@@ -8723,3 +8723,142 @@ main.page-nearby-attractions > footer { display: block !important; }
     padding: 34px 0 52px;
   }
 }
+
+
+/* Speakers page: match the light editorial styling used on Previous Editions.
+   The dark-blue treatment was inconsistent with the rest of the site. */
+main.page-speakers > section.speakers-section {
+  background: #f5f8fc !important;
+}
+main.page-speakers .speaker-card {
+  background: #ffffff !important;
+  border: 1px solid #dce6f0 !important;
+  box-shadow: 0 12px 32px rgba(13, 48, 78, .08) !important;
+}
+main.page-speakers .speaker-info h3 {
+  color: #102f50 !important;
+}
+main.page-speakers .speaker-info p {
+  color: #52677d !important;
+}
+main.page-speakers .speaker-info span {
+  color: #52677d !important;
+  opacity: 1 !important;
+}
+
+
+/* Speakers page follows the Accommodation page shell and light visual theme. */
+main.page-speakers > section:not(.speakers-section) {
+  display: none !important;
+}
+main.page-speakers > .speakers-section {
+  display: block !important;
+  min-height: 58vh;
+  padding: 46px 0 64px;
+  background: #f5f8fc !important;
+}
+main.page-speakers > footer {
+  display: block !important;
+}
+.page-speakers .speakers-section .section-title h2 {
+  color: #0b2c52 !important;
+}
+.page-speakers .speakers-section .section-title > span {
+  background: #2d91ce !important;
+}
+.page-speakers .speaker-card {
+  border: 1px solid #dce6f0 !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  box-shadow: 0 12px 32px rgba(13, 48, 78, .08) !important;
+}
+.page-speakers .speaker-photo-wrap {
+  padding: 16px 16px 0 !important;
+}
+.page-speakers .speaker-photo-wrap img {
+  border-radius: 10px !important;
+}
+.page-speakers .speaker-info h3 {
+  color: #0b2c52 !important;
+}
+.page-speakers .speaker-info p {
+  color: #52677d !important;
+}
+.page-speakers .speaker-info span {
+  color: #607287 !important;
+  opacity: 1 !important;
+}
+@media (max-width: 720px) {
+  main.page-speakers > .speakers-section {
+    padding: 34px 0 52px;
+  }
+}
+
+
+/* Compact speaker cards: reduce overall footprint while retaining readable text. */
+.page-speakers .speakers-grid {
+  max-width: 940px !important;
+  gap: 18px !important;
+}
+.page-speakers .speaker-photo-wrap {
+  height: 220px !important;
+  padding: 12px 12px 0 !important;
+}
+.page-speakers .speaker-info {
+  padding: 12px 12px 15px !important;
+}
+.page-speakers .speaker-info h3 {
+  font-size: 1rem !important;
+  margin-bottom: 6px !important;
+}
+.page-speakers .speaker-info p {
+  font-size: .82rem !important;
+  line-height: 1.35 !important;
+  margin-bottom: 5px !important;
+}
+.page-speakers .speaker-info span {
+  font-size: .75rem !important;
+}
+@media (min-width: 721px) and (max-width: 1000px) {
+  .page-speakers .speakers-grid {
+    max-width: 780px !important;
+    gap: 15px !important;
+  }
+  .page-speakers .speaker-photo-wrap {
+    height: 205px !important;
+  }
+}
+@media (max-width: 720px) {
+  .page-speakers .speakers-grid {
+    gap: 10px !important;
+  }
+  .page-speakers .speaker-photo-wrap {
+    height: 150px !important;
+    padding: 8px 8px 0 !important;
+  }
+  .page-speakers .speaker-info {
+    padding: 9px 7px 11px !important;
+  }
+  .page-speakers .speaker-info h3 {
+    font-size: .82rem !important;
+    margin-bottom: 5px !important;
+  }
+  .page-speakers .speaker-info p {
+    font-size: .68rem !important;
+    line-height: 1.3 !important;
+  }
+  .page-speakers .speaker-info span {
+    font-size: .62rem !important;
+  }
+}
+@media (max-width: 390px) {
+  .page-speakers .speaker-photo-wrap {
+    height: 132px !important;
+  }
+  .page-speakers .speaker-info h3 {
+    font-size: .76rem !important;
+  }
+  .page-speakers .speaker-info p {
+    font-size: .63rem !important;
+  }
+}
