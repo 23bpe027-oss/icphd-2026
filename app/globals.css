@@ -8166,3 +8166,78 @@ main.page-nearby-attractions > footer { display: block !important; }
     font-size: .58rem !important;
   }
 }
+
+
+/* Restore the earlier chapter and Guest of Honor card sizes on desktop
+   and desktop-site tablet widths. Keep regular mobile (<=720px) untouched. */
+@media (min-width: 721px) {
+  .association-guests-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(350px, .95fr) !important;
+    column-gap: 40px !important;
+    align-items: start !important;
+  }
+  .association-chapters .association-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 150px) !important;
+    grid-auto-rows: 150px !important;
+    justify-items: center !important;
+    gap: 14px !important;
+  }
+  .association-chapters .association-slot {
+    width: 100% !important;
+    max-width: 260px !important;
+    height: 150px !important;
+  }
+  .guest-of-honor-grid {
+    height: 314px !important;
+    margin-top: 0 !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+  .guest-of-honor-card {
+    height: 314px !important;
+    min-height: 314px !important;
+  }
+  .guest-of-honor-caption {
+    flex: 0 0 96px !important;
+    min-height: 96px !important;
+    padding: 9px 10px !important;
+  }
+}
+@media (min-width: 721px) and (max-width: 900px) {
+  .guest-of-honor-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+  }
+  .guest-of-honor-card > img {
+    height: 230px !important;
+  }
+  .guest-of-honor-caption {
+    min-height: 88px !important;
+    padding: 9px 8px 11px !important;
+  }
+}
+
+
+/* Slightly enlarge Guest of Honor names and designations on regular mobile only.
+   Card dimensions, portrait sizes, and desktop/tablet layouts remain unchanged. */
+@media (max-width: 720px) {
+  .guest-of-honor-caption h3 {
+    font-size: clamp(.66rem, 2.65vw, .82rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -.015em !important;
+  }
+  .guest-of-honor-caption p {
+    font-size: .70rem !important;
+    line-height: 1.3 !important;
+  }
+}
+@media (max-width: 390px) {
+  .guest-of-honor-caption h3 {
+    font-size: .64rem !important;
+  }
+  .guest-of-honor-caption p {
+    font-size: .67rem !important;
+  }
+}
