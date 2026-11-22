@@ -8291,6 +8291,19 @@ main.page-nearby-attractions > footer { display: block !important; }
    Do not alter chapter-card width, height, or any mobile/tablet sizing. */
 @media (min-width: 901px) {
   .association-chapters .association-logos {
-    column-gap: 8px !important;
+    column-gap: 11px !important;
   }
+}
+
+@media (min-width: 901px) {
+  .association-chapters .association-slot {
+    max-width: 260px !important;
+  }
+}
+
+
+/* ICPHD 2026: reduce the gap between each Guest of Honor name and designation
+   consistently across desktop, tablet, desktop-site mobile, and regular mobile. */
+.guest-of-honor-caption h3 {
+  margin-bottom: 1px !important;
 }
