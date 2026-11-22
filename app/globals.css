@@ -8862,3 +8862,46 @@ main.page-speakers > footer {
     font-size: .63rem !important;
   }
 }
+
+
+/* Match the Accommodation page's top offset so the Speakers heading never
+   sits underneath the fixed navigation bar. */
+main.page-speakers > .speakers-section {
+  padding-top: 112px !important;
+  scroll-margin-top: 96px;
+}
+main.page-speakers .speakers-section .section-title {
+  margin-top: 12px !important;
+  margin-bottom: 34px !important;
+}
+@media (max-width: 720px) {
+  main.page-speakers > .speakers-section {
+    padding: 92px 0 38px !important;
+  }
+  main.page-speakers .speakers-section .section-title {
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+
+/* Increase the portrait height for every keynote speaker, without changing
+   card widths or the compact information layout. */
+.page-speakers .speaker-photo-wrap {
+  height: 270px !important;
+}
+@media (min-width: 721px) and (max-width: 1000px) {
+  .page-speakers .speaker-photo-wrap {
+    height: 245px !important;
+  }
+}
+@media (max-width: 720px) {
+  .page-speakers .speaker-photo-wrap {
+    height: 190px !important;
+  }
+}
+@media (max-width: 390px) {
+  .page-speakers .speaker-photo-wrap {
+    height: 168px !important;
+  }
+}

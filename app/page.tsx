@@ -554,7 +554,7 @@ export default function Home() {
               </article>
               <article className="speaker-card">
                 <div className="speaker-photo-wrap">
-                  <img src="https://channeli.in/media/kernel/display_pictures/3d3b6f87-9326-4d01-ab00-036ed80a550b" alt="Prof. Hari Prakash Veluswamy" referrerPolicy="no-referrer" loading="eager" />
+                  <img src="/assets/guest-hari-prakash-veluswamy.jpg" alt="Prof. Hari Prakash Veluswamy" loading="lazy" />
                 </div>
                 <div className="speaker-info">
                   <h3>Prof. Hari Prakash Veluswamy</h3>
