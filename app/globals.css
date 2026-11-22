@@ -8603,3 +8603,12 @@ main.page-nearby-attractions > footer { display: block !important; }
     letter-spacing: -.06em !important;
   }
 }
+
+
+/* Regular mobile only: restore a small visible gap between each Guest of Honor
+   name and designation. Desktop and desktop-site mobile remain unchanged. */
+@media (max-width: 720px) {
+  .guest-of-honor-caption p {
+    margin-top: 5px !important;
+  }
+}
