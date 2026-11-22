@@ -371,20 +371,20 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="guest-of-honor-panel">
-                  <p className="mini-label">GUEST OF HONOR</p>
+                  <p className="mini-label">GUESTS OF HONOR</p>
                   <div className="guest-of-honor-grid">
                     <article className="guest-of-honor-card">
-                      <img src="/assets/guest-ashish-agarwal.jpg" alt="Shri Ashish Liladhar Agarwal" />
-                      <div className="guest-of-honor-caption">
-                        <h3>Shri Ashish Liladhar Agarwal</h3>
-                        <p>MD and CEO, SEROS</p>
-                      </div>
-                    </article>
-                    <article className="guest-of-honor-card">
-                      <img src="/assets/guest-dharm-pal.jpg" alt="Shri Dharm Pal" />
+                      <img src="/assets/guest-dharm-pal.jpg" alt="Shri Ashish Liladhar Agarwal" />
                       <div className="guest-of-honor-caption">
                         <h3>Shri Dharm Pal</h3>
                         <p>Head of Institute (HOI), Institute of Reservoir Studies, ONGC</p>
+                      </div>
+                    </article>
+                    <article className="guest-of-honor-card">
+                      <img src="/assets/guest-ashish-agarwal.jpg" alt="Shri Ashish Liladhar Agarwal" />
+                      <div className="guest-of-honor-caption">
+                        <h3>Shri Dharm Pal</h3>
+                        <p>MD and CEO, SEROS</p>
                       </div>
                     </article>
                   </div>
