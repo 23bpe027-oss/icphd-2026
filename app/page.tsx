@@ -360,13 +360,34 @@ export default function Home() {
                 <p className="org-copy">Department of Petroleum Engineering with Department of Chemical Engineering and Department of Chemistry,<span className="desktop-org-break"><br /></span> Pandit Deendayal Energy University</p>
               </div>
 
-              <div className="association-block">
-                <p className="mini-label">IN ASSOCIATION WITH</p>
-                <div className="association-logos">
-                  <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
-                  <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
-                  <div className="association-slot"><img src="/assets/seg-spg-eage-final-hd-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
-                  <div className="association-slot"><img src="/assets/iadc-colored-card.png" alt="IADC PDEU Student Chapter" /></div>
+              <div className="association-block association-guests-layout">
+                <div className="association-chapters">
+                  <p className="mini-label">IN ASSOCIATION WITH</p>
+                  <div className="association-logos">
+                    <div className="association-slot association-fipi"><img src="/assets/fipi-association-clean-final.png" alt="FIPI" /></div>
+                    <div className="association-slot"><img src="/assets/spe-association-clean-transparent.png" alt="SPE PDEU Student Chapter" /></div>
+                    <div className="association-slot"><img src="/assets/seg-spg-eage-final-hd-transparent.png" alt="SEG, SPG and EAGE PDEU Student Chapters" /></div>
+                    <div className="association-slot"><img src="/assets/iadc-colored-card.png" alt="IADC PDEU Student Chapter" /></div>
+                  </div>
+                </div>
+                <div className="guest-of-honor-panel">
+                  <p className="mini-label">GUEST OF HONOR</p>
+                  <div className="guest-of-honor-grid">
+                    <article className="guest-of-honor-card">
+                      <img src="/assets/guest-ashish-agarwal.jpg" alt="Shri Ashish Liladhar Agarwal" />
+                      <div className="guest-of-honor-caption">
+                        <h3>Shri Ashish Liladhar Agarwal</h3>
+                        <p>MD and CEO, SEROS</p>
+                      </div>
+                    </article>
+                    <article className="guest-of-honor-card">
+                      <img src="/assets/guest-dharm-pal.jpg" alt="Shri Dharm Pal" />
+                      <div className="guest-of-honor-caption">
+                        <h3>Shri Dharm Pal</h3>
+                        <p>Head of Institute (HOI), Institute of Reservoir Studies, ONGC</p>
+                      </div>
+                    </article>
+                  </div>
                 </div>
               </div>
             </div>
