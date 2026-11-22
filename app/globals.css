@@ -8564,3 +8564,42 @@ main.page-nearby-attractions > footer { display: block !important; }
     letter-spacing: -.06em !important;
   }
 }
+
+
+/* Final Guest of Honor typography correction:
+   tighten the name/designation transition while retaining equal designation
+   baselines on desktop and desktop-site mobile/tablet. */
+@media (min-width: 721px) {
+  .guest-of-honor-caption h3 {
+    height: 2.20em !important;
+    min-height: 2.20em !important;
+    flex-basis: 2.20em !important;
+    line-height: 1.10 !important;
+    margin: 0 !important;
+  }
+  .guest-of-honor-caption p {
+    margin-top: -2px !important;
+  }
+}
+@media (max-width: 720px) {
+  .guest-of-honor-caption h3 {
+    font-size: .70rem !important;
+    line-height: 1.20 !important;
+    height: 1.20em !important;
+    min-height: 1.20em !important;
+    margin: 0 !important;
+    letter-spacing: -.055em !important;
+  }
+  .guest-of-honor-caption p {
+    margin-top: -2px !important;
+  }
+}
+@media (max-width: 390px) {
+  .guest-of-honor-caption h3 {
+    font-size: .64rem !important;
+    line-height: 1.20 !important;
+    height: 1.20em !important;
+    min-height: 1.20em !important;
+    letter-spacing: -.06em !important;
+  }
+}
